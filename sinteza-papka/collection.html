@@ -17,10 +17,23 @@
       <div class="delivery-container">
          <div class="header-block">
             <div class="header-left">
-              <div class="drop-down-menu__button">
+              <div id="dropDownMenuButton" class="drop-down-menu__button">
                   <img src="img/header/line-menu.svg" alt="">
                   <img src="img/header/line-menu.svg" alt="">
               </div>
+
+               <div id="dropDownMenu" class="drop-down-menu">
+                  <a href="" class="header-left__link">Мебель</a>
+                  <a href="" class="header-left__link">Оборудование</a>
+                  <a href="" class="header-left__link">Журнал</a>
+                  <a href="" class="header-left__link">Режим AR</a>
+                  <a href="" class="header-left__link">Доставка и оплата</a>
+                  <a href="" class="header-left__link header-left__link-sinteza-arr">
+                     <span>Fit-out Sinteza</span>
+                  </a>
+
+                  <a class="header-left__link" href="tel:+74993223787">+7 (499) 322-37-87</a>
+               </div>
 
                <a href="#" class="header-left__link-logo">
                   <img src="img/header/logo.svg" alt="">
@@ -31,13 +44,10 @@
                <a href="" class="header-left__link">Журнал</a>
                <a href="" class="header-left__link">Режим AR</a>
                <a href="" class="header-left__link">Доставка и оплата</a>
-               <a href="" class="header-left__link-sinteza-arr header-left__link">
+               <a href="" class="header-left__link header-left__link-sinteza-arr">
                   <span>Fit-out Sinteza</span>
                   <img src="img/header/sinteza-arrow.svg" alt="">
                </a>
-            </div>
-
-            <div class="burger">
             </div>
 
             <div class="header-right">
@@ -72,34 +82,36 @@
 
       <div class="collection-photo">
          <div class="collection-container">
-            <div class="block-photo">
-               <img src="img/collection/main-photo.jpg" alt="">
-               <div class="collection-share">
-                  <span class="collection-share__title">Поделиться событием</span>
-                  <div class="collection-share__links-block">
-                     <a href="" class="links-block__link">
-                        <span>Twitter</span>
-                        <img src="img/collection/white-arrow.svg" alt="">
-                     </a>
+            <div class="photo-block__wrapper">
+               <div class="block-photo">
+                  <img src="img/collection/main-photo.jpg" alt="">
+                  <div class="collection-share">
+                     <span class="collection-share__title">Поделиться событием</span>
+                     <div class="collection-share__links-block">
+                        <a href="" class="links-block__link">
+                           <span>Twitter</span>
+                           <img src="img/collection/white-arrow.svg" alt="">
+                        </a>
 
-                     <a href="" class="links-block__link">
-                        <span>Facebook</span>
-                        <img src="img/collection/white-arrow.svg" alt="">
-                     </a>
+                        <a href="" class="links-block__link">
+                           <span>Facebook</span>
+                           <img src="img/collection/white-arrow.svg" alt="">
+                        </a>
 
-                     <a href="" class="links-block__link">
-                        <span>telegram</span>
-                        <img src="img/collection/white-arrow.svg" alt="">
-                     </a>
+                        <a href="" class="links-block__link">
+                           <span>Telegram</span>
+                           <img src="img/collection/white-arrow.svg" alt="">
+                        </a>
+                     </div>
                   </div>
                </div>
-            </div>
 
-            <div class="signature-photo">
-               <div class="signature-date">25 сентября 2020 года</div>
-               <div class="signeture__photo-video">
-                  <span>Фотографии</span>
-                  <span>Видео</span>
+               <div class="signature-photo">
+                  <div class="signature-date">25 сентября 2020 года</div>
+                  <div class="signeture__photo-video">
+                     <span>Фотографии</span>
+                     <span>Видео</span>
+                  </div>
                </div>
             </div>
 
@@ -120,18 +132,25 @@
       </div>
 
       <div class="collection-slider-block">
-         <img class=" coll-arr coll-arr-left" src="img/collection/slider-arr.svg" alt="">
 
-         <img class=" coll-arr coll-arr-right" src="img/collection/slider-arr.svg" alt="">
+
+         <button class="coll-arr coll-arr-left">
+              <img class="" src="img/collection/slider-arr.svg" alt="">
+        </button>
+
+        <button class="coll-arr coll-arr-right">
+              <img class="" src="img/collection/slider-arr.svg" alt="">
+        </button>
+
+
            <div class="collection-container ">
               <span class="collection-slider__title">Товары из коллекции</span>
 
-           <div class="swiper-container">
-<!--              <div class="coll-slider swiper-wrapper">-->
+           <div class="swiper-1 swiper-container">
 
                <div class="coll-slider swiper-wrapper">
 
-                  <div class="coll-slider__link swiper-slide">
+                  <div class="coll-slider__link coll-slider__link-big swiper-slide">
                     <div class="coll-slider__link-photo__wrapper coll-slider__link-photo__wrapper-big">
                        <img class="slider-start" src="img/collection/star-slider.svg" alt="">
 
@@ -139,8 +158,8 @@
                              <img src="img/collection/button-arrow.svg" alt="">
                        </button>
 
-                       <img src="img/collection/ch-1.jpg" alt="">
-                       <img src="img/collection/pr-1.png" alt="">
+                          <img class="coll-slider-product-img" src="img/collection/ch-1.jpg" alt="">
+                          <img class="coll-slider-product-img" src="img/collection/pr-1.png" alt="">
                     </div>
                      <p class="coll-slider__info">ПИСЬМЕННЫЙ СТОЛ КВИНТ-С С ОПОРАМИ ИЗ МАССИВА ДЕРЕВА И ВСТРОЕННОЙ ТУМБОЙ 160Х80</p>
                        <p class="coll-slider__price">20 108 ₽ <span class="collection__old-price"> 27 108</span></p>
@@ -154,7 +173,7 @@
                              <img src="img/collection/button-arrow.svg" alt="">
                           </button>
 
-                          <img src="img/collection/ch-2.png" alt="">
+                          <img class="coll-slider-product-img"  src="img/collection/ch-2.png" alt="">
                        </div>
                      <p class="coll-slider__info">ПИСЬМЕННЫЙ СТОЛ КВИНТ-С С ОПОРАМИ ИЗ МАССИВА ДЕРЕВА И ВСТРОЕННОЙ ТУМБОЙ 160Х80</p>
                        <p class="coll-slider__price">273 108 ₽ </p>
@@ -168,13 +187,13 @@
                              <img src="img/collection/button-arrow.svg" alt="">
                           </button>
 
-                          <img src="img/collection/ch-3.png" alt="">
+                          <img class="coll-slider-product-img"  src="img/collection/ch-3.png" alt="">
                        </div>
                      <p class="coll-slider__info">ПИСЬМЕННЫЙ СТОЛ КВИНТ-С С ОПОРАМИ ИЗ МАССИВА ДЕРЕВА И ВСТРОЕННОЙ ТУМБОЙ 160Х80</p>
                        <p class="coll-slider__price">273 108 ₽ </p>
                   </div>
 
-                  <div class="coll-slider__link ">
+                  <div class="coll-slider__link swiper-slide">
                     <div class="coll-slider__link-photo__wrapper coll-slider__link-photo__wrapper-big">
                        <img class="slider-start" src="img/collection/star-slider.svg" alt="">
 
@@ -182,14 +201,14 @@
                              <img src="img/collection/button-arrow.svg" alt="">
                        </button>
 
-                       <img src="img/collection/ch-1.jpg" alt="">
-                       <img src="img/collection/pr-1.png" alt="">
+                       <img class="coll-slider-product-img"  src="img/collection/ch-1.jpg" alt="">
+                       <img class="coll-slider-product-img"  src="img/collection/pr-1.png" alt="">
                     </div>
                      <p class="coll-slider__info">ПИСЬМЕННЫЙ СТОЛ КВИНТ-С С ОПОРАМИ ИЗ МАССИВА ДЕРЕВА И ВСТРОЕННОЙ ТУМБОЙ 160Х80</p>
                        <p class="coll-slider__price">20 108 ₽ <span class="collection__old-price"> 27 108</span></p>
                   </div>
 
-                  <div class="coll-slider__link ">
+                  <div class="coll-slider__link swiper-slide">
                        <div class="coll-slider__link-photo__wrapper">
                           <img class="slider-start" src="img/collection/star-slider.svg" alt="">
 
@@ -197,13 +216,13 @@
                              <img src="img/collection/button-arrow.svg" alt="">
                           </button>
 
-                          <img src="img/collection/ch-2.png" alt="">
+                          <img class="coll-slider-product-img"  src="img/collection/ch-2.png" alt="">
                        </div>
                      <p class="coll-slider__info">ПИСЬМЕННЫЙ СТОЛ КВИНТ-С С ОПОРАМИ ИЗ МАССИВА ДЕРЕВА И ВСТРОЕННОЙ ТУМБОЙ 160Х80</p>
                        <p class="coll-slider__price">273 108 ₽ </p>
                   </div>
 
-                  <div class="coll-slider__link ">
+                  <div class="coll-slider__link swiper-slide">
                        <div class="coll-slider__link-photo__wrapper">
                           <img class="slider-start" src="img/collection/star-slider.svg" alt="">
 
@@ -211,7 +230,7 @@
                              <img src="img/collection/button-arrow.svg" alt="">
                           </button>
 
-                          <img src="img/collection/ch-3.png" alt="">
+                          <img class="coll-slider-product-img"  src="img/collection/ch-3.png" alt="">
                        </div>
                      <p class="coll-slider__info">ПИСЬМЕННЫЙ СТОЛ КВИНТ-С С ОПОРАМИ ИЗ МАССИВА ДЕРЕВА И ВСТРОЕННОЙ ТУМБОЙ 160Х80</p>
                        <p class="coll-slider__price">273 108 ₽ </p>
@@ -228,10 +247,10 @@
             <span class="bot-slider__title">Больше идей и вдохновения</span>
 
 
+             <div class="swiper-2 swiper-container">
+               <div class="bott-slider-wrapper swiper-wrapper">
 
-               <div class="bott-slider-wrapper">
-
-                  <div class="ideas-link">
+                  <div class="ideas-link swiper-slide">
                      <div class="ideas-link-photo">
                         <img src="img/collection/bot-slide-1.png" alt="">
                      </div>
@@ -241,7 +260,7 @@
                      </div>
                   </div>
 
-                  <div class="ideas-link">
+                  <div class="ideas-link swiper-slide">
                      <div class="ideas-link-photo">
                         <img src="img/collection/bot-slide-1.png" alt="">
                      </div>
@@ -251,7 +270,7 @@
                      </div>
                   </div>
 
-                  <div class="ideas-link">
+                  <div class="ideas-link swiper-slide">
                      <div class="ideas-link-photo">
                         <img src="img/collection/bot-slide-1.png" alt="">
                      </div>
@@ -260,7 +279,39 @@
                         <span class="ideas-link__bottom-date">21 Октября 2020 г.</span>
                      </div>
                   </div>
+
+                  <div class="ideas-link swiper-slide">
+                     <div class="ideas-link-photo">
+                        <img src="img/collection/bot-slide-1.png" alt="">
+                     </div>
+                     <div class="ideas-link__bottom">
+                        <span class="ideas-link__bottom-descr">Шоурум в центре дизайна Artplay</span>
+                        <span class="ideas-link__bottom-date">21 Октября 2020 г.</span>
+                     </div>
+                  </div>
+
+                  <div class="ideas-link swiper-slide">
+                     <div class="ideas-link-photo">
+                        <img src="img/collection/bot-slide-1.png" alt="">
+                     </div>
+                     <div class="ideas-link__bottom">
+                        <span class="ideas-link__bottom-descr">Шоурум в центре дизайна Artplay</span>
+                        <span class="ideas-link__bottom-date">21 Октября 2020 г.</span>
+                     </div>
+                  </div>
+
+                  <div class="ideas-link swiper-slide">
+                     <div class="ideas-link-photo">
+                        <img src="img/collection/bot-slide-1.png" alt="">
+                     </div>
+                     <div class="ideas-link__bottom">
+                        <span class="ideas-link__bottom-descr">Шоурум в центре дизайна Artplay</span>
+                        <span class="ideas-link__bottom-date">21 Октября 2020 г.</span>
+                     </div>
+                  </div>
+
                </div>
+            </div>
          </div>
       </div>
 

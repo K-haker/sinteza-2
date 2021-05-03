@@ -4,6 +4,8 @@
    <link rel="stylesheet" href="css/style.css">
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <title>Document</title>
 </head>
 <body>
@@ -12,6 +14,24 @@
       <div class="delivery-container">
          <div class="header-block">
             <div class="header-left">
+              <div id="dropDownMenuButton" class="drop-down-menu__button">
+                  <img src="img/header/line-menu.svg" alt="">
+                  <img src="img/header/line-menu.svg" alt="">
+              </div>
+
+               <div id="dropDownMenu" class="drop-down-menu">
+                  <a href="" class="header-left__link">Мебель</a>
+                  <a href="" class="header-left__link">Оборудование</a>
+                  <a href="" class="header-left__link">Журнал</a>
+                  <a href="" class="header-left__link">Режим AR</a>
+                  <a href="" class="header-left__link">Доставка и оплата</a>
+                  <a href="" class="header-left__link header-left__link-sinteza-arr">
+                     <span>Fit-out Sinteza</span>
+                  </a>
+
+                  <a class="header-left__link" href="tel:+74993223787">+7 (499) 322-37-87</a>
+               </div>
+
                <a href="#" class="header-left__link-logo">
                   <img src="img/header/logo.svg" alt="">
                   <span>Интернет магазин</span>
@@ -61,13 +81,25 @@
       <div class="waranty-slider-block">
          <div class="warranty-container">
             <span class="warranty-slider__title">Сертификаты соответствия</span>
-            <div class="warranty-slider">
-               <img class="left-far-warranty" src="img/warranty/scr-1.jpg" alt="">
-               <img class="left-medium-warranty"  src="img/warranty/scr-2.jpg" alt="">
-               <img class="active-warranty" src="img/warranty/scr-3.jpg" alt="">
-               <img class="right-medium-warranty"  src="img/warranty/scr-4.jpg" alt="">
-               <img class="right-far-warranty" src="img/warranty/scr-5.jpg" alt="">
+
+<!--
+            <div id="warr-prev" class="warrancy-slider-arrow warrancy-slider-arrow-left">
+               <img src='img/warranty/perv-slide.svg' alt="">
             </div>
+            <div id="warr-next" class="warrancy-slider-arrow warrancy-slider-arrow-right">
+               <img src='img/warranty/next-slide.svg' alt="">
+            </div>
+-->
+
+            <div class="warranty-slider__wrapper">
+               <div class="warranty-slider ">
+                  <img class="slide-warranty " src="img/warranty/sr---1.jpg" alt="">
+                  <img class="slide-warranty " src="img/warranty/sr---1.jpg" alt="">
+                  <img class="slide-warranty " src="img/warranty/sr---1.jpg" alt="">
+                  <img class="slide-warranty " src="img/warranty/sr---1.jpg" alt="">
+                  <img class="slide-warranty " src="img/warranty/sr---1.jpg" alt="">
+               </div>
+           </div>
          </div>
       </div>
 
@@ -168,6 +200,9 @@
    </footer>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+
+   <script src="js/jquery.waterwheelCarousel.min.js"></script>
 
    <script src="js/slick.min.js"></script>
 
