@@ -12,7 +12,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'CodecPro';
+    font-family: 'CodecPro-news';
     src:url('../fonts/codec/CodecPro-News.woff2') format('woff2'),
     url('../fonts/codec/CodecPro-News.eot?#iefix') format('embedded-opentype'),
     url('../fonts/codec/CodecPro-News.woff') format('woff'),
@@ -22,6 +22,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'CodecPro';
     src:url('../fonts/codec/CodecPro-Light.woff2') format('woff2'),
@@ -602,6 +603,11 @@ footer{
 
    font-weight: 400;
 }
+
+.content-link_right-info p{
+   font-family: "CodecPro-news", sans-serif;
+}
+
 
 .our-delivery{
    padding-bottom: 50px;
