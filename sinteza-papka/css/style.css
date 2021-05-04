@@ -169,6 +169,7 @@ header{
    border-radius: 50%;
    background-color: #000000;
    position: relative;
+   bottom: 4px;
 }
 
 .header-counter{
@@ -229,6 +230,8 @@ header{
    text-decoration: none;
    position: relative;
    top:-1px;
+
+   font-weight: 400;
 }
 
 .header-left__link-logo span{
@@ -287,7 +290,7 @@ header{
 
 .header-left__link-sinteza-arr{
    position: relative;
-   bottom:1px;
+   bottom:2px;
 }
 
 .drop-down-menu__button{
@@ -586,7 +589,6 @@ footer{
 }
 
 .content-link_right-info{
-   font-family: "CodecPro"
 }
 
 .content-link_right-info p{
@@ -605,7 +607,8 @@ footer{
 }
 
 .content-link_right-info p{
-   font-family: "CodecPro-news", sans-serif;
+   font-family: "CodecPro-News";
+   font-size: 16px;
 }
 
 
@@ -695,6 +698,8 @@ footer{
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
+   font-size: 16px;
+   line-height: 24px;
 }
 
 .map-link img{
@@ -810,9 +815,11 @@ Media
       margin-bottom: 35px;
    }
 
+/*
    .map-link{
       width: 100%;
    }
+*/
 
    .content-link{
       display: block;
@@ -849,11 +856,20 @@ Media
       margin-left: -15px;
    }
 
+   .mailing-text{
+      width: 100%;
+   }
+
 
 }
 
 
 @media(max-width:480px){
+
+   .map-link{
+      width: 100%;
+      padding-right: 0;
+   }
 
 
    .delivery-h1{
@@ -884,6 +900,7 @@ Media
 
    .content-link_right-info p{
       margin-bottom: 20px;
+      font-size: 14px;
    }
 }
 
@@ -1115,7 +1132,7 @@ Media
    background-color:#FFF658;
    border: none;
    right:0;
-   top: 2px;
+   top: 3px;
    position: absolute;
 
    -webkit-transition-duration: 0.5s;
@@ -1171,7 +1188,7 @@ Media
 }
 
 .opened-answer{
-   top: calc(100% - 38px - 5px);
+   top: calc(100% - 38px - 6px);
 }
 
 .bold-link{
@@ -1228,10 +1245,6 @@ Media
       padding: 0 15px;
    }
 
-   .mailing-text{
-      width: 50%;
-   }
-
    .faq-link__answer answer-display-block{
       width: 100%;
    }
@@ -1273,13 +1286,16 @@ Media
    .faq-link{
       display: block;
    }
+/*
 
    .faq-link:last-child{
       padding-bottom: 20px;
    }
+*/
 
    .faq-open-close {
       top: calc(100% - 41px);
+      margin-left: 8px;
    }
 
    .faq-link__question{
@@ -1302,7 +1318,7 @@ Media
       position: relative;
       left: calc(100% - 126px);
       width: 126px;
-      height: 38px;;
+      height: 38px;
    }
 
    .faq-link{
@@ -1339,6 +1355,13 @@ Media
       top: -4px;
    }
 
+   .faq-open-close{
+      margin-top: 20px;
+   }
+
+   .faq-link__answer{
+      margin-bottom: 0;
+   }
 
 }
 
@@ -1364,6 +1387,10 @@ Media
       width:auto;
    }
 
+
+   .swiper-1 {
+      margin-top: 28px;
+   }
 
 .ideas-link.swiper-slide{
       width: auto;
@@ -1621,9 +1648,6 @@ Media
    display: flex;
 }
 
-
-
-
 .slick-track{
    display: -webkit-box;
    display: -ms-flexbox;
@@ -1671,10 +1695,11 @@ Media
 
 @media(max-width:768px){
    .collection-share{
-      top: calc(100% - 40px);
+      top: calc(100% - 45px);
       right: -10px;
       width: 100%;
       max-width: 400px;
+      opacity: 0.9;
    }
 
    .collection-main-title{
@@ -1799,7 +1824,7 @@ Media
    }
 
    .collection-share{
-      padding: 15px 0 16px 20px;
+      padding: 15px 0 16px 17px;
    }
 
    .collection-share__title{
@@ -1824,7 +1849,7 @@ Media
    }
 
    .block-photo{
-      margin-bottom: 80px;
+      margin-bottom: 70px;
    }
 
    .slider-in-buscket-button{
@@ -1833,10 +1858,26 @@ Media
       line-height: 19px;
    }
 
-
-
    .coll-slider-product-img{
       height: 80%;
+   }
+
+   .swiper-1{
+      margin-top: 20px;
+   }
+
+   .ideas-link__bottom-descr{
+      font-size: 10px;
+      line-height: 12px;
+   }
+
+   .ideas-link-photo{
+      margin-bottom: 10px;
+   }
+
+   .container-slider-bottom.collection-container.collection-container-big-2{
+      width: 100%;
+      padding: 0;
    }
 }
 
