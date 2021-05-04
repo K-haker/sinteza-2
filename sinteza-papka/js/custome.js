@@ -1,25 +1,17 @@
 $(document).ready(function(){
 
+/*Аккордеон на станице вопросов и ответов FAQ*/
+   $(".faq-open-close").click(function(){
+      $(this).prev(".faq-link__answer").slideToggle(400);
+      $(this).toggleClass("opened-answer");
+      $(this).addClass(".bottom-arr-opened");
 
-//   $(".faq-open-close").click(function(){
-//      $(this).prev(".faq-link__answer").slideToggle(400);
-//      $(this).toggleClass("opened-answer");
-//   });
+      $(this).find('.faq-button-arr').toggleClass("faq-button-arr-opened");
 
 
-
-
-   /*Аккордеон*/
-
-   $('.faq-link__question, .faq-link__question, .faq-open-close').click(function(event) {
-      var parent = $(this).closest('.faq-link');
-      parent.find('.contact-toggle').slideToggle(300);
-      parent.toggleClass('cont-open');
    });
 
-
-   /*Меню*/
-
+   /*Выпадающее Меню*/
     $("#dropDownMenuButton").on("click", function(event) {
         event.preventDefault();
 
@@ -27,7 +19,6 @@ $(document).ready(function(){
     });
 
    /*Карусель на странице гарантий*/
-
    let waterWheel = $(".warranty-slider").waterwheelCarousel({
       separation: 300,
       opacityMultiplier: 0.5,
@@ -39,15 +30,15 @@ $(document).ready(function(){
 
    })
 
-//   $("#warr-prev").bind("click", function(){
-//      carousel.prev();
-//      return false;
-//   });
-//
-//   $("#warr-next").bind("click", function(){
-//      carousel.next();
-//      return false;
-//   });
+   $("#warr-prev").bind("click", function(){
+      waterWheel.prev();
+      return false;
+   });
+
+   $("#warr-next").bind("click", function(){
+      waterWheel.next();
+      return false;
+   });
 });
 
 
