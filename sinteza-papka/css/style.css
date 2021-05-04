@@ -1600,6 +1600,7 @@ Media
    font-size: 12px;
    line-height: 18px;
    font-family: "CodecPro";
+   border-radius: 0;
 }
 
 .bot-slider__title{
@@ -1997,7 +1998,9 @@ Media
    max-height: 538px;
 }
 
-
+.mobile-br{
+   display: none;
+}
 
 /*media*/
 
@@ -2067,6 +2070,10 @@ Media
 
    .arrows-warrancy-slider-block{
       width: 300px;
+   }
+
+   .mobile-br{
+      display: block;
    }
 }
 

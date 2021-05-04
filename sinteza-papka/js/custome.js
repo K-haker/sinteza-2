@@ -55,6 +55,12 @@ let firstSwiper = new Swiper(".swiper-1",{
 let secondSwiper = new Swiper(".swiper-2",{
    slidesPerView: 'auto',
    spaceBetween: 30,
+//
+//   breakpoints:{
+//      480:{
+//         spaceBetween:12;
+//      },
+//   }
 })
 
 
