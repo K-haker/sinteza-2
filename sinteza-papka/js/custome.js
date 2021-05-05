@@ -19,16 +19,37 @@ $(document).ready(function(){
     });
 
    /*Карусель на странице гарантий*/
-   let waterWheel = $(".warranty-slider").waterwheelCarousel({
-      separation: 300,
-      opacityMultiplier: 0.5,
-      horizon: 0,
-      flankingItems: 2,
+//   let waterWheel = $(".warranty-slider").waterwheelCarousel({
+//      separation: 300,
+//      opacityMultiplier: 0.5,
+//      horizon: 0,
+//      flankingItems: 2,
+//   })
 
-
-
-
+   // код запустится, если на странице есть карусель, на остальных не будет работать
+   if($(".warranty-slider").length > 0){
+   // инициализации при старте страницы
+   var waterWheel = $(".warranty-slider").waterwheelCarousel({
+    separation: 300,
+    opacityMultiplier: 0.5,
+    horizon: 0,
+    flankingItems: 2,
    })
+
+   // событие при ресайзе
+   $( window ).resize(function() {
+    // удалить все стили с картинок карусели, чтобы сбросить размеры
+    $(".slide-warranty").attr("style", "");
+    // запомнить картинки
+    var images_list = $(".warranty-slider").html();
+    // стересть картинки из DOM, чтобы при новой инициализации пересчитать размеры картинок
+    $(".warranty-slider").html("");
+    // вернуть картинки на место в карусель
+    $(".warranty-slider").html(images_list);
+    // перезапусстить карусель
+    waterWheel.reload();
+   });
+}
 
    $("#warr-prev").bind("click", function(){
       waterWheel.prev();
@@ -55,12 +76,18 @@ let firstSwiper = new Swiper(".swiper-1",{
 let secondSwiper = new Swiper(".swiper-2",{
    slidesPerView: 'auto',
    spaceBetween: 30,
-//
-//   breakpoints:{
-//      480:{
-//         spaceBetween:12;
-//      },
-//   }
+
+   breakpoints:{
+      768:{
+         spaceBetween:10,
+      },
+      480:{
+         spaceBetween:2,
+      },
+      320:{
+         spaceBetween:2,
+      },
+   }
 })
 
 

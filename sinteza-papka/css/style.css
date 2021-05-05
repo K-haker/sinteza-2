@@ -1,7 +1,7 @@
 /*fonts*/
 
 @font-face {
-    font-family: 'CodecPro';
+    font-family: 'CodecPro-Extra-Bold';
     src:url('../fonts/codec/CodecPro-ExtraBold.woff2') format('woff2'),
     url('../fonts/codec/CodecPro-ExtraBold.eot?#iefix') format('embedded-opentype'),
     url('../fonts/codec/CodecPro-ExtraBold.woff') format('woff'),
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-    font-family: 'CodecPro';
+    font-family: 'CodecPro-Light';
     src:url('../fonts/codec/CodecPro-Light.woff2') format('woff2'),
     url('../fonts/codec/CodecPro-Light.eot?#iefix') format('embedded-opentype'),
     url('../fonts/codec/CodecPro-Light.woff') format('woff'),
@@ -35,7 +35,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'CodecPro';
+    font-family: 'CodecPro-Bold';
     src:url('../fonts/codec/CodecPro-Bold.woff2') format('woff2'),
     url('../fonts/codec/CodecPro-Bold.eot?#iefix') format('embedded-opentype'),
     url('../fonts/codec/CodecPro-Bold.woff') format('woff'),
@@ -46,7 +46,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'CodecPro';
+    font-family: 'CodecPro-Heavy';
     src:url('../fonts/codec/CodecPro-Heavy.woff2') format('woff2'),
     url('../fonts/codec/CodecPro-Heavy.eot?#iefix') format('embedded-opentype'),
     url('../fonts/codec/CodecPro-Heavy.woff') format('woff'),
@@ -57,7 +57,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'CodecPro';
+    font-family: 'CodecPro-Regular';
     src:url('../fonts/codec/CodecPro-Regular.woff2') format('woff2'),
     url('../fonts/codec/CodecPro-Regular.eot?#iefix') format('embedded-opentype'),
     url('../fonts/codec/CodecPro-Regular.woff') format('woff'),
@@ -104,6 +104,7 @@
 }
 
 
+/*Подключение шрифтов*/
 
 
 
@@ -116,11 +117,10 @@ body{
 
    font-family: sans-serif;
 
-   font-family: "CodecPro";
-   font-weight: 300;
-
    margin: 0;
    padding: 0;
+
+   font-family: "CodecPro-Light", sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -220,8 +220,7 @@ header{
    margin-left: 25px;
    font-size: 13px;
    line-height: 11.5px;
-   font-family: "CodecPro";
-   font-weight: 400;
+   font-family: "CodecPro-Regular";
 }
 
 .header-left__link-logo{
@@ -231,7 +230,7 @@ header{
    position: relative;
    top:-1px;
 
-   font-weight: 400;
+   font-family: "CodecPro-Regular";
 }
 
 .header-left__link-logo span{
@@ -239,7 +238,6 @@ header{
    line-height: 9px;
    margin-top: 2px;
 
-   font-family: "CodecPro";
 }
 
 .header-left__link-logo span,
@@ -265,8 +263,7 @@ header{
    line-height: 22px;
    color: #000000;
 
-   font-family: "CodecPro";
-   font-weight: 400;
+   font-family: "CodecPro-Regular";
 }
 
 .header-telephone a{
@@ -488,11 +485,14 @@ footer{
    justify-content: space-between;
    width: 50%;
    margin-right: 150px;
+
+   font-family: "CodecPro-Regular";
 }
 
 .footer-bottom__right{
    width: 50%;
    margin-left: 150px;
+   font-family: "CodecPro-Regular";
 }
 .footer-bottom__right-top{
    margin-bottom: 54px;
@@ -552,7 +552,7 @@ footer{
 }
 
 .delivery-h1{
-   font-family: 'CodecPro';
+   font-family: 'CodecPro-Bold';
    font-size: 67px;
    line-height: 68px;
    font-weight: 700;
@@ -576,8 +576,7 @@ footer{
    font-size: 16px;
    line-height: 20px;
 
-   font-family: "CodecPro";
-   font-weight: 700;
+   font-family: "CodecPro-Bold";
 }
 
 .content-link_right{
@@ -700,6 +699,8 @@ footer{
    align-items: center;
    font-size: 16px;
    line-height: 24px;
+
+   font-family: 'CodecPro-news';
 }
 
 .map-link img{
@@ -902,6 +903,10 @@ Media
       margin-bottom: 20px;
       font-size: 14px;
    }
+
+   .mailing-form:after{
+      height: 1.5px;
+   }
 }
 
 
@@ -1042,7 +1047,7 @@ Media
 
    .mailing-form:after{
       content:"";
-      height: 3px;
+      height: 1.5px;
       width: calc(100% + 30px);
       color: red;
       position: absolute;
@@ -1075,6 +1080,7 @@ Media
 }
 
 .faq-main-title{
+   font-family: 'CodecPro-Bold';
    font-size: 120px;
    margin-bottom: 50px;
 }
@@ -1104,6 +1110,8 @@ Media
 }
 
 .faq-link__question{
+   font-family: 'CodecPro-Extra-Bold';
+
    font-size: 14px;
    line-height:18px;
    width: 30%;
@@ -1192,7 +1200,7 @@ Media
 }
 
 .bold-link{
-   font-weight: 700;
+   font-family: "CodecPro-Bold";
    text-decoration: none;
    color: #000000;
 }
@@ -1286,12 +1294,6 @@ Media
    .faq-link{
       display: block;
    }
-/*
-
-   .faq-link:last-child{
-      padding-bottom: 20px;
-   }
-*/
 
    .faq-open-close {
       top: calc(100% - 41px);
@@ -1415,6 +1417,8 @@ Media
    font-size: 67px;
    line-height: 68px;
    margin-bottom: 50px;
+
+   font-family: "CodecPro-Bold";
 }
 
 .collection-photo{
@@ -1457,6 +1461,8 @@ Media
 }
 
 .collection-slider__title{
+   font-family: "CodecPro-Bold";
+
    font-size: 16px;
    line-height: 22px;
    margin-bottom: 28px;
@@ -1509,6 +1515,11 @@ Media
    font-size: 19px;
    line-height: 16px;
    font-weight: 300;
+}
+
+.links-block__link img{
+   position: relative;
+   top:-1px;
 }
 
 .collection-slider-block{
@@ -1577,7 +1588,7 @@ Media
 }
 
 .coll-slider__price{
-   font-weight: 300;
+   font-family: "CodecPro-Regular", sans-serif;
 }
 
 .collection__old-price{
@@ -1599,7 +1610,6 @@ Media
    right: -8px;
    font-size: 12px;
    line-height: 18px;
-   font-family: "CodecPro";
    border-radius: 0;
 }
 
@@ -1625,6 +1635,7 @@ Media
 
 .bottom-slider{
    margin-bottom: 80px;
+   margin-left: -30px;
 }
 
 
@@ -1655,6 +1666,8 @@ Media
    display: flex;
 }
 
+.container-slider-bottom{
+}
 
 
 
@@ -1746,10 +1759,15 @@ Media
 
    .ideas-link-photo img{
       height: 200px;
+      width: 290px;
    }
 
    .collection-share__title{
       margin-bottom: 0;
+   }
+
+   .ideas-link__bottom-descr{
+      font-size: 12px;
    }
 
 }
@@ -1794,9 +1812,6 @@ Media
 
    }
 
-   .coll-slider__link-photo__wrapper{
-      height: auto;
-   }
 
    .collection-share__links-block{
       margin-top: 30px;
@@ -1876,9 +1891,10 @@ Media
       margin-bottom: 10px;
    }
 
-   .container-slider-bottom.collection-container.collection-container-big-2{
-      width: 100%;
+.container-slider-bottom{
+      width:calc(100% + 15px);
       padding: 0;
+      margin-left: -10px;
    }
 }
 
@@ -1908,6 +1924,8 @@ Media
 }
 
 .warranty-title{
+   font-family: "CodecPro-Bold";
+
    font-size: 67px;
    line-height: 68px;
    font-weight: 700;
@@ -1915,6 +1933,8 @@ Media
 }
 
 .warranty-slider__title{
+   font-family: "CodecPro-Bold";
+
    font-size: 16px;
    line-height: 22px;
    font-weight: 700;
@@ -1942,6 +1962,8 @@ Media
 }
 
 .warranty-conditions-left{
+   font-family: "CodecPro-Bold";
+
    width: 40%;
    font-weight: 700;
    font-size: 16px;
@@ -2046,6 +2068,7 @@ Media
    }
 
    .warranty-conditions-left{
+      width: 100%;
       font-size: 14px;
       line-height: 22px;
       margin-bottom: 10px;
