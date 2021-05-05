@@ -5,10 +5,7 @@ $(document).ready(function(){
       $(this).prev(".faq-link__answer").slideToggle(400);
       $(this).toggleClass("opened-answer");
       $(this).addClass(".bottom-arr-opened");
-
       $(this).find('.faq-button-arr').toggleClass("faq-button-arr-opened");
-
-
    });
 
    /*Выпадающее Меню*/
@@ -19,12 +16,6 @@ $(document).ready(function(){
     });
 
    /*Карусель на странице гарантий*/
-//   let waterWheel = $(".warranty-slider").waterwheelCarousel({
-//      separation: 300,
-//      opacityMultiplier: 0.5,
-//      horizon: 0,
-//      flankingItems: 2,
-//   })
 
    // код запустится, если на странице есть карусель, на остальных не будет работать
    if($(".warranty-slider").length > 0){
@@ -91,7 +82,17 @@ let secondSwiper = new Swiper(".swiper-2",{
 })
 
 
+/*слайдеры на главной*/
 
+let mainSliderMain = new Swiper(".main-slider-main",{
 
+})
 
+let mainSliderFirst = new Swiper(".main-slider-1",{
+
+})
+
+let mainSliderSecond = new Swiper(".main-slider-2",{
+
+})
 
