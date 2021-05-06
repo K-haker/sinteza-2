@@ -2074,8 +2074,7 @@ Media
    height: 95vh;
    z-index: 1000;
    position: absolute;
-   width: 100%;
-   max-width: 500px;
+   width: 80;
    margin: 0 auto;
    left: 0;
    right: 0;
@@ -2087,7 +2086,6 @@ Media
 
 .big-slide-wrapper img{
    height: 100%;
-   width: auto;
 }
 
 
@@ -2199,6 +2197,15 @@ Media
 
    .warrancy-slider-arrow{
       top: 50%;
+   }
+
+   .big-slide-wrapper img{
+      width: 80%;
+      margin: -30px auto 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      position: relative;
    }
 }
 
@@ -2375,8 +2382,8 @@ Media
 
 .play-stop__block{
    position: absolute;
-   top: 50%;
-   left: 50%;
+   margin: auto;
+
 }
 
 .play-stop__block span{
@@ -2512,7 +2519,9 @@ Media
    margin-bottom: 90px;
 }
 
-
+.swiper-slide{
+   width: auto !important;
+}
 
 
 
