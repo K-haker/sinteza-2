@@ -41,19 +41,25 @@ $(document).ready(function(){
     waterWheel.reload();
    });
 }
-
    $("#warr-prev").bind("click", function(){
       waterWheel.prev();
       return false;
    });
-
    $("#warr-next").bind("click", function(){
       waterWheel.next();
       return false;
    });
+
+
+   /*POP UP*/
+   $(".carousel-center").click(function(){
+      console.log("hi!"); //проверяю отработку клика
+   })
+
 });
 
 
+/*JS*/
 let firstSwiper = new Swiper(".swiper-1",{
    slidesPerView: 'auto',
    spaceBetween: 20,
@@ -79,29 +85,30 @@ let secondSwiper = new Swiper(".swiper-2",{
          spaceBetween:2,
       },
    }
-})
+});
 
 
 /*слайдеры на главной*/
 
 let mainSliderMain = new Swiper(".main-slider-main",{
+   slidesPerView: 'auto',
+});
 
-})
+let mainSliderFirst = new Swiper(".main-slider-1");
 
-let mainSliderFirst = new Swiper(".main-slider-1",{
+let mainSliderSecond = new Swiper(".main-slider-2");
 
-})
-
-let mainSliderSecond = new Swiper(".main-slider-2",{
-
-})
-
-let mainSliderStories = new Swiper(".stories-main__slider-block",{
-
-})
+let mainSliderStories = new Swiper(".stories-main__slider-block");
 
 
+/*Лупа на старнице гарантий*/
 
+//new ImageZoom(document.getElementById("warranty-slider"),{
+//
+//    width: 400,
+//    zoomWidth: 500,
+//    offset: {vertical: 0, horizontal: 10}
+//});
 
 
 
