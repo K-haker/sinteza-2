@@ -1,4 +1,6 @@
 $(document).ready(function(){
+   var show_popup_sert = false;
+
 
 /*Аккордеон на станице вопросов и ответов FAQ*/
    $(".faq-open-close").click(function(){
@@ -52,9 +54,31 @@ $(document).ready(function(){
 
 
    /*POP UP*/
-   $(".carousel-center").click(function(){
-      console.log("hi!"); //проверяю отработку клика
-   })
+
+   /// спрятать попап с картинкой, по клику в любом месте страницы
+$("body").click(function() {
+  // если попап открыт, то закрывать
+  if(show_popup_sert){
+    // анимированно показать скрытый блок
+    $(".big-slide-wrapper").fadeOut(300);
+    show_popup_sert = false; // попап скрыт
+  }
+});
+
+// обработка клика по динамическому слайду
+$(".warranty-slider").on("click", ".carousel-center", function() {
+  // получить картинку активного слайда, по которму кликнул
+  var img_src = $(this).attr("src");
+  // вставтить картинку в попап
+  $(".big-slide-wrapper img").attr("src", img_src);
+  // анимированно показать скрытый блок
+  $(".big-slide-wrapper").fadeIn(300, function() {
+    // когда пройдет 300 милисек, то меняем флаг попапа на "видимый" = true
+    show_popup_sert = true;
+  });
+});
+
+
 
 });
 
@@ -91,24 +115,39 @@ let secondSwiper = new Swiper(".swiper-2",{
 /*слайдеры на главной*/
 
 let mainSliderMain = new Swiper(".main-slider-main",{
+   slidesPerView: '1',
+});
+
+let mainSliderFirst = new Swiper(".main-slider-1",{
+   slidesPerView: 'auto',
+   spaceBetween: 20,
+});
+
+let mainSliderStories = new Swiper(".stories-slider-main",{
    slidesPerView: 'auto',
 });
 
-let mainSliderFirst = new Swiper(".main-slider-1");
+let mainSliderSecond = new Swiper(".main-slider-2",{
+   slidesPerView: 'auto',
+   spaceBetween: 1020,
+});
 
-let mainSliderSecond = new Swiper(".main-slider-2");
+let mainSliderThird = new Swiper(".main-slider-4",{
+   slidesPerView: 'auto',
+   spaceBetween: 25,
+});
 
-let mainSliderStories = new Swiper(".stories-main__slider-block");
+
 
 
 /*Лупа на старнице гарантий*/
 
-//new ImageZoom(document.getElementById("warranty-slider"),{
-//
-//    width: 400,
-//    zoomWidth: 500,
-//    offset: {vertical: 0, horizontal: 10}
-//});
+new ImageZoom(document.getElementById("warranty-slider"),{
+
+    width: 400,
+    zoomWidth: 500,
+    offset: {vertical: 0, horizontal: 10}
+});
 
 
 
