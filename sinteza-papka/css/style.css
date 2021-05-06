@@ -2071,7 +2071,7 @@ Media
 
 
 .big-slide-wrapper{
-   height: 90vh;
+   height: 95vh;
    z-index: 1000;
    position: absolute;
    width: 100%;
@@ -2081,12 +2081,13 @@ Media
    right: 0;
 
    display: none;
+   text-align: center;
+   top: -15px;
 }
 
 .big-slide-wrapper img{
-   text-align: center;
-   width: 100%;
-   height: auto;
+   height: 100%;
+   width: auto;
 }
 
 
