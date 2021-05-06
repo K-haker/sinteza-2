@@ -2073,7 +2073,7 @@ Media
 .big-slide-wrapper{
    height: 95vh;
    z-index: 1000;
-   position: absolute;
+   position: fixed;
    width: 80;
    margin: 0 auto;
    left: 0;
@@ -2081,7 +2081,9 @@ Media
 
    display: none;
    text-align: center;
-   top: -15px;
+   top:10px;
+
+
 }
 
 .big-slide-wrapper img{
@@ -2199,13 +2201,17 @@ Media
       top: 50%;
    }
 
+   .big-slide-wrapper{
+      bottom:20px;
+   }
+
    .big-slide-wrapper img{
       width: 80%;
-      margin: -30px auto 0;
+      margin:0  auto -30px;
       left: 0;
       right: 0;
+
       height: auto;
-      position: relative;
    }
 }
 
