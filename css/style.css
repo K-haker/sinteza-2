@@ -152,10 +152,16 @@ header{
    -webkit-box-pack: justify;
    -ms-flex-pack: justify;
    justify-content: space-between;
-   padding: 26px 00 50px;
+   padding: 18px 00 16px;
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
+   margin-bottom: 34px;
+
+/*
+   height: 73px;
+   align-items: center;
+*/
 }
 
 .header-icon-1{
@@ -182,7 +188,7 @@ header{
    background-color: #FFFFFF;
    font-size: 10px;
    line-height: 9px;
-   padding: 1px 4px 1px;
+   padding: 2px 4px 1px;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -1484,10 +1490,11 @@ Media
 }
 
 .collection-share{
-   padding: 24px 52px 30px 36px;
+/*   padding: 24px 52px 30px 36px;*/
+   padding: 30px 70px 30px 30px;
    background-color:rgba(254, 80, 0, 0.8);
    position: absolute;
-   top:-38px;
+   top:-43px;
    right: -50px;
 }
 
@@ -1499,7 +1506,7 @@ Media
 }
 
 .collection-share__links-block{
-   margin-top: 60px;
+   margin-top: 20px;
    width: 100%;
    display: -webkit-box;
    display: -ms-flexbox;
@@ -1515,7 +1522,7 @@ Media
    margin-right: 20px;
 }
 .links-block__link span{
-   margin-right: 6px;
+   margin-right: 5px;
    font-size: 19px;
    line-height: 16px;
    font-weight: 300;
@@ -1724,9 +1731,8 @@ Media
 @media(max-width:768px){
    .collection-share{
       top: calc(100% - 45px);
-      right: -10px;
-      width: 100%;
-      max-width: 400px;
+      right: -14px;
+
       opacity: 0.9;
    }
 
@@ -1855,7 +1861,7 @@ Media
    }
 
    .collection-share{
-      padding: 15px 0 16px 17px;
+      padding: 14px 0 14px 14px;
    }
 
    .collection-share__title{
@@ -2039,6 +2045,10 @@ Media
    display: none;
 }
 
+.carousel-center.warranty-slide-big-img{
+   height: 800px;!important
+}
+
 /*media*/
 
 @media(max-width:768px){
@@ -2200,6 +2210,11 @@ Media
    position: relative;
    top: 8px;
    letter-spacing: -5px;
+}
+
+.main-links__item .arrow{
+   position: relative;
+   top:3px;
 }
 
 .main-slider-2{
@@ -2379,6 +2394,7 @@ Media
 
 .video-description-block{
    margin-bottom: 80px;
+   text-align: right;
 }
 
 .main-slider-4{
@@ -2399,11 +2415,25 @@ Media
    margin-bottom: 23px;
 }
 
+.header-block.header-block__main{
+   margin-bottom: 0;
+}
 
+.main-slider-1{
+   margin-bottom: 80px;
+}
 
+.stories-slider-main{
+   margin-bottom: 80px;
+}
 
+.main-slider-2 {
+   margin-top: 40px;
+}
 
-
+.main-slider-4{
+   margin-bottom: 90px;
+}
 
 
 
