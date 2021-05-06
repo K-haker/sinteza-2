@@ -121,20 +121,45 @@ let mainSliderMain = new Swiper(".main-slider-main",{
 let mainSliderFirst = new Swiper(".main-slider-1",{
    slidesPerView: 'auto',
    spaceBetween: 20,
+   navigation:{
+      nextEl:".m-sl-1-r",
+      prevEl:".m-sl-1-l",
+   },
 });
 
 let mainSliderStories = new Swiper(".stories-slider-main",{
    slidesPerView: 'auto',
+   spaceBetween: 90,
+   navigation:{
+      nextEl:".m-sl-str-r",
+      prevEl:".m-sl-str-l",
+   },
+   breakpoints:{
+      768:{
+         spaceBetween:10,
+      },
+      480:{
+         spaceBetween:26,
+      },
+   }
 });
 
 let mainSliderSecond = new Swiper(".main-slider-2",{
    slidesPerView: 'auto',
-   spaceBetween: 1020,
+   spaceBetween: 20,
+   navigation:{
+      nextEl:".m-sl-2-r",
+      prevEl:".m-sl-2-l",
+   },
 });
 
 let mainSliderThird = new Swiper(".main-slider-4",{
    slidesPerView: 'auto',
    spaceBetween: 25,
+   navigation:{
+      nextEl:".m-sl-3-r",
+      prevEl:".m-sl-3-l",
+   },
 });
 
 
