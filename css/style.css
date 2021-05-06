@@ -1999,6 +1999,7 @@ Media
 
 .warranty-slider__wrapper{
    overflow-x: hidden;
+   position: relative;
 
 }
 
@@ -2041,6 +2042,10 @@ Media
    max-height: 538px;
 }
 
+.slide-warranty.carousel-center:hover{
+   cursor:zoom-in;
+}
+
 .mobile-br{
    display: none;
 }
@@ -2049,7 +2054,64 @@ Media
    height: 800px;!important
 }
 
+.warrancy-slider-arrow{
+   position: absolute;
+   top: calc(50% - 30px);
+   z-index: 1000;
+}
+
+.warrancy-slider-arrow-left{
+   left: 250px;
+}
+
+.warrancy-slider-arrow-right{
+   right: 250px;
+}
+
+
+
+.big-slide-wrapper{
+   height: 90vh;
+   z-index: 1000;
+   position: absolute;
+   width: 100%;
+   max-width: 500px;
+   margin: 0 auto;
+   left: 0;
+   right: 0;
+
+   display: none;
+}
+
+.big-slide-wrapper img{
+   text-align: center;
+   width: 100%;
+   height: auto;
+}
+
+
+
 /*media*/
+
+@media(max-width: 1100px){
+   .warrancy-slider-arrow-left{
+   left:150px;
+}
+
+.warrancy-slider-arrow-right{
+   right: 150px;
+}
+}
+
+@media(max-width:950px){
+   .warrancy-slider-arrow-left{
+   left: 100px;
+}
+
+.warrancy-slider-arrow-right{
+   right: 100px;
+}
+}
 
 @media(max-width:768px){
    .arrows-warrancy-slider-block{
@@ -2070,6 +2132,16 @@ Media
 
    .waranty-slider-block{
       margin-bottom: 20px;
+   }
+}
+
+@media(max-width:800px){
+   .warrancy-slider-arrow-left{
+      left: 50px;
+   }
+
+   .warrancy-slider-arrow-right{
+      right: 50px;
    }
 }
 
@@ -2122,6 +2194,10 @@ Media
 
    .mobile-br{
       display: block;
+   }
+
+   .warrancy-slider-arrow{
+      top: 50%;
    }
 }
 
