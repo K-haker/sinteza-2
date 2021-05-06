@@ -2231,12 +2231,12 @@ Media
 
 .main-slider__item{
    width: 100%;
-   max-height: 533px;
 }
 
 .main-slider__item img{
    width: 100%;
    height: 100%;
+   display: block;
 }
 
 .main-slider-first{
@@ -2371,6 +2371,8 @@ Media
    font-family: "CodecPro-Bold";
    font-size: 16px;
    line-height: 30px;
+
+   margin-top: 28px;
 }
 
 .our-advantages__main-link .info-m{
@@ -2379,21 +2381,22 @@ Media
    opacity: 0.6;
 }
 
+.main-video__item{
+   width: 100%;
+   height: auto;
+}
+
 .main-video__block{
    width: 100%;
    position: relative;
    margin-bottom:27px;
 }
 
-.main-video__item{
-   width: 100%;
-   height: auto;
-}
-
 .play-stop__block{
    position: absolute;
-   margin: auto;
-
+   top:50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
 
 .play-stop__block span{
@@ -2515,6 +2518,7 @@ Media
 
 .main-slider-1{
    margin-bottom: 80px;
+   position: relative;
 }
 
 .stories-slider-main{
@@ -2532,6 +2536,220 @@ Media
 .swiper-slide{
    width: auto !important;
 }
+
+.main-slider-1 .coll-slider__link-photo__wrapper{
+   max-width: 280px;
+   max-height: 367px;
+}
+
+.l-arr img{
+   transform: rotate(180deg);
+}
+
+.arrows-in-slider-in-main{
+   position: absolute;
+   z-index: 200;
+
+   top: 170px;
+}
+
+.l-arr{
+   left: -50px;
+}
+
+.r-arr{
+   right: -50px;
+}
+
+.main-cont-sl-1{
+   position: relative;
+}
+
+.main-container-2{
+   position: relative;
+}
+
+.main-container-3 .arrows-in-slider-in-main{
+ top: 95px;
+}
+
+.main-container-3{
+   position: relative;
+}
+
+.main-container-stories{
+   position: relative;
+}
+
+.arrows-in-stories-in-main{
+   position: absolute;
+}
+
+.main-cont-top{
+   display: none;
+}
+
+
+
+/*@media - main*/
+
+
+@media(max-width:480px){
+   .header-block {
+      padding: 6px 0;
+      margin-bottom: 23px;
+   }
+
+   .main-cont-top{
+      display: block;
+   }
+
+   .main-links-block {
+      display: block;
+   }
+
+   .main-links__item .circle{
+      width: 28px;
+      height: 28px;
+   }
+
+   .main-links__item span{
+      font-size: 32px;
+      line-height: 27px;
+
+      margin: 0 8px 0 5px;
+      letter-spacing: 2px;
+   }
+
+   .main-links__item .arrow{
+      width: 25px;
+      height: 25px;
+   }
+
+   .main-links__item:nth-child(1){
+      margin-bottom: 28px;
+   }
+
+   .main-links-block{
+      margin-bottom: 20px;
+   }
+
+   .coll-slider__link-photo__wrapper{
+      margin-bottom: 17px;
+   }
+
+   .main-slider__signature-name{
+      display: none;
+   }
+
+   .stories-slider__link-wrapper{
+      width: 100px;
+      height: 100px;
+      margin-bottom: 8px;
+   }
+
+   .stories-slider__link{
+      overflow: hidden;
+      width: 94px;
+      height: 94px;
+   }
+
+   .stor-sl-main-wrapp-link span{
+      font-size: 12px;
+      line-height: 16px;
+   }
+
+   .collection-slider__title{
+
+   }
+
+   .our-advantages-main__wrapper:after{
+      width: 700px;
+      height: 430px;
+      transform: rotate(10deg);
+   }
+
+   .our-advantages__main-link{
+      width: 50%;
+   }
+
+   .main-slider{
+      width: 100%;
+      height: auto;
+   }
+
+   .main-slider__item{
+      width: 100%;
+   }
+
+   .our-advantages__main-content{
+      flex-wrap: wrap;
+   }
+
+   .our-advantages__main-title{
+      font-size: 10px;
+      line-height: 20px;
+      margin-bottom: 55px;
+   }
+
+   .our-advantages__main-link .title-m{
+      font-size: 18px;
+      line-height: 18px;
+      font-family: "CodecPro-news";
+      margin-bottom: 8px;
+   }
+
+   .our-advantages__main-link .info-m{
+      font-size: 12px;
+      line-height: 15px;
+   }
+
+   .our-advantages__main-link{
+      margin-bottom: 40px;
+   }
+
+   .main-slider__signature-signatures{
+      width: 100%;
+   }
+
+   .main-slider__signature-signatures{
+      font-size: 10px;
+      line-height: 8px;
+   }
+
+   .main-slider__signature{
+      margin-bottom: 40px;
+   }
+
+   .main-links__item{
+      margin-bottom: 40px;
+   }
+
+   .main-slider-2{
+      margin-bottom:60px;
+   }
+
+   .our-advantages__main{
+      padding-top: 15px;
+   }
+
+   .our-advantages-main__wrapper{
+      margin-bottom: 340px;
+   }
+
+   .main-block-video{
+      padding: 0;
+   }
+
+}
+
+
+
+
+
+
+
+
 
 
 
