@@ -116,6 +116,14 @@ let secondSwiper = new Swiper(".swiper-2",{
 
 let mainSliderMain = new Swiper(".main-slider-main",{
    slidesPerView: '1',
+   pagination:{
+      el:'.pag-main-slider-block',
+      clickable: true,
+   },
+   navigation:{
+      nextEl:".m-sl-main-r",
+      prevEl:".m-sl-main-l",
+   },
 });
 
 let mainSliderFirst = new Swiper(".main-slider-1",{
@@ -135,13 +143,18 @@ let mainSliderStories = new Swiper(".stories-slider-main",{
       prevEl:".m-sl-str-l",
    },
    breakpoints:{
-      768:{
-         spaceBetween:10,
-      },
-      480:{
+      10:{
          spaceBetween:26,
       },
+
+      480:{
+         spaceBetween:55,
+      },
+      1200:{
+         spaceBetween:90,
+      },
    }
+
 });
 
 let mainSliderSecond = new Swiper(".main-slider-2",{
@@ -165,14 +178,30 @@ let mainSliderThird = new Swiper(".main-slider-4",{
 
 
 
-/*Лупа на старнице гарантий*/
 
-new ImageZoom(document.getElementById("warranty-slider"),{
+/*Смена вида стрелок на главном слайдере главной страницы*/
 
-    width: 400,
-    zoomWidth: 500,
-    offset: {vertical: 0, horizontal: 10}
-});
+let mainSliderMainPageLeftArr = document.querySelector(".main-sl-l-ar");
+let mainSliderMainPageRightArr = document.querySelector(".main-sl-r-ar");
+let mainSliderMainPageLeftArrPar = document.querySelector(".m-sl-main-l");
+let mainSliderMainPageRightArrPar = document.querySelector(".m-sl-main-r");
+
+
+if(window.outerWidth < 480){
+   mainSliderMainPageLeftArr.src = "img/main/mainSlWhiteAr.svg";
+   mainSliderMainPageRightArr.src = "img/main/mainSlWhiteAr.svg";
+} else {
+   mainSliderMainPageLeftArr.src = "img/main/black-arr-sliders-main.svg";
+   mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
+}
+
+
+
+
+
+
+
+
 
 
 
