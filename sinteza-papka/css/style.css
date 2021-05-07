@@ -3211,12 +3211,23 @@ Media
    position: relative;
 }
 
+.background-for-big-slide{
+   content: "";
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   background-color:#000000;
+   z-index: 100;
+   opacity: 0.3;
 
+   display: none;
+}
 
-
-
-
-
+.background-for-big-slide-active{
+   display: block;
+}
 
 
 
