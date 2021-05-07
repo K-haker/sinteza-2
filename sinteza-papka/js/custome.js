@@ -60,8 +60,9 @@ $("body").click(function() {
   // если попап открыт, то закрывать
   if(show_popup_sert){
     // анимированно показать скрытый блок
-    $(".big-slide-wrapper").fadeOut(300);
-    show_popup_sert = false; // попап скрыт
+       $(".big-slide-wrapper").fadeOut(300);
+        $(".background-for-big-slide").fadeOut(100);
+       show_popup_sert = false; // попап скрыт
   }
 });
 
@@ -76,6 +77,7 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
     // когда пройдет 300 милисек, то меняем флаг попапа на "видимый" = true
     show_popup_sert = true;
   });
+   $(".background-for-big-slide").fadeIn(300);
 });
 
 
@@ -187,13 +189,17 @@ let mainSliderMainPageLeftArrPar = document.querySelector(".m-sl-main-l");
 let mainSliderMainPageRightArrPar = document.querySelector(".m-sl-main-r");
 
 
+try{
+
 if(window.outerWidth < 480){
    mainSliderMainPageLeftArr.src = "img/main/mainSlWhiteAr.svg";
    mainSliderMainPageRightArr.src = "img/main/mainSlWhiteAr.svg";
-} else {
-   mainSliderMainPageLeftArr.src = "img/main/black-arr-sliders-main.svg";
-   mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
-}
+   } else {
+      mainSliderMainPageLeftArr.src = "img/main/black-arr-sliders-main.svg";
+      mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
+   }
+} catch{}
+
 
 
 
