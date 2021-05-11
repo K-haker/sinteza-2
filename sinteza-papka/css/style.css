@@ -201,6 +201,11 @@ header{
    z-index: 10;
 }
 
+.qqq-4-img{
+   position: relative;
+   right: 15px;
+}
+
 .header-icor-corcle img{
    position: absolute;
    top: 9px;
@@ -528,10 +533,12 @@ footer{
    -ms-flex-pack: justify;
    justify-content: space-between;
    font-size: 10px;
-   line-height: 8px;
+   line-height: 18px;
    color: #818181;
    font-weight: 400;
 }
+
+
 
 .footer--max{
    color: #818181;
@@ -607,8 +614,6 @@ footer{
    font-size: 14px;
    line-height: 20px;
    margin-bottom: 8px;
-
-   font-family: 'CodecPro-Regular';
 }
 
 .content-link_right-info p{
@@ -872,6 +877,19 @@ Media
 
 
 @media(max-width:480px){
+   .mailing-form input{
+      font-size: 10px;
+      line-height: 9px;
+   }
+
+   .big-w{
+      text-transform: uppercase;
+   }
+
+   .hide-in-mobile-480{
+      display: none;
+   }
+
    .map-link{
       width: 100%;
       padding-right: 0;
@@ -1889,9 +1907,10 @@ Media
    }
 
    .slider-in-buscket-button{
-      padding: 3px 17px 3px 6px;
+      padding: 7px 24px 7px 10px;
       font-size: 12px;
       line-height: 19px;
+      width: 110px;
    }
 
    .coll-slider-product-img{
@@ -2594,21 +2613,20 @@ Media
 
 .arrows-stories-block{
    position: absolute;
-   width: 100px;
+   width: 60px;
    display: flex;
    justify-content: space-between;
    top: -19px;
    right: 0;
 }
 
+.m-sl-str-l{
+   visibility: hidden;
+}
+
 
 .main-cont-top{
    display: none;
-}
-
-.under-title{
-   font-family: 'CodecPro-Regular';
-   font-weight: 400;
 }
 
 .mistake-wrapper{
@@ -2674,15 +2692,26 @@ Media
 .our-hits__all-button{
    border: none;
    background-color: transparent;
+   font-size: 16px;
+   line-height: 24px;
+   color: #000000;
+   font-family: 'CodecPro-Light';
+   opacity: 0.6;
+   cursor: pointer;
 }
 
+.main-cont-last-sl{
+   display: flex;
+   justify-content: space-between;
+}
 
+.desc-visible-main-sl{
+   display: block;
+}
 
-
-
-
-
-
+.desc-unvisible-main-sl{
+   display: none;
+}
 
 
 
@@ -2797,6 +2826,19 @@ Media
 
 
 @media(max-width:480px){
+   .desc-visible-main-sl{
+      display: none;
+   }
+
+   .desc-unvisible-main-sl{
+      display: block;
+   }
+
+   .our-hits__all-button{
+      font-size: 14px;
+      line-height: 24px;
+   }
+
    .main-slider__signature-signatures{
       width: 100%;
    }
@@ -3599,6 +3641,10 @@ Media
 
    .journal-news-secondblock{
       margin-bottom: 10px;
+   }
+
+   .main-links__item span{
+      top: 7px;
    }
 
 }

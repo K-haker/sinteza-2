@@ -195,7 +195,10 @@ let mainSliderMainPageLeftArrPar = document.querySelector(".m-sl-main-l");
 let mainSliderMainPageRightArrPar = document.querySelector(".m-sl-main-r");
 
 
-try{
+
+
+window.addEventListener("resize", function(){
+   try{
 
 if(window.outerWidth < 480){
    mainSliderMainPageLeftArr.src = "img/main/mainSlWhiteAr.svg";
@@ -205,8 +208,7 @@ if(window.outerWidth < 480){
       mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
    }
 } catch{}
-
-
+})
 
 
 
