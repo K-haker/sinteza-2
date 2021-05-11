@@ -872,7 +872,6 @@ Media
 
 
 @media(max-width:480px){
-
    .map-link{
       width: 100%;
       padding-right: 0;
@@ -3039,6 +3038,11 @@ Media
    margin-bottom: 25px;
 }
 
+.journal-main-photo img{
+   max-width: 100%;
+   max-height: 100%;
+}
+
 .journal-main-photo__description-name{
    font-size: 16px;
    line-height:19px;
@@ -3090,13 +3094,12 @@ Media
    width: 50%;
    padding: 0 12px;
    margin-bottom: 60px;
-
-   overflow: hidden;
 }
 
 .journal-news__item-photo-wrapper img{
-   max-width: 100%;
-   max-height: 100%;
+
+   width: 100%;
+   height: auto;
 }
 
 .journal-news__item-photo-wrapper{
@@ -3124,19 +3127,19 @@ Media
    margin-bottom:25px;
 }
 
-
-
-
-.journal-archive-block{
-   border-top: 2px solid #000000;
-   padding-top: 20px;
+.journal-news-secondblock__item-photo-wrapper img{
+   max-width: 100%;
+   max-height: 100%;
 }
+
 
 .archive-title{
    font-family: "CodecPro-Bold";
    font-size: 16px;
    font-weight: 14px;
    margin-bottom: 50px;
+   border-top: 2px solid #000000;
+   padding-top: 20px;
 }
 
 .journal-archive__item{
@@ -3186,6 +3189,7 @@ Media
    line-height: 24px;
    display: block;
    width: 267px;
+   margin-bottom: 38px;
 }
 
 .more-events-link img{
@@ -3229,9 +3233,107 @@ Media
    display: block;
 }
 
+.faq-link__answer{
+   margin-top: 50px;
+}
+
+.arch-cont{
+   padding-bottom: 80px;
+}
+
+.journal-open-close.journal-opened-close{
+   top: calc(100% - 74px);
+   transform: translate(0, -100%);
+}
+
+.journ-link__answer{
+   margin-top: 50px;
+}
+
+.new-container.journ-link__answer{
+   padding: 0;
+}
+
+.journal-main-photo__description-name-mob-top{
+   display: none;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:480px){
+   .journal-main-title{
+      font-size: 28px;
+      line-height:34px;
+      margin-bottom: 20px;
+   }
+
+   .journal-main-photo__description-name-mob-top{
+      display: block;
+      margin-bottom: 10px;
+      font-family: 'CodecPro-Light';
+      font-size: 10px;
+      line-height: 12px;
+   }
+
+   .journal-main-photo__description-name{
+      display: none;
+   }
+
+   .journal-main-photo{
+      margin-bottom: 10px;
+   }
+
+   .journal-main-photo__description-right{
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .date-jour{
+      margin-left: 0;
+   }
+
+   .journal-main-photo__description{
+      margin-bottom: 40px;
+   }
+
+   .journal-news__item{
+      width: 100%;
+      padding: 0;
+      margin-bottom: 40px;
+   }
+
+   .journal-news__item-photo-wrapper{
+      margin-bottom: 10px;
+   }
+
+   .journal-archive__item{
+      width: 100%;
+   }
+
+
+}
 
 
 

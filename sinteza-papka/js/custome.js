@@ -6,7 +6,13 @@ $(document).ready(function(){
    $(".faq-open-close").click(function(){
       $(this).prev(".faq-link__answer").slideToggle(400);
       $(this).toggleClass("opened-answer");
-      $(this).addClass(".bottom-arr-opened");
+      $(this).find('.faq-button-arr').toggleClass("faq-button-arr-opened");
+   });
+
+/*Аккордеон на странице Журнала*/
+   $(".journal-open-close").click(function(){
+      $(this).prev(".journ-link__answer").slideToggle(400);
+      $(this).toggleClass("opened-answer");
       $(this).find('.faq-button-arr').toggleClass("faq-button-arr-opened");
    });
 

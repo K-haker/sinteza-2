@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <meta charset="UTF-8">
-   <title>Document</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Журнал</title>
 </head>
 <body>
    <header>
@@ -73,6 +75,12 @@
          <h1 class="journal-main-title">Журнал</h1>
       </div>
 
+
+     <div class="new-container">
+           <div class="journal-main-photo__description-name-mob-top">Новый формат общения «Кейс-школа»</div>
+     </div>
+
+
       <div class="new-container">
          <div class="journal-main-photo">
             <img src="img/journal/main-photo.jpg" alt="">
@@ -92,35 +100,12 @@
       <div class="new-container new-cont-big">
          <div class="journal-news__block">
 
-            <div class="journal-news__item">
-               <div class="journal-news__item-photo-wrapper">
-                  <img src="img/journal/journ-type-img.svg" alt="">
-               </div>
-               <div class="journal-news__item-description">
-                  <span class="news-journal-name">Новый формат общения «Кейс-школа»</span>
-                  <span class="news-journal-date">21 Октября 2020 г.</span>
-               </div>
-            </div>
 
-            <div class="journal-news__item">
-               <div class="journal-news__item-photo-wrapper">
-                  <img src="img/journal/news-img-1.jpg" alt="">
-               </div>
-               <div class="journal-news__item-description">
-                  <span class="news-journal-name">Новый формат общения «Кейс-школа»</span>
-                  <span class="news-journal-date">21 Октября 2020 г.</span>
-               </div>
-            </div>
 
-            <div class="journal-news__item">
-               <div class="journal-news__item-photo-wrapper">
-                  <img src="img/journal/news-img-2.jpg" alt="">
-               </div>
-               <div class="journal-news__item-description">
-                  <span class="news-journal-name">Новый формат общения «Кейс-школа»</span>
-                  <span class="news-journal-date">21 Октября 2020 г.</span>
-               </div>
-            </div>
+
+
+
+
 
             <div class="journal-news__item">
                <div class="journal-news__item-photo-wrapper">
@@ -152,6 +137,35 @@
                </div>
             </div>
 
+            <div class="journal-news__item">
+               <div class="journal-news__item-photo-wrapper">
+                  <img src="img/journal/journ-type-img.svg" alt="">
+               </div>
+               <div class="journal-news__item-description">
+                  <span class="news-journal-name">Новый формат общения «Кейс-школа»</span>
+                  <span class="news-journal-date">21 Октября 2020 г.</span>
+               </div>
+            </div>
+
+            <div class="journal-news__item">
+               <div class="journal-news__item-photo-wrapper">
+                  <img src="img/journal/news-img-1.jpg" alt="">
+               </div>
+               <div class="journal-news__item-description">
+                  <span class="news-journal-name">Новый формат общения «Кейс-школа»</span>
+                  <span class="news-journal-date">21 Октября 2020 г.</span>
+               </div>
+            </div>
+
+            <div class="journal-news__item">
+               <div class="journal-news__item-photo-wrapper">
+                  <img src="img/journal/news-img-2.jpg" alt="">
+               </div>
+               <div class="journal-news__item-description">
+                  <span class="news-journal-name">Новый формат общения «Кейс-школа»</span>
+                  <span class="news-journal-date">21 Октября 2020 г.</span>
+               </div>
+            </div>
          </div>
       </div>
 
@@ -179,8 +193,10 @@
 
 
      <div class="new-container arch-cont">
-         <div class="new-container">
-            <div class="journal-archive-block">
+        <div class="archive-title">Архив новостей и событий</div>
+
+         <div class="new-container journ-link__answer">
+            <div class="journal-archive-block open-close-archive-block">
                <div class="journal-archive">
                   <div class="journal-archive__item">
                      <div class="journal-archive__item-photo-wrapper">
@@ -275,20 +291,96 @@
          </div>
 
 
-<!--
-          <button class="journal-open-close">
-            <img class="faq-button-arr" src="img/faq/close-open-accord.svg" alt="">
+          <button class="journal-open-close journal-opened-close">
+            <img class="faq-button-arr faq-button-arr-opened" src="img/faq/close-open-accord.svg" alt="">
          </button>
--->
      </div>
-
-
-
-
-
-
    </main>
 
+
+
+   <footer>
+      <div class="footer-wrapper">
+         <div class="footer-top">
+            <div class="delivery-container">
+               <div class="footer-link__block">
+                  <div class="foter-link__block-item">
+                       <a href="">Instagram</a>
+                     <img src="img/footer/arow.svg" alt="">
+                  </div>
+
+                  <div class="foter-link__block-item">
+                       <a href="">Youtube</a>
+                     <img src="img/footer/arow.svg" alt="">
+                  </div>
+
+                  <div class="foter-link__block-item">
+                       <a href="">Facebook</a>
+                     <img src="img/footer/arow.svg" alt="">
+                  </div>
+
+                  <div class="foter-link__block-item">
+                       <a href="">Linkedin</a>
+                     <img src="img/footer/arow.svg" alt="">
+                  </div>
+               </div>
+
+               <div class="mailing">
+                  <div class="mailing-text">Подпишитесь на новостную рассылку от группы компаний Sinteza. Будем писать про мебель и строительство. Умеренно часто и без спама</div>
+
+                  <form class="mailing-form" action="">
+                     <input class="mailing-input" type="text" placeholder="Email">
+                     <button class="mailing-button">
+                        <img class="mailing-button__img" src="img/footer/yellow-arr.svg" alt="">
+                     </button>
+                  </form>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <div class="delivery-container">
+               <div class='footer-bottom__block'>
+                  <div class="footer-bottom__left">
+                       <div class="footer-bottom__left-left">
+                        <a href="">Мебель</a>
+                        <a href="">Оборудование</a>
+                        <a href="">Гарантия и сертификаты</a>
+                        <a href="">FAQ-вопросы</a>
+                        <a href="">Доставка и оплата</a>
+                       </div>
+                       <div class="footer-bottom__left-right">
+                        <a href="">Журнал</a>
+                        <a href="">О компании</a>
+                        <a href="">Режим AR</a>
+                        <a href="">Fit-out Sinteza</a>
+                        <a href="">Контакты</a>
+                       </div>
+                  </div>
+                  <div class="footer-bottom__right">
+                     <div class="footer-bottom__right-top">
+                          <div>Москва, ул. Нижняя Сыромятническая, д.10, к.2, 2 этаж</div>
+                        <a class="footer-telephone" href="tel:+74993223787">+7 (499) 322-37-87</a>
+                        <a href="mailto:order-05@zebrano.pro">order-05@zebrano.pro</a>
+                     </div>
+
+                     <div class="footer-bottom__right-bottom">
+                        <span>Политика конфиденциальности</span>
+                        <span>Дизайн и вёрстка - конечно,
+                           <a class="footer--max" href="">МАХ</a>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="js/custome.js"></script>
 
 </body>
 </html>
