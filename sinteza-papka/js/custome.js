@@ -16,12 +16,62 @@ $(document).ready(function(){
       $(this).find('.faq-button-arr').toggleClass("faq-button-arr-opened");
    });
 
-   /*Выпадающее Меню*/
+/*Выпадающее мобильное Меню*/
+   /*открытие меню*/
     $("#dropDownMenuButton").on("click", function(event) {
         event.preventDefault();
 
-        $("#dropDownMenu").toggleClass("drop-down-menu-active");
+        $("#dropDownMenu").addClass("drop-down-menu-active");
     });
+
+      /*закрытие меню*/
+      $("#closeDropdownMobMenu").on("click", function(){
+         $('#dropDownMenu').removeClass("drop-down-menu-active")
+      })
+
+
+
+/*появление вкладок мебель и оборудование*/
+   $('[data-open="furniture"]').on("click", function(e){
+      e.preventDefault();
+      $("#furitureMenuBlock").addClass("drop-down-menu-furniture-active");
+      $("#background-furn").addClass("drop-down-menu-furniture-active");
+      $("#furniture-block").addClass("dis-yes");
+   })
+
+   $('[data-open="equipment"]').on("click", function(e){
+      e.preventDefault();
+      $("#furitureMenuBlock").addClass("drop-down-menu-furniture-active");
+      $("#background-furn").addClass("drop-down-menu-furniture-active");
+      $("#equipment-block").addClass("dis-yes");
+   })
+
+/*Закрытие вкладки мебель/оборудование и возвращение к мобильному меню*/
+   $('[data-type="close-furniture-equipment"]').on("click", function(e){
+      e.preventDefault();
+      $("#furitureMenuBlock").removeClass("drop-down-menu-furniture-active");
+      $("#background-furn").removeClass("drop-down-menu-furniture-active");
+      $("#furniture-block").removeClass("dis-yes");
+      $("#equipment-block").removeClass("dis-yes");
+   })
+
+
+/*Закрыть вкладку мебель/оборудование и  мобильное меню*/
+   $('[data-type="close-mob-menu-and-furniture"]').on("click", function(e){
+      e.preventDefault();
+      $("#furitureMenuBlock").removeClass("drop-down-menu-furniture-active");
+      $("#dropDownMenu").removeClass("drop-down-menu-active");
+      $("#background-furn").removeClass("drop-down-menu-furniture-active");
+      $("#furniture-block").removeClass("dis-yes");
+      $("#equipment-block").removeClass("dis-yes");
+   })
+
+   $("#background-furn").on("click", function(){
+      $("#furitureMenuBlock").removeClass("drop-down-menu-furniture-active");
+      $("#background-furn").removeClass("drop-down-menu-furniture-active");
+      $("#furniture-block").removeClass("dis-yes");
+      $("#equipment-block").removeClass("dis-yes");
+   })
 
    /*Карусель на странице гарантий*/
 
@@ -210,7 +260,15 @@ if(window.outerWidth < 480){
 } catch{}
 })
 
-
+try{
+   if(window.outerWidth < 480){
+      mainSliderMainPageLeftArr.src = "img/main/mainSlWhiteAr.svg";
+      mainSliderMainPageRightArr.src = "img/main/mainSlWhiteAr.svg";
+   } else {
+      mainSliderMainPageLeftArr.src = "img/main/black-arr-sliders-main.svg";
+      mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
+   }
+} catch{}
 
 
 
