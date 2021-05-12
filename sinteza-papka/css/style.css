@@ -3907,6 +3907,12 @@ Media
    }
 }
 
+@media(max-width:1100px){
+   .menu-equipment-left-right{
+      margin-left: 50px;
+   }
+}
+
 @media(max-width:1026px){
    .menu-furniture-left{
       margin-left: 0;
@@ -3937,12 +3943,6 @@ Media
    }
 
 
-}
-
-@media(max-width:1100px){
-   .menu-equipment-left-right{
-      margin-left: 50px;
-   }
 }
 
 @media(max-width:810px){
@@ -4006,7 +4006,7 @@ Media
 
    .menu-equipment-left{
       overflow-y: scroll;
-      height: 100%;
+      height: 220px;
    }
 
    .menu-equipment-left{

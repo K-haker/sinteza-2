@@ -20,16 +20,13 @@ $(document).ready(function(){
    /*открытие меню*/
     $("#dropDownMenuButton").on("click", function(event) {
         event.preventDefault();
-
         $("#dropDownMenu").addClass("drop-down-menu-active");
     });
 
-      /*закрытие меню*/
-      $("#closeDropdownMobMenu").on("click", function(){
-         $('#dropDownMenu').removeClass("drop-down-menu-active")
-      })
-
-
+   /*закрытие меню*/
+   $("#closeDropdownMobMenu").on("click", function(){
+      $('#dropDownMenu').removeClass("drop-down-menu-active")
+   })
 
 /*появление вкладок мебель и оборудование*/
    $('[data-open="furniture"]').on("click", function(e){
@@ -37,6 +34,7 @@ $(document).ready(function(){
       $("#furitureMenuBlock").addClass("drop-down-menu-furniture-active");
       $("#background-furn").addClass("drop-down-menu-furniture-active");
       $("#furniture-block").addClass("dis-yes");
+      $("#mobFurnitureTopType").text("Мебель");
    })
 
    $('[data-open="equipment"]').on("click", function(e){
@@ -44,6 +42,7 @@ $(document).ready(function(){
       $("#furitureMenuBlock").addClass("drop-down-menu-furniture-active");
       $("#background-furn").addClass("drop-down-menu-furniture-active");
       $("#equipment-block").addClass("dis-yes");
+      $("#mobFurnitureTopType").text("Офисное оборудование")
    })
 
 /*Закрытие вкладки мебель/оборудование и возвращение к мобильному меню*/
