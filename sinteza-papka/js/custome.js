@@ -139,8 +139,9 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 
 });
 
-
+/***/
 /*JS*/
+/***/
 let firstSwiper = new Swiper(".swiper-1",{
    slidesPerView: 'auto',
    spaceBetween: 20,
@@ -243,42 +244,33 @@ let mainSliderMainPageRightArr = document.querySelector(".main-sl-r-ar");
 let mainSliderMainPageLeftArrPar = document.querySelector(".m-sl-main-l");
 let mainSliderMainPageRightArrPar = document.querySelector(".m-sl-main-r");
 
-
-
-
 window.addEventListener("resize", function(){
-   try{
-
-if(window.outerWidth < 480){
-   mainSliderMainPageLeftArr.src = "img/main/mainSlWhiteAr.svg";
-   mainSliderMainPageRightArr.src = "img/main/mainSlWhiteAr.svg";
-   } else {
-      mainSliderMainPageLeftArr.src = "img/main/black-arr-sliders-main.svg";
-      mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
-   }
-} catch{}
+   mainArrowsReplacingArrows();
 })
 
 try{
-   if(window.outerWidth < 480){
-      mainSliderMainPageLeftArr.src = "img/main/mainSlWhiteAr.svg";
-      mainSliderMainPageRightArr.src = "img/main/mainSlWhiteAr.svg";
+   mainArrowsReplacingArrows()
+} catch{}
+
+function mainArrowsReplacingArrows(){
+      if(window.outerWidth < 1200){
+      mainSliderMainPageLeftArr.src = "img/main/white-arr-sliders-main.svg";
+      mainSliderMainPageRightArr.src = "img/main/white-arr-sliders-main.svg";
    } else {
       mainSliderMainPageLeftArr.src = "img/main/black-arr-sliders-main.svg";
       mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
    }
-} catch{}
+}
 
-
-
-
-
-
-
-
-
-
-
+/*добавить/убрать первую/последнюю стрелку в слайдере*/
+//
+//let sliders = document.querySelectorAll(".swiper-wrapper");
+//
+//for(let i = 0; i<sliders.length; i++){            if(sliders[i].firstElementChild.classList.contains('swiper-slide-active')){
+//   sliders[i].closest(".main-container").querySelector('.l-arr').addClass("dis-none");
+//} else if()
+//
+//}
 
 
 

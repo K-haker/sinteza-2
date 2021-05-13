@@ -191,8 +191,8 @@ main{
    min-height: 11px;
    border-radius: 5.5px;
    position: absolute;
-   top: 6px;
-   left: 4px;
+   top: 5px;
+   left: 13px;
    background-color: #FFFFFF;
    font-size: 10px;
    line-height: 9px;
@@ -216,8 +216,8 @@ main{
 
 .header-icor-corcle img{
    position: absolute;
-   top: 9px;
-   right :4px;
+   top: 7px;
+   right :5px;
 }
 
 .header-left{
@@ -2650,10 +2650,12 @@ Media
 .arrows-in-slider-in-main{
    position: absolute;
    z-index: 200;
-
    top: 170px;
-
    padding: 0 10px;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .l-arr{
@@ -2693,10 +2695,6 @@ Media
    right: 0;
 }
 
-.m-sl-str-l{
-   visibility: hidden;
-}
-
 
 .main-cont-top{
    display: none;
@@ -2720,7 +2718,7 @@ Media
 }
 
 .main-slider-main .pag-main-slider-block{
-   padding: 4px 0;
+   padding: 4px 0 3px;
    margin: 0 auto;
    left: 0;
    right: 0;
@@ -2737,13 +2735,22 @@ Media
 
 
 .main-slider-main .swiper-pagination-bullet{
-   width: 5px;
-   height: 5px;
-   background-color: rgba(255, 255, 255, 0.8);
+   width: 4px;
+   height: 4px;
+   background-color: #D5D5D5;
+   border-radius: 0;
+   opacity: 1;
+   position: relative;
+   top: -1px;
 }
 
 .main-slider-main .swiper-pagination-bullet-active{
-   background: rgba(255, 255, 255, 1);
+   background: #FFFFFF;
+   border-radius: 0;
+   width: 6px;
+   height: 6px;
+   position: relative;
+   top:0;
 }
 
 
@@ -3028,7 +3035,7 @@ Media
    }
 
    .our-advantages__main-link .title-m{
-      font-size: 18px;
+      font-size: 14px;
       line-height: 18px;
       font-family: "CodecPro-news";
       margin-bottom: 8px;
@@ -3140,6 +3147,8 @@ Media
    .delete-apsn-mob-redact{
 
    }
+
+
 
 }
 
@@ -3717,7 +3726,7 @@ Media
    }
 
    .main-links__item span{
-      top: 7px;
+      top: 6px;
    }
 
 }
@@ -3954,6 +3963,9 @@ Media
 
 
 @media(max-width:768px){
+   .main-slider__signature-signatures{
+      width: 100%;
+   }
 }
 
 @media(max-width:700px){
@@ -4017,6 +4029,27 @@ Media
    .menu-equipment-left-main-contant,
    .menu-equipment-right-main-contant{
       margin-bottom: 10px;
+   }
+
+   .arrows-in-slider-in-main img{
+      width: 25px;
+   }
+
+   .arrows-in-slider-in-main{
+      margin: 0 5px;
+      padding: 2px 2px;
+
+      background-color: rgba(255,255,255, 0.4);
+   }
+
+   .m-sl-main-l img{
+      position: relative;
+      right: 1px;
+   }
+
+   .m-sl-main-r img{
+      position: relative;
+      left: 2px;
    }
 
 }
