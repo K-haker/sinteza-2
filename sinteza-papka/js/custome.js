@@ -262,16 +262,5 @@ function mainArrowsReplacingArrows(){
    }
 }
 
-/*добавить/убрать первую/последнюю стрелку в слайдере*/
-//
-//let sliders = document.querySelectorAll(".swiper-wrapper");
-//
-//for(let i = 0; i<sliders.length; i++){            if(sliders[i].firstElementChild.classList.contains('swiper-slide-active')){
-//   sliders[i].closest(".main-container").querySelector('.l-arr').addClass("dis-none");
-//} else if()
-//
-//}
-
-
 
 
