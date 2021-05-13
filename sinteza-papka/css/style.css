@@ -2415,12 +2415,12 @@ Media
 
 .our-advantages-main__wrapper{
    position: relative;
-   margin-bottom: 240px;
+   margin-bottom: 210px;
 }
 
 .our-advantages-main__wrapper:after{
    content:"";
-   height: 350px;
+   height: 320px;
    width: calc(100% + 300px);
    margin-left: -150px;
    background-color:#337A82;
@@ -2439,7 +2439,7 @@ Media
 }
 
 .our-advantages__main-title{
-   margin-bottom: 84px;
+   margin-bottom: 65px;
    font-size: 10px;
    line-height: 20px;
    color: #FFFFFF;
@@ -2452,7 +2452,7 @@ Media
    -webkit-box-pack: justify;
    -ms-flex-pack: justify;
    justify-content: space-between;
-   margin-top: 84px;
+   margin-top: 65px;
    flex-wrap: wrap;
 }
 
@@ -2854,7 +2854,7 @@ Media
    }
 
    .our-advantages-main__wrapper{
-      margin-bottom: 370px;
+      margin-bottom: 340px;
 
    }
 
@@ -4079,4 +4079,13 @@ Media
 
 .play-stop__block div{
    cursor: pointer;
+}
+
+.furniture-right-img-block{
+   width: 200px;
+   height: 90px;
+}
+
+.menu-furniture-right{
+   margin-top: 15px;
 }
