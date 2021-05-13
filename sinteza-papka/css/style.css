@@ -4053,6 +4053,10 @@ Media
       left: 2px;
    }
 
+   .menu-furniture-main{
+      padding-bottom: 30px;
+   }
+
 }
 
 .swiper-button-disabled{
@@ -4067,4 +4071,12 @@ Media
 .main-video__block a{
    color: #000000;
    text-decoration: none;
+}
+
+.play-stop__block img{
+   cursor: pointer;
+}
+
+.play-stop__block div{
+   cursor: pointer;
 }

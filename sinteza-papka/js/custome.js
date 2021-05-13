@@ -20,67 +20,68 @@ $(document).ready(function(){
    /*открытие меню*/
     $("#dropDownMenuButton").on("click", function(event) {
         event.preventDefault();
-        $("#dropDownMenu").show(300);
+        $("#dropDownMenu").slideDown(300);
     });
 
    /*закрытие меню*/
    $("#closeDropdownMobMenu").on("click", function(){
-      $('#dropDownMenu').hide(300);
+      $('#dropDownMenu').slideUp(300);
    })
 
 /*появление вкладок мебель и оборудование*/
    $('[data-open="furniture"]').on("click", function(e){
       e.preventDefault();
 
-      $("#furniture-block").removeClass("dis-yes");
-      $("#equipment-block").removeClass("dis-yes");
+      $("#furniture-block").slideUp(0);
+      $("#equipment-block").slideUp(0);
 
       $("#background-furn").addClass("drop-down-menu-furniture-active");
-      $("#furniture-block").addClass("dis-yes");
+      $("#furniture-block").slideDown(300);
       $("#mobFurnitureTopType").text("Мебель");
 
 
-      $("#furitureMenuBlock").show(300);
+      $("#furitureMenuBlock").slideDown(300);
    })
+
 
    $('[data-open="equipment"]').on("click", function(e){
       e.preventDefault();
 
-      $("#furniture-block").removeClass("dis-yes");
-      $("#equipment-block").removeClass("dis-yes");
+      $("#furniture-block").slideUp(0);
+      $("#equipment-block").slideUp(0);
 
       $("#background-furn").addClass("drop-down-menu-furniture-active");
-      $("#equipment-block").addClass("dis-yes");
+      $("#equipment-block").slideDown(300);
       $("#mobFurnitureTopType").text("Офисное оборудование");
 
-      $("#furitureMenuBlock").show(300);
+      $("#furitureMenuBlock").slideDown(300);
    })
 
 /*Закрытие вкладки мебель/оборудование и возвращение к мобильному меню*/
    $('[data-type="close-furniture-equipment"]').on("click", function(e){
       e.preventDefault();
-      $("#furitureMenuBlock").hide("300");
+      $("#furitureMenuBlock").slideUp(300);
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
-      $("#furniture-block").removeClass("dis-yes");
-      $("#equipment-block").removeClass("dis-yes");
+      $("#furniture-block").slideUp(300);
+      $("#equipment-block").slideUp(300);
    })
 
 
 /*Закрыть вкладку мебель/оборудование и  мобильное меню*/
    $('[data-type="close-mob-menu-and-furniture"]').on("click", function(e){
       e.preventDefault();
-      $("#furitureMenuBlock").hide("300");
-      $("#dropDownMenu").hide("300");
+      $("#furitureMenuBlock").slideUp(300);
+      $("#dropDownMenu").slideUp(300);
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
-      $("#furniture-block").removeClass("dis-yes");
-      $("#equipment-block").removeClass("dis-yes");
+      $("#furniture-block").slideUp(300);
+      $("#equipment-block").slideUp(300);
    })
 
    $("#background-furn").on("click", function(){
-      $("#furitureMenuBlock").hide("300");
+      $("#furitureMenuBlock").slideUp(300);
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
-      $("#furniture-block").removeClass("dis-yes");
-      $("#equipment-block").removeClass("dis-yes");
+      $("#furniture-block").slideUp(300);
+      $("#equipment-block").slideUp(300);
    })
 
    /*Карусель на странице гарантий*/
