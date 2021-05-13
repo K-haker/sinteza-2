@@ -20,35 +20,46 @@ $(document).ready(function(){
    /*открытие меню*/
     $("#dropDownMenuButton").on("click", function(event) {
         event.preventDefault();
-        $("#dropDownMenu").addClass("drop-down-menu-active");
+        $("#dropDownMenu").show(300);
     });
 
    /*закрытие меню*/
    $("#closeDropdownMobMenu").on("click", function(){
-      $('#dropDownMenu').removeClass("drop-down-menu-active")
+      $('#dropDownMenu').hide(300);
    })
 
 /*появление вкладок мебель и оборудование*/
    $('[data-open="furniture"]').on("click", function(e){
       e.preventDefault();
-      $("#furitureMenuBlock").addClass("drop-down-menu-furniture-active");
+
+      $("#furniture-block").removeClass("dis-yes");
+      $("#equipment-block").removeClass("dis-yes");
+
       $("#background-furn").addClass("drop-down-menu-furniture-active");
       $("#furniture-block").addClass("dis-yes");
       $("#mobFurnitureTopType").text("Мебель");
+
+
+      $("#furitureMenuBlock").show(300);
    })
 
    $('[data-open="equipment"]').on("click", function(e){
       e.preventDefault();
-      $("#furitureMenuBlock").addClass("drop-down-menu-furniture-active");
+
+      $("#furniture-block").removeClass("dis-yes");
+      $("#equipment-block").removeClass("dis-yes");
+
       $("#background-furn").addClass("drop-down-menu-furniture-active");
       $("#equipment-block").addClass("dis-yes");
-      $("#mobFurnitureTopType").text("Офисное оборудование")
+      $("#mobFurnitureTopType").text("Офисное оборудование");
+
+      $("#furitureMenuBlock").show(300);
    })
 
 /*Закрытие вкладки мебель/оборудование и возвращение к мобильному меню*/
    $('[data-type="close-furniture-equipment"]').on("click", function(e){
       e.preventDefault();
-      $("#furitureMenuBlock").removeClass("drop-down-menu-furniture-active");
+      $("#furitureMenuBlock").hide("300");
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
       $("#furniture-block").removeClass("dis-yes");
       $("#equipment-block").removeClass("dis-yes");
@@ -58,15 +69,15 @@ $(document).ready(function(){
 /*Закрыть вкладку мебель/оборудование и  мобильное меню*/
    $('[data-type="close-mob-menu-and-furniture"]').on("click", function(e){
       e.preventDefault();
-      $("#furitureMenuBlock").removeClass("drop-down-menu-furniture-active");
-      $("#dropDownMenu").removeClass("drop-down-menu-active");
+      $("#furitureMenuBlock").hide("300");
+      $("#dropDownMenu").hide("300");
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
       $("#furniture-block").removeClass("dis-yes");
       $("#equipment-block").removeClass("dis-yes");
    })
 
    $("#background-furn").on("click", function(){
-      $("#furitureMenuBlock").removeClass("drop-down-menu-furniture-active");
+      $("#furitureMenuBlock").hide("300");
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
       $("#furniture-block").removeClass("dis-yes");
       $("#equipment-block").removeClass("dis-yes");
@@ -134,8 +145,6 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
   });
    $(".background-for-big-slide").fadeIn(300);
 });
-
-
 
 });
 
@@ -261,6 +270,32 @@ function mainArrowsReplacingArrows(){
       mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
    }
 }
+
+
+/*Видео на главной*/
+
+let videoMain = document.querySelector("#videoOnMainPage");
+let videoMainButton = document.querySelector(".play-stop__block");
+
+
+function playVideo(e){
+   event.stopPropagation();
+   videoMain.play();
+   videoMainButton.style.display="none";
+}
+
+function pauseVideo(){
+   videoMain.pause();
+   videoMainButton.style.display="";
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -161,7 +161,6 @@ header{
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
-   margin-bottom: 34px;
    z-index: 800;
    width: 100%;
    max-width: 1200px;
@@ -2498,6 +2497,7 @@ Media
    left: 50%;
    transform: translate(-50%, -50%);
    text-align: center;
+   z-index: 400;
 }
 
 .play-stop__block div{
@@ -2664,6 +2664,7 @@ Media
 
 .r-arr{
    right: -50px;
+
 }
 
 .main-cont-sl-1{
@@ -4058,6 +4059,12 @@ Media
    visibility: hidden;
 }
 
+.l-arr,
+.r-arr{
+   cursor: pointer;
+}
 
-
-
+.main-video__block a{
+   color: #000000;
+   text-decoration: none;
+}
