@@ -633,21 +633,21 @@
 
 
       <div class="main-container main-block-video">
-         <div class="main-video__block">
-            <video class="main-video__item" src="video/main-video.mp4"  poster="img/main/video-img.jpg"></video>
+         <div onclick="pauseVideo()" class="main-video__block">
+            <video id="videoOnMainPage" class="main-video__item" src="video/main-video.mp4" poster="img/main/video-img.jpg"  preload="auto"  type="video/mp4"></video>
 
-            <a class="see-your-eyes-block">
+            <a href="#" class="see-your-eyes-block">
                <span>Увидеть своими глазами</span>
                <img src="img/main/blac-arr-video.svg" alt="">
             </a>
-              <a class="see-your-eyes-block-mini">
+              <a href="#" class="see-your-eyes-block-mini">
                <span>Увидеть своими глазами</span>
                <img src="img/main/blac-arr-video.svg" alt="">
             </a>
 
 
 
-            <div class="play-stop__block">
+            <div onclick="playVideo()" class="play-stop__block">
                <img src="img/main/play-triangle.svg" alt="">
                <div>Play</div>
             </div>
