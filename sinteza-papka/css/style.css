@@ -3865,6 +3865,8 @@ Media
    color: #000000;
    font-family: "CodecPro-Regular";
 
+   font-size: 14px;
+   line-height: 16px;
    padding: 5px 0;
    margin-bottom: 17px;
 }
@@ -4089,3 +4091,178 @@ Media
 .menu-furniture-right{
    margin-top: 15px;
 }
+
+
+
+/*****************************************************/
+/*Product card*/
+
+.general-info-product__nav{
+   padding-top: 25px;
+}
+
+.general-info-product__nav{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   max-width: 400px;
+   margin-bottom: 30px;
+}
+
+.general-info-product__nav a{
+   text-decoration: none;
+   color: #000000;
+   font-family: "CodecPro-Regular";
+   font-size: 12px;
+   line-height: 10px;
+}
+
+.general-info-product{
+   display: flex;
+}
+
+.general-info-product__info{
+   width: 50%;
+}
+
+.product-info__name{
+   font-family: "CodecPro-Bold";
+   font-size: 67px;
+   line-height: 70px;
+   margin-bottom: 3px;
+}
+
+.product-info__bread-block{
+   margin-bottom: 23px;
+   font-size: 10px;
+   line-height:12px ;
+   color: #676767;
+}
+
+.general-info-product__price{
+   font-size: 30px;
+   line-height: 30px;
+   margin-bottom: 20px;
+}
+
+.general-info-product__parameters-block{
+   width: 100%;
+   max-width:330px ;
+   margin-bottom: 15px;
+}
+
+.product__parameters-block-item{
+   width: 100%;
+   border-bottom: 2px solid #000000;
+   margin-bottom: 15px;
+}
+
+.product__parameters-block-item__name{
+   font-family: "CodecPro-Regular";
+   font-size: 10px;
+   line-height:20px ;
+   color: #000000;
+   opacity: 0.4;
+   margin-bottom: 3px;
+}
+
+.info-product-meaning{
+   font-size: 16px;
+   line-height: 24px;
+}
+
+.product__parameters-block-item__bottom{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.product__parameters-block-item__bottom img{
+   position: relative;
+   right: 5px;
+   cursor: pointer;
+}
+
+.product-actions-block{
+   display: flex;
+   align-items: center;
+   margin-top: 30px;
+   margin-left: -15px;
+   margin-bottom: 30px;
+}
+
+.product__in-buscket{
+   width: 296px;
+   padding: 15px 0 13px 14px ;
+   background-color: #000000;
+   color:#FFFFFF;
+   display: flex;
+   align-items: center;
+   margin-right: 17px;
+}
+
+.product__in-buscket img{
+   margin-left: 6px;
+   position: relative;
+   top: -3px;
+}
+
+.product-actions-block .str{
+   margin-right: 20px;
+}
+
+.product-actions-block div{
+   cursor: pointer;
+}
+
+.download-3d-model{
+   color:#676767;
+   font-size: 14px;
+   line-height: 24px;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   margin-bottom: 56px;
+}
+
+.download-3d-model img{
+   position: relative;
+   top: 1px;
+   margin-left: 5px;
+}
+
+.other-information__nav{
+   padding: 26px 0 24px ;
+   font-size: 16px;
+   line-height: 24px;
+   margin-bottom: 20px;
+}
+
+.count-wr{
+   opacity: 0.4;
+}
+
+.other-information__nav{
+   display: flex;
+}
+
+.other-information__nav-item{
+   margin-right: 40px;
+}
+
+.other-information__nav-item-active{
+   border-bottom: 2px solid #000000;
+}
+
+.other-information__photo-slider-wrapper{
+   margin-bottom: 80px;
+}
+
+
+
+
+
+
+
+
+

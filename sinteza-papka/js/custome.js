@@ -292,9 +292,15 @@ function pauseVideo(){
 
 
 
+/*Слайдеры на карточке товара*/
 
+let productCardPhotoSlider = new Swiper(".other-information__photo-slider-wrapper",{
+   slidesPerView: 'auto',
+   spaceBetween: 20,
+   navigation:{
 
-
+   },
+});
 
 
 
