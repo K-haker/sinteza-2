@@ -12,7 +12,7 @@ $(document).ready(function(){
 /*Аккордеон на странице Журнала*/
    $(".journal-open-close").click(function(){
       $(this).prev(".journ-link__answer").slideToggle(400);
-      $(this).toggleClass("opened-answer");
+//      $(this).toggleClass("opened-answer");
       $(this).find('.faq-button-arr').toggleClass("faq-button-arr-opened");
    });
 
@@ -87,7 +87,7 @@ $(document).ready(function(){
    })
 
 
-   /*Закрытике при клике рна подложку*/
+   /*Закрытике при клике на подложку*/
    $("#background-furn").on("click", function(){
       $("#furitureMenuBlock").slideUp(300);
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
@@ -310,13 +310,35 @@ function pauseVideo(){
 
 let productCardPhotoSlider = new Swiper(".other-information__photo-slider-wrapper",{
    slidesPerView: 'auto',
-   spaceBetween: 20,
+   spaceBetween: 30,
    navigation:{
 
    },
 });
 
+let productCardStoriesSlider = new Swiper(".stories-slider-product-card",{
+   slidesPerView: 'auto',
+   spaceBetween: 120,
+   navigation:{
+      nextEl:".p-c-sl-str-r",
+      prevEl:".p-c-sl-str-l",
+   },
+});
 
+let productCardBottomSlider = new Swiper(".product-slider-bottom",{
+   slidesPerView: 'auto',
+   spaceBetween: 20,
+   navigation:{
+      nextEl:".p-c-sl-b-r",
+      prevEl:".p-c-sl-b-l",
+   },
+});
 
-
-
+let productCardReviewsSlider = new Swiper(".reviews-slider-product-card",{
+   slidesPerView: 'auto',
+   spaceBetween: 85,
+   navigation:{
+      nextEl:".p-c-sl-reviews-r",
+      prevEl:".p-c-sl-reviews-l",
+   },
+});

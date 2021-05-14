@@ -3396,14 +3396,12 @@ Media
 }
 
 .journal-open-close.journal-opened-close{
-   top: calc(100% - 120px);
+   top: 43px;
    transform: translate(0, -100%);
    right: 10px;
+   cursor: pointer;
 }
 
-.journal-open-close.journal-opened-close.opened-answer{
-   top: calc(100% - 80px);
-}
 
 .journ-link__answer{
    margin-top: 50px;
@@ -4284,6 +4282,98 @@ Media
 }
 
 .f-w-bold{
-   font-family: "CodecPro-Bold"
+   font-family: "CodecPro-Bold";
 }
+
+.stories-slider-product-card{
+   margin-bottom: 80px;
+}
+
+.slider-prod-csrd-bottom .coll-slider__link-photo__wrapper{
+   width: 216px;
+   height: 216px;
+}
+
+.slider-prod-csrd-bottom .coll-slider__link .coll-slider__link-photo__wrapper img{
+   max-width: 90%;
+   max-height: 90%;
+}
+
+.m-c-pc-b-s{
+   margin-bottom: 90px;
+}
+
+.prodcard-title-slider-bottom{
+   line-height: 24px;
+   margin-bottom: 40px;
+}
+
+.reviews-name,
+.reviews-post{
+   font-size: 13px;
+   line-height: 17px;
+   font-family: "CodecPro-Regular";
+}
+
+.reviews-post{
+   opacity: 0.4;
+   margin-bottom: 15px;
+}
+
+.reviews-review{
+   font-size: 16px;
+   line-height: 24px;
+   max-height: 190px;
+}
+
+.reviews-sl-main-wrapp-link{
+   max-width: 362px;
+}
+
+.reviews-slider-product-card{
+   margin-bottom: 80px;
+}
+
+.read-more-button-reviews{
+   font-size: 14px;
+   font-family: "CodecPro-Bold";
+   line-height: 24px;
+   position: relative;
+   bottom:0;
+   z-index: 200;
+}
+
+.see-in-interier{
+   position: absolute;
+   top: 20px;
+   right: -70px;
+   padding: 18px 26px 21px 28px;
+   font-family: "CodecPro-Regular";
+   color: #FFFFFF;
+   background-color:rgba(255, 87, 0, 0.8);
+   display: flex;
+   align-items: center;
+}
+
+.see-in-interier img{
+   position: relative;
+   top: -1px;
+   margin-left: 6px;
+}
+
+.see-in-interier span{
+   position: relative;
+   top: 3px;
+}
+
+.general-info-product__img-block{
+   position: relative;
+}
+
+
+
+
+
+
+
 
