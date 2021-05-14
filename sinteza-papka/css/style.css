@@ -4487,11 +4487,157 @@ Media
    color: #676767;
 }
 
+.in-stock-prod-card{
+   color:#000000;
+   display: none;
+   opacity: 0.3;
+   font-size: 10px;
+   line-height: 18px;
+   margin-left: 7px;
+   position: relative;
+   top: -3px;
+}
+
+.general-info-product__price{
+   display: flex;
+   align-items: flex-end;
+}
+
+.black-arr-main-info-img{
+   display: none;
+}
+
+.see-in-interier-mobile{
+   width: calc(100% + 20px);
+   padding: 18px 0 21px 10px;
+   background-color: #FFF767;
+   display: block;
+   text-decoration: none;
+   color: #000000;
+   margin-left: -10px;
+   font-family: "CodecPro-Regular";
+   display: none;
+   margin-bottom: 40px;
+}
+
+.see-in-interier-mobile img{
+   position: relative;
+   top: 1px;
+}
 
 
+/* */
 
 
+@media(max-width: 480px){
+   .general-info-product__img-block{
+      display: none;
+   }
 
+   .general-info-product__nav{
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .general-info-product__nav a{
+      margin: 0;
+   }
+
+   .other-information__nav{
+      overflow-x: scroll;
+   }
+
+   .other-information__nav-item{
+      font-size: 12px;
+      line-height: 24px;
+      margin-right: 18px;
+   }
+
+   .general-info-product{
+      display: block;
+   }
+
+   .general-info-product__info{
+      width: 100%;
+   }
+
+   .product-info__name{
+      font-size: 18px;
+      line-height: 20px;
+      font-family: "CodecPro-Regular";
+      margin-bottom: 6px;
+   }
+
+   .product-info__bread-block{
+      margin-bottom: 12px;
+   }
+
+   .general-info-product__price{
+      font-size: 26px;
+      line-height: 31px;
+      font-family: "CodecPro-Bold";
+   }
+   .in-stock-prod-card{
+      display: block;
+   }
+
+   .black-triangle-main-info-img{
+      display: none;
+   }
+
+   .black-arr-main-info-img{
+      display: block;
+   }
+
+   .info-product-meaning{
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   .prod-card__star-img-wrapper,
+   .prod-card-share{
+      display: none;
+   }
+
+   .product__in-buscket{
+      margin-right: 0;
+   }
+
+   .product-actions-block{
+      margin-left: 0;
+   }
+
+   .download-3d-model{
+      font-size: 12px;
+      line-height: 24px;
+      margin-bottom: 9px;
+   }
+
+   .see-in-interier-mobile{
+      display: block;
+   }
+   .other-information__nav{
+      padding: 0;
+   }
+
+   .product-card__description{
+      display: block;
+      margin-bottom: 40px;
+   }
+
+   .product-card__description-left{
+      width: 100%;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 20px;
+   }
+
+   .product-card__description-right{
+      font-size: 14px;
+      line-height: 21px;
+      width: 100%;
+   }
+}
 
 
 
