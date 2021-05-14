@@ -312,7 +312,8 @@ let productCardPhotoSlider = new Swiper(".other-information__photo-slider-wrappe
    slidesPerView: 'auto',
    spaceBetween: 30,
    navigation:{
-
+      nextEl:".arrs-sl-prod-card-first-r",
+      prevEl:".arrs-sl-prod-card-first-l",
    },
 });
 
@@ -342,3 +343,5 @@ let productCardReviewsSlider = new Swiper(".reviews-slider-product-card",{
       prevEl:".p-c-sl-reviews-l",
    },
 });
+
+
