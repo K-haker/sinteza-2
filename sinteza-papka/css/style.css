@@ -3713,7 +3713,7 @@ Media
    }
 
    .journal-open-close.journal-opened-close{
-      top:38px;
+      top:40px;
    }
 
    .journal-open-close.journal-opened-close.opened-answer{
@@ -4353,6 +4353,9 @@ Media
    background-color:rgba(255, 87, 0, 0.8);
    display: flex;
    align-items: center;
+   text-decoration: none;
+   font-size: 14px;
+   line-height: 18px;
 }
 
 .see-in-interier img{
