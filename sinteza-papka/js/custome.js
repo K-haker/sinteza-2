@@ -276,15 +276,15 @@ try{
    mainArrowsReplacingArrows()
 } catch{}
 
-function mainArrowsReplacingArrows(){
-      if(window.outerWidth < 1200){
-      mainSliderMainPageLeftArr.src = "img/main/white-arr-sliders-main.svg";
-      mainSliderMainPageRightArr.src = "img/main/white-arr-sliders-main.svg";
-   } else {
-      mainSliderMainPageLeftArr.src = "img/main/black-arr-sliders-main.svg";
-      mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
-   }
-}
+//function mainArrowsReplacingArrows(){
+//      if(window.outerWidth < 1200){
+//      mainSliderMainPageLeftArr.src = "img/main/white-arr-sliders-main.svg";
+//      mainSliderMainPageRightArr.src = "img/main/white-arr-sliders-main.svg";
+//   } else {
+//      mainSliderMainPageLeftArr.src = "img/main/black-arr-sliders-main.svg";
+//      mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
+//   }
+//}
 
 
 /*Видео на главной*/
