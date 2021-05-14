@@ -702,7 +702,7 @@ footer{
 }
 
 .our-delivery-h{
-   margin-bottom: 80px;
+   margin-bottom: 65px;
    font-size: 10px;
    line-height: 20px;
    color: #FFFFFF;
@@ -2452,7 +2452,7 @@ Media
    -webkit-box-pack: justify;
    -ms-flex-pack: justify;
    justify-content: space-between;
-   margin-top: 65px;
+   margin-top: 80px;
    flex-wrap: wrap;
 }
 
@@ -2929,7 +2929,7 @@ Media
    }
 
    .main-video__block{
-      margin-bottom: 10px;
+      margin-bottom: 43px;
    }
 
    .our-advantages__main-content{
@@ -2958,6 +2958,8 @@ Media
    .main-links__item .circle{
       width: 28px;
       height: 28px;
+      position: relative;
+      top: 1px;
    }
 
    .main-links__item span{
@@ -2971,6 +2973,7 @@ Media
    .main-links__item .arrow{
       width: 25px;
       height: 25px;
+      top: 2px;
    }
 
    .main-links__item:nth-child(1){
@@ -3097,7 +3100,7 @@ Media
    .see-your-eyes-block-mini{
       padding: 15px 18px 13px 10px;
       display: block;
-      bottom: 2px;
+      bottom: -32px;
       left: 0;
       background-color:#FFF658;
       position: absolute;
@@ -4258,11 +4261,29 @@ Media
    margin-bottom: 80px;
 }
 
+.product-card__description{
+   display: flex;
+   font-size: 16px;
+   line-height: 24px;
+   margin-bottom: 80px;
+}
 
+.product-card__description-left{
+   font-family: "CodecPro-Bold";
+   width: 45%;
+}
 
+.product-card__description-right{
+   width: 55%;
+}
 
+.product-card__viseo-description{
+   box-sizing: 16px;
+   line-height: 14px;
+   margin-bottom: 80px;
+}
 
-
-
-
+.f-w-bold{
+   font-family: "CodecPro-Bold"
+}
 

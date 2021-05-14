@@ -39,7 +39,8 @@ $(document).ready(function(){
       $("#furniture-block").slideDown(300);
       $("#mobFurnitureTopType").text("Мебель");
 
-
+      $('[data-open="equipment"]').removeClass("f-w-bold");
+      $('[data-open="furniture"]').addClass("f-w-bold");
       $("#furitureMenuBlock").slideDown(300);
    })
 
@@ -54,6 +55,9 @@ $(document).ready(function(){
       $("#equipment-block").slideDown(300);
       $("#mobFurnitureTopType").text("Офисное оборудование");
 
+
+      $('[data-open="furniture"]').removeClass("f-w-bold");
+      $('[data-open="equipment"]').addClass("f-w-bold");
       $("#furitureMenuBlock").slideDown(300);
    })
 
@@ -64,6 +68,9 @@ $(document).ready(function(){
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
       $("#furniture-block").slideUp(300);
       $("#equipment-block").slideUp(300);
+
+      $('[data-open="furniture"]').removeClass("f-w-bold");
+      $('[data-open="equipment"]').removeClass("f-w-bold");
    })
 
 
@@ -75,13 +82,20 @@ $(document).ready(function(){
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
       $("#furniture-block").slideUp(300);
       $("#equipment-block").slideUp(300);
+      $('[data-open="furniture"]').removeClass("f-w-bold");
+      $('[data-open="equipment"]').removeClass("f-w-bold");
    })
 
+
+   /*Закрытике при клике рна подложку*/
    $("#background-furn").on("click", function(){
       $("#furitureMenuBlock").slideUp(300);
       $("#background-furn").removeClass("drop-down-menu-furniture-active");
       $("#furniture-block").slideUp(300);
       $("#equipment-block").slideUp(300);
+
+      $('[data-open="furniture"]').removeClass("f-w-bold");
+      $('[data-open="equipment"]').removeClass("f-w-bold");
    })
 
    /*Карусель на странице гарантий*/
