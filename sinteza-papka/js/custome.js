@@ -268,23 +268,16 @@ let mainSliderMainPageRightArr = document.querySelector(".main-sl-r-ar");
 let mainSliderMainPageLeftArrPar = document.querySelector(".m-sl-main-l");
 let mainSliderMainPageRightArrPar = document.querySelector(".m-sl-main-r");
 
-window.addEventListener("resize", function(){
-   mainArrowsReplacingArrows();
-})
+
+try{
+   window.addEventListener("resize", function(){
+      mainArrowsReplacingArrows();
+   })
+} catch{}
 
 try{
    mainArrowsReplacingArrows()
 } catch{}
-
-//function mainArrowsReplacingArrows(){
-//      if(window.outerWidth < 1200){
-//      mainSliderMainPageLeftArr.src = "img/main/white-arr-sliders-main.svg";
-//      mainSliderMainPageRightArr.src = "img/main/white-arr-sliders-main.svg";
-//   } else {
-//      mainSliderMainPageLeftArr.src = "img/main/black-arr-sliders-main.svg";
-//      mainSliderMainPageRightArr.src = "img/main/black-arr-sliders-main.svg";
-//   }
-//}
 
 
 /*Видео на главной*/
@@ -315,6 +308,19 @@ let productCardPhotoSlider = new Swiper(".other-information__photo-slider-wrappe
       nextEl:".arrs-sl-prod-card-first-r",
       prevEl:".arrs-sl-prod-card-first-l",
    },
+   pagination:{
+      el:'.prod-card__photo-slider-dots',
+      clickable: true,
+   },
+   breakpoints:{
+      480:{
+         spaceBetween:10,
+      },
+      1200:{
+         spaceBetween:30,
+      },
+
+   },
 });
 
 let productCardStoriesSlider = new Swiper(".stories-slider-product-card",{
@@ -323,6 +329,19 @@ let productCardStoriesSlider = new Swiper(".stories-slider-product-card",{
    navigation:{
       nextEl:".p-c-sl-str-r",
       prevEl:".p-c-sl-str-l",
+   },
+   breakpoints:{
+      10:{
+         spaceBetween:25,
+      },
+
+      480:{
+         spaceBetween:55,
+      },
+      1200:{
+         spaceBetween:130,
+      },
+
    },
 });
 
@@ -337,11 +356,25 @@ let productCardBottomSlider = new Swiper(".product-slider-bottom",{
 
 let productCardReviewsSlider = new Swiper(".reviews-slider-product-card",{
    slidesPerView: 'auto',
-   spaceBetween: 85,
+   spaceBetween: 20,
    navigation:{
       nextEl:".p-c-sl-reviews-r",
       prevEl:".p-c-sl-reviews-l",
    },
 });
+
+
+let productCardMobilesSlider = new Swiper(".prod-card__mob-slider-wrapper",{
+   slidesPerView: 1 ,
+   navigation:{
+      nextEl:".mob-slider-arrow-r",
+      prevEl:".mob-slider-arrow-l",
+   },
+   pagination:{
+      el:'.prod-card__mob-slider-wrapper-pagg',
+      clickable: true,
+   },
+});
+
 
 
