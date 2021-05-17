@@ -1,14 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style.css">
 
-     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
    <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Document</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Карточка товара</title>
 </head>
 <body>
+
+
+<!--
+<div class="slide-left__color">
+   <div class="slide-left__color-title">Цвет</div>
+   <div class="slide-left__color-variants"> <span>11</span> вариантов</div>
+   <div class="slide-left__colors-variants">
+
+      <div class="colors-variants-item">
+         <div class="colors-variants-item-img-wrap">
+            <div class="colors-variants-item-img">
+               <img src="img/product-card/color-1.jpg" alt="">
+            </div>
+         </div>
+         <div class="colors-variants-item__info">
+            <input type="radio">
+            <span>Коричневый</span>
+         </div>
+      </div>
+
+      <div class="colors-variants-item">
+         <div class="colors-variants-item-img-wrap">
+            <div class="colors-variants-item-img">
+               <img src="img/product-card/color-1.jpg" alt="">
+            </div>
+         </div>
+         <div class="colors-variants-item__info">
+            <input type="radio">
+            <span>Коричневый</span>
+         </div>
+      </div>
+
+      <div class="colors-variants-item">
+         <div class="colors-variants-item-img-wrap">
+            <div class="colors-variants-item-img">
+               <img src="img/product-card/color-1.jpg" alt="">
+            </div>
+         </div>
+         <div class="colors-variants-item__info">
+            <input type="radio">
+            <span>Коричневый</span>
+         </div>
+      </div>
+
+   </div>
+
+
+   <button class="slide-left__color-chice-button">
+      <span>Выбрать</span>
+      <img src="img/product-card/choice-color-prod-arr.svg" alt="">
+   </button>
+</div>
+-->
+
+
+<!--
+<div class="slide-left__complectation">
+   <div class="slide-left__complectation-title">Комплектация</div>
+   <div class="slide-left__complectation-counter-block">
+      <span>13</span>
+      <span>вариантов</span>
+   </div>
+
+   <div class="slide-left__complectation-variants">
+      <div class="slide-left__complectation-variants__item">
+         <div class="complectation-variants__item-photo">
+            <div class="complectation-variants__item-photo-wrapper">
+               <img src="img/product-card/podushka.jpg" alt="">
+            </div>
+         </div>
+         <div class="slide-left__complectation-variants__item-info">
+            <div class="comp-var-left-side">
+               <input type="radio">
+            </div>
+            <div class="comp-var-right-side">
+               <div class="comp-var-right-side__name">Подушка под голову</div>
+               <div class="comp-var-right-side__info">Удобнее сидеть, <br> визуально эстетичнее</div>
+               <div class="comp-var-right-side__price">4 489 Р</div>
+            </div>
+         </div>
+      </div>
+
+      <div class="slide-left__complectation-variants__item">
+         <div class="complectation-variants__item-photo">
+            <div class="complectation-variants__item-photo-wrapper">
+               <img src="img/product-card/spinka.jpg" alt="">
+            </div>
+         </div>
+         <div class="slide-left__complectation-variants__item-info">
+            <div class="comp-var-left-side">
+               <input type="radio">
+            </div>
+            <div class="comp-var-right-side">
+               <div class="comp-var-right-side__name">Подушка под голову</div>
+               <div class="comp-var-right-side__info">Удобнее сидеть, <br> визуально эстетичнее</div>
+               <div class="comp-var-right-side__price">4 489 Р</div>
+            </div>
+         </div>
+      </div>
+
+      <div class="slide-left__complectation-variants__item">
+         <div class="complectation-variants__item-photo">
+            <div class="complectation-variants__item-photo-wrapper">
+               <img src="img/product-card/podushka.jpg" alt="">
+            </div>
+         </div>
+         <div class="slide-left__complectation-variants__item-info">
+            <div class="comp-var-left-side">
+               <input type="radio">
+            </div>
+            <div class="comp-var-right-side">
+               <div class="comp-var-right-side__name">Подушка под голову</div>
+               <div class="comp-var-right-side__info">Удобнее сидеть, <br> визуально эстетичнее</div>
+               <div class="comp-var-right-side__price">4 489 Р</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+-->
+
+
+
+
+<div class="slide-left__size">
+
+   <div class="slide-left__size-title">Размер</div>
+   <div class="slide-left__size-counter-block">
+      <span>3</span>
+      <span>вариантa</span>
+   </div>
+     <div class='slide-left__size-variants'>
+
+        <div class="slide-left__size-variants-item">
+            <input type="radio">
+            <div>60 х 60 х 70 см</div>
+        </div>
+
+        <div class="slide-left__size-variants-item">
+            <input type="radio">
+            <div>74 х 62 х 105 см</div>
+        </div>
+
+        <div class="slide-left__size-variants-item">
+            <input type="radio">
+            <div>80 х 80 х 90 см</div>
+        </div>
+
+     </div>
+</div>
+
+
+
 
 
 <header>
@@ -176,7 +329,7 @@
    </header>
 
 
-<main>
+<main class="prod-card-main">
  <div class="main-info-product__block">
     <div class="new-container">
       <div class="general-info-product__nav">
@@ -184,6 +337,52 @@
          <a href="">Мебель</a>
          <a href="">Офисные кресла</a>
       </div>
+
+      <div class="star-share__block-mob">
+         <div class="prod-card__star-img-wrapper   prod-card__star-img-wrapper-active st-sh-bl-mob-bl  st-sh-bl-mob-bl-star">
+            <img src="img/product-card/product-start.svg" alt="">
+         </div>
+         <div class="prod-card-share st-sh-bl-mob-bl">
+            <img src="img/product-card/vector-prod.svg" alt="">
+         </div>
+      </div>
+
+
+      <div class="prod-card__mob-slider-wrapper swiper-container">
+
+         <div class="mob-slider-arrow mob-slider-arrow-l">
+           <img src="img/product-card/mob-sl-arr-l.svg" alt="">
+           </div>
+
+           <div class="mob-slider-arrow mob-slider-arrow-r">
+           <img src="img/product-card/mob-sl-arr-r.svg" alt="">
+           </div>
+
+         <div class="prod-card__mob-slider swiper-wrapper">
+            <div class="prod-card__mob-slider-item swiper-slide">
+               <img src="img/product-card/mob-sl.jpg" alt="">
+            </div>
+
+            <div class="prod-card__mob-slider-item swiper-slide">
+               <img src="img/product-card/mob-sl.jpg" alt="">
+            </div>
+
+            <div class="prod-card__mob-slider-item swiper-slide">
+               <img src="img/product-card/mob-sl.jpg" alt="">
+            </div>
+
+            <div class="prod-card__mob-slider-item swiper-slide">
+               <img src="img/product-card/mob-sl.jpg" alt="">
+            </div>
+
+         </div>
+
+         <div class="prod-card__mob-slider-wrapper-pagg"></div>
+      </div>
+
+
+
+
       <div class="general-info-product">
          <div class="general-info-product__info">
             <h1 class="product-info__name">Стул Family Look M ZWC-1</h1>
@@ -193,6 +392,9 @@
                <span>Арт. M ZWC-1</span>
             </div>
             <div class="general-info-product__price"> <span class="prc">23 900 </span> ₽ <span class="in-stock-prod-card"> В наличии</span></div>
+
+            <div class="complectation-mob">Стандартная комплектация</div>
+
             <div class="general-info-product__parameters-block">
                <div class="product__parameters-block-item">
                   <div class="product__parameters-block-item__name">Цвет</div>
@@ -295,11 +497,15 @@
      <div class="new-container cont-sl-first-prod-card">
 
        <div class="arrows-in-slider-in-main arrs-sl-prod-card-first arrs-sl-prod-card-first-l p-c-sl-first-sl-l l-arr ">
-         <img class="main-sl-l-ar"  src="img/main/black-arr-sliders-main.svg" alt="">
+         <img class="main-sl-l-ar prod-card-photo-sl-arr"  src="img/main/black-arr-sliders-main.svg" alt="">
+
+         <img class="main-telephone-arrows main-sl-l-ar" src="img/main/white-arr-sliders-main.svg" alt="">
       </div>
 
       <div class="arrows-in-slider-in-main arrs-sl-prod-card-first arrs-sl-prod-card-first-r p-c-sl-first-sl-r r-arr">
-         <img class="main-sl-r-ar" src="img/main/black-arr-sliders-main.svg" alt="">
+         <img class="main-sl-r-ar prod-card-photo-sl-arr" src="img/main/black-arr-sliders-main.svg" alt="">
+
+         <img class="main-telephone-arrows main-sl-r-ar" src="img/main/white-arr-sliders-main.svg" alt="">
       </div>
 
         <div class="other-information__photo-slider-wrapper swiper-container">
@@ -324,6 +530,10 @@
                  <div class="photo-slider__item swiper-slide">
                     <img src="img/product-card/photo-slider-1.jpg" alt="">
                  </div>
+
+
+            </div>
+            <div class="prod-card__photo-slider-dots">
             </div>
         </div>
      </div>
@@ -342,6 +552,12 @@
             </div>
          </div>
      </div>
+   </div>
+
+   <div class="new-container">
+      <div class="product-card__viseo-description  prod-curd__video-descr-mob">
+         Видео-обзор на офисное кресло
+      </div>
    </div>
 
    <div class="new-container">
