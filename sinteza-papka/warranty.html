@@ -6,15 +6,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <title>Document</title>
 </head>
 <body>
 
-   <header>
+<header>
       <div class="delivery-container">
-         <div class="header-block">
+         <div class="header-block header-block__main">
             <div class="header-left">
               <div id="dropDownMenuButton" class="drop-down-menu__button">
                   <img src="img/header/line-menu.svg" alt="">
@@ -22,24 +20,49 @@
               </div>
 
                <div id="dropDownMenu" class="drop-down-menu">
-                  <a href="" class="header-left__link">Мебель</a>
-                  <a href="" class="header-left__link">Оборудование</a>
-                  <a href="" class="header-left__link">Журнал</a>
-                  <a href="" class="header-left__link">Режим AR</a>
-                  <a href="" class="header-left__link">Доставка и оплата</a>
-                  <a href="" class="header-left__link header-left__link-sinteza-arr">
-                     <span>Fit-out Sinteza</span>
-                  </a>
+                  <div class="dropdown-menu-wrapper">
+                    <div class="drop-down-menu-top">
+                       <div class="drop-down-menu-links">
+                             <a href="#" data-open="furniture" class="header-left__link">Мебель
+                              <img src="img/header/drop-menu-arr-black.svg" alt="">
+                           </a>
+                           <a href="#" data-open="equipment" class="header-left__link">Оборудование
+                              <img src="img/header/drop-menu-arr-black.svg" alt="">
+                           </a>
+                           <a href="" class="header-left__link">Журнал</a>
+                           <a href="" class="header-left__link">Режим AR</a>
+                           <a href="" class="header-left__link">Доставка и оплата</a>
+                           <a href="" class="header-left__link header-left__link-sinteza-arr">
+                              <span>Fit-out Sinteza</span>
+                           </a>
+                       </div>
+                         <div class='drop-down-menu__top-right'>
+                           <div id="closeDropdownMobMenu" class="close-mobile-dropdown-menu">
+                              <img src="img/header/drop-down-menu-mobile-close-krest.svg" alt="">
+                           </div >
 
-                  <a class="header-left__link" href="tel:+74993223787">+7 (499) 322-37-87</a>
+                         </div>
+                    </div>
+
+
+                       <div class="drop-down-menu-contacts">
+                            <div class="cont-title"> Контакты</div>
+                             <a class="drop-down-contacts" href="tel:+74993223787">
+                                <img src="img/header/drop-down-menu-tel-img.svg" alt=""> +7 (499) 322-37-87
+                             </a>
+                             <a class="drop-down-contacts" href="mailto:order-05@zebrano.pro">
+                                <img src="img/header/drop-down-meu-email-img.svg" alt=""> order-05@zebrano.pro
+                             </a>
+                       </div>
+                    </div>
                </div>
 
                <a href="#" class="header-left__link-logo">
                   <img src="img/header/logo.svg" alt="">
                   <span>Интернет-магазин</span>
                </a>
-               <a href="" class="header-left__link">Мебель</a>
-               <a href="" class="header-left__link">Оборудование</a>
+               <a data-open="furniture" href="" class="header-left__link">Мебель</a>
+               <a data-open="equipment" href="" class="header-left__link">Оборудование</a>
                <a href="" class="header-left__link">Журнал</a>
                <a href="" class="header-left__link">Режим AR</a>
                <a href="" class="header-left__link">Доставка и оплата</a>
@@ -48,6 +71,7 @@
                   <img src="img/header/sinteza-arrow.svg" alt="">
                </a>
             </div>
+
 
             <div class="header-right">
                <div class="header-telephone">
@@ -64,16 +88,98 @@
                      <img src="img/header/user.svg" alt="">
                   </div>
                   <div class="header-icon header-icor-corcle">
-                       <div class="header-counter">123</div>
-                     <img src="img/header/in-black-circle.svg" alt="">
+                       <div class="header-counter">23</div>
+                     <img src="img/header/Truck.svg" alt="">
                   </div>
                </div>
             </div>
          </div>
       </div>
+
+
+
+      <div id="furitureMenuBlock" class="drop-down-menu-furniture">
+        <div class="new-container">
+          <div class="mob-furniture-top">
+             <div data-type="close-furniture-equipment">
+                <img src="img/header/furnit-top-arrow-black.svg" alt="">
+             </div>
+             <div id="mobFurnitureTopType" class="mob-furniture-top-type"></div>
+             <div data-type="close-mob-menu-and-furniture">
+                <img src="img/header/furnit-top-krest-black.svg" alt="">
+             </div>
+          </div>
+
+           <div class="menu-furniture-main">
+              <div id="furniture-block" class="furn-left-wrapp">
+               <div class="menu-furniture-left">
+                 <div class="menu-furniture-left__left">
+                    <a href="#">Столы</a>
+                  <a href="#">Офисные кресла</a>
+                  <a href="#">Кабинеты</a>
+                  <a href="#">Кухни</a>
+                  <a href="#">Мягкая мебель</a>
+                  <a href="#">Переговорные</a>
+                 </div>
+
+                 <div class="menu-furniture-left__right">
+                    <a href="#">Бенч-системы</a>
+                  <a href="#">Бенч-системы Комбо</a>
+                  <a href="#">Ресепшен</a>
+                  <a href="#">Смарт столы</a>
+                  <a href="#">Шкафы и стеллажи</a>
+                  <a href="#">Коллекция Family Look</a>
+                 </div>
+
+               </div>
+            </div>
+
+
+            <div id="equipment-block" class="equip-left-wrapp">
+               <div class="menu-equipment-left">
+                  <div class="menu-equipment-left-left">
+                     <div class="menu-equipment-left-title">Оргтехника</div>
+                     <div class="menu-equipment-left-main-contant">
+                        <a href="#">Принтеры</a>
+                        <a href="#">Сканеры</a>
+                        <a href="#">Копиры</a>
+                        <a href="#">МФУ</a>
+                        <a href="#">Шредеры</a>
+                        <a href="#">Маркировочные <br> машинки</a>
+                     </div>
+                  </div>
+                  <div class="menu-equipment-left-right">
+                     <div class="menu-equipment-right-title">Презентационное оборудование</div>
+                     <div class="menu-equipment-right-main-contant">
+                        <a href="#">Видео-панели</a>
+                        <a href="#">Экраны</a>
+                        <a href="#">телевизоры</a>
+                        <a href="#">Видео-наблюдение</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+
+
+
+
+               <div class="menu-furniture-right">
+                  <a href="#" class="furniture-right-img-block">
+                     <img src="img/header/Mask%20Group.jpg" alt="">
+                  </a>
+                    <div class="furniture-right-img-description">
+                       <span>Мебель по подписке</span>
+                       <span>Акция</span>
+                    </div>
+               </div>
+            </div>
+           </div>
+         </div>
    </header>
 
 
+   <div id="background-furn" class="background-furniture"></div>
 
    <main>
       <div class="warranty-container">
@@ -197,7 +303,7 @@
                      </div>
 
                      <div class="footer-bottom__right-bottom">
-                        <span>Политика&nbspконфиденциальности</span>
+                        <span>Политика&nbsp;конфиденциальности</span>
                         <span class="dis-ver-max">Дизайн и вёрстка &mdash; <br class="mobile-br">конечно,
                            <a class="footer--max" href="">МАХ</a>
                         </span>
@@ -212,7 +318,7 @@
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
    <script src="js/jquery.waterwheelCarousel.min.js"></script>
-   <script src="js/slick.min.js"></script>
+<!--   <script src="js/slick.min.js"></script>-->
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script src="js/custome.js"></script>
 </body>
