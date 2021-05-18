@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
    <link rel="stylesheet" href="css/style.css">
-
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Карточка товара</title>
@@ -11,7 +11,7 @@
 <body>
 
 
-<div id="qqqwwwee" data-type="productCardsWindows" class="slide-left__color">
+<div id="productCardsWindowColor" data-type="productCardsWindows" class="slide-left__color">
    <div class="slide-left__color-title">Цвет</div>
    <div class="slide-left__color-variants"> <span>11</span> вариантов</div>
    <div class="slide-left__colors-variants">
@@ -55,43 +55,63 @@
    </div>
 
 
+   <div class="slide-left__colors-slider_wrapper swiper-container">
+      <div data-type="prodCardMobSlColors"  class="slide-left__colors-slider swiper-wrapper">
 
-   <div data-type="prodCardMobSlColors"  class="slide-left__colors-slider">
-
-      <div class="slide-left__colors-slider-item">
-         <div class="slide-left__colors-slider-item__photo">
-            <div class="slide-left__colors-slider-item__photo-wrapper">
-               <img src="img/product-card/colors-mob-sl.jpg" alt="">
+         <div class="slide-left__colors-slider-item swiper-slide">
+            <div class="slide-left__colors-slider-item__photo">
+               <div class="slide-left__colors-slider-item__photo-wrapper">
+                  <img src="img/product-card/colors-mob-sl.jpg" alt="">
+               </div>
             </div>
+            <div class="slide-left__colors-slider-item-color">Лазурный</div>
          </div>
-         <div>Лазурный</div>
+
+         <div class="slide-left__colors-slider-item swiper-slide">
+            <div class="slide-left__colors-slider-item__photo">
+               <div class="slide-left__colors-slider-item__photo-wrapper">
+                  <img src="img/product-card/colors-mob-sl.jpg" alt="">
+               </div>
+            </div>
+            <div class="slide-left__colors-slider-item-color">Лазурный</div>
+         </div>
+
+         <div class="slide-left__colors-slider-item swiper-slide">
+            <div class="slide-left__colors-slider-item__photo">
+               <div class="slide-left__colors-slider-item__photo-wrapper">
+                  <img src="img/product-card/colors-mob-sl.jpg" alt="">
+               </div>
+            </div>
+            <div class="slide-left__colors-slider-item-color">Лазурный</div>
+         </div>
+
+         <div class="slide-left__colors-slider-item swiper-slide">
+            <div class="slide-left__colors-slider-item__photo">
+               <div class="slide-left__colors-slider-item__photo-wrapper">
+                  <img src="img/product-card/colors-mob-sl.jpg" alt="">
+               </div>
+            </div>
+            <div class="slide-left__colors-slider-item-color">Лазурный</div>
+         </div>
+
+         <div class="slide-left__colors-slider-item swiper-slide">
+            <div class="slide-left__colors-slider-item__photo">
+               <div class="slide-left__colors-slider-item__photo-wrapper">
+                  <img src="img/product-card/colors-mob-sl.jpg" alt="">
+               </div>
+            </div>
+            <div class="slide-left__colors-slider-item-color">Лазурный</div>
+         </div>
 
       </div>
 
-      <div class="slide-left__colors-slider-item">
-         <div class="slide-left__colors-slider-item__photo">
-            <div class="slide-left__colors-slider-item__photo-wrapper">
-               <img src="img/product-card/colors-mob-sl.jpg" alt="">
-            </div>
-         </div>
-         <div>Лазурный</div>
+      <div class="slide-left__colors-slider-arr colors-mob-slider-arr-l">
+         <img src="img/product-card/mob-sl-arr-l.svg" alt="">
       </div>
-
-      <div class="slide-left__colors-slider-item">
-         <div class="slide-left__colors-slider-item__photo">
-            <div class="slide-left__colors-slider-item__photo-wrapper">
-               <img src="img/product-card/colors-mob-sl.jpg" alt="">
-            </div>
-         </div>
-         <div>Лазурный</div>
+      <div class="slide-left__colors-slider-arr colors-mob-slider-arr-r">
+         <img src="img/product-card/mob-sl-arr-r.svg" alt="">
       </div>
-
-
-
    </div>
-
-      <div class="slide-left__colors-slider-arr colors-slider-arr-l"></div>
-      <div class="slide-left__colors-slider-arr colors-slider-arr-r"></div>
 
 
    <button class="slide-left__color-chice-button">
@@ -104,7 +124,8 @@
    </div>
 </div>
 
-<div data-type="productCardsWindows" class="slide-left__complectation">
+
+<div id="productCardsWindowComplectation" data-type="productCardsWindows" class="slide-left__complectation">
    <div class="slide-left__complectation-title">Комплектация</div>
    <div class="slide-left__complectation-counter-block">
       <span>13</span>
@@ -167,6 +188,60 @@
       </div>
    </div>
 
+
+
+      <div class="slide-left__complectation-slider_wrapper swiper-container">
+         <div data-type="prodCardMobSlcomplectation"  class="slide-left__complectation-slider swiper-wrapper">
+
+            <div class="slide-left__complectation-slider-item swiper-slide">
+               <div class="slide-left_complectations-slider-item__photo">
+                  <div class="slide-left__complectation-slider-item__photo-wrapper">
+                     <img src="img/product-card/qwerty-1.jpg" alt="">
+                  </div>
+               </div>
+               <div class="slide-left__complectation-slider-item--info">
+                  <div>Подушка под голову</div>
+                  <div>4 489 Р</div>
+               </div>
+            </div>
+
+            <div class="slide-left__complectation-slider-item swiper-slide">
+               <div class="slide-left_complectations-slider-item__photo">
+                  <div class="slide-left__complectation-slider-item__photo-wrapper">
+                     <img src="img/product-card/colors-mob-sl.jpg" alt="">
+                  </div>
+               </div>
+               <div class="slide-left__complectation-slider-item--info">
+                  <div>Подушка под голову</div>
+                  <div>4 489 Р</div>
+               </div>
+            </div>
+
+            <div class="slide-left__complectation-slider-item swiper-slide">
+               <div class="slide-left_complectations-slider-item__photo">
+                  <div class="slide-left__complectation-slider-item__photo-wrapper">
+                     <img src="img/product-card/colors-mob-sl.jpg" alt="">
+                  </div>
+               </div>
+               <div class="slide-left__complectation-slider-item--info">
+                  <div>Подушка под голову</div>
+                  <div>4 489 Р</div>
+               </div>
+            </div>
+
+         </div>
+
+         <div class="slide-left__colors-slider-arr complectation-mob-slider-arr-left">
+            <img src="img/product-card/mob-sl-arr-l.svg" alt="">
+         </div>
+         <div class="slide-left__colors-slider-arr complectation-mob-slider-arr-right">
+            <img src="img/product-card/mob-sl-arr-r.svg" alt="">
+         </div>
+      </div>
+
+
+
+
    <button class="slide-left__color-chice-button">
       <span>Выбрать</span>
       <img src="img/product-card/choice-color-prod-arr.svg" alt="">
@@ -179,8 +254,7 @@
 
 
 
-
-<div data-type="productCardsWindows" class="slide-left__size">
+<div id="productCardsWindowSize" data-type="productCardsWindows" class="slide-left__size">
 
    <div class="slide-left__size-title">Размер</div>
    <div class="slide-left__size-counter-block">
@@ -216,8 +290,11 @@
    </div>
 </div>
 
-<div data-type="productCardsWindows" class="slide-left__material">
-   <div class="slide-left__material-title">Размер</div>
+
+
+
+<div id="productCardsWindowMaterial" data-type="productCardsWindows" class="slide-left__material">
+   <div class="slide-left__material-title">Материал</div>
    <div class="slide-left__material-counter-block">
       <span>3</span>
       <span>вариантa</span>
@@ -255,6 +332,51 @@
       </div>
 
    </div>
+
+
+      <div class="slide-left__material-slider_wrapper swiper-container">
+         <div data-type="prodCardMobSlMaterial"  class="slide-left__material-slider swiper-wrapper">
+
+            <div class="slide-left__material-slider-item swiper-slide">
+               <div class="slide-left_material-slider-item__photo">
+                  <div class="slide-left__material-slider-item__photo-wrapper">
+                     <img src="img/product-card/qwerty-1.jpg" alt="">
+                  </div>
+               </div>
+               <div class="slide-left__material-slider-item--info">      K369 Туманность Небьюла
+               </div>
+            </div>
+
+            <div class="slide-left__material-slider-item swiper-slide">
+               <div class="slide-left_material-slider-item__photo">
+                  <div class="slide-left__material-slider-item__photo-wrapper">
+                     <img src="img/product-card/qwerty-1.jpg" alt="">
+                  </div>
+               </div>
+               <div class="slide-left__material-slider-item--info">      K369 Туманность Небьюла
+               </div>
+            </div>
+
+            <div class="slide-left__material-slider-item swiper-slide">
+               <div class="slide-left_material-slider-item__photo">
+                  <div class="slide-left__material-slider-item__photo-wrapper">
+                     <img src="img/product-card/qwerty-1.jpg" alt="">
+                  </div>
+               </div>
+               <div class="slide-left__material-slider-item--info">      K369 Туманность Небьюла
+               </div>
+            </div>
+
+         </div>
+
+         <div class="slide-left__colors-slider-arr material-mob-slider-arr-left">
+            <img src="img/product-card/mob-sl-arr-l.svg" alt="">
+         </div>
+         <div class="slide-left__colors-slider-arr material-mob-slider-arr-right">
+            <img src="img/product-card/mob-sl-arr-r.svg" alt="">
+         </div>
+      </div>
+
 
    <button class="slide-left__color-chice-button">
       <span>Выбрать</span>
@@ -440,6 +562,8 @@
 
 
    <div id="background-furn" class="background-furniture"></div>
+
+
 <main class="prod-card-main">
  <div class="main-info-product__block">
     <div class="new-container">
@@ -496,7 +620,7 @@
 
       <div class="general-info-product">
          <div class="general-info-product__info">
-            <h1 class="product-info__name">Стул Family Look M ZWC-1</h1>
+            <h1 class="product-info__name">Письменный стол квинт из массива дерева и встроеннной тумбой 160х120</h1>
             <div class="product-info__bread-block">
                <a href="#">Коллекция Family Look</a>
                <div class="bread-circle"></div>
@@ -515,7 +639,7 @@
                         <path d="M0 0L-4.37114e-07 10L5 5L0 0Z" fill="#676767"/>
                      </svg>
 
-                     <img class="black-arr-main-info-img" src="img/product-card/Path.svg" alt="">
+                     <img id="openMobileBlockColor" class="black-arr-main-info-img" src="img/product-card/Path.svg" alt="">
                   </div>
                </div>
 
@@ -526,7 +650,7 @@
                      <svg id="proCardOpenMaterialsBlock" class="black-triangle-main-info-img" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0L-4.37114e-07 10L5 5L0 0Z" fill="#676767"/>
                      </svg>
-                     <img class="black-arr-main-info-img" src="img/product-card/Path.svg" alt="">
+                     <img id="openMobileBlockMaterial" class="black-arr-main-info-img" src="img/product-card/Path.svg" alt="">
                   </div>
                </div>
 
@@ -537,7 +661,7 @@
                      <svg id="proCardOpenSizeBlock" class="black-triangle-main-info-img" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0L-4.37114e-07 10L5 5L0 0Z" fill="#676767"/>
                      </svg>
-                     <img class="black-arr-main-info-img" src="img/product-card/Path.svg" alt="">
+                     <img id="openMobileBlockSize" class="black-arr-main-info-img" src="img/product-card/Path.svg" alt="">
                   </div>
                </div>
 
@@ -548,7 +672,7 @@
                      <svg id="proCardOpenComplectationBlock" class="black-triangle-main-info-img" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0L-4.37114e-07 10L5 5L0 0Z" fill="#676767"/>
                      </svg>
-                     <img class="black-arr-main-info-img" src="img/product-card/Path.svg" alt="">
+                     <img id="openMobileBlockComplectation" class="black-arr-main-info-img" src="img/product-card/Path.svg" alt="">
                   </div>
                </div>
             </div>
@@ -1032,8 +1156,6 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
-   <script src="js/jquery.waterwheelCarousel.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
    <script src="js/custome.js"></script>
 
