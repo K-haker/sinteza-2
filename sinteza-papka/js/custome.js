@@ -161,6 +161,34 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
    $(".background-for-big-slide").fadeIn(300);
 });
 
+
+   /*Фиксированное положение хедера*/
+
+
+
+   /*Фиксированое положение блока на карточке товара*/
+
+
+
+   /*Открытие боковых панеделей на карточке товара при клике на треугольники/стрелочки*/
+   $("#proCardOpenColorsBlock").on("click", function(){
+      $("#qqqwwwee").addClass("qwerty");
+   })
+
+
+   /*Закрытие всех боковых окон при нажатии на крестик*/
+   $('[data-type="closeWindowsProductCard"]').on('click', function(){
+      $('[data-type="productCardsWindows"]').removeClass("qwerty")
+   })
+
+   /*Слайдеры на мобильных вариантах выпадающих блоков*/
+
+//   var waterWheel = $('#qqqwwwee').waterwheelCarousel({
+//    separation: 300,
+//    opacityMultiplier: 0.5,
+//    horizon: 0,
+//    flankingItems: 2,
+//   })
 });
 
 /***/
