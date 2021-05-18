@@ -74,7 +74,7 @@ $(document).ready(function(){
    })
 
 
-/*Закрыть вкладку мебель/оборудование и  мобильное меню*/
+   /*Закрыть вкладку мебель/оборудование и  мобильное меню*/
    $('[data-type="close-mob-menu-and-furniture"]').on("click", function(e){
       e.preventDefault();
       $("#furitureMenuBlock").slideUp(300);
@@ -165,34 +165,68 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
    /*Фиксированное положение хедера*/
 
 
-
+/*работа с карточкой товаров*/
    /*Фиксированое положение блока на карточке товара*/
 
 
 
-   /*Открытие боковых панеделей на карточке товара при клике на треугольники/стрелочки*/
+   /*Открытие боковых панелей на карточке товара при клике на треугольники/стрелочки*/
    $("#proCardOpenColorsBlock").on("click", function(){
-      $("#qqqwwwee").addClass("qwerty");
+       $("#productCardsWindowColor").animate({'left':'0px'},300)
+   });
+
+   $("#proCardOpenComplectationBlock").on("click", function(){
+      $("#productCardsWindowComplectation").animate({'left':'0px'},300)
+   });
+
+   $("#proCardOpenSizeBlock").on("click", function(){
+       $("#productCardsWindowSize").animate({'left':'0px'},300)
+   });
+
+   $("#proCardOpenMaterialsBlock").on("click", function(){
+     $("#productCardsWindowMaterial").animate({'left':'0px'},300)
+   });
+
+   /*открытие мобильных блоков*/
+   $("#openMobileBlockColor").on('click', function(){
+      $("#productCardsWindowColor").animate({'bottom':'0px'},300);
+      $("#background-furn").addClass("dis-bl");
+   })
+
+   $("#openMobileBlockMaterial").on('click', function(){
+      $("#productCardsWindowMaterial").animate({'bottom':'0px'},300)
+      $("#background-furn").addClass("dis-bl");
+   })
+
+   $("#openMobileBlockSize").on('click', function(){
+      $("#productCardsWindowSize").animate({'bottom':'0px'},300)
+      $("#background-furn").addClass("dis-bl");
+   })
+
+   $("#openMobileBlockComplectation").on('click', function(){      $("#productCardsWindowComplectation").animate({'bottom':'0px'},300);
+      $("#background-furn").addClass("dis-bl");
    })
 
 
    /*Закрытие всех боковых окон при нажатии на крестик*/
-   $('[data-type="closeWindowsProductCard"]').on('click', function(){
-      $('[data-type="productCardsWindows"]').removeClass("qwerty")
-   })
+
+   if($(window).width() > 480){
+      $('[data-type="closeWindowsProductCard"]').on('click', function(){
+         $('[data-type="productCardsWindows"]').animate({'left':'-414px'},300);
+      })
+   }else{
+      $('[data-type="closeWindowsProductCard"]').on('click', function(){
+         $('[data-type="productCardsWindows"]').animate({'bottom':'-700'},300);
+         $("#background-furn").removeClass("dis-bl");
+      })
+   }
 
    /*Слайдеры на мобильных вариантах выпадающих блоков*/
 
-//   var waterWheel = $('#qqqwwwee').waterwheelCarousel({
-//    separation: 300,
-//    opacityMultiplier: 0.5,
-//    horizon: 0,
-//    flankingItems: 2,
-//   })
 });
 
 /***/
-/*JS*/
+/*начало JS кода*/
 /***/
 let firstSwiper = new Swiper(".swiper-1",{
    slidesPerView: 'auto',
@@ -291,21 +325,21 @@ let mainSliderThird = new Swiper(".main-slider-4",{
 
 /*Смена вида стрелок на главном слайдере главной страницы*/
 
-let mainSliderMainPageLeftArr = document.querySelector(".main-sl-l-ar");
-let mainSliderMainPageRightArr = document.querySelector(".main-sl-r-ar");
-let mainSliderMainPageLeftArrPar = document.querySelector(".m-sl-main-l");
-let mainSliderMainPageRightArrPar = document.querySelector(".m-sl-main-r");
+//let mainSliderMainPageLeftArr = document.querySelector(".main-sl-l-ar");
+//let mainSliderMainPageRightArr = document.querySelector(".main-sl-r-ar");
+//let mainSliderMainPageLeftArrPar = document.querySelector(".m-sl-main-l");
+//let mainSliderMainPageRightArrPar = document.querySelector(".m-sl-main-r");
 
 
-try{
-   window.addEventListener("resize", function(){
-      mainArrowsReplacingArrows();
-   })
-} catch{}
-
-try{
-   mainArrowsReplacingArrows()
-} catch{}
+//try{
+//   window.addEventListener("resize", function(){
+//      mainArrowsReplacingArrows();
+//   })
+//} catch{}
+//
+//try{
+//   mainArrowsReplacingArrows()
+//} catch{}
 
 
 /*Видео на главной*/
@@ -403,6 +437,63 @@ let productCardMobilesSlider = new Swiper(".prod-card__mob-slider-wrapper",{
       clickable: true,
    },
 });
+
+
+
+
+
+/*Слайдеры на странице карточки товара*/
+
+let productCardMobilesSliderColorWindow = new Swiper(".slide-left__colors-slider_wrapper",{
+   slidesPerView:'auto',
+   navigation:{
+      nextEl:".colors-mob-slider-arr-r",
+      prevEl:".colors-mob-slider-arr-l",
+   },
+   speed:300,
+   spaceBetween: 20,
+   slidesPerGroup:1,
+   centeredSlides: true,
+});
+
+
+let productCardMobilesSliderComplectationWindow = new Swiper(".slide-left__complectation-slider_wrapper",{
+   slidesPerView:'auto',
+   navigation:{
+      nextEl:".complectation-mob-slider-arr-right",
+      prevEl:".complectation-mob-slider-arr-left",
+   },
+   speed:300,
+   spaceBetween: 20,
+   slidesPerGroup:1,
+   centeredSlides: true,
+});
+
+let productCardMobilesSliderMaterialsWindow = new Swiper(".slide-left__material-slider_wrapper",{
+   slidesPerView:'auto',
+   navigation:{
+      nextEl:".material-mob-slider-arr-right",
+      prevEl:".material-mob-slider-arr-left",
+   },
+   speed:300,
+   spaceBetween: 20,
+   slidesPerGroup:1,
+   centeredSlides: true,
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
