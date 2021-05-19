@@ -482,16 +482,50 @@ let productCardMobilesSliderMaterialsWindow = new Swiper(".slide-left__material-
 });
 
 
+//let prodCardSliderPopUpReviewsPhotos = new Swiper(".prod-card-reviews-slider",{
+//   navigation:{
+//      nextEl:".review-slider-photos__right-arr",
+//      prevEl:".review-slider-photos__left-arr",
+//   },
+//   slidesPerView: 1,
+//   slidesPerGroup:1,
+//});
 
 
+let reviewsPhotosGroup = document.querySelectorAll(".reviews-photos");
+let reviewsPhotosGroupSlider = document.querySelectorAll(".review-slider-photos-block");
 
 
+for( let i = 0; i<reviewsPhotosGroup.length; i++){
+   reviewsPhotosGroup[i].addEventListener("click", function(){
+      let childrenOfPhotoreviewsBlock = reviewsPhotosGroup[i].querySelectorAll('.reviews-photos-item__wrapper img')
 
+      for(i=0; i<childrenOfPhotoreviewsBlock.length; i++){
+        let srcImg = childrenOfPhotoreviewsBlock[i].getAttribute('src');
 
+         console.log(srcImg);
 
+         reviewsPhotosGroupSlider.insertAdjacentHTML("beforeend",
+         `
+            <div class="review-slider-photos-item swiper-slide">
+              <img src=${srcImg} alt="">
+           </div>
+         `
+         )
+      }
+   })
+}
 
-
-
+setTimeout(function(){
+   let prodCardSliderPopUpReviewsPhotos = new Swiper(".prod-card-reviews-slider",{
+      navigation:{
+         nextEl:".review-slider-photos__right-arr",
+         prevEl:".review-slider-photos__left-arr",
+      },
+      slidesPerView: 1,
+      slidesPerGroup:1,
+   });
+}, 1000)
 
 
 
