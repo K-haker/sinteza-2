@@ -188,24 +188,26 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
    });
 
    /*открытие мобильных блоков*/
-   $("#openMobileBlockColor").on('click', function(){
-      $("#productCardsWindowColor").animate({'bottom':'0px'},300);
-      $("#background-furn").addClass("dis-bl");
-   })
+   if($(window).width()< 481){
+      $('[data-open="openMobileBlockColor"]').on('click', function(){
+         $("#productCardsWindowColor").animate({'bottom':'0px'},300);
+         $("#background-furn").addClass("dis-bl");
+      })
 
-   $("#openMobileBlockMaterial").on('click', function(){
-      $("#productCardsWindowMaterial").animate({'bottom':'0px'},300)
-      $("#background-furn").addClass("dis-bl");
-   })
+      $('[data-open="openMobileBlockMaterial"]').on('click', function(){
+         $("#productCardsWindowMaterial").animate({'bottom':'0px'},300)
+         $("#background-furn").addClass("dis-bl");
+      })
 
-   $("#openMobileBlockSize").on('click', function(){
-      $("#productCardsWindowSize").animate({'bottom':'0px'},300)
-      $("#background-furn").addClass("dis-bl");
-   })
+      $('[data-open="openMobileBlockSize"]').on('click', function(){
+         $("#productCardsWindowSize").animate({'bottom':'0px'},300)
+         $("#background-furn").addClass("dis-bl");
+      })
 
-   $("#openMobileBlockComplectation").on('click', function(){      $("#productCardsWindowComplectation").animate({'bottom':'0px'},300);
-      $("#background-furn").addClass("dis-bl");
-   })
+      $("[data-open='openMobileBlockComplectation']").on('click', function(){      $("#productCardsWindowComplectation").animate({'bottom':'0px'},300);
+         $("#background-furn").addClass("dis-bl");
+      })
+   }
 
 
    /*Закрытие всех боковых окон при нажатии на крестик*/
@@ -213,6 +215,7 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
    if($(window).width() > 480){
       $('[data-type="closeWindowsProductCard"]').on('click', function(){
          $('[data-type="productCardsWindows"]').animate({'left':'-414px'},300);
+         $("#background-furn").removeClass("dis-bl");
       })
    }else{
       $('[data-type="closeWindowsProductCard"]').on('click', function(){
@@ -238,8 +241,15 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 
 
    /*Фиксированный блок при скролле над слайдером*/
-//   console.log($(".other-information__nav").offset().top)
-//   if($(window).scrollTop === )
+
+   $(window).on("scroll", function() {
+
+      let scrollTop = $(window).scrollTop()
+      if(scrollTop === $(".other-information__nav").offset().top){
+         console.log("Tadam!");
+      }
+      console.log($(window).scrollTop())
+    });
 
 });
 
