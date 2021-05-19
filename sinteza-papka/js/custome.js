@@ -235,6 +235,12 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
       $(".read-more-button-reviews").removeClass("dis-none");
    })
 
+
+
+   /*Фиксированный блок при скролле над слайдером*/
+//   console.log($(".other-information__nav").offset().top)
+//   if($(window).scrollTop === )
+
 });
 
 /***/
@@ -270,7 +276,7 @@ let secondSwiper = new Swiper(".swiper-2",{
 
 /*слайдеры на главной*/
 
-let mainSliderMain = new Swiper(".main-slider-main",{
+var mainSliderMain = new Swiper(".main-slider-main",{
    slidesPerView: '1',
    pagination:{
       el:'.pag-main-slider-block',
@@ -282,7 +288,7 @@ let mainSliderMain = new Swiper(".main-slider-main",{
    },
 });
 
-let mainSliderFirst = new Swiper(".main-slider-1",{
+var mainSliderFirst = new Swiper(".main-slider-1",{
    slidesPerView: 'auto',
    spaceBetween: 20,
    navigation:{
@@ -291,7 +297,7 @@ let mainSliderFirst = new Swiper(".main-slider-1",{
    },
 });
 
-let mainSliderStories = new Swiper(".stories-slider-main",{
+var mainSliderStories = new Swiper(".stories-slider-main",{
    slidesPerView: 'auto',
    spaceBetween: 90,
    navigation:{
@@ -313,7 +319,7 @@ let mainSliderStories = new Swiper(".stories-slider-main",{
 
 });
 
-let mainSliderSecond = new Swiper(".main-slider-2",{
+var mainSliderSecond = new Swiper(".main-slider-2",{
    slidesPerView: 'auto',
    spaceBetween: 20,
    navigation:{
@@ -322,7 +328,7 @@ let mainSliderSecond = new Swiper(".main-slider-2",{
    },
 });
 
-let mainSliderThird = new Swiper(".main-slider-4",{
+var mainSliderThird = new Swiper(".main-slider-4",{
    slidesPerView: 'auto',
    spaceBetween: 25,
    navigation:{
