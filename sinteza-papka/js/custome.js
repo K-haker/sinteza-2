@@ -512,7 +512,7 @@ var closePhohSliderReview = document.querySelector(".review-slider-photos-block_
 
 for( let i = 0; i<reviewsPhotosGroup.length; i++){
    reviewsPhotosGroup[i].addEventListener("click", function(){
-      reviewSliderPhotosBlockWrapper.style.top="70px";
+      reviewSliderPhotosBlockWrapper.style.left="0px";
       setTimeout(function(){
       var prodCardSliderPopUpReviewsPhotos = new Swiper(".prod-card-reviews-slider",{
          navigation:{
@@ -543,7 +543,7 @@ for( let i = 0; i<reviewsPhotosGroup.length; i++){
 
 
 closePhohSliderReview.addEventListener("click", function(){
-   reviewSliderPhotosBlockWrapper.style.top= "-1000px";
+   reviewSliderPhotosBlockWrapper.style.left= "-3000px";
 
 
 })
