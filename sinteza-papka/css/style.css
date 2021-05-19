@@ -2634,9 +2634,11 @@ Media
    margin-bottom: 90px;
 }
 
+/*
 .swiper-slide{
    width: auto !important;
 }
+*/
 
 .main-slider-1 .coll-slider__link-photo__wrapper{
    max-width: 280px;
@@ -5252,12 +5254,15 @@ Media
 
 .review-slider-photos-block_wrapper{
    position: fixed;
-   top: 70px;
+   top: -1000px;
    left: 0;
    width: 100%;
    height: 100%;
    background-color: #FFFFFF;
    z-index: 800;
+
+   transition: all 1s;
+
 }
 
 .review-slider-photos-block_wrapper-close{
@@ -5300,17 +5305,20 @@ Media
 }
 
 .prod-card-reviews-slider{
-   width: 100%;
-   height: 100%;
+   height: auto;
+   width: 80vw;
    max-width: 1000px;
    max-height: 636px;
    overflow: hidden;
+
 }
 
 .review-slider-photos-block_wrapper{
-   display: none;
-
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
+
 
 .height-auto{
    max-height: none;
@@ -5415,6 +5423,19 @@ Media
 
 
 @media(max-width: 480px){
+   .review-slider-photos__left-arr{
+       top: calc(50% - 50px);
+   }
+
+   .review-slider-photos__right-arr{
+       top: calc(50% - 50px);
+   }
+
+   .review-slider-photos-item img{
+      height: 100%;
+      width: auto;
+   }
+
    .review-slider-photos-block_wrapper{
       top: 45px;
    }
@@ -5844,7 +5865,9 @@ Media
 
 }
 
-
+.dis-fl{
+   display: flex;
+}
 
 
 
