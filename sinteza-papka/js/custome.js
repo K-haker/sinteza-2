@@ -221,7 +221,19 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
       })
    }
 
-   /*Слайдеры на мобильных вариантах выпадающих блоков*/
+   /*Смотреть весь отзыв*/
+   $('.read-more-button-reviews').on("click", function(){
+       $(this).siblings('.reviews-review').addClass('height-auto');
+      $(this).addClass("dis-none");
+      $(".close-read-more").removeClass("dis-none");
+   })
+
+   /*Закрыть раскрытый отзыв*/
+   $('.close-read-more').on("click", function(){
+       $(this).siblings('.reviews-review').removeClass('height-auto');
+      $(this).addClass("dis-none");
+      $(".read-more-button-reviews").removeClass("dis-none");
+   })
 
 });
 
@@ -457,7 +469,7 @@ let productCardMobilesSliderColorWindow = new Swiper(".slide-left__colors-slider
 });
 
 
-let productCardMobilesSliderComplectationWindow = new Swiper(".slide-left__complectation-slider_wrapper",{
+var productCardMobilesSliderComplectationWindow = new Swiper(".slide-left__complectation-slider_wrapper",{
    slidesPerView:'auto',
    navigation:{
       nextEl:".complectation-mob-slider-arr-right",
@@ -469,7 +481,7 @@ let productCardMobilesSliderComplectationWindow = new Swiper(".slide-left__compl
    centeredSlides: true,
 });
 
-let productCardMobilesSliderMaterialsWindow = new Swiper(".slide-left__material-slider_wrapper",{
+var productCardMobilesSliderMaterialsWindow = new Swiper(".slide-left__material-slider_wrapper",{
    slidesPerView:'auto',
    navigation:{
       nextEl:".material-mob-slider-arr-right",
@@ -492,18 +504,30 @@ let productCardMobilesSliderMaterialsWindow = new Swiper(".slide-left__material-
 //});
 
 
-let reviewsPhotosGroup = document.querySelectorAll(".reviews-photos");
-let reviewsPhotosGroupSlider = document.querySelectorAll(".review-slider-photos-block");
+var reviewsPhotosGroup = document.querySelectorAll(".reviews-photos");
+var reviewsPhotosGroupSlider = document.querySelector(".review-slider-photos-block");
+var reviewSliderPhotosBlockWrapper = document.querySelector(".review-slider-photos-block_wrapper");
+var closePhohSliderReview = document.querySelector(".review-slider-photos-block_wrapper-close")
 
 
 for( let i = 0; i<reviewsPhotosGroup.length; i++){
    reviewsPhotosGroup[i].addEventListener("click", function(){
-      let childrenOfPhotoreviewsBlock = reviewsPhotosGroup[i].querySelectorAll('.reviews-photos-item__wrapper img')
+      reviewSliderPhotosBlockWrapper.classList.add("dis-bl");
+      setTimeout(function(){
+      var prodCardSliderPopUpReviewsPhotos = new Swiper(".prod-card-reviews-slider",{
+         navigation:{
+            nextEl:".review-slider-photos__right-arr",
+            prevEl:".review-slider-photos__left-arr",
+         },
+         slidesPerView: 1,
+         slidesPerGroup:1,
+      });
+      }, 1000);
+
+      var childrenOfPhotoreviewsBlock = reviewsPhotosGroup[i].querySelectorAll('.reviews-photos-item__wrapper img')
 
       for(i=0; i<childrenOfPhotoreviewsBlock.length; i++){
-        let srcImg = childrenOfPhotoreviewsBlock[i].getAttribute('src');
-
-         console.log(srcImg);
+        var srcImg = childrenOfPhotoreviewsBlock[i].getAttribute('src');
 
          reviewsPhotosGroupSlider.insertAdjacentHTML("beforeend",
          `
@@ -516,18 +540,10 @@ for( let i = 0; i<reviewsPhotosGroup.length; i++){
    })
 }
 
-setTimeout(function(){
-   let prodCardSliderPopUpReviewsPhotos = new Swiper(".prod-card-reviews-slider",{
-      navigation:{
-         nextEl:".review-slider-photos__right-arr",
-         prevEl:".review-slider-photos__left-arr",
-      },
-      slidesPerView: 1,
-      slidesPerGroup:1,
-   });
-}, 1000)
 
 
-
+closePhohSliderReview.addEventListener("click", function(){
+   reviewSliderPhotosBlockWrapper.classList.remove("dis-bl");
+})
 
 

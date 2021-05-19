@@ -4341,6 +4341,7 @@ Media
    font-size: 16px;
    line-height: 24px;
    max-height: 190px;
+   overflow-y: hidden;
 }
 
 .reviews-sl-main-wrapp-link{
@@ -4356,7 +4357,7 @@ Media
    font-family: "CodecPro-Bold";
    line-height: 24px;
    position: relative;
-   bottom:0;
+   bottom:-20px;
    z-index: 200;
 }
 
@@ -4954,6 +4955,16 @@ Media
    display: none;
 }
 
+.reviews-photos-item__wrapper{
+   width: 100px;
+   height: 100px;
+}
+
+.reviews-photos-item__wrapper img{
+   max-width: 100%;
+   max-height: 100%;
+}
+
 .reviews-photos-item__wrapper:nth-child(1),
 .reviews-photos-item__wrapper:nth-child(2){
    display: block;
@@ -5234,6 +5245,100 @@ Media
    display: block;
 }
 
+.swiper-slide-active .slide-left_material-slider-item__photo{
+   border: 1px solid #000000;
+}
+
+
+.review-slider-photos-block_wrapper{
+   position: fixed;
+   top: 70px;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #FFFFFF;
+   z-index: 800;
+}
+
+.review-slider-photos-block_wrapper-close{
+   position: absolute;
+   top: 47px;
+   right: 47px;
+   z-index: 1000;
+   cursor: pointer;
+}
+
+.review-slider-photos__left-arr{
+   top: calc(50% - 100px);
+   position: absolute;
+   left: 25px;
+   z-index: 1000;
+   cursor: pointer;
+}
+
+.review-slider-photos__right-arr{
+   top: calc(50% - 100px);
+   position: absolute;
+   right: 25px;
+   z-index: 1000;
+   cursor: pointer;
+}
+
+.review-slider-photos-item{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+
+.review-slider-photos-item img{
+   width: 100%;
+   height: 100%;
+}
+
+.prod-card-reviews-slider{
+   width: 100%;
+   height: 100%;
+   max-width: 1000px;
+   max-height: 636px;
+   overflow: hidden;
+}
+
+.review-slider-photos-block_wrapper{
+   display: none;
+
+}
+
+.height-auto{
+   max-height: none;
+}
+
+.dis-bl{
+   display: block;
+}
+
+.read-more-button-reviews{
+   cursor: pointer;
+}
+
+.close-read-more{
+   font-family: "CodecPro-Bold";
+   margin-top: 15px;
+}
+
+.review-slider-photos-block_wrapper-close{
+   width: 58px;
+   height: 58px;
+}
+
+.review-slider-photos-block_wrapper-close img{
+   max-width: 100%;
+   max-height: 100%;
+}
+
 /*media */
 
 @media(max-width: 1200px){
@@ -5310,6 +5415,10 @@ Media
 
 
 @media(max-width: 480px){
+   .review-slider-photos-block_wrapper{
+      top: 45px;
+   }
+
    .close-krest-product-card{
       top:20px;
       right: 15px;
@@ -5494,6 +5603,11 @@ Media
       max-width: 230px;
    }
 
+   .reviews-review__block{
+      height: auto;
+      padding-bottom: 20px;
+   }
+
    .reviews-slider-product-card {
       margin-bottom: 71px;
    }
@@ -5649,6 +5763,42 @@ Media
       width: 242px;
    }
 
+   .prod-card-reviews-slider{
+      width: 80vw;
+      height: 80vh;
+      margin-top: 50px;
+   }
+   .review-slider-photos-block_wrapper-close img{
+      max-width: 100%;
+      max-height: 100%;
+   }
+
+   .review-slider-photos-block_wrapper-close{
+      width: 15px;
+      height: 15px;
+      top: 63px;
+       right: 10px;
+   }
+
+   .review-slider-photos__right-arr img,
+   .review-slider-photos__left-arr img{
+      max-width: 100%;
+      max-height: 100%;
+   }
+
+
+   .review-slider-photos__right-arr{
+      width: 20px;
+      height: 20px;
+      right: 10px;
+   }
+
+   .review-slider-photos__left-arr{
+      width: 20px;
+      height: 20px;
+      left: 10px;
+   }
+
 }
 
 
@@ -5693,79 +5843,6 @@ Media
    }
 
 }
-
-.swiper-slide-active .slide-left_material-slider-item__photo{
-   border: 1px solid #000000;
-}
-
-
-.review-slider-photos-block_wrapper{
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
-   background-color: #FFFFFF;
-   z-index: 800;
-}
-
-.review-slider-photos-block_wrapper-close{
-   position: absolute;
-   top: 97px;
-   right: 47px;
-   z-index: 1000;
-   cursor: pointer;
-}
-
-.review-slider-photos__left-arr{
-   top: 50%;
-   position: absolute;
-   left: 25px;
-   z-index: 1000;
-   cursor: pointer;
-}
-
-.review-slider-photos__right-arr{
-   top: 50%;
-   position: absolute;
-   right: 25px;
-   z-index: 1000;
-   cursor: pointer;
-}
-
-.review-slider-photos-item{
-   width: 100%;
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   overflow: hidden;
-}
-
-.review-slider-photos-item img{
-   max-width: 100%;
-   max-height: 100%;
-}
-
-.prod-card-reviews-slider{
-   margin: 80px 0;
-   max-width: 1000px;
-   max-height: 636px;
-   overflow: hidden;
-
-}
-
-.review-slider-photos-block_wrapper{
-   display: none;
-}
-
-
-
-
-
-
-
-
 
 
 
