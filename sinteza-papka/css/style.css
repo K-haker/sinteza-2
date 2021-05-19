@@ -5945,11 +5945,11 @@ Media
    cursor: pointer;
 }
 
-.slide-left__size-variants-item{
+
+.slide-left__size-variants-item input,
+.slide-left__size-variants-item label{
    cursor: pointer;
 }
-
-
 
 
 
