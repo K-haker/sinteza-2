@@ -1,6 +1,43 @@
 $(document).ready(function(){
    var show_popup_sert = false;
+   var theItemToDelete;
 
+
+/*Работа с корзиной*/
+   /*очищение всей корзины*/
+   $("#clearBusketButton").on("click", function(){
+      $("#background-furn").addClass("dis-bl");
+      $("#clearBusketQuestionWindow").slideDown(300);
+   })
+
+   $("#yesClearBusket").on("click", function(){
+      $("#busketProductsListBlock").empty();
+      $("#background-furn").removeClass("dis-bl");
+      $(".busket__modal-clear-all-items").slideUp(300);
+      $("#visibleBlockIfTheCartHasAnItem").addClass("dis-none");
+   })
+
+   /*Удаление элемента*/
+   $(".busket-products-list__item-delete").on("click", function(){
+      $("#background-furn").addClass("dis-bl");
+      $("#deleteItemQuestionWindow").slideDown(300);
+
+      theItemToDelete = $(this).closest(".busket-products-list__item");
+
+      console.log(parent);
+   })
+
+   $("#yesDeleteElement").on("click", function(){
+      theItemToDelete.remove();
+      $("#background-furn").removeClass("dis-bl");
+      $(".busket__modal-clear-all-items").slideUp(300);
+   });
+
+   /*Закрытие уточняющих окон*/
+   $('[data-close="busketQuestionWindow"]').on("click", function(){
+      $("#background-furn").removeClass("dis-bl");
+      $(".busket__modal-clear-all-items").slideUp(300);
+   })
 
 /*Аккордеон на станице вопросов и ответов FAQ*/
    $(".faq-open-close").click(function(){
@@ -12,7 +49,6 @@ $(document).ready(function(){
 /*Аккордеон на странице Журнала*/
    $(".journal-open-close").click(function(){
       $(this).prev(".journ-link__answer").slideToggle(400);
-//      $(this).toggleClass("opened-answer");
       $(this).find('.faq-button-arr').toggleClass("faq-button-arr-opened");
    });
 
@@ -242,14 +278,6 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 
    /*Фиксированный блок при скролле над слайдером*/
 
-   $(window).on("scroll", function() {
-
-      let scrollTop = $(window).scrollTop()
-      if(scrollTop === $(".other-information__nav").offset().top){
-         console.log("Tadam!");
-      }
-      console.log($(window).scrollTop())
-    });
 
 });
 
@@ -557,11 +585,33 @@ for( let i = 0; i<reviewsPhotosGroup.length; i++){
 }
 
 
+try{
+   closePhohSliderReview.addEventListener("click", function(){
+      reviewSliderPhotosBlockWrapper.style.left= "-3000px";
+   })
+} catch{}
 
-closePhohSliderReview.addEventListener("click", function(){
-   reviewSliderPhotosBlockWrapper.style.left= "-3000px";
+/*Слайдеры на странице корзина*/
+
+var BusketSliderBottomBeforeFooter = new Swiper(".container-buscket-bottom-slider",{
+   slidesPerView:'auto',
+   navigation:{
+      nextEl:".busket-slider-bottom-arr-r",
+      prevEl:".busket-slider-bottom-arr-l",
+   },
+   spaceBetween: 20,
+
+});
 
 
-})
+
+
+
+
+
+
+
+
+
 
 
