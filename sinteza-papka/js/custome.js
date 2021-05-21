@@ -264,22 +264,83 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
    $('.read-more-button-reviews').on("click", function(){
        $(this).siblings('.reviews-review').addClass('height-auto');
       $(this).addClass("dis-none");
-      $(".close-read-more").removeClass("dis-none");
-   })
-
-   /*Закрыть раскрытый отзыв*/
-   $('.close-read-more').on("click", function(){
-       $(this).siblings('.reviews-review').removeClass('height-auto');
-      $(this).addClass("dis-none");
-      $(".read-more-button-reviews").removeClass("dis-none");
    })
 
 
 
    /*Фиксированный блок при скролле над слайдером*/
+   var OffsetTopFixedBlock = $(".other-information__nav").offset().top;
+
+   $(window).on("scroll resize", function(){
+      var scrollTopWindow = $(window).scrollTop();
+
+         if(scrollTopWindow > OffsetTopFixedBlock -95 && $(window).width() >480){
+            $(".other-information__nav").addClass("fixed-block");
+            $('.product-card__other-information').addClass('block-was-fixed');
+         } else {
+            $(".other-information__nav").removeClass("fixed-block");
+            $('.product-card__other-information').removeClass('block-was-fixed');
+         }
+
+      if(scrollTopWindow > OffsetTopFixedBlock -65 && $(window).width() <481){
+            $(".other-information__nav").addClass("fixed-block-mobile");
+            $('.product-card__other-information').addClass('block-was-fixed-mobile');
+         } else {
+            $(".other-information__nav").removeClass("fixed-block-mobile");
+            $('.product-card__other-information').removeClass('block-was-fixed-mobile');
+         }
 
 
-});
+   })
+
+
+   /*Фиксированная цена и наименование товара в мобилке в карточке товара*/
+      var OffsetTopFixedBlockProductCard = $(".general-info-product__price").offset().top;
+      var productCardTextContent = $(".general-info-product__price .prc").text();
+      var fixedBottomPriceText = $(".product-card__fixed-price").text(productCardTextContent)
+
+      var productCardTextContentName = $(".product-info__name").text();
+      var fixedBottomPriceTextName = $(".product-card__mobile-bottom-block__name").text(productCardTextContentName)
+
+      $(window).on("scroll resize", function(){
+      var scrollTopWindow = $(window).scrollTop();
+
+      if(scrollTopWindow > OffsetTopFixedBlockProductCard){
+         $(".product-card__mobile-bottom-block").addClass("dis-fl");
+         $(".product-card__mobile-bottom").addClass("dis-flexed");
+
+      } else {
+          $(".product-card__mobile-bottom-block").removeClass("dis-fl");
+         $(".product-card__mobile-bottom").removeClass("dis-flexed");
+
+      }
+   })
+
+
+   /*переход к блоку при клике на пункт навигации товара*/
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+
+        var elementId = $(this).data('scroll');
+        var elementOffset = $(elementId).offset().top;
+
+       if($(window).width() >480){
+          $("html, body").animate({
+            scrollTop: elementOffset - 200
+        }, 700);
+       }else{
+          $("html, body").animate({
+            scrollTop: elementOffset - 120
+        }, 700);
+       }
+
+    });
+
+
+
+
+})
+
 
 /***/
 /*начало JS кода*/
@@ -374,29 +435,6 @@ var mainSliderThird = new Swiper(".main-slider-4",{
       prevEl:".m-sl-3-l",
    },
 });
-
-
-
-
-
-/*Смена вида стрелок на главном слайдере главной страницы*/
-
-//let mainSliderMainPageLeftArr = document.querySelector(".main-sl-l-ar");
-//let mainSliderMainPageRightArr = document.querySelector(".main-sl-r-ar");
-//let mainSliderMainPageLeftArrPar = document.querySelector(".m-sl-main-l");
-//let mainSliderMainPageRightArrPar = document.querySelector(".m-sl-main-r");
-
-
-//try{
-//   window.addEventListener("resize", function(){
-//      mainArrowsReplacingArrows();
-//   })
-//} catch{}
-//
-//try{
-//   mainArrowsReplacingArrows()
-//} catch{}
-
 
 /*Видео на главной*/
 
@@ -538,16 +576,6 @@ var productCardMobilesSliderMaterialsWindow = new Swiper(".slide-left__material-
 });
 
 
-//let prodCardSliderPopUpReviewsPhotos = new Swiper(".prod-card-reviews-slider",{
-//   navigation:{
-//      nextEl:".review-slider-photos__right-arr",
-//      prevEl:".review-slider-photos__left-arr",
-//   },
-//   slidesPerView: 1,
-//   slidesPerGroup:1,
-//});
-
-
 var reviewsPhotosGroup = document.querySelectorAll(".reviews-photos");
 var reviewsPhotosGroupSlider = document.querySelector(".review-slider-photos-block");
 var reviewSliderPhotosBlockWrapper = document.querySelector(".review-slider-photos-block_wrapper");
@@ -605,10 +633,46 @@ var BusketSliderBottomBeforeFooter = new Swiper(".container-buscket-bottom-slide
 
 
 
+/*Слайдер в поп апе на странице карточки товара*/
+
+var  productCardPhotosGroup = document.querySelectorAll(".prod-card__mob-slider-item");
+var  productCardPhotosGroupSlider = document.querySelector(".review-slider-photos-block");
+var productCardSliderPhotosBlockWrapper = document.querySelector(".product-card__mibile-pop-up-wrapper");
+var closeProdCardSlider = document.querySelector(".product-card__mibile-pop-up-wrapper-close")
+
+for( let i = 0; i<productCardPhotosGroup.length; i++){
+   productCardPhotosGroup[i].addEventListener("click", function(){
+      productCardSliderPhotosBlockWrapper.style.display="block";
 
 
+      setTimeout(function(){
+      var productCardMobilePopupWindowSlider = new Swiper(".product-card__mibile-pop-up-wrapper",{
+         slidesPerView:'auto',
+         navigation:{
+            nextEl:".product-card__mob-popup__arrow-r",
+            prevEl:".product-card__mob-popup__arrow-l",
+         },
+         spaceBetween: 20,
+
+      });
+      }, 1000);
 
 
+      var childrenSliderMobile = productCardPhotosGroup[i].querySelectorAll('.reviews-photos-item__wrapper img')
+
+      for(i=0; i<childrenOfPhotoreviewsBlock.length; i++){
+        var srcImgMobPopUp = childrenOfPhotoreviewsBlock[i].getAttribute('src');
+
+         reviewsPhotosGroupSlider.insertAdjacentHTML("beforeend",
+         `
+            <div class="product-card__mibile-pop-up-item swiper-slide">
+              <img src="img/product-card/mob-pop-up-1.jpg" alt="">
+           </div>
+         `
+         )
+      }
+   })
+}
 
 
 
