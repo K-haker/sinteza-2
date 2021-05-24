@@ -80,7 +80,7 @@
               </div>
                <div class="header-right__icons">
                   <div class="header-icon  header-icon-1">
-                     <img src="img/header/search.jpg" alt="">
+                     <img src="img/header/lupa.svg" alt="">
                   </div>
                   <div class="header-icon">
                      <img src="img/header/start.svg" alt="">
@@ -173,7 +173,7 @@
             </div>
            </div>
          </div>
-   </header>
+</header>
 
    <div id="clearBusketQuestionWindow"  class="busket__modal-clear-all-items">
       <div class="busket__modal-clear-all-items__text">Вы точно хотите <br class="mob-br"> очистить <br class="desc-br"> корзину?</div>
@@ -220,10 +220,11 @@
       <div class="new-container">
          <div class="busket-top">
             <div class="busket-top__left">
-               <span class="busket-top__left-counter">14</span>
+               <span class="busket-top__left-counter"></span>
                <span>товаров</span>
                <div class="busket-top__left-img">
                   <img src="img/busket/arrow-1.svg" alt="">
+                  <span>Поделиться</span>
                </div>
             </div>
             <button id="clearBusketButton" class="clear-all-busket-button">Очистить корзину</button>
@@ -244,12 +245,12 @@
                         <span class="busket-product-counter-minus">
                            <img src="img/busket/counter-minus.svg" alt="">
                         </span>
-                        <input class="busket-product-counter-input" type="text">
+                        <input value="2"  class="busket-product-counter-input" type="text">
                         <span class="busket-product-counter-plus">
                            <img src="img/busket/counter-plus.svg" alt="">
                         </span>
                      </div>
-                     <div class="busket-products-list__item-main-info__price">289 304 <span>&#8381;</span></div>
+                     <div class="busket-products-list__item-main-info__price"> <span class="busket-products-list__item-main-info__price-counter">100000</span>  <span>&#8381;</span></div>
                   </div>
                   <div class="busket-products-list__item-delete">
                      <img src="img/busket/delete-product.svg" alt="">
@@ -257,7 +258,7 @@
 
 
                   <a href="#" class="busket-products-list__item-combo-diskont">
-                     <span>-20% при покупке комбо</span>
+                     <span>- <span class="product-discount-value">20</span> % при покупке комбо</span>
                      <svg class="busket-products-list__item-combo-diskont-img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M1.2614 3.86753L9.08724 3.86753L9.08724 11.6026" stroke="black"/>
                            <path d="M8.78993 3.97852L0.673828 12.0005" stroke="black"/>
@@ -265,7 +266,7 @@
                   </a>
             </div>
 
-                        <div class="busket-products-list__item">
+            <div class="busket-products-list__item">
                   <div class="busket-products-list__item-photo">
                      <img src="img/busket/product-img.jpg" alt="">
                   </div>
@@ -276,19 +277,19 @@
                         <span class="busket-product-counter-minus">
                            <img src="img/busket/counter-minus.svg" alt="">
                         </span>
-                        <input class="busket-product-counter-input" type="text">
+                        <input value="1" class="busket-product-counter-input" type="text">
                         <span class="busket-product-counter-plus">
                            <img src="img/busket/counter-plus.svg" alt="">
                         </span>
                      </div>
-                     <div class="busket-products-list__item-main-info__price">289 304 <span>&#8381;</span></div>
+                     <div class="busket-products-list__item-main-info__price"><span class="busket-products-list__item-main-info__price-counter">100000</span> <span>&#8381;</span></div>
                   </div>
                   <div class="busket-products-list__item-delete">
                      <img src="img/busket/delete-product.svg" alt="">
                   </div>
             </div>
 
-                        <div class="busket-products-list__item">
+            <div class="busket-products-list__item">
                   <div class="busket-products-list__item-photo">
                      <img src="img/busket/product-img.jpg" alt="">
                   </div>
@@ -299,16 +300,24 @@
                         <span class="busket-product-counter-minus">
                            <img src="img/busket/counter-minus.svg" alt="">
                         </span>
-                        <input class="busket-product-counter-input" type="text">
+                        <input value="3" class="busket-product-counter-input" type="text">
                         <span class="busket-product-counter-plus">
                            <img src="img/busket/counter-plus.svg" alt="">
                         </span>
                      </div>
-                     <div class="busket-products-list__item-main-info__price">289 304 <span>&#8381;</span></div>
+                     <div class="busket-products-list__item-main-info__price"><span class="busket-products-list__item-main-info__price-counter">100000</span> <span>&#8381;</span></div>
                   </div>
                   <div class="busket-products-list__item-delete">
                      <img src="img/busket/delete-product.svg" alt="">
                   </div>
+
+                  <a href="#" class="busket-products-list__item-combo-diskont">
+                     <span>- <span class="product-discount-value">13</span> % при покупке комбо</span>
+                     <svg class="busket-products-list__item-combo-diskont-img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.2614 3.86753L9.08724 3.86753L9.08724 11.6026" stroke="black"/>
+                           <path d="M8.78993 3.97852L0.673828 12.0005" stroke="black"/>
+                     </svg>
+                  </a>
             </div>
 
 
@@ -320,7 +329,7 @@
             <div class="busket-general-price__no-discount">
                <span>Стоимость товаров</span>
                <div class="busket-general-price__no-discount__couner-block">
-                  <span class="busket-general-price__no-discount_counter">289 304</span>
+                  <span class="busket-general-price__no-discount_counter"> 0 </span>
                   <span>&#8381;</span>
                </div>
              </div>
@@ -354,18 +363,18 @@
 
 
 
-<!--
   <div id="noProductsInTheBusket">
      <div class="new-container">
          <div class="busket-no-productst__message">Ваши корзина пуста в данный момент. <br>
          Но это можно исправить!</div>
      </div>
-     <div class="busket-no-productst__message-button">
-           <span>Перейти к товарам</span>
-           <img src="" alt="">
+     <div class="new-container basket-container__button-wrapper">
+        <a href="#" class="busket-no-productst__message-button">
+              <span>Перейти к товарам</span>
+              <img src="img/busket/bask-1.svg" alt="">
+        </a>
      </div>
   </div>
--->
 
       <div class="new-container">
          <div class="busket-slider-title">С этим товаром также покупают</div>
