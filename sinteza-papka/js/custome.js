@@ -269,24 +269,24 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 
 
    /*Фиксированный блок при скролле над слайдером*/
-   var OffsetTopFixedBlock = $(".other-information__nav").offset().top;
+   var OffsetTopFixedBlock = $("#prodCardotherInfoNavWrapper").offset().top;
 
    $(window).on("scroll resize", function(){
       var scrollTopWindow = $(window).scrollTop();
 
          if(scrollTopWindow > OffsetTopFixedBlock -95 && $(window).width() >480){
-            $(".other-information__nav").addClass("fixed-block");
+            $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
             $('.product-card__other-information').addClass('block-was-fixed');
          } else {
-            $(".other-information__nav").removeClass("fixed-block");
+            $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
             $('.product-card__other-information').removeClass('block-was-fixed');
          }
 
       if(scrollTopWindow > OffsetTopFixedBlock -65 && $(window).width() <481){
-            $(".other-information__nav").addClass("fixed-block-mobile");
+            $("#prodCardotherInfoNavWrapper").addClass("fixed-block-mobile");
             $('.product-card__other-information').addClass('block-was-fixed-mobile');
          } else {
-            $(".other-information__nav").removeClass("fixed-block-mobile");
+            $("#prodCardotherInfoNavWrapper").removeClass("fixed-block-mobile");
             $('.product-card__other-information').removeClass('block-was-fixed-mobile');
          }
 
@@ -335,6 +335,7 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
        }
 
     });
+
 
 
 
@@ -585,6 +586,7 @@ var closePhohSliderReview = document.querySelector(".review-slider-photos-block_
 for( let i = 0; i<reviewsPhotosGroup.length; i++){
    reviewsPhotosGroup[i].addEventListener("click", function(){
       reviewSliderPhotosBlockWrapper.style.left="0px";
+
       setTimeout(function(){
       var prodCardSliderPopUpReviewsPhotos = new Swiper(".prod-card-reviews-slider",{
          navigation:{
@@ -635,15 +637,14 @@ var BusketSliderBottomBeforeFooter = new Swiper(".container-buscket-bottom-slide
 
 /*Слайдер в поп апе на странице карточки товара*/
 
-var  productCardPhotosGroup = document.querySelectorAll(".prod-card__mob-slider-item");
-var  productCardPhotosGroupSlider = document.querySelector(".review-slider-photos-block");
-var productCardSliderPhotosBlockWrapper = document.querySelector(".product-card__mibile-pop-up-wrapper");
+var  productCardPhotosGroup = document.querySelectorAll(".prod-card__mob-slider");
+var  productCardPhotosGroupSlider = document.querySelector(".product-card__mibile-pop-up");
+var productCardSliderPhotosBlockWrapper = document.querySelector(".prod-card__mob-pop-up__block");
 var closeProdCardSlider = document.querySelector(".product-card__mibile-pop-up-wrapper-close")
 
 for( let i = 0; i<productCardPhotosGroup.length; i++){
    productCardPhotosGroup[i].addEventListener("click", function(){
-      productCardSliderPhotosBlockWrapper.style.display="block";
-
+      productCardSliderPhotosBlockWrapper.style.left ="0px";
 
       setTimeout(function(){
       var productCardMobilePopupWindowSlider = new Swiper(".product-card__mibile-pop-up-wrapper",{
@@ -658,12 +659,12 @@ for( let i = 0; i<productCardPhotosGroup.length; i++){
       }, 1000);
 
 
-      var childrenSliderMobile = productCardPhotosGroup[i].querySelectorAll('.reviews-photos-item__wrapper img')
+      var childrenSliderMobilePopUp = productCardPhotosGroup[i].querySelectorAll('.prod-card__mob-slider-item img')
 
-      for(i=0; i<childrenOfPhotoreviewsBlock.length; i++){
-        var srcImgMobPopUp = childrenOfPhotoreviewsBlock[i].getAttribute('src');
+      for(i=0; i<childrenSliderMobilePopUp.length; i++){
+        var srcImgMobPopUp = childrenSliderMobilePopUp[i].getAttribute('src');
 
-         reviewsPhotosGroupSlider.insertAdjacentHTML("beforeend",
+         productCardPhotosGroupSlider.insertAdjacentHTML("beforeend",
          `
             <div class="product-card__mibile-pop-up-item swiper-slide">
               <img src="img/product-card/mob-pop-up-1.jpg" alt="">
@@ -672,7 +673,43 @@ for( let i = 0; i<productCardPhotosGroup.length; i++){
          )
       }
    })
+
+
+   closeProdCardSlider.addEventListener("click", function(){
+      productCardSliderPhotosBlockWrapper.style.left ="-2000px";
+   })
 }
+
+
+
+/*Подчеркивание активного пункта в навигации product card*/
+
+window.addEventListener("scroll", function(){
+   let productCardScrollDistance = window.scrollY;
+
+   document.querySelectorAll(".prod-card__ither-information-item").forEach((el,i)=>{
+      if(el.offsetTop - 100 <= productCardScrollDistance){
+         document.querySelectorAll(".other-information__nav-item").forEach((el) =>{
+            if(el.classList.contains('other-information__nav-item-active')){
+               el.classList.remove("other-information__nav-item-active")
+            }
+         })
+
+         document.querySelectorAll(".other-information__nav-item").classList.add("other-information__nav-item-active")
+      }
+   })
+})
+
+
+
+
+
+
+
+
+
+
+
 
 
 

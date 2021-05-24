@@ -4265,7 +4265,6 @@ Media
    padding: 26px 10px 24px ;
    font-size: 16px;
    line-height: 24px;
-   margin-bottom: 20px;
 }
 
 .count-wr{
@@ -5271,12 +5270,12 @@ Media
 
 .review-slider-photos-block_wrapper{
    position: fixed;
-   top: 70;
+   top: 0;
    left: -10000;
    width: 100%;
    height: 100%;
    background-color: #FFFFFF;
-   z-index: 800;
+   z-index: 3000;
 
    transition: all 1s;
 
@@ -5876,6 +5875,14 @@ Media
       left: 10px;
    }
 
+   .prod-card-reviews-slider{
+      margin-top: 0;
+   }
+
+   .review-slider-photos-item{
+      margin-top: -50px;
+   }
+
 }
 
 
@@ -6442,10 +6449,6 @@ Media
    display: none;
 }
 
-.new-cont-nav{
-   padding: 0;
-}
-
 .product-card__mobile-bottom{
    display: none;
 }
@@ -6480,16 +6483,29 @@ Media
 
 
 
-.product-card__mibile-pop-up-wrapper{
+.prod-card__mob-pop-up__block{
    position: fixed;
    width: 100vw;
    height: 100vh;
    background-color: #FFFFFF;
-   z-index: 2000;
+   z-index: 4000;
    top:0;
    left:-2000px;
    bottom:0;
    right: 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   transition: all 1s;
+}
+
+.product-card__mibile-pop-up-wrapper{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
 }
 
 .product-card__mibile-pop-up-wrapper-arrow{
@@ -6547,6 +6563,15 @@ Media
 .product-card__mobile-bottom dis-flexed img{
    position: relative;
    top: -2px;
+}
+
+.new-cont-nav{
+   padding: 0;
+}
+
+.other-information__nav-wrapper{
+   background-color: #FFFFFF;
+   margin-bottom: 20px;
 }
 
 @media(max-width: 1200px){
@@ -6615,6 +6640,18 @@ Media
 
    .slide-left__colors-slider-item.swiper-slide-active {
       min-height: 130px;
+   }
+
+   .slide-left__colors-slider{
+      right: 34px;
+   }
+
+   .slide-left__material-slider{
+      right: 37px;
+   }
+
+   .slide-left__complectation-slider{
+      right: 18px;
    }
 
    .slide-left__material-title{
@@ -6887,5 +6924,40 @@ Media
    }
 
 }
+
+@media(max-width:320px){
+   .slide-left__colors-slider{
+      right: 30px;
+   }
+
+   .slide-left__material-slider{
+      right: 56px;
+   }
+
+   .slide-left__complectation-slider{
+      right: 29px;
+   }
+}
+
+.general-info-product__price .rouble-news{
+   font-family: 'CodecPro-news';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
