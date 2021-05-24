@@ -513,7 +513,7 @@ let productCardBottomSlider = new Swiper(".product-slider-bottom",{
 
 let productCardReviewsSlider = new Swiper(".reviews-slider-product-card",{
    slidesPerView: 'auto',
-   spaceBetween: 20,
+   spaceBetween: 40,
    navigation:{
       nextEl:".p-c-sl-reviews-r",
       prevEl:".p-c-sl-reviews-l",
@@ -687,17 +687,31 @@ for( let i = 0; i<productCardPhotosGroup.length; i++){
 window.addEventListener("scroll", function(){
    let productCardScrollDistance = window.scrollY;
 
-   document.querySelectorAll(".prod-card__ither-information-item").forEach((el,i)=>{
-      if(el.offsetTop - 100 <= productCardScrollDistance){
-         document.querySelectorAll(".other-information__nav-item").forEach((el) =>{
-            if(el.classList.contains('other-information__nav-item-active')){
-               el.classList.remove("other-information__nav-item-active")
-            }
-         })
+   if(window.width>480){
+      document.querySelectorAll(".prod-card__ither-information-item").forEach((el,i)=>{
+         if(el.offsetTop - 200 <= productCardScrollDistance){
+            document.querySelectorAll(".other-information__nav-item").forEach((el) =>{
+               if(el.classList.contains('other-information__nav-item-active')){
+                  el.classList.remove("other-information__nav-item-active")
+               }
+            })
 
-         document.querySelectorAll(".other-information__nav-item").classList.add("other-information__nav-item-active")
-      }
-   })
+            document.querySelectorAll(".other-information__nav-item")[i].classList.add("other-information__nav-item-active")
+            }
+      })
+   } else {
+      document.querySelectorAll(".prod-card__ither-information-item").forEach((el,i)=>{
+         if(el.offsetTop - 120 <= productCardScrollDistance){
+            document.querySelectorAll(".other-information__nav-item").forEach((el) =>{
+               if(el.classList.contains('other-information__nav-item-active')){
+                  el.classList.remove("other-information__nav-item-active")
+               }
+            })
+
+            document.querySelectorAll(".other-information__nav-item")[i].classList.add("other-information__nav-item-active")
+            }
+      })
+   }
 })
 
 

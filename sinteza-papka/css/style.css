@@ -4250,7 +4250,7 @@ Media
    background-color: transparent;
    border: none;
    cursor: pointer;
-   margin-bottom: 56px;
+   margin-bottom: 30px;
 
    font-family: "CodecPro-Light";
 }
@@ -4356,8 +4356,10 @@ Media
    overflow-y: hidden;
 }
 
-.reviews-sl-main-wrapp-link{
+.reviews-sl-main-wrapp-link.swiper-slide{
+   width: auto;
    max-width: 362px;
+
 }
 
 .reviews-slider-product-card{
@@ -4480,8 +4482,13 @@ Media
    cursor: pointer;
 }
 
-.black-triangle-main-info-img:hover path{
+.black-triangle-main-info-img path{
    fill:#000000;
+   transition: all 0.3s;
+}
+
+.black-triangle-main-info-img:hover path{
+   fill:#676767;
 }
 
 .product-slider-bottom .coll-slider__price{
@@ -6459,7 +6466,7 @@ Media
 
 .fixed-block{
    position: fixed;
-   top: 95px;
+   top: 70px;
    z-index: 1000;
    width: 100%;
    background-color: #FFFFFF;
@@ -6565,13 +6572,12 @@ Media
    top: -2px;
 }
 
-.new-cont-nav{
-   padding: 0;
-}
 
 .other-information__nav-wrapper{
    background-color: #FFFFFF;
    margin-bottom: 20px;
+
+   padding-top: 25px;
 }
 
 @media(max-width: 1200px){
@@ -6630,8 +6636,9 @@ Media
 
 
 @media(max-width:480px){
-   main.prod-card-main{
-      margin-top: 41px;
+   .other-information__nav-wrapper{
+      top:45px;
+      padding-top: 5px;
    }
 
    .slide-left__complectation-slider-item.swiper-slide-active{
