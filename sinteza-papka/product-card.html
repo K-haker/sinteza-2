@@ -610,43 +610,6 @@
 
 
 
-
-<!--
-   <div class="product-card__mibile-pop-up-wrapper swiper-container">
-     <div class="product-card__mibile-pop-up-wrapper-close">
-        <img src="img/product-card/pop-up-close.svg" alt="">
-     </div>
-     <div class="product-card__mob-popup__arrow product-card__mob-popup__arrow-l">
-        <img src="img/product-card/l-arr-popup.svg" alt="">
-     </div>
-     <div class="product-card__mob-popup__arrow product-card__mob-popup__arrow-r">
-        <img src="img/product-card/pop-up-mob-arr.svg"  alt="">
-     </div>
-
-      <div class="product-card__mibile-pop-up swiper-wrapper">
-
-           <div class="product-card__mibile-pop-up-item swiper-slide">
-              <img src="img/product-card/mob-pop-up-1.jpg" alt="">
-           </div>
-
-            <div class="product-card__mibile-pop-up-item swiper-slide">
-              <img src="img/product-card/mob-pop-up-1.jpg" alt="">
-           </div>
-
-           <div class="product-card__mibile-pop-up-item swiper-slide">
-              <img src="img/product-card/mob-pop-up-1.jpg" alt="">
-           </div>
-
-           <div class="product-card__mibile-pop-up-item swiper-slide">
-              <img src="img/product-card/mob-pop-up-1.jpg" alt="">
-           </div>
-
-      </div>
-   </div>
--->
-
-
-
    <div id="background-furn" class="background-furniture"></div>
 
 
@@ -674,6 +637,31 @@
 
    </div>
 
+
+
+
+   <div class="prod-card__mob-pop-up__block">
+       <div class="product-card__mibile-pop-up-wrapper-close">
+        <img src="img/product-card/pop-up-close.svg" alt="">
+        </div>
+
+      <div class="product-card__mibile-pop-up-wrapper swiper-container">
+        <div class="product-card__mob-popup__arrow product-card__mob-popup__arrow-l">
+           <img src="img/product-card/l-arr-popup.svg" alt="">
+        </div>
+        <div class="product-card__mob-popup__arrow product-card__mob-popup__arrow-r">
+           <img src="img/product-card/pop-up-mob-arr.svg"  alt="">
+        </div>
+
+         <div class="product-card__mibile-pop-up swiper-wrapper">
+   <!--
+              <div class="product-card__mibile-pop-up-item swiper-slide">
+                 <img src="img/product-card/mob-pop-up-1.jpg" alt="">
+              </div>
+   -->
+         </div>
+      </div>
+</div>
 
 
 <main class="prod-card-main">
@@ -738,7 +726,7 @@
                <div class="bread-circle mob-none"></div>
                <span>Арт. M ZWC-1</span>
             </div>
-            <div class="general-info-product__price"> <span class="prc">23 900</span> <span>&#8381;</span> <span class="in-stock-prod-card"> В наличии</span></div>
+            <div class="general-info-product__price"> <span class="prc">23 900</span> <span class="rouble-news">₽</span> <span class="in-stock-prod-card"> В наличии</span></div>
 
             <div class="complectation-mob">Стандартная комплектация</div>
 
@@ -832,16 +820,18 @@
 
 
  <div class="product-card__other-information">
+    <div id="prodCardotherInfoNavWrapper" class="other-information__nav-wrapper">
       <div class="new-container new-cont-nav">
          <div class="other-information__nav">
-            <div  class="other-information__nav-item other-information__nav-item-active" data-scroll="#productCardPhotos">Фотографии</div>
+            <div  class="other-information__nav-item" data-scroll="#productCardPhotos">Фотографии</div>
             <div  class="other-information__nav-item"  data-scroll="#productCardVideo">Видеообзор</div>
             <div  class="other-information__nav-item"  data-scroll="#productCardCharacteristics">Характеристика</div>
             <div  class="other-information__nav-item"  data-scroll="#productCardReviews">Отзывы <span class="count-wr"> (<span class="other-information__reviews-counter">4</span>)</span></div>
          </div>
      </div>
+   </div>
 
-     <div id="productCardPhotos" class="new-container cont-sl-first-prod-card">
+     <div id="productCardPhotos" class="prod-card__ither-information-item  new-container cont-sl-first-prod-card">
 
        <div class="arrows-in-slider-in-main arrs-sl-prod-card-first arrs-sl-prod-card-first-l p-c-sl-first-sl-l l-arr ">
          <img class="main-sl-l-ar prod-card-photo-sl-arr"  src="img/main/black-arr-sliders-main.svg" alt="">
@@ -887,7 +877,7 @@
 
 
      <div class="new-container">
-         <div id="productCardCharacteristics" class="product-card__description">
+         <div id="productCardCharacteristics" class="product-card__description  prod-card__ither-information-item">
             <div class="product-card__description-left"> Общая       характеристика </div>
             <div class="product-card__description-right">
                Комфортное и эргономичное кресло Zebrano с каркасом из высокопрочного массива дерева и приятной на ощупь бархатной обивкой. Сиденье и спинка не теряют с годами своей формы и яркости цвета, а надежные крепежные элементы позволяют собирать
@@ -908,7 +898,7 @@
    </div>
 
    <div class="new-container">
-      <div id="productCardVideo" onclick="pauseVideo()" class="main-video__block">
+      <div id="productCardVideo" onclick="pauseVideo()" class="main-video__block  prod-card__ither-information-item">
          <video id="videoOnMainPage" class="main-video__item" src="video/main-video.mp4" poster="img/main/video-img.jpg"  preload="auto"  type="video/mp4"></video>
 
          <div onclick="playVideo()" class="play-stop__block">
@@ -927,7 +917,7 @@
 
 
          <div class="main-container">
-           <span id="productCardReviews" class="collection-slider__title-stories">Отзывы</span>
+           <span id="productCardReviews" class="collection-slider__title-stories  prod-card__ither-information-item">Отзывы</span>
         </div>
          <div class="main-container main-container-stories">
             <div class="arrows-stories-block">
