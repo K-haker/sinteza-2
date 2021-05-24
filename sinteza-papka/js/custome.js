@@ -23,8 +23,6 @@ $(document).ready(function(){
       $("#deleteItemQuestionWindow").slideDown(300);
 
       theItemToDelete = $(this).closest(".busket-products-list__item");
-
-      console.log(parent);
    })
 
    $("#yesDeleteElement").on("click", function(){
@@ -335,10 +333,6 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
        }
 
     });
-
-
-
-
 
 })
 
@@ -713,6 +707,103 @@ window.addEventListener("scroll", function(){
       })
    }
 })
+
+
+/*Корзина. Блоки в зависимости от наличия товара в корзине*/
+
+var basketBlockWithBasketItems = document.querySelector("#visibleBlockIfTheCartHasAnItem");
+var basketNoProductsInTheBusket = document.querySelector("#noProductsInTheBusket");
+var basketbusketProductsListBlock = document.querySelectorAll("#busketProductsListBlock .busket-products-list__item");
+
+
+function checkingAvailabilityOfProductsInBasket(){
+   if(basketbusketProductsListBlock.length > 0){
+      basketBlockWithBasketItems.classList.add("dis-bl");
+      basketNoProductsInTheBusket.classList.add("dis-none")
+   } else {
+      basketBlockWithBasketItems.classList.add("dis-none");
+      basketNoProductsInTheBusket.classList.add("dis-bl")
+   }
+}
+
+checkingAvailabilityOfProductsInBasket()
+
+/*подсчет товаров в корзине*/
+
+var counterInputsOfBasket = 0;
+var basketCounterInputs = document.querySelectorAll(".busket-product-counter-input");
+var basketProductsTotalCounter = document.querySelector(".busket-top__left-counter")
+
+for(let i =0; i<basketCounterInputs.length; i++){
+   counterInputsOfBasket = +counterInputsOfBasket + +basketCounterInputs[i].value;
+   console.log(counterInputsOfBasket);
+}
+
+basketProductsTotalCounter.textContent = counterInputsOfBasket;
+
+/*Подсчет стоимости всех товаров*/
+
+var generalPriceNoDiscountCounter = document.querySelector(".busket-general-price__no-discount_counter");
+var basketProductItem = document.querySelectorAll(".busket-products-list__item")
+var counterOfTotalPrice = 0;
+
+function busketCostCalculation(){
+   for(let i =0; i < basketProductItem.length; i++){
+   var counterInItemBasket = basketProductItem[i].querySelector('.busket-product-counter-input');
+   var priceInItemBasket = basketProductItem[i].querySelector('.busket-products-list__item-main-info__price-counter');
+   var priceOfOneItem = +counterInItemBasket.value * +priceInItemBasket.textContent;
+
+   counterOfTotalPrice = counterOfTotalPrice + priceOfOneItem
+   }
+
+generalPriceNoDiscountCounter.textContent = counterOfTotalPrice;
+}
+
+busketCostCalculation();
+
+
+var discontCounterInBasketpage = 0;
+var discontmeaningInBasketpage = document.querySelector(".busket-general-price__discount-counter")
+
+
+for(i=0; i < basketProductItem.length; i++){
+
+   if(basketProductItem[i].querySelector(".product-discount-value")){
+
+      var priceInItemBasket = basketProductItem[i].querySelector('.busket-products-list__item-main-info__price-counter').textContent;
+
+      var disconBusketProductItem = +(basketProductItem[i].querySelector(".product-discount-value").textContent / 100) * +priceInItemBasket;
+
+     discontCounterInBasketpage = +discontCounterInBasketpage + +disconBusketProductItem
+
+      console.log(discontCounterInBasketpage)
+   }
+}
+
+discontmeaningInBasketpage.textContent = discontCounterInBasketpage;
+
+
+
+/*Считаем конечную стоимость*/
+var finalСostbasket = document.querySelector(".busket-final-price__counter")
+
+finalСostbasket.textContent = counterOfTotalPrice - discontCounterInBasketpage;
+
+
+
+/* работа с + и - в корзине*/
+
+//var plusOnePiece = document.querySelectorAll(".busket-product-counter-plus");
+//
+//for(i=0; i< plusOnePiece.length; i++){
+//   plusOnePiece[i].addEventListener("click", function(){
+//      var counterPiecesOfProductItem = event.target.parentNode.parentNode.querySelector(".busket-product-counter-input")
+//
+//      console.log(counterPiecesOfProductItem)
+//
+//      counterPiecesOfProductItem.value = counterPiecesOfProductItem + 1
+//   })
+//}
 
 
 

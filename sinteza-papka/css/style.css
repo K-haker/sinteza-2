@@ -137,6 +137,11 @@ h1,h2,h3,h4,h5,h6{
    box-sizing: border-box;
 }
 
+*:active,
+*:focus{
+   outline: none;
+}
+
 
 /**/
 /*Header*/
@@ -174,6 +179,8 @@ main{
 .header-icon-1{
    width: 24px;
    height: 24px;
+   position: relative;
+   top: -2px;
 }
 
 .header-icor-corcle{
@@ -6068,7 +6075,7 @@ Media
    max-width: 240px;
    font-size: 12px;
    line-height: 15px;
-   margin-top: 20px;
+   margin-top: 30px;
 }
 
 .busket-products-list{
@@ -6096,6 +6103,11 @@ Media
 .busket-products-list__item-main-info__counter .busket-product-counter-plus{
    display: flex;
    align-items: center;
+}
+
+.busket-product-counter-minus{
+   min-width: 15px;
+   min-height: 15px;
 }
 
 
@@ -6214,8 +6226,10 @@ Media
 
 
 .busket-product-counter-input{
-   min-width: 0;
-   width: 15px;
+   width: 45px;
+   border: none;
+
+   text-align: center;
 }
 
 .busket-product-counter-plus,
@@ -6362,13 +6376,6 @@ Media
 .busket__no-products{
    padding-top: 28px;
 }
-
-.busket-no-productst__message{
-   font-size: 18px;
-   line-height: 25px;
-   margin-bottom: 80px;
-}
-
 
 .slide-left__size-variants-item__input{
    display: none;
@@ -6571,6 +6578,18 @@ Media
    position: relative;
    top: -2px;
 }
+.busket-top__left-img{
+   cursor: pointer;
+}
+
+.busket-top__left-img span{
+   font-size:10px;
+   line-height: 15px ;
+   font-family: "CodecPro-Regular";
+   position: relative;
+   top:4px;
+}
+
 
 
 .other-information__nav-wrapper{
@@ -6636,6 +6655,10 @@ Media
 
 
 @media(max-width:480px){
+   .busket-top__left-img span{
+      display: none;
+   }
+
    .other-information__nav-wrapper{
       top:45px;
       padding-top: 5px;
@@ -6787,7 +6810,7 @@ Media
    }
 
    .busket-products-list__item-combo-diskont{
-      bottom: -49px;
+      bottom: -42px;
    }
 
    .busket-general-price{
@@ -6950,18 +6973,71 @@ Media
    font-family: 'CodecPro-news';
 }
 
+.busket-top__left-img img{
+   position: relative;
+   top: 4px;
+}
+
+.busket-no-productst__message{
+   padding-top: 28px;
+   font-size: 18px;
+   line-height: 25px;
+   margin-bottom: 80px;
+}
+
+.busket-no-productst__message-button{
+   padding: 21px 0 20px 14px;
+   background-color:#FFF767 ;
+   width: calc(100% + 15px);
+   margin-left: -15px;
+   margin-bottom: 80px;
+
+   font-size: 16px;
+   line-height: 24px;
+   display: block;
+   text-decoration: none;
+   color: #000000;
+}
+
+.busket-no-productst__message-button img{
+   margin-left: 6px;
+}
 
 
 
+@media(max-width: 480px){
+   .basket-container__button-wrapper{
+      padding: 0;
+   }
 
+   .busket-no-productst__message-button{
+      margin-left: 0;
+      width: 100%;
+   }
 
+   .busket-no-productst__message{
+      padding-top: 0;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 40px;
+   }
 
+   .busket-no-productst__message-button{
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 50px;
+   }
 
+   .busket-top__left span{
+      position: relative;
+      top: 9px;
+   }
 
-
-
-
-
+   .clear-all-busket-button{
+      position: relative;
+      top: 2px;
+   }
+}
 
 
 
