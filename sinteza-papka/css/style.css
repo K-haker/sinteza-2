@@ -320,6 +320,7 @@ main{
    cursor: pointer;
    display: none;
    padding: 7px;
+   margin-left: -5px;
 }
 
 .drop-down-menu__button img{
@@ -1352,7 +1353,7 @@ Media
    }
 
    .delivery-container{
-      padding: 0 15px;
+      padding: 0 10px;
    }
 
    .faq-link__answer answer-display-block{
@@ -6027,7 +6028,7 @@ Media
 .busket-top__left div{
    margin-left: 10px;
    position: relative;
-   top: -3px;
+   top: -2px;
 }
 
 .busket-top__left-counter{
@@ -6587,7 +6588,7 @@ Media
    line-height: 15px ;
    font-family: "CodecPro-Regular";
    position: relative;
-   top:4px;
+   top:3px;
 }
 
 
@@ -7042,5 +7043,615 @@ Media
 
 
 
+.making-order__main-title{
+   font-size: 67px;
+   font-family: "CodecPro-Bold";
+   line-height: 59px;
+   margin-bottom: 50px;
+}
+.making-order__switching-menu{
+   display: flex;
+   margin-bottom: 40px;
+   flex-wrap: wrap;
+}
 
+.making-order__switching-menu_item{
+   margin-right: 50px;
+   cursor: pointer;
+}
+
+.making-order__switching-menu_item span{
+   font-size: 24px;
+   line-height: 29px;
+   margin-right: 5px;color: #000000;
+   opacity: 0.4;
+}
+
+.making-order__switching-menu_item-active span{
+   opacity: 1;
+}
+
+.making-order__switching-menu_item-active .making-order__switching-menu_item-arr path{
+   stroke-opacity: 1;
+
+}
+
+.making-order__switching-menu_item-active .making-order__switching-menu_item-arr{
+      transform-origin:10px 16px 0;
+   transform: rotate(180deg);
+}
+
+.making-order__personal-account{
+   background-color: #FFF658;
+   padding: 10px 5px 0  18px;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   max-width: 585px;
+   align-items: center;
+
+   margin-bottom: 33px;
+}
+
+.making-order__personal-account__discont span{
+   font-size: 10px;
+   line-height: 13px;
+   position: relative;
+   top: 10px;
+}
+
+.making-order__personal-account__link{
+   width: 172px;
+   height: 38px;
+   text-align: right;
+   background-color: #000000;
+   padding: 3px 7px 0 0;
+   position: relative;
+   top: 4px;
+}
+
+.making-order__personal-account__discont{
+   display: flex;
+}
+
+.making-order__form-registered__item{
+   position: relative;
+   margin-bottom: 24px;
+   height:60px;
+}
+
+.making-order__form-registered__item:after{
+   content: "";
+   width: 100%;
+   height: 3px;
+   background-color: #000000;
+   bottom: 0;
+   position: absolute;
+   left: 0;
+}
+
+.making-order__form-registered{
+   width: 100%;
+   max-width: 585px;
+}
+
+.making-order__form-registered__item label{
+   position: absolute;
+   bottom: 9px;
+   font-size: 16px;
+   line-height: 24px;
+   opacity: 0.4;
+   transition: all 1s;
+   z-index: 300;
+}
+
+.making-order__form-registered__item input{
+   color: #000000;
+   font-size: 16px;
+   line-height: 24px;
+   position: absolute;
+   bottom: 9px;
+   border: none;
+}
+
+.making-order__form-registered__item label.label-active{
+   font-size: 10px;
+   bottom: 33px;
+}
+
+.making-order__how-to-contact{
+   margin-bottom: 60px;
+}
+
+.making-order__order-info{
+   width: 100%;
+   max-width: 585px;
+}
+
+.making-order__order-info__top{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 15px;
+   position: relative;
+}
+
+.making-order__order-info__top-left>span:nth-child(1){
+   font-family: "CodecPro-Bold";
+   font-size: 16px;
+   line-height: 24px;
+   margin-right: 20px;
+}
+
+.making-order__order-info__top-left>span:nth-child(2){
+   font-family: "CodecPro-Regular";
+   font-size: 13px;
+   line-height: 24px;
+   opacity: 0.4;
+}
+
+.making-order__order-info__top-right{
+   font-size:13px ;
+   line-height: 24px;
+   font-family: "CodecPro-Regular";
+}
+
+.making-order__order-info__middle{
+   padding-top: 30px;
+   padding-bottom: 10px;
+   position: relative;
+   margin-bottom: 37px;
+}
+
+.making-order__order-info__middle-item{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+}
+
+.making-order__order-info__middle-item>span:nth-child(1){
+   font-size: 16px;
+   line-height: 24px;
+   font-family: "CodecPro-Regular";
+}
+
+.making-order__order-info__middle-item-price>span{
+   font-size: 23px;
+   line-height: 24px;
+   margin-right: 5px;
+}
+
+.making-order__order-info__middle:after{
+   content:"";
+   width: 100%;
+   height: 2px;
+   bottom:0;
+   position: absolute;
+   background-color: #000000;
+}
+
+.making-order__order-info__middle:before{
+   content:"";
+   width: 100%;
+   height: 2px;
+   top:0;
+   position: absolute;
+   background-color: #000000;
+}
+
+.making-order__order-info__middle-item-price-discont{
+   color:#FF5700;
+}
+
+.making-order__order-info__bottom{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 40px;
+}
+
+.making-order__order-info__bottom>span{
+   font-family: "CodecPro-Bold";
+   line-height: 24px;
+   font-size: 16px;
+}
+
+.making-order__order-info__bottom>div{
+   line-height: 32px;
+   font-size: 32px;
+}
+
+.making-order__how-to-get-it{
+   width: 100%;
+   padding: 21px 0 20px 16px;
+   background-color: #676767;
+   color: #FFFFFF;
+   margin-bottom: 30px;
+   margin-left: -10px;
+}
+
+.making-order__how-to-get-it span{
+   margin-right: 5px;
+   position: relative;
+   top: -2px;
+}
+
+.making-order__how-to-get-it img{
+   position: relative;
+   top: -2px;
+}
+
+.making-order__bottom{
+   margin-bottom: 80px;
+}
+
+.making-order__bottom-save-information__input{
+   display: none;
+}
+
+.making-order__bottom-save-information__input:checked + .making-order__bottom-save-information__fake-radio:after{
+   opacity: 1;
+}
+
+.making-order__bottom-save-information__fake-radio{
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   border-radius: 2px;
+   position: relative;
+   border: 1px solid black;
+   position: relative;
+   top: 5px;
+   background-color: #C3C0BC;
+   opacity: 0.4;
+   border: none;
+   margin-right: 5px;
+}
+
+.making-order__bottom-save-information__fake-radio:after{
+   content:"";
+   width: 25px;
+   height: 20px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   opacity: 1;
+   z-index: 100;
+}
+
+.making-order__how-to-contact__variants-item input{
+   display: none;
+}
+
+.making-order__how-to-contact__variants-item{
+   padding: 7px 0 7px 8px;
+   width: 152px;
+   margin-right: 20px;
+   background-color:#F6F6F9;
+   display: block;
+   cursor: pointer;
+
+   font-size: 16px;
+   line-height: 24px;
+}
+
+.making-order__how-to-contact__question{
+   font-size: 10px;
+   line-height: 24px;
+   margin-bottom: 3px;
+   opacity: 0.4;
+}
+
+.making-order__how-to-contact__variants{
+   display: flex;
+   margin-left: -10px;
+}
+
+.making-order__bottom-save-information>span{
+   font-size: 16px;
+   line-height: 24px;
+   font-family: "CodecPro-Regular";
+}
+
+.footer-wrapper-making-order{
+   position: relative;
+}
+
+.footer-making-order__circle{
+   width: 80px;
+   height: 80px;
+   position: absolute;
+   z-index: 500;
+   background-color: #FFFFFF;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+
+   right: 15px;
+   top: 15px;
+   overflow: hidden;
+}
+
+.footer-making-order__circle-info{
+   text-align: center;
+   position: relative;
+   top: -5px;
+}
+
+.footer-making-order__circle-info img{
+   height: 50px;
+   margin-bottom: 5px;
+}
+
+.footer-making-order__circle-info div{
+   font-size: 10px;
+   line-height: 13px;
+}
+
+.making-order__authorized{
+   width: 100%;
+   max-width: 585px;
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 20px;
+   position: relative;
+   margin-bottom: 60px;
+}
+
+.making-order__authorized:after{
+   content:"";
+   width: 100%;
+   height: 2px;
+   background-color: #000000;
+   left: 0;
+   position: absolute;
+   bottom: 0;
+}
+
+.making-order__authorized-item{
+   font-size: 16px;
+   line-height: 24px;
+}
+
+.mob-br{
+   display: none;
+}
+
+.making-order__authorized-img{
+   cursor: pointer;
+}
+
+@media(max-width: 480px){
+   .making-order__main-title{
+      font-size:28px ;
+      line-height: 34px;
+      margin-bottom: 20px;
+   }
+
+   .making-order__switching-menu_item{
+      margin-right: 25px;
+      margin-bottom: 10px;
+   }
+
+   .making-order__switching-menu_item span{
+      font-size: 16px;
+      line-height: 24px;
+   }
+
+   .making-order__switching-menu{
+      margin-bottom: 20px;
+   }
+
+   .container-making-order__personal-account{
+      padding: 0;
+   }
+
+   .making-order__personal-account{
+      position: relative;
+      padding: 24px 0 26px 11px;
+   }
+
+   .making-order__personal-account__link{
+      position: absolute;
+      bottom:0;
+      right: 0;
+      top:auto;
+      width: 128px;
+   }
+
+   .making-order__personal-account__discont img{
+      position: relative;
+      top: 5px;
+   }
+
+   .making-order__personal-account__discont span{
+      top: auto;
+   }
+
+   .making-order__form-registered__item:after{
+      width: calc(100% + 20px);
+      margin-left: -10px;
+      height: 2px;
+   }
+
+   .making-order__how-to-contact{
+      padding-bottom: 3px;
+      margin-bottom: 50px;
+   }
+
+   .making-order__how-to-contact:after{
+      content:"";
+      width: calc(100% + 20px);
+      margin-left: -10px;
+      height: 2px;
+      bottom: 0;
+      background-color: #000000;
+   }
+
+   .making-order__order-info__middle:before,
+   .making-order__order-info__middle:after{
+      width: calc(100% + 20px);
+      margin-left: -10px;
+   }
+
+   .making-order__order-info__top-left>span:nth-child(1){
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   .making-order__order-info__top-left>span:nth-child(2){
+      font-size: 10px;
+      line-height: 15px;
+   }
+
+   .making-order__order-info__top{
+      margin-bottom: 10px;
+   }
+
+   .making-order__order-info__middle{
+      padding-top: 20px;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+   }
+
+   .making-order__order-info__middle-item>span:nth-child(1){
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   .making-order__order-info__middle-item-price>span{
+      font-size: 18px;
+   }
+
+   .making-order__order-info__middle-item{
+      margin-bottom: 11px;
+   }
+
+   .making-order__order-info__bottom>span{
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   .making-order__order-info__bottom>div{
+      font-size: 18px;
+      line-height: 18px;
+      position: relative;
+      top:3px;
+   }
+
+   .making-order__order-info__bottom{
+      margin-bottom: 30px;
+   }
+
+   .making-order__how-to-get-it{
+      width: calc(100% + 20px);
+      margin-right: 0;
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   .making-order__bottom-save-information>span{
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: -0.5px;
+   }
+
+   .making-order__bottom{
+      margin-bottom: 50px;
+   }
+
+
+
+   .footer-making-order__circle{
+      width: 54px;
+      height: 54px;
+   }
+
+   .footer-making-order__circle-info{
+      top: -5px;
+   }
+
+   .footer-making-order__circle-info img{
+      height: 35px;
+      margin-bottom: 1px;
+   }
+
+   .footer-making-order__circle-info div{
+      font-size: 9px;
+      line-height: 10px;
+   }
+
+
+   .making-order__authorized-item{
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   .making-order__authorized{
+      margin-bottom: 50px;
+      align-items: flex-start;
+   }
+
+   .making-order__authorized:after{
+      display: none
+   }
+
+   .mob-br{
+      display: block;
+   }
+
+
+}
+
+
+.thank-you-body{
+   height: 100%;
+}
+
+.thank-you__check{
+   padding: 40px 40px 70px 40px;
+   border: 1px solid black;
+   max-width: 540px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.thank-you__check-title{
+   font-size: 67px;
+   line-height:64px;
+   font-weight: 700;
+   margin-bottom: 7px;
+}
+
+.thank-you__check-status{
+   opacity: 0.2;
+}
+
+.thank-you__info{
+   font-size: 16px;
+   line-height: 24px;
+   font-family: "CodecPro-Regular";
+   margin-bottom: 11px;
+}
+
+.thank-you__personal-room{
+   width: 172px;
+   height: 38px;
+   background-color: #FFF658;
+   display: block;
+   padding: 3px 7px 0 0;
+   text-align-last: right;
+}
+
+.container-thank-you{
+   height: 100%;
+}
+
+.thank-you__check-bottom__text{
+   margin-bottom: 20px;
+   font-size: 16px;
+   line-height: 24px;
+}
 
