@@ -2,6 +2,8 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+   /*маска телефона на странице Ваши данные*/
+   $("#formInputPhone").mask("+7(999)999-99-99");
 
 /*Работа с корзиной*/
    /*очищение всей корзины*/
@@ -332,6 +334,44 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 /***/
 /*начало JS кода*/
 /***/
+
+/*Валидация формы на странице ваши данные*/
+   let makingOrderFormItemInput = document.querySelectorAll(".making-order__form-registered__item-input");
+
+   for(let i =0; i<makingOrderFormItemInput.length; i++ ){
+      makingOrderFormItemInput[i].addEventListener("blur", function(){
+         if(makingOrderFormItemInput[i].value === ""){
+            let childLabelInfoAboutYou = makingOrderFormItemInput[i].parentElement.querySelector("label");
+            childLabelInfoAboutYou.classList.remove("label-active");
+         }
+
+         if(makingOrderFormItemInput[i].value !== ""){
+            let childLabelInfoAboutYouCheck = makingOrderFormItemInput[i].parentElement.querySelector("label");
+            childLabelInfoAboutYouCheck.classList.add("label-active");
+         }
+      })
+
+      makingOrderFormItemInput[i].addEventListener("focus", function(){
+         let childLabelInfoAboutYou = makingOrderFormItemInput[i].parentElement.querySelector("label");
+         childLabelInfoAboutYou.classList.add("label-active");
+      })
+   }
+
+   /*Валидация номера телефона*/
+   let telephoneNumberMakingOrder = document.querySelector("#telephoneNumberMakingOrder")
+
+   console.log(telephoneNumberMakingOrder);
+
+   telephoneNumberMakingOrder.addEventListener("blur", function(){
+      if(telephoneNumberMakingOrder.value.replace(/[_-]/g, '').length < 14){
+
+      }
+   })
+
+
+/*слайдеры*/
+
+
 let firstSwiper = new Swiper(".swiper-1",{
    slidesPerView: 'auto',
    spaceBetween: 20,
@@ -718,6 +758,8 @@ function checkingAvailabilityOfProductsInBasket(){
    }
 }
 
+
+
 checkingAvailabilityOfProductsInBasket()
 
 /*подсчет количества товаров в корзине*/
@@ -858,6 +900,21 @@ basketDeleteProductItem.addEventListener("click", function(){
    /*проверка на наличие товара в корзине*/
    checkingAvailabilityOfProductsInBasket()
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

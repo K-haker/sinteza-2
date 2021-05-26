@@ -1276,7 +1276,6 @@ Media
 
 .quest-check:checked ~ .faq-link__answer{
    display: block;
-
 }
 
 .quest-check:checked{
@@ -7142,7 +7141,6 @@ Media
    line-height: 24px;
    opacity: 0.4;
    transition: all 1s;
-   z-index: 300;
 }
 
 .making-order__form-registered__item input{
@@ -7152,6 +7150,9 @@ Media
    position: absolute;
    bottom: 9px;
    border: none;
+   background-color: transparent;
+
+   width: 100%;
 }
 
 .making-order__form-registered__item label.label-active{
@@ -7291,6 +7292,11 @@ Media
    opacity: 1;
 }
 
+.making-order__bottom-save-information__input:checked + .making-order__bottom-save-information__fake-radio{
+   background-color: #000000;
+   opacity: 1;
+}
+
 .making-order__bottom-save-information__fake-radio{
    display: inline-block;
    width: 20px;
@@ -7314,7 +7320,10 @@ Media
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   opacity: 1;
+   background: url("../img/making-order/galka-cast.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   opacity: 0;
    z-index: 100;
 }
 
@@ -7370,6 +7379,7 @@ Media
    right: 15px;
    top: 15px;
    overflow: hidden;
+   cursor: pointer;
 }
 
 .footer-making-order__circle-info{
@@ -7606,16 +7616,23 @@ Media
 
 .thank-you-body{
    height: 100%;
+   background: url("../img/thank-you/Bitmap.jpg");
+   background-size:cover;
+   background-repeat: no-repeat;
+   overflow: hidden;
 }
 
 .thank-you__check{
    padding: 40px 40px 70px 40px;
-   border: 1px solid black;
+   width: 100%;
    max-width: 540px;
-   height: 100%;
+   position: absolute;
+   top: 71px;
+   bottom: 0;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   background-color: #FFFFFF;
 }
 
 .thank-you__check-title{
@@ -7625,8 +7642,15 @@ Media
    margin-bottom: 7px;
 }
 
-.thank-you__check-status{
+.thank-you__check-status__paided{
    opacity: 0.2;
+}
+
+.thank-you__check-status__waiting-payment{
+   font-size: 42px;
+   line-height:50px ;
+   opacity: 0.2;
+   font-weight: "CodecPro-Bold"
 }
 
 .thank-you__info{
@@ -7654,4 +7678,164 @@ Media
    font-size: 16px;
    line-height: 24px;
 }
+
+
+.thank-you__check-parthners-item__img{
+   height: 66px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 6px;
+}
+
+.thank-you__check-parthners{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.thank-you__check-parthners-item div:nth-child(2){
+   font-family: "CodecPro-Bold";
+   font-size: 14px;
+   line-height: 21px;
+}
+
+.thank-you__see-your-eyes{
+   width: 296px;
+   height: 52px;
+   padding: 15px 0 13px 14px;
+   background-color: #FFF658;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   display: block;
+   color: #000000;
+   text-decoration: none;
+   z-index: 200;
+}
+
+.thank-you__see-your-eyes span{
+   font-size: 16px;
+   line-height: 24px;
+}
+
+.thank-you__see-your-eyes img{
+   position: relative;
+   top: 1px;
+}
+
+.thank-you__header{
+   background-color: transparent;
+}
+
+.thank-you__check-parthners-item__img img{
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.thank-you__check-parthners-item{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+@media(max-width:991px){
+   .thank-you__check-title{
+      font-size: 50px;
+      line-height: 50px;
+   }
+
+   .thank-you__see-your-eyes{
+      width: 256px;
+   }
+
+   .thank-you__personal-room{
+      display: none;
+   }
+
+   .thank-you__check{
+      max-width: 470px;
+   }
+}
+
+
+@media(max-width:480px){
+   .thank-you-body{
+      background: none;
+   }
+
+   .thank-you__check{
+      padding: 0;
+      padding-bottom: 88px;
+   }
+
+   .thank-you__check-title{
+      font-size: 40px;
+      line-height: 44px;
+      margin-bottom: 9px;
+   }
+
+   .thank-you__check-status__waiting-payment{
+      font-size: 31px;
+      line-height:31px;
+   }
+
+   .thank-you__info{
+      font-size:16px;
+      line-height:24px;
+   }
+
+   .thank-you__personal-room{
+      display: none;
+   }
+
+   .thank-you__check-bottom__text{
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   .thank-you__check-parthners-item div:nth-child(2){
+      font-size: 11px;
+      line-height: 13px;
+   }
+
+   .thank-you__check-parthners-item__img{
+      height: 57px;
+      max-width: 70px;
+   }
+
+   .thank-you__see-your-eyes{
+      width: calc(100% + 10px);
+      margin-right: -10px;
+   }
+
+   .making-order__form-registered__item{
+      margin-bottom: 13px;
+   }
+}
+
+
+.making-order__how-to-contact__variants-item input:checked + making-order__actived-rdio-div{
+   background-color: red;
+}
+
+.making-order__how-to-contact__variants-item input{
+   display: block;
+}
+
+.red-error{
+   background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
