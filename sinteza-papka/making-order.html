@@ -255,18 +255,18 @@
          <div class="making-order__form-registered">
 
             <div class="making-order__form-registered__item">
-               <label class="label-active" for="formInputName"> Имя и Фамилия / Название организации</label>
-                 <input placeholder="" type="text">
+               <label  for="formInputName"> Имя и Фамилия / Название организации</label>
+                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
             </div>
 
             <div class="making-order__form-registered__item">
                <label for="formInputName"> Ваша почта</label>
-                 <input placeholder="" type="text">
+                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
             </div>
 
             <div class="making-order__form-registered__item">
-               <label for="formInputName"> Номер телефона</label>
-                 <input placeholder="" type="text">
+               <label id="telephoneNumberMakingOrder" for="formInputName"> Номер телефона</label>
+                 <input class="making-order__form-registered__item-input" id="formInputPhone" placeholder="" type="text">
             </div>
 
          </div>
@@ -277,14 +277,14 @@
             <span class="making-order__how-to-contact__question">Как с вами связаться?</span>
 
             <div class="making-order__how-to-contact__variants">
-              <label class='making-order__how-to-contact__variants-item'>
-                    <input type="radio">
-                   <div>По телефону</div>
+              <label  class='making-order__how-to-contact__variants-item'>
+                    <input  type="radio">
+                   <div class="making-order__actived-rdio-div">По телефону</div>
               </label>
 
                <label class='making-order__how-to-contact__variants-item'>
                     <input type="radio">
-                   <div>По почте</div>
+                   <div class="making-order__actived-rdio-div">По почте</div>
               </label>
             </div>
          </div>
@@ -446,6 +446,7 @@
 
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+   <script src="js/jquery.maskedinput.js"></script>
    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
    <script src="js/custome.js"></script>
 </body>
