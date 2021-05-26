@@ -2,8 +2,13 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+   /*перемещение к верху страницы при нажтии на кнопку "вверх" на странице Оформление заказа*/
+   $("#goToTopPageMakingOrder").on('click', function(){
+        $('body,html').animate({scrollTop: 0}, 500);
+    });
+
    /*маска телефона на странице Ваши данные*/
-   $("#formInputPhone").mask("+7(999)999-99-99");
+   $("#telephoneNumberMakingOrder").mask("+7(999)999-99-99");
 
 /*Работа с корзиной*/
    /*очищение всей корзины*/
@@ -343,11 +348,15 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
          if(makingOrderFormItemInput[i].value === ""){
             let childLabelInfoAboutYou = makingOrderFormItemInput[i].parentElement.querySelector("label");
             childLabelInfoAboutYou.classList.remove("label-active");
+
+            makingOrderFormItemInput[i].parentElement.classList.add("errored-form-input");
          }
 
          if(makingOrderFormItemInput[i].value !== ""){
             let childLabelInfoAboutYouCheck = makingOrderFormItemInput[i].parentElement.querySelector("label");
             childLabelInfoAboutYouCheck.classList.add("label-active");
+
+            makingOrderFormItemInput[i].parentElement.classList.remove("errored-form-input");
          }
       })
 
@@ -360,11 +369,10 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
    /*Валидация номера телефона*/
    let telephoneNumberMakingOrder = document.querySelector("#telephoneNumberMakingOrder")
 
-   console.log(telephoneNumberMakingOrder);
 
    telephoneNumberMakingOrder.addEventListener("blur", function(){
       if(telephoneNumberMakingOrder.value.replace(/[_-]/g, '').length < 14){
-
+         telephoneNumberMakingOrder.parentElement.classList.add("errored-form-input");
       }
    })
 

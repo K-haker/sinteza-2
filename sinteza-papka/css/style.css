@@ -109,6 +109,10 @@
 
 
 /*sinteza 2.0*/
+.making-order__your-data__wrraper-block{
+   display: none;
+}
+
 body{
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
@@ -7739,6 +7743,12 @@ Media
    flex-wrap: wrap;
 }
 
+.making-order__form-registered__item{
+   border-bottom: 3px solid black;
+   padding: 0 0px;
+   transition: border-color 0.3s;
+}
+
 @media(max-width:991px){
    .thank-you__check-title{
       font-size: 50px;
@@ -7812,6 +7822,23 @@ Media
    .making-order__form-registered__item{
       margin-bottom: 13px;
    }
+
+   .new-container-pad0{
+      padding: 0;
+   }
+
+   .making-order__form-registered__item{
+      border-bottom: 2px solid black;
+      padding: 0 10px;
+   }
+
+   .making-order__form-registered__item input{
+      font-size: 14px;
+   }
+
+   .making-order__form-registered__item label{
+      font-size: 14px;
+   }
 }
 
 
@@ -7827,15 +7854,88 @@ Media
    background-color: red;
 }
 
+.making-order__form-registered__item:after{
+   display: none;
+}
 
+.errored-form-input{
+   border-color: red;
+}
 
+.how-get__chooser-question{
+   font-size: 10px;
+   line-height: 24px;
+   opacity: 0.4;
+   margin-bottom: 3px;
+}
 
+.how-get__additional-services-choice__item{
+   display: flex;
+   margin-bottom: 12px;
+}
 
+.how-get__additional-services-choice__item-left{
+   margin-right: 5px;
+}
 
+.how-get__additional-services-choice__item-right>div:nth-child(1) {
+   font-size: 16px;
+   line-height: 24px;
+   font-family: "CodecPro-Regular";
+}
 
+.how-get__additional-services-choice__item-right>div:nth-child(2) {
+   font-size: 10px;
+   line-height: 12px;
+   opacity: 0.4;
+}
 
+.how-get__additional-services-choice__item-right{
+   position: relative;
+   top: 3px;
+}
 
+.how-get__additional-services-choice{
+   margin-bottom: 60px;
+}
 
+.how-get__additional-services-choice__item-left{
+   cursor: pointer;
+}
+
+.which-floor{
+   max-width: 585px;
+}
+
+.making-order__order-info__middle-item-price__question{
+   display: flex;
+   align-items: center;
+}
+
+.making-order__order-info__middle-item-price__question div{
+   position: relative;
+   margin-right: 5px;
+   border: 2px solid #676767;
+   border-radius: 50%;
+   width: 24px;
+   height: 24px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #676767;
+   font-size: 18px;
+   cursor: pointer;
+}
+
+.making-order__order-info__middle-item-price__question div>span{
+   position: relative;
+   top: 2px;
+}
+
+.making-order__order-info__middle-item-price-discont__minus{
+   position: relative;
+   right:-6px;
+}
 
 
 
