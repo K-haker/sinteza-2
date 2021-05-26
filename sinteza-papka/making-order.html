@@ -223,6 +223,89 @@
 
 
 
+<div class="making-order__your-data__wrraper">
+
+  <div class="how-get__wrapper-block">
+   <div class="new-container">
+      <div class="how-get__chooser">
+         <div class="how-get__chooser-question">
+            Какой способ получения удобнее?
+         </div>
+         <div class="how-get__choose-variants">
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+      </div>
+   </div>
+
+   <div class="new-container new-container-pad0">
+         <div class="making-order__form-registered">
+
+            <div class="making-order__form-registered__item">
+               <label  for="formInputName"> Ваш адрес</label>
+                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
+            </div>
+
+            <div class="making-order__form-registered__item">
+               <label for="formInputName"> Квартира, подъезд, код домофона</label>
+                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
+            </div>
+
+            <div class="making-order__form-registered__item">
+               <label for="formInputName"> Комментарий к заказу</label>
+                 <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
+            </div>
+
+         </div>
+      </div>
+
+      <div class="new-container">
+         <div class="how-get__additional-services-choice">
+
+             <div class="how-get__additional-services-choice__item">
+                <label class="how-get__additional-services-choice__item-left">
+                    <input class="making-order__bottom-save-information__input" type="radio">
+                    <span class="making-order__bottom-save-information__fake-radio"></span>
+                 </label>
+                 <div class="how-get__additional-services-choice__item-right">
+                    <div>Подъем на этаж</div>
+                    <div>до 2% от заказа</div>
+                 </div>
+             </div>
+
+             <div class="making-order__form-registered__item
+which-floor">
+               <label for="formInputName"> Этаж, на который нужно занести товары</label>
+                 <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
+            </div>
+
+             <div class="how-get__additional-services-choice__item">
+                <label class="how-get__additional-services-choice__item-left">
+                    <input class="making-order__bottom-save-information__input" type="radio">
+                    <span class="making-order__bottom-save-information__fake-radio"></span>
+                 </label>
+                 <div class="how-get__additional-services-choice__item-right">
+                    <div>Сбор мебели и вывоз упаковки </div>
+                    <div>до 10% от заказа </div>
+                 </div>
+             </div>
+
+         </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+   <div class="making-order__your-data__wrraper-block">
+
+
+
 <!--
      <div class="new-container">
         <div class="making-order__authorized">
@@ -251,7 +334,7 @@
          </div>
       </div>
 
-      <div class="new-container">
+      <div class="new-container new-container-pad0">
          <div class="making-order__form-registered">
 
             <div class="making-order__form-registered__item">
@@ -265,8 +348,8 @@
             </div>
 
             <div class="making-order__form-registered__item">
-               <label id="telephoneNumberMakingOrder" for="formInputName"> Номер телефона</label>
-                 <input class="making-order__form-registered__item-input" id="formInputPhone" placeholder="" type="text">
+               <label for="formInputName"> Номер телефона</label>
+                 <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
             </div>
 
          </div>
@@ -289,8 +372,11 @@
             </div>
          </div>
       </div>
-
-
+   </div>
+<!--
+ ***   ***  ****
+ **** ** *   ******
+      -->
 
       <div class="new-container">
          <div class="making-order__order-info">
@@ -318,7 +404,28 @@
                <div class="making-order__order-info__middle-item">
                   <span>Скидка -20% при покупке комбо </span>
                   <span class='making-order__order-info__middle-item-price making-order__order-info__middle-item-price-discont'>
+                       <span class="making-order__order-info__middle-item-price-discont__minus">-</span>
                      <span>900</span>
+                     <span>₽</span>
+                  </span>
+               </div>
+
+               <div class="making-order__order-info__middle-item">
+                  <span>Дополнительные услуги </span>
+                  <span class='making-order__order-info__middle-item-price'>
+                     <span>2900</span>
+                     <span>₽</span>
+                  </span>
+               </div>
+
+               <div class="making-order__order-info__middle-item">
+                  <span>Доставка </span>
+                  <span class='making-order__order-info__middle-item-price making-order__order-info__middle-item-price__question'>
+                        <div>
+                           <span>?</span>
+                        </div>
+                       <span>от</span>
+                     <span>289 304</span>
                      <span>₽</span>
                   </span>
                </div>
@@ -352,6 +459,9 @@
 
          </div>
      </div>
+</div>
+
+
 
    </main>
 
@@ -359,7 +469,7 @@
 <footer>
       <div class="footer-wrapper  footer-wrapper-making-order">
 
-        <div class="footer-making-order__circle">
+        <div id="goToTopPageMakingOrder" class="footer-making-order__circle">
            <div class="footer-making-order__circle-info">
               <img src="img/making-order/arrow-footer.svg" alt="">
               <div>Вверх</div>
