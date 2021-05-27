@@ -2,6 +2,119 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+   /*появление ошибки об оплате при нажатии на кнопку*/
+   $("#making-order__payment-pay-button").on("click", function(){
+      $(".making-order__payment-error").slideDown(300);
+      $("#background-furn").addClass("dis-bl");
+   })
+
+   $(".making-order__payment-error__bottom-item").on("click", function(){
+      $(".making-order__payment-error").slideUp(300);
+      $("#background-furn").removeClass("dis-bl");
+   })
+
+   /*работа с радио кнопками способов оплаты*/
+   $(".making-order__payment__variants-item").on("click", function(){
+      $(".making-order__payment__variants-item").removeClass("making-order__payment__variants-item-active")
+      $(event.target).addClass("making-order__payment__variants-item-active")
+
+      if ($(event.target).attr('id') == 'making-order__payment__variants-cash'){
+         $("#making-order__payment-pay-button__cart").slideUp(0)
+         $("#making-order__payment-pay-button__cash").slideDown(0)
+      } else {
+         $("#making-order__payment-pay-button__cart").slideDown(0)
+         $("#making-order__payment-pay-button__cash").slideUp(0)
+      }
+   })
+
+   /*Работа с радиокнопками Ваши данные/способ получения/оплата*/
+   $("#makingOrderRadioButonYouData").on("click", function(){
+      $("#how-get__wrapper-block").slideUp(0);
+      $("#making-order__your-data__wrraper-block").slideDown(0);
+      $("#makibg-order__wrapper-all").slideDown(0);
+      $("#making-order__payment-wrapper").slideUp(0)
+
+      $(".making-order__switching-menu_item").removeClass("making-order__switching-menu_item-active")
+      $(this).addClass("making-order__switching-menu_item-active")
+   })
+
+    $("#makingOrderRadioButonHowToGetIt").on("click", function(){
+      $("#how-get__wrapper-block").slideDown(0);
+      $("#making-order__your-data__wrraper-block").slideUp(0);
+       $("#makibg-order__wrapper-all").slideDown(0);
+       $("#making-order__payment-wrapper").slideUp(0)
+
+       $(".making-order__switching-menu_item").removeClass("making-order__switching-menu_item-active")
+       $(this).addClass("making-order__switching-menu_item-active")
+   })
+
+   $("#makingOrderRadioButonPayment").on("click", function(){
+      $("#makibg-order__wrapper-all").slideUp(0);
+      $(".making-order__switching-menu_item").removeClass("making-order__switching-menu_item-active")
+       $(this).addClass("making-order__switching-menu_item-active")
+      $("#making-order__payment-wrapper").slideDown(0)
+   })
+
+   /*показ/скрытие блока о поднятии на этаж в зависимости от того выбран input или нет*/
+   $(".how-get__additional-services-choice__item-left").on("click", function(){
+      if($("#ascent-to-the-foor-input").is(":checked")){
+         $("#ascent-to-the-foor-block").slideDown(300);
+      } else{
+         $("#ascent-to-the-foor-block").slideUp(300);
+      }
+   })
+
+
+   /*Работа с радио кнопками во вкладке Ваши данные*/
+   $(".making-order__how-to-contact__variants-item").on("click", function(){
+      $(".making-order__how-to-contact__variants-item").removeClass("making-order__how-to-contact__variants-item-active");
+      $(event.target).addClass("making-order__how-to-contact__variants-item-active")
+   })
+
+   /*Открытие всплывающих окон на странице оформление заказа*/
+
+   $("#chooseYourCity").on("click", function(){
+      $("#making-order__window-choose-sity").slideToggle(300);
+      $("#background-furn").addClass("dis-bl");
+
+      var nameCityInInputOfWindowMakingOrder = $("#nameChoosedCity").text()
+      $("#cityInWindowChooseCity").val(nameCityInInputOfWindowMakingOrder)
+   })
+
+   /*Закрытие всплывающих окон на странице форомление заказа*/
+   $("#close-making-order-city-window").on("click", function(){
+
+      var choosedCityNameEnded = $("#cityInWindowChooseCity").val()
+      $("#nameChoosedCity").text(choosedCityNameEnded);
+
+      $("#making-order__window-choose-sity").slideToggle(300);
+      $("#background-furn").removeClass("dis-bl");
+   })
+
+   /*выбор города и смена названия в Инпуте в открытом окне*/
+   $(".making-order__window-choose-sity__list-item").on("click", function(){
+      $(event.target).text();
+
+      var choosedCityName = $(event.target).text();
+      $("#cityInWindowChooseCity").val(choosedCityName)
+   })
+
+
+   /*Работа с тремя радиобатонами о доставке/самовывозе*/
+   $(".how-get__choose-variants-item").on("click", function(){
+      $(".how-get__choose-variants-item").removeClass("how-get__choose-variants-item-active");
+      $(event.target).addClass("how-get__choose-variants-item-active")
+
+      if ($(event.target).attr('id') == 'making-order__pick-up-service'){
+         $("#how-get__pick-up-service").slideDown(0)
+         $("#making-order__delivery").slideUp(0)
+      } else {
+         $("#how-get__pick-up-service").slideUp(0)
+         $("#making-order__delivery").slideDown(0)
+      }
+   })
+
+
    /*перемещение к верху страницы при нажтии на кнопку "вверх" на странице Оформление заказа*/
    $("#goToTopPageMakingOrder").on('click', function(){
         $('body,html').animate({scrollTop: 0}, 500);
@@ -333,6 +446,7 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 
     });
 
+
 })
 
 
@@ -340,7 +454,9 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 /*начало JS кода*/
 /***/
 
-/*Валидация формы на странице ваши данные*/
+
+
+   /*Валидация формы на странице ваши данные*/
    let makingOrderFormItemInput = document.querySelectorAll(".making-order__form-registered__item-input");
 
    for(let i =0; i<makingOrderFormItemInput.length; i++ ){
@@ -348,15 +464,15 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
          if(makingOrderFormItemInput[i].value === ""){
             let childLabelInfoAboutYou = makingOrderFormItemInput[i].parentElement.querySelector("label");
             childLabelInfoAboutYou.classList.remove("label-active");
+              makingOrderFormItemInput[i].parentElement.classList.add("errored-form-input");
 
-            makingOrderFormItemInput[i].parentElement.classList.add("errored-form-input");
          }
 
          if(makingOrderFormItemInput[i].value !== ""){
             let childLabelInfoAboutYouCheck = makingOrderFormItemInput[i].parentElement.querySelector("label");
             childLabelInfoAboutYouCheck.classList.add("label-active");
-
             makingOrderFormItemInput[i].parentElement.classList.remove("errored-form-input");
+
          }
       })
 
@@ -375,6 +491,7 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
          telephoneNumberMakingOrder.parentElement.classList.add("errored-form-input");
       }
    })
+
 
 
 /*слайдеры*/
