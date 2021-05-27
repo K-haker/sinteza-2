@@ -177,6 +177,35 @@
 
 
 
+
+   <div id="making-order__window-choose-sity" class="making-order__window-choose-sity">
+        <div id="close-making-order-city-window" class="making-order__window-choose-sity__close">
+           <img src="img/making-order/close-modal.svg" alt="">
+        </div>
+
+      <div class="making-order__window-choose-sity__title">Укажите свой город</div>
+      <div class="making-order__window-choose-sity__input-wrapper">
+         <input id="cityInWindowChooseCity" type="text">
+      </div>
+      <div class="making-order__window-choose-sity__list">
+         <div class="making-order__window-choose-sity__list-item">Кез</div>
+         <div class="making-order__window-choose-sity__list-item">Екат</div>
+         <div class="making-order__window-choose-sity__list-item">Тверь</div>
+         <div class="making-order__window-choose-sity__list-item">Сочи</div>
+         <div class="making-order__window-choose-sity__list-item">Кез</div>
+         <div class="making-order__window-choose-sity__list-item">Кез</div>
+         <div class="making-order__window-choose-sity__list-item">Кез</div>
+         <div class="making-order__window-choose-sity__list-item">Кез</div>
+         <div class="making-order__window-choose-sity__list-item">Кез</div>
+         <div class="making-order__window-choose-sity__list-item">Кез</div>
+         <div class="making-order__window-choose-sity__list-item">Кез</div>
+
+      </div>
+   </div>
+
+
+   <div id="background-furn" class="background-furniture"></div>
+
    <main>
 
       <div class="new-container">
@@ -193,8 +222,7 @@
 
      <div class="new-container">
         <div class="making-order__switching-menu">
-
-           <div class="making-order__switching-menu_item making-order__switching-menu_item-active">
+           <div id="makingOrderRadioButonYouData" class="making-order__switching-menu_item making-order__switching-menu_item-active">
               <span>Ваши данные</span>
               <svg class='making-order__switching-menu_item-arr' width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.14376 7.73493L17.3811 7.73493L17.3811 23.2048" stroke="black" stroke-opacity="0.4" stroke-width="1.73"/>
@@ -202,7 +230,7 @@
                </svg>
            </div>
 
-            <div class="making-order__switching-menu_item ">
+            <div id="makingOrderRadioButonHowToGetIt" class="making-order__switching-menu_item ">
               <span>Способ получения</span>
               <svg class='making-order__switching-menu_item-arr' width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.14376 7.73493L17.3811 7.73493L17.3811 23.2048" stroke="black" stroke-opacity="0.4" stroke-width="1.73"/>
@@ -210,7 +238,7 @@
                </svg>
            </div>
 
-           <div class="making-order__switching-menu_item ">
+           <div id="makingOrderRadioButonPayment" class="making-order__switching-menu_item ">
               <span>Оплата</span>
               <svg class='making-order__switching-menu_item-arr' width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.14376 7.73493L17.3811 7.73493L17.3811 23.2048" stroke="black" stroke-opacity="0.4" stroke-width="1.73"/>
@@ -221,78 +249,102 @@
         </div>
       </div>
 
+<div id="makibg-order__wrapper-all" class="makibg-order__wrapper-all">
 
+   <div id="making-order__your-data__wrraper" class="making-order__your-data__wrraper">
 
-<div class="making-order__your-data__wrraper">
-
-  <div class="how-get__wrapper-block">
-   <div class="new-container">
-      <div class="how-get__chooser">
-         <div class="how-get__chooser-question">
-            Какой способ получения удобнее?
-         </div>
-         <div class="how-get__choose-variants">
-            <div></div>
-            <div></div>
-            <div></div>
+     <div id="how-get__wrapper-block" class="how-get__wrapper-block">
+      <div class="new-container">
+         <div class="how-get__chooser">
+            <div class="how-get__chooser-question">
+               Какой способ получения удобнее?
+            </div>
+            <div class="how-get__choose-variants">
+               <div class="how-get__choose-variants-item  how-get__choose-variants-item-active">Доставка за сутки</div>
+               <div class="how-get__choose-variants-item">Доставка от 2 до 14 дней</div>
+               <div id="making-order__pick-up-service" class="how-get__choose-variants-item">Самовывоз</div>
+            </div>
          </div>
       </div>
+
+      <div id="how-get__pick-up-service" class="how-get__pick-up-service">
+         <div class="new-container">
+            <div class="how-get__pick-up-service__im-wrapp">
+               <img src="img/making-order/sam.svg" alt="">
+            </div>
+              <div class="how-get__pick-up-service__right">
+                  <div>г. Москва, 1-я Бухвостова 12/11</div>
+                  <div>Пн-Пт с 10-00 до 19-00</div>
+                  <a href="#">Посмотреть на карте</a>
+              </div>
+         </div>
+      </div>
+
+
+     <div id="making-order__delivery">
+      <div class="new-container new-container-pad0">
+            <div class="making-order__form-registered">
+
+               <div class="making-order__form-registered__item">
+                  <label  for="formInputName"> Ваш адрес</label>
+                    <input class="making-order__form-registered__item-input" placeholder="" type="text">
+
+                    <div id="chooseYourCity" class="making-order__choice-your-city">
+                         <span>г.</span>
+                          <span id="nameChoosedCity">Москва</span>
+                         <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M14.7126 0.999819L7.95997 7.85547L0.999691 0.999819" stroke="black" stroke-width="1.73"/>
+                        </svg>
+                    </div>
+               </div>
+
+               <div class="making-order__form-registered__item">
+                  <label for="formInputName"> Квартира, подъезд, код домофона</label>
+                    <input class="making-order__form-registered__item-input" placeholder="" type="text">
+               </div>
+
+               <div class="making-order__form-registered__item">
+                  <label for="formInputName"> Комментарий к заказу</label>
+                    <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
+               </div>
+
+            </div>
+         </div>
+
+         <div class="new-container">
+            <div class="how-get__additional-services-choice">
+
+                <div class="how-get__additional-services-choice__item">
+                   <label class="how-get__additional-services-choice__item-left">
+                       <input id="ascent-to-the-foor-input"  class="making-order__bottom-save-information__input" type="checkbox">
+                       <span class="making-order__bottom-save-information__fake-radio"></span>
+                    </label>
+                    <div class="how-get__additional-services-choice__item-right">
+                       <div>Подъем на этаж</div>
+                       <div>до 2% от заказа</div>
+                    </div>
+                </div>
+
+                <div id="ascent-to-the-foor-block" class="making-order__form-registered__item which-floor">
+                  <label for="formInputName"> Этаж, на который нужно занести товары</label>
+                    <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
+               </div>
+
+                <div class="how-get__additional-services-choice__item">
+                   <label class="how-get__additional-services-choice__item-left">
+                       <input class="making-order__bottom-save-information__input" type="checkbox">
+                       <span class="making-order__bottom-save-information__fake-radio"></span>
+                    </label>
+                    <div class="how-get__additional-services-choice__item-right">
+                       <div>Сбор мебели и вывоз упаковки </div>
+                       <div>до 10% от заказа </div>
+                    </div>
+                </div>
+
+            </div>
+         </div>
    </div>
 
-   <div class="new-container new-container-pad0">
-         <div class="making-order__form-registered">
-
-            <div class="making-order__form-registered__item">
-               <label  for="formInputName"> Ваш адрес</label>
-                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
-            </div>
-
-            <div class="making-order__form-registered__item">
-               <label for="formInputName"> Квартира, подъезд, код домофона</label>
-                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
-            </div>
-
-            <div class="making-order__form-registered__item">
-               <label for="formInputName"> Комментарий к заказу</label>
-                 <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
-            </div>
-
-         </div>
-      </div>
-
-      <div class="new-container">
-         <div class="how-get__additional-services-choice">
-
-             <div class="how-get__additional-services-choice__item">
-                <label class="how-get__additional-services-choice__item-left">
-                    <input class="making-order__bottom-save-information__input" type="radio">
-                    <span class="making-order__bottom-save-information__fake-radio"></span>
-                 </label>
-                 <div class="how-get__additional-services-choice__item-right">
-                    <div>Подъем на этаж</div>
-                    <div>до 2% от заказа</div>
-                 </div>
-             </div>
-
-             <div class="making-order__form-registered__item
-which-floor">
-               <label for="formInputName"> Этаж, на который нужно занести товары</label>
-                 <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
-            </div>
-
-             <div class="how-get__additional-services-choice__item">
-                <label class="how-get__additional-services-choice__item-left">
-                    <input class="making-order__bottom-save-information__input" type="radio">
-                    <span class="making-order__bottom-save-information__fake-radio"></span>
-                 </label>
-                 <div class="how-get__additional-services-choice__item-right">
-                    <div>Сбор мебели и вывоз упаковки </div>
-                    <div>до 10% от заказа </div>
-                 </div>
-             </div>
-
-         </div>
-      </div>
 </div>
 
 
@@ -300,9 +352,7 @@ which-floor">
 
 
 
-
-
-   <div class="making-order__your-data__wrraper-block">
+   <div id="making-order__your-data__wrraper-block" class="making-order__your-data__wrraper-block">
 
 
 
@@ -360,15 +410,10 @@ which-floor">
             <span class="making-order__how-to-contact__question">Как с вами связаться?</span>
 
             <div class="making-order__how-to-contact__variants">
-              <label  class='making-order__how-to-contact__variants-item'>
-                    <input  type="radio">
-                   <div class="making-order__actived-rdio-div">По телефону</div>
-              </label>
+              <div class='making-order__how-to-contact__variants-item making-order__how-to-contact__variants-item-active'>По телефону</div>
 
-               <label class='making-order__how-to-contact__variants-item'>
-                    <input type="radio">
-                   <div class="making-order__actived-rdio-div">По почте</div>
-              </label>
+               <div class='making-order__how-to-contact__variants-item'>По почте</div>
+              </div>
             </div>
          </div>
       </div>
@@ -429,6 +474,14 @@ which-floor">
                      <span>₽</span>
                   </span>
                </div>
+
+               <div class="making-order__order-info__middle-item">
+                  <span>Самовывоз </span>
+                  <span class='making-order__order-info__middle-item-price'>
+                     <span>0</span>
+                     <span>₽</span>
+                  </span>
+               </div>
             </div>
 
             <div class="making-order__order-info__bottom">
@@ -444,14 +497,14 @@ which-floor">
 
       <div class="new-container">
           <div class="making-order__bottom">
-           <div class="making-order__how-to-get-it">
+           <button disabled="" class="making-order__how-to-get-it">
                <span>Перейти к способу получения</span>
                <img src="img/making-order/wh-ar.svg" alt="">
-           </div>
+           </button>
 
            <div class="making-order__bottom-save-information">
               <label>
-                 <input class="making-order__bottom-save-information__input" type="radio">
+                 <input class="making-order__bottom-save-information__input" type="checkbox">
                  <span class="making-order__bottom-save-information__fake-radio"></span>
               </label>
                <span>Сохранить информацию для следующих покупок?</span>
@@ -459,11 +512,47 @@ which-floor">
 
          </div>
      </div>
-</div>
+   </div>
 
 
+<!--   Работа с блоком оплаты-->
 
-   </main>
+   <div id="making-order__payment-wrapper" class="making-order__payment-wrapper">
+      <div class="new-container">
+         <div class="making-order__payment__title">Какой способ оплаты удобнее?</div>
+         <div class="making-order__payment__variants">
+            <div class="making-order__payment__variants-item  making-order__payment__variants-item-active">Банковской картой</div>
+            <div class="making-order__payment__variants-item">Через расчетный счет</div>
+            <div id="making-order__payment__variants-cash" class="making-order__payment__variants-item">Наличными</div>
+         </div>
+
+         <div id="making-order__payment-pay-button" class="making-order__payment-pay-button">
+            <span id="making-order__payment-pay-button__cart">Оплатить</span>
+            <span id="making-order__payment-pay-button__cash" class="making-order__payment-pay-button__cash">Оплата наличными</span>
+            <span>289 304</span>
+            <span>&#8381;</span>
+            <img src="img/making-order/pay-butt.svg" alt="">
+         </div>
+      </div>
+   </div>
+
+   <div class="making-order__payment-error">
+      <div class="making-order__payment-error-top">
+         <div>Ошибка оплаты</div>
+         <span>Возникла техническая ошибка. Возможно, вы ошиблись при вводе данных.</span>
+      </div>
+      <div class="making-order__payment-error__bottom">
+         <div class="making-order__payment-error__bottom-item">
+            <span>Вернуться</span>
+         </div>
+         <div class="making-order__payment-error__bottom-item">
+            <span>Повторить</span>
+            <img src="img/making-order/repeat.svg" alt="">
+         </div>
+      </div>
+   </div>
+
+</main>
 
 
 <footer>
