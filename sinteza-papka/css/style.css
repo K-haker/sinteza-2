@@ -8311,6 +8311,15 @@ Media
 }
 
 @media(max-width:480px){
+   .mailing-form:after{
+      width: calc(100% + 20px);
+       left: -10px;
+   }
+
+   .mailing-button{
+      margin-right: -10px;
+   }
+
    .making-order__payment__variants-item{
       width: 190px;
       font-size: 14px;
@@ -8424,7 +8433,9 @@ Media
    display: block;
 }
 
-
+main{
+   overflow-x: hidden;
+}
 
 
 
