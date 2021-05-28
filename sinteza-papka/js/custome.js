@@ -2,6 +2,27 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+   if($(window).width < 480){
+      $(".question-circle__hover").on("click", function(){
+
+         if($(".blue-green-window__delivery").hasClass('display-block')){
+            $(".blue-green-window__delivery").removeClass("display-block")
+         } else{
+            $(".blue-green-window__delivery").addClass("display-block")
+         }
+
+      })
+   }  else {
+
+      $(".question-circle__hover").hover(function(){
+         $(".blue-green-window__delivery").addClass("display-block")
+      },function(){
+         $(".blue-green-window__delivery").removeClass("display-block");
+      })
+
+   }
+
+
    /*появление ошибки об оплате при нажатии на кнопку*/
    $("#making-order__payment-pay-button").on("click", function(){
       $(".making-order__payment-error").slideDown(300);
@@ -16,7 +37,8 @@ $(document).ready(function(){
    /*работа с радио кнопками способов оплаты*/
    $(".making-order__payment__variants-item").on("click", function(){
       $(".making-order__payment__variants-item").removeClass("making-order__payment__variants-item-active")
-      $(event.target).addClass("making-order__payment__variants-item-active")
+//      $(event.target).addClass("making-order__payment__variants-item-active")
+      $(this).addClass("making-order__payment__variants-item-active")
 
       if ($(event.target).attr('id') == 'making-order__payment__variants-cash'){
          $("#making-order__payment-pay-button__cart").slideUp(0)
@@ -43,6 +65,8 @@ $(document).ready(function(){
       $("#making-order__your-data__wrraper-block").slideUp(0);
        $("#makibg-order__wrapper-all").slideDown(0);
        $("#making-order__payment-wrapper").slideUp(0)
+       $("#making-order__order-info__delivery").addClass("display-flex");
+       $("#making-order__order-info__pick-up-sevice").removeClass("display-flex");
 
        $(".making-order__switching-menu_item").removeClass("making-order__switching-menu_item-active")
        $(this).addClass("making-order__switching-menu_item-active")
@@ -62,6 +86,25 @@ $(document).ready(function(){
       } else{
          $("#ascent-to-the-foor-block").slideUp(300);
       }
+
+      if($('[data-type="additional-services"]').is(":checked") > 0){
+         $("#making-order__order-info__additional-services").addClass("display-flex");
+      } else{
+         $("#making-order__order-info__additional-services").removeClass("display-flex");
+      }
+   })
+
+   /*Самовывоз*/
+   $("#making-order__pick-up-service").on("click", function(){
+      $("#making-order__order-info__delivery").removeClass("display-flex");
+      $("#making-order__order-info__pick-up-sevice").addClass("display-flex");
+      $("#making-order__order-info__additional-services").removeClass("display-flex");
+   })
+
+   /*Доставка*/
+   $('[data-delivery="yes"]').on("click", function(){
+      $("#making-order__order-info__delivery").addClass("display-flex");
+      $("#making-order__order-info__pick-up-sevice").removeClass("display-flex");
    })
 
 
@@ -103,14 +146,21 @@ $(document).ready(function(){
    /*Работа с тремя радиобатонами о доставке/самовывозе*/
    $(".how-get__choose-variants-item").on("click", function(){
       $(".how-get__choose-variants-item").removeClass("how-get__choose-variants-item-active");
-      $(event.target).addClass("how-get__choose-variants-item-active")
+      $(this).addClass("how-get__choose-variants-item-active")
 
       if ($(event.target).attr('id') == 'making-order__pick-up-service'){
          $("#how-get__pick-up-service").slideDown(0)
          $("#making-order__delivery").slideUp(0)
+
       } else {
          $("#how-get__pick-up-service").slideUp(0)
          $("#making-order__delivery").slideDown(0)
+      }
+
+      if ($(event.target).attr('id') == 'making-order__pick-up-service'){
+         $("#making-order__order-info__pick-up-sevice").addClass("dis-fl")
+         $("#making-order__order-info__additional services").slideUp(0)
+         $("#making-order__order-info__delivery").slideUp(0)
       }
    })
 
@@ -121,7 +171,10 @@ $(document).ready(function(){
     });
 
    /*маска телефона на странице Ваши данные*/
-   $("#telephoneNumberMakingOrder").mask("+7(999)999-99-99");
+
+   if($("#telephoneNumberMakingOrd")>0){
+      $("#telephoneNumberMakingOrd").mask("+7(999)999-99-99");
+   }
 
 /*Работа с корзиной*/
    /*очищение всей корзины*/

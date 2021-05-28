@@ -7924,22 +7924,24 @@ Media
    align-items: center;
 }
 
-.making-order__order-info__middle-item-price__question div{
+.making-order__order-info__middle-item-price__question div:nth-child(1){
    position: relative;
    margin-right: 5px;
-   border: 2px solid #676767;
+   border: 2px solid #000000;
    border-radius: 50%;
    width: 24px;
    height: 24px;
    display: flex;
    align-items: center;
    justify-content: center;
-   color: #676767;
+   color: #000000;
    font-size: 18px;
    cursor: pointer;
+
+   transition: all 0.3s;
 }
 
-.making-order__order-info__middle-item-price__question div>span{
+.making-order__order-info__middle-item-price__question div:nth-child(1)>span{
    position: relative;
    top: 2px;
 }
@@ -8207,6 +8209,86 @@ Media
    display: none;
 }
 
+.making-order__payment-wrapper{
+   display: none;
+}
+
+.making-order__order-info__additional-services{
+   display: none;
+}
+
+.making-order__order-info__delivery{
+   display: none;
+}
+
+.making-order__order-info__delivery{
+   display: none;
+}
+
+#making-order__order-info__delivery{
+   position: relative;
+}
+
+.blue-green-window__delivery{
+   position: absolute;
+
+   top: 50%;
+   right: 185px;
+   transform: translateY(-50%);
+
+   display: none;
+}
+
+.blue-green-window__delivery-text{
+   padding: 18px;
+   background-color:rgba(3, 92, 103, 0.8);
+   font-size: 11px;
+   line-height: 17px;
+   color: #FFFFFF;
+   font-family: "CodecPro-Regular"
+}
+
+.blue-green-window__delivery-right-triangle{
+   width: 0;
+   height: 0;
+   border-top: 6px solid transparent;
+   border-left: 10px solid rgba(3, 92, 103, 0.8);
+   border-bottom: 6px solid transparent;
+
+   position: absolute;
+   right: -10px;
+   top:50%;
+   transform: translateY(-50%)
+}
+
+.blue-green-window__delivery-bottom-triangle{
+   width: 0;
+   height: 0;
+   border-left: 4px solid transparent;
+   border-top: 8px solid rgba(3, 92, 103, 0.8);
+   border-right: 4px solid transparent;
+
+   position: absolute;
+   left:50%;
+   transform: translateX(-50%);
+   display: none;
+}
+
+.making-order__order-info__middle-item-price__question div:nth-child(1):hover{
+   color: #676767;
+   border-color: #676767;
+}
+
+
+
+.making-order__order-info__middle-item-price__question{
+   position: relative;
+}
+
+.blue-green-window__delivery{
+   position: absolute;
+}
+
 
 
 
@@ -8275,17 +8357,72 @@ Media
       border-bottom: 2px solid #000000;
       margin-bottom: 20px;
    }
+
+   .making-order__payment-error{
+      bottom: 0;
+      transform: none;
+      left: 0;
+      top: auto;width: 100%;
+   }
+
+   .blue-green-window__delivery-right-triangle{
+      display: none;
+   }
+
+   .blue-green-window__delivery-bottom-triangle{
+      display: block;
+   }
+
+   .blue-green-window__delivery{
+
+   }
+
+   .blue-green-window__delivery{
+
+      transform: none;
+      right: 100px;
+      bottom:23px;
+      right: 41px;
+      top: auto;
+
+      padding: 14px;
+   }
+
 }
 
+@media(max-width:375px){
+      .making-order__payment-error-top div{
+      font-size: 18px;
+      line-height: 30px;
+   }
 
+   .making-order__payment-error-top span{
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 20px;
+   }
 
+   .making-order__payment-error-top{
+      padding: 20px;
+   }
 
+   .making-order__payment-error__bottom-item{
+      font-size: 14px;
+      line-height: 24px;
+   }
 
+   .making-order__payment-error__bottom-item{
+      height: 44px;
+   }
+}
 
+.display-flex{
+   display: flex;
+}
 
-
-
-
+.display-block{
+   display: block;
+}
 
 
 
