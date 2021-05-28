@@ -260,8 +260,8 @@
                Какой способ получения удобнее?
             </div>
             <div class="how-get__choose-variants">
-               <div class="how-get__choose-variants-item  how-get__choose-variants-item-active">Доставка за сутки</div>
-               <div class="how-get__choose-variants-item">Доставка от 2 до 14 дней</div>
+               <div data-delivery="yes" class="how-get__choose-variants-item  how-get__choose-variants-item-active">Доставка за сутки</div>
+               <div data-delivery="yes" class="how-get__choose-variants-item">Доставка от 2 до 14 дней</div>
                <div id="making-order__pick-up-service" class="how-get__choose-variants-item">Самовывоз</div>
             </div>
          </div>
@@ -305,7 +305,7 @@
 
                <div class="making-order__form-registered__item">
                   <label for="formInputName"> Комментарий к заказу</label>
-                    <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
+                    <input class="making-order__form-registered__item-input" placeholder="" type="text">
                </div>
 
             </div>
@@ -316,7 +316,7 @@
 
                 <div class="how-get__additional-services-choice__item">
                    <label class="how-get__additional-services-choice__item-left">
-                       <input id="ascent-to-the-foor-input"  class="making-order__bottom-save-information__input" type="checkbox">
+                       <input data-type="additional-services" id="ascent-to-the-foor-input"  class="making-order__bottom-save-information__input" type="checkbox">
                        <span class="making-order__bottom-save-information__fake-radio"></span>
                     </label>
                     <div class="how-get__additional-services-choice__item-right">
@@ -327,12 +327,12 @@
 
                 <div id="ascent-to-the-foor-block" class="making-order__form-registered__item which-floor">
                   <label for="formInputName"> Этаж, на который нужно занести товары</label>
-                    <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
+                    <input class="making-order__form-registered__item-input" placeholder="" type="text">
                </div>
 
                 <div class="how-get__additional-services-choice__item">
                    <label class="how-get__additional-services-choice__item-left">
-                       <input class="making-order__bottom-save-information__input" type="checkbox">
+                       <input data-type="additional-services" class="making-order__bottom-save-information__input" type="checkbox">
                        <span class="making-order__bottom-save-information__fake-radio"></span>
                     </label>
                     <div class="how-get__additional-services-choice__item-right">
@@ -399,7 +399,7 @@
 
             <div class="making-order__form-registered__item">
                <label for="formInputName"> Номер телефона</label>
-                 <input id="telephoneNumberMakingOrder" class="making-order__form-registered__item-input" placeholder="" type="text">
+                 <input id="telephoneNumberMakingOrd" class="making-order__form-registered__item-input" placeholder="" type="text">
             </div>
 
          </div>
@@ -455,7 +455,7 @@
                   </span>
                </div>
 
-               <div class="making-order__order-info__middle-item">
+               <div id="making-order__order-info__additional-services" class="making-order__order-info__middle-item making-order__order-info__additional-services">
                   <span>Дополнительные услуги </span>
                   <span class='making-order__order-info__middle-item-price'>
                      <span>2900</span>
@@ -463,19 +463,29 @@
                   </span>
                </div>
 
-               <div class="making-order__order-info__middle-item">
+               <div id="making-order__order-info__delivery" class="making-order__order-info__middle-item making-order__order-info__delivery">
                   <span>Доставка </span>
                   <span class='making-order__order-info__middle-item-price making-order__order-info__middle-item-price__question'>
-                        <div>
-                           <span>?</span>
-                        </div>
+                     <div class="question-circle__hover">
+                        <span>?</span>
+                     </div>
+
                        <span>от</span>
                      <span>289 304</span>
                      <span>₽</span>
                   </span>
+
+
+                    <div class="blue-green-window__delivery">
+                        <div class="blue-green-window__delivery-text">Точную сумму <br> сообщит менеджер </div>
+
+                        <div class="blue-green-window__delivery-right-triangle"></div>
+
+                        <div class="blue-green-window__delivery-bottom-triangle"></div>
+                     </div>
                </div>
 
-               <div class="making-order__order-info__middle-item">
+               <div id="making-order__order-info__pick-up-sevice" class="making-order__order-info__middle-item making-order__order-info__delivery">
                   <span>Самовывоз </span>
                   <span class='making-order__order-info__middle-item-price'>
                      <span>0</span>
