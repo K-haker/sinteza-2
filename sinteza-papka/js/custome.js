@@ -2,6 +2,64 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+   /*работа с поиском*/
+   /*открытие поиска*/
+   $("#open-search-panel").on("click", function(){
+      $("#search-block").slideDown(300);
+      $("#background-furn").addClass("display-block");
+   })
+
+   /*Закрытие поиска*/
+   $("#close-search-panel").on("click", function(){
+      $("#search-block").slideUp(300);
+      $("#background-furn").removeClass("display-block");
+   })
+
+   /*скрытие/показ блока с товарами, которые часто ищут при длине value нпута поиска*/
+//   $("#searchPanelInput").on("keydown", function(){
+//      console.log($("#searchPanelInput").val().length )
+//
+//      if($("#searchPanelInput").val === ""){
+//         $("#frequently-searched-block").addClass("dis-none");
+//      } else if($("#searchPanelInput").val !== ""){
+//         $("#frequently-searched-block").addClass("dis-bl");
+//      }
+//   })
+
+
+
+
+   /*Скрипты на странице поиска*/
+   $('[data-searchPage="searchedButtons"]').on("click", function(){
+      $('[data-searchPage="searchedButtons"]').removeClass("search-page__radio-buttons__item-active");
+      $('[data-searchPage="searchedButtons"]').find('[data-searchPage="searchedCounters"]').slideUp(0)
+
+      $(this).addClass("search-page__radio-buttons__item-active");
+      $(this).find('[data-searchPage="searchedCounters"]').slideDown(0);
+   })
+
+   /**/
+   $('[data-searchButton="searchedButton"]').on("click", function(event){
+      $('[data-searchButton="searchedButton"]').removeClass("search-matches-found__left-buttons-items-active");
+      $('[data-searchButton="searchedButton"]').find('[data-count="search-matches__counters"]').slideUp(0)
+
+      $(this).addClass("search-matches-found__left-buttons-items-active");
+      $(this).find('[data-count="search-matches__counters"]').slideDown(0);
+   })
+
+   $("#searchedProductsRadio").on("click", function(){
+      $("#searchJournalMatchedBlock").slideUp(0)
+      $("#searchProductsMatchedBlock").slideDown(0);
+   })
+
+   $("#searchedJournalsRadio").on("click", function(){
+      $("#searchJournalMatchedBlock").slideDown(0)
+      $("#searchProductsMatchedBlock").slideUp(0);
+   })
+
+
+   /*Открытие сине зеленого блока*/
+
    if($(window).width < 480){
       $(".question-circle__hover").on("click", function(){
 
@@ -168,9 +226,12 @@ $(document).ready(function(){
 
    /*маска телефона на странице Ваши данные*/
 
-   if($("#telephoneNumberMakingOrd")>0){
+
+   if($("#telephoneNumberMakingOrd").length > 0){
       $("#telephoneNumberMakingOrd").mask("+7(999)999-99-99");
    }
+
+
 
 /*Работа с корзиной*/
    /*очищение всей корзины*/
@@ -497,6 +558,28 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 
     });
 
+   /*Валидация формы на странице Ваши данные*/
+   $(".making-order__form-registered__item-input").blur(function(){
+
+      if($(this).val() ===""){
+         $(this).parent().find("label").removeClass("label-active");
+         $(this).parent().addClass("errored-form-input");
+      }
+
+      if($(this).val() !==""){
+         $(this).parent().find("label").addClass("label-active");
+         $(this).parent().removeClass("errored-form-input");
+      }
+
+   })
+
+
+
+   $(".making-order__form-registered__item-input").focus(function(){
+      console.log("focus")
+      $(this).parent().find("label").addClass("label-active");
+   })
+
 
 })
 
@@ -504,53 +587,6 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 /***/
 /*начало JS кода*/
 /***/
-
-
-
-   /*Валидация формы на странице ваши данные*/
-
-   var makingOrderFormItemInput = document.querySelectorAll(".making-order__form-registered__item-input");
-
-   for( var i=0; i<makingOrderFormItemInput.length; i++){
-
-      makingOrderFormItemInput[i].addEventListener("blur", function(){
-
-         console.log(i)
-
-         if(makingOrderFormItemInput[i].value === ""){
-            var childLabelInfoAboutYou = makingOrderFormItemInput[i].parentElement.querySelector("label");
-            childLabelInfoAboutYou.classList.remove("label-active");
-           makingOrderFormItemInput[i].parentElement.classList.add("errored-form-input")
-         }
-
-         if(makingOrderFormItemInput[i].value !== ""){
-            var childLabelInfoAboutYouCheck = makingOrderFormItemInput[i].parentElement.querySelector("label");
-            childLabelInfoAboutYouCheck.classList.add("label-active");
-            makingOrderFormItemInput[i].parentElement.classList.remove("errored-form-input")
-
-         }
-      });
-
-      makingOrderFormItemInput[i].addEventListener("focus", function(){
-         var childLabelInfoAboutYou = makingOrderFormItemInput[i].parentElement.querySelector("label");
-         childLabelInfoAboutYou.classList.add("label-active");
-
-      })
-
-   }
-
-   /*Валидация номера телефона*/
-   var telephoneNumberMakingOrder = document.querySelector("#telephoneNumberMakingOrder")
-
-
-   if(telephoneNumberMakingOrder){
-      telephoneNumberMakingOrder.addEventListener("blur", function(){
-         if(telephoneNumberMakingOrder.value.replace(/[_-]/g, '').length < 14){            telephoneNumberMakingOrder.parentElement.classList.add("errored-form-input");
-         }
-      })
-   }
-
-
 
 
 /*слайдеры*/
@@ -563,6 +599,12 @@ var firstSwiper = new Swiper(".swiper-1",{
       nextEl:".coll-arr-right",
       prevEl:".coll-arr-left",
    },
+})
+
+var firstSwiper = new Swiper(".search-page-slider",{
+   slidesPerView: 'auto',
+   spaceBetween: 20,
+
 })
 
 
