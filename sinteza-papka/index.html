@@ -77,7 +77,7 @@
                   <a href="tel:+74993223787">+7 (499) 322-37-87</a>
               </div>
                <div class="header-right__icons">
-                  <div class="header-icon  header-icon-1">
+                  <div id="open-search-panel" class="header-icon  header-icon-1">
                      <img src="img/header/lupa.svg" alt="">
                   </div>
                   <div class="header-icon">
@@ -177,10 +177,361 @@
    <div id="background-furn" class="background-furniture"></div>
 
 
+   <div id="search-block" class="search">
+      <div class="new-container">
+         <div class="search-top">
+            <div class="search-top__left">
+               <img src="img/header/lupa.svg" alt="">
+               <input id="searchPanelInput" placeholder="Начните поиск" type="text">
+            </div>
+            <div id="close-search-panel" class="search-top__right">
+               <img src="img/header/close-poisk.svg" alt="">
+            </div>
+         </div>
 
-   <main class="main-main">
+        <!-- Часто ищут блок-->
+         <div id="frequently-searched-block" class="frequently-searched">
+            <div class="frequently-searched__title">
+               Часто ищут
+            </div>
+
+            <div class="frequently-searched__main">
+               <div class="Search__frequently-searched__main-left">
+
+                  <div class="frequently-searched__main-left__item">
+                     <div class="frequently-searched__main-left__item-img">
+                        <img src="img/header/poisk-img-item.jpg" alt="">
+                     </div>
+                     <div class="frequently-searched__main-left__item-info">
+                        <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                        <div>273 108 ₽</div>
+                     </div>
+                  </div>
+
+                  <div class="frequently-searched__main-left__item">
+                     <div class="frequently-searched__main-left__item-img">
+                        <img src="img/header/poisk-img-item.jpg" alt="">
+                     </div>
+                     <div class="frequently-searched__main-left__item-info">
+                        <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                        <div>273 108 ₽</div>
+                     </div>
+                  </div>
+
+                  <div class="frequently-searched__main-left__item">
+                     <div class="frequently-searched__main-left__item-img">
+                        <img src="img/header/poisk-img-item.jpg" alt="">
+                     </div>
+                     <div class="frequently-searched__main-left__item-info">
+                        <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                        <div>273 108 ₽</div>
+                     </div>
+                  </div>
+
+                  <div class="frequently-searched__main-left__item">
+                     <div class="frequently-searched__main-left__item-img">
+                        <img src="img/header/poisk-img-item.jpg" alt="">
+                     </div>
+                     <div class="frequently-searched__main-left__item-info">
+                        <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                        <div>273 108 ₽</div>
+                     </div>
+                  </div>
+
+                  <div class="frequently-searched__main-left__item">
+                     <div class="frequently-searched__main-left__item-img">
+                        <img src="img/header/poisk-img-item.jpg" alt="">
+                     </div>
+                     <div class="frequently-searched__main-left__item-info">
+                        <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                        <div>273 108 ₽</div>
+                     </div>
+                  </div>
+
+                  <div class="frequently-searched__main-left__item">
+                     <div class="frequently-searched__main-left__item-img">
+                        <img src="img/header/poisk-img-item.jpg" alt="">
+                     </div>
+                     <div class="frequently-searched__main-left__item-info">
+                        <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                        <div>273 108 ₽</div>
+                     </div>
+                  </div>
+
+               </div>
+
+               <div class="frequently-searched__main-right">
+                  <div class="frequently-searched__main-right__img">
+                     <img src="img/header/popo.jpg" alt="">
+                  </div>
+                  <div class="frequently-searched__main-right__info">
+                     <span>Мебель по подписке</span>
+                     <span>Акция</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Совпадение блок-->
+         <div id="search-processing"  class="search-match-wrapper">
+            <div class="new-container">
+               <div class="search-match">
+                  <div class="search-match__types">
+
+                     <a href="" class="search-match__types-item">
+                        <span>стеллажи</span>
+                        <img src="img/header/types-search.svg" alt="">
+                     </a>
+
+                     <a href="" class="search-match__types-item">
+                        <span>стеллажи</span>
+                        <img src="img/header/types-search.svg" alt="">
+                     </a>
+
+                  </div>
+                  <div class="search-match__products">
+
+                     <div class="search-match__products-item">
+                        <div class="search-match__products-item__img">
+                           <img src="img/header/poisk-img-item.jpg" alt="">
+                        </div>
+                        <div class="search-match__products-item__info">
+                           <div>ПИСЬМЕННЫЙ СТОЛ КВИНТ
+                              ОПОРАМИ ИЗ МАССИВА ДЕРЕВА
+                              И ВСТРОЕННОЙ ТУМБОЙ 160Х80</div>
+                           <div>стулья</div>
+                        </div>
+                     </div>
+
+                     <div class="search-match__products-item">
+                        <div class="search-match__products-item__img">
+                           <img src="img/header/poisk-img-item.jpg" alt="">
+                        </div>
+                        <div class="search-match__products-item__info">
+                           <div>ПИСЬМЕННЫЙ СТОЛ КВИНТ
+                              ОПОРАМИ ИЗ МАССИВА ДЕРЕВА
+                              И ВСТРОЕННОЙ ТУМБОЙ 160Х80</div>
+                           <div>стулья</div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
 
 
+
+         <!-- Найденные товары и журнал-->
+         <div id="matches-found" class="frequently-searched">
+
+            <div class="frequently-searched__main">
+
+
+              <div class="search-matches-found__left">
+
+                  <div class="search-matches-found__left-buttons">
+                     <div id="searchedProductsRadio" class="search-matches-found__left-buttons-items  search-matches-found__left-buttons-items-active" data-searchButton="searchedButton">
+                        <span>Товары</span>
+                        <span data-count="search-matches__counters">44</span>
+                     </div>
+
+                     <div id="searchedJournalsRadio" class="search-matches-found__left-buttons-items" data-searchButton="searchedButton">
+                        <span>Журналы</span>
+                        <span class="dis-none" data-count="search-matches__counters">23</span>
+                     </div>
+
+                  </div>
+
+                <!-- Блок с товарами по поиску-->
+                  <div id="searchProductsMatchedBlock" class="Search__frequently-searched__main-left-wrapper Search__frequently-searched__main-left-wrapper-matched">
+
+                     <div class="Search__frequently-searched__main-left Search__frequently-searched__main-left-matched">
+
+                        <div class="frequently-searched__main-left__item">
+                           <div class="frequently-searched__main-left__item-img">
+                              <img src="img/header/poisk-img-item.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info">
+                              <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                              <div>273 108 ₽</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item">
+                           <div class="frequently-searched__main-left__item-img">
+                              <img src="img/header/poisk-img-item.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info">
+                              <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                              <div>273 108 ₽</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item">
+                           <div class="frequently-searched__main-left__item-img">
+                              <img src="img/header/poisk-img-item.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info">
+                              <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                              <div>273 108 ₽</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item">
+                           <div class="frequently-searched__main-left__item-img">
+                              <img src="img/header/poisk-img-item.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info">
+                              <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                              <div>273 108 ₽</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item">
+                           <div class="frequently-searched__main-left__item-img">
+                              <img src="img/header/poisk-img-item.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info">
+                              <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                              <div>273 108 ₽</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item">
+                           <div class="frequently-searched__main-left__item-img">
+                              <img src="img/header/poisk-img-item.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info">
+                              <div>Письменный стол Квинт, с опорами из массива дерева 160х70</div>
+                              <div>273 108 ₽</div>
+                           </div>
+                        </div>
+
+                     </div>
+
+                     <a class="search-matches-found__left-all-products" href="#">Ко всем товарам</a>
+                  </div>
+
+                  <!-- Блок с журналом по поиску-->
+                  <div id="searchJournalMatchedBlock" class="Search__frequently-searched__main-left-wrapper Search__frequently-searched__main-left-wrapper-matched">
+
+                     <div class="Search__frequently-searched__main-left Search__frequently-searched__main-left-matched">
+
+                        <div class="frequently-searched__main-left__item-journal">
+                           <div class="frequently-searched__main-left__item-img-journal">
+                              <img src="img/header/vbn.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info-journal">
+                              <div>Новый формат общения «Кейс-школа»</div>
+                              <div>21 октября</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item-journal">
+                           <div class="frequently-searched__main-left__item-img-journal">
+                              <img src="img/header/vbn.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info-journal">
+                              <div>Новый формат общения «Кейс-школа»</div>
+                              <div>21 октября</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item-journal">
+                           <div class="frequently-searched__main-left__item-img-journal">
+                              <img src="img/header/vbn.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info-journal">
+                              <div>Новый формат общения «Кейс-школа»</div>
+                              <div>21 октября</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item-journal">
+                           <div class="frequently-searched__main-left__item-img-journal">
+                              <img src="img/header/vbn.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info-journal">
+                              <div>Новый формат общения «Кейс-школа»</div>
+                              <div>21 октября</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item-journal">
+                           <div class="frequently-searched__main-left__item-img-journal">
+                              <img src="img/header/vbn.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info-journal">
+                              <div>Новый формат общения «Кейс-школа»</div>
+                              <div>21 октября</div>
+                           </div>
+                        </div>
+
+                        <div class="frequently-searched__main-left__item-journal">
+                           <div class="frequently-searched__main-left__item-img-journal">
+                              <img src="img/header/vbn.jpg" alt="">
+                           </div>
+                           <div class="frequently-searched__main-left__item-info-journal">
+                              <div>Новый формат общения «Кейс-школа»</div>
+                              <div>21 октября</div>
+                           </div>
+                        </div>
+
+                     </div>
+
+                     <a class="search-matches-found__left-all-products" href="#">Ко всем статьям</a>
+                  </div>
+
+            </div>
+
+               <div class="frequently-searched__main-right">
+                  <div class="frequently-searched__main-right__img">
+                     <img src="img/header/popo.jpg" alt="">
+                  </div>
+                  <div class="frequently-searched__main-right__info">
+                     <span>Мебель по подписке</span>
+                     <span>Акция</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+      </div>
+
+
+
+      <!-- Блок ничего не найдено в поиске-->
+         <div id="nothing-searched-block" class="nothig-searched-wrapper">
+            <div class='new-container'>
+               <div class="nothig-searched__title">
+                  Ничего не найдено
+               </div>
+               <div class="nothig-searched__text">
+                  Попробуйте изменить запрос <br>
+                  или скорректировать его. Или поищите в товарах.
+               </div>
+
+               <a class="nothig-searched__all-products" href="">
+                  <span>Перейти к товарам</span>
+                  <img src="img/header/cvzx.svg" alt="">
+               </a>
+            </div>
+         </div>
+
+
+         <!-- -->
+
+
+
+
+   </div>
+
+
+
+<main class="main-main">
        <div class="main-container main-cont-top">
           <div class="main-slider__signature-name-top">Новая коллекция Smart Island</div>
        </div>
