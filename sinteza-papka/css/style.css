@@ -8840,57 +8840,167 @@ main{
 
 
 
+.upholstered-furniture__title{
+   font-size: 77px;
+   line-height: 68px;
+   font-family: 'CodecPro-Bold';
+   margin-bottom: 50px;
+}
+
+.upholstered-furniture__intro{
+   margin-bottom: 60px;
+}
+
+.upholstered-furniture__our-furniture{
+   font-size: 16px;
+   line-height: 24px;
+   display: flex;
+   margin-bottom: 80px;
+}
+
+.upholstered-furniture__our-furniture div:nth-child(1){
+   width: 40%;
+   font-family: "CodecPro-Bold"
+}
+
+.upholstered-furniture__our-furniture div:nth-child(2){
+   width: 60%;
+}
+
+.upholstered-furniture__mini-nav{
+   overflow-x: scroll;
+   margin-bottom:30px;
+   display: flex;
+}
+
+.upholstered-furniture__mini-nav__span{
+   padding: 10px 20px;
+   background-color:#F6F6F9;
+   border-radius: 6px;
+   font-size: 14px;
+   line-height: 24px;
+   font-family: "CodecPro-Regular";
+   margin-right: 10px;
+   display: inline-block;
+   text-align: center;
+   cursor: pointer;
+   white-space:nowrap;
+}
+
+.upholstered-furniture__mini-nav__span-active{
+   background-color: #FFF767;
+}
+
+.upholstered-furniture__intro{
+   width: 100%;
+   height:  auto;
+}
+
+.upholstered-furniture__intro img{
+   max-width: 100%;
+   max-height: 100%;
+}
 
 
+.upholstered-furniture__mini-nav::-webkit-scrollbar { width: 0; }
+.upholstered-furniture__mini-nav { -ms-overflow-style: none; }
+.upholstered-furniture__mini-nav { overflow: -moz-scrollbars-none; }
 
+.upholstered-furniture__info-block__products-counter-block{
+   color: #676767;
+}
 
+.upholstered-furniture__info-block{
+   display: flex;
+   font-size: 14px;
+   line-height: 15px;
 
+   justify-content: flex-end;
+}
 
+.upholstered-furniture__info-block__products-counter-block{
+   margin-right: 15px;
+   font-family: "CodecPro-Regular";
+}
 
+.upholstered-furniture__info-block__choose-sort span{
+   margin-right: 5px;
+}
 
+.upholstered-furniture__info-block__choose-sort img{
+   position: relative;
+   top: 2px;
+}
 
+.upholstered-furniture__info-block__choose-sort{
+   cursor: pointer;
+   font-family: "CodecPro-Regular"
+}
 
+.upholstered-furniture__catalog-products-block .coll-slider__link{
+   width: 280px;
+   margin-bottom: 40px;
+}
 
+.upholstered-furniture__catalog-products-block .coll-slider__info{
+  font-family: "CodecPro-Regular"
+}
 
+.upholstered-furniture__catalog-products-block{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
 
+.upholstered-furniture__load-more_products_button{
+   padding: 15px 0 13px 14px;
+   background-color:#FFF658 ;
+   width:  296px;
+   display: flex;
+   align-items: center;
+   font-size: 16px;
+   line-height: 24px;
+   cursor: pointer;
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
 
+.upholstered-furniture__load-more_products_button span{
+   margin-right: 6px;
+}
 
+.upholstered-furniture__load-more_products_button img{
+   position: relative;
+   top:-3px;
+}
 
+.upholstered-furnitur__switching_pages{
+   font-size: 16px;
+   line-height: 16px;
+   display: flex;
+   justify-content: space-between;
+}
 
+.upholstered-furniture__products-block{
+   margin-bottom: 80px;
+}
 
+.upholstered-furnitur__switching_pages-list-item{
+   padding: 0 3px;
+   cursor: pointer;
+   color: #676767;
+   font-size: 14px;
+}
 
+.upholstered-furnitur__switching_pages-list-item-active{
+   color: #000000;
+   font-size: 16px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.upholstered-furnitur__switching_pages-next,
+.upholstered-furnitur__switching_pages-prev{
+   cursor: pointer;
+}
 
 
 
