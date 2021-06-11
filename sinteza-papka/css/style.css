@@ -9463,6 +9463,92 @@ main{
    .catalog-news-block-big{
       width: 100%;
    }
+
+   .catalog-materials-order-block{
+      height: 424px;
+   }
+
+   .catalog-materials-order__title{
+      font-size: 30px;
+      line-height: 31px;
+      margin-bottom: 0;
+   }
+
+   .catalog-materials-order__price{
+      font-size: 18px;
+      line-height: 35px;
+      margin-bottom: 6px;
+   }
+
+   .catalog-materials-order__text{
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 37px;
+   }
+
+   .catalog-materials-order__button{
+      font-size: 14px;
+      line-height: 24px;
+      width: 242px;
+      margin-left: -10px;
+   }
+
+   .catalog-materials-order{
+      padding-top: 210px;
+   }
+
+   .catalog-materials__parthners__designer{
+      padding: 60px 0;
+   }
+
+   .catalog-materials__parthners__designer{
+      font-size: 38px;
+      line-height: 39px;
+   }
+
+   .catalog-materials__designer-img img{
+      width: 30px;
+      height: 30px;
+   }
+
+   .catalog-materials__parthners-wrapper{
+      padding-bottom: 0;
+   }
+
+   .catalog-materials__parthners-title{
+      margin-bottom: 50px;
+   }
+
+   .catalog-materials__parthners-item div:nth-child(1){
+      font-size: 30px;
+      line-height: 33px;
+      margin-bottom: 8px;
+   }
+
+   .catalog-materials__parthners-item div:nth-child(2){
+      font-size: 10px;
+      line-height: 16px;
+   }
+
+   .catalog-materials__parthners{
+      margin-bottom: 10px;
+   }
+
+   .catalog-materials__parthners-button{
+      width: calc(100% + 20px);
+      margin-left: -10px;
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   .catalog-materials__parthners-button img{
+      width: 16px;
+   }
+
+   .catalog-materials-order__button img{
+      margin-left: 2px;
+      width: 14px;
+   }
 }
 
 
