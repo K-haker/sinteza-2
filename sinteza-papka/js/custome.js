@@ -2,6 +2,8 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+   /*работа с сортировкой по типу в каталоге */
+
    /*работа с поиском*/
    /*открытие поиска*/
    $("#open-search-panel").on("click", function(){
@@ -1142,7 +1144,14 @@ if(basketDeleteProductItem){
 }
 
 
-
+var catalogPrintersSlider = new Swiper(".printers-stories-slider-container",{
+   slidesPerView: 'auto',
+   spaceBetween: 20,
+//   navigation:{
+//      nextEl:".coll-arr-right",
+//      prevEl:".coll-arr-left",
+//   },
+})
 
 
 

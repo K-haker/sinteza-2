@@ -1730,6 +1730,7 @@ Media
    line-height: 18px;
    border-radius: 0;
    font-family: 'CodecPro-news';
+   cursor: pointer;
 }
 
 .bot-slider__title{
@@ -2549,6 +2550,7 @@ Media
    border: 1px solid #FF5700;
 
    margin: 0 auto 10px;
+   cursor: pointer;
 }
 
 .stories-slider__link{
@@ -8906,10 +8908,12 @@ main{
    max-height: 100%;
 }
 
+/*
 
 .upholstered-furniture__mini-nav::-webkit-scrollbar { width: 0; }
 .upholstered-furniture__mini-nav { -ms-overflow-style: none; }
 .upholstered-furniture__mini-nav { overflow: -moz-scrollbars-none; }
+*/
 
 .upholstered-furniture__info-block__products-counter-block{
    color: #676767;
@@ -9174,6 +9178,11 @@ main{
    text-align:right;
 }
 
+.printers-stories__mini-nav{
+   display: flex;
+   margin-bottom: 40px;
+}
+
 .printers-stories__mini-nav-item{
    margin-right: 30px;
    opacity: 0.4;
@@ -9197,9 +9206,13 @@ main{
 .upholstered-furniture__info-block__choose-sort__dropdown-menu{
    position: absolute;
    padding: 20px 14px 20px 12px;
-   border: 1px solid red;
    box-shadow: 0px 4px 4px 2px rgba(246, 246, 249, 0.6);
    cursor: default;
+   left: -80px;
+   z-index: 100;
+   background-color: #ffffff;
+
+
 }
 
 .upholstered-furniture__info-block__choose-sort__dropdown-menu div{
@@ -9210,46 +9223,247 @@ main{
    margin-bottom: 7px;
    padding-left: 21px;
    cursor: pointer;
+   position: relative;
 }
 
 .upholstered-furniture__info-block__choose-sort__dropdown-menu div:after{
    content: "";
-   background: url("../");
+   background: url("../img/sort-type.svg");
+   position: absolute;
+   left: 0;
+   width: 11px;
+   height: 10px;
+   background-position: center;
+   top: 7px;
+   display: none;
+
+}
+
+.upholstered-furniture__info-block__choose-sort__dropdown-menu div.upholstered-furniture__info-block__choose-sort__dropdown-menu-div-active:after{
+   display: block;
+}
+
+.printers-stories__mini-nav-item-active{
+   opacity: 1;
+}
+
+.printers-stories__mini-nav-item-active svg{
+   transform: rotate(180deg);
+   transform-origin: 7px 12px;
+}
+
+.printers-stories__mini-nav-item-active svg path{
+   opacity: 1;
+}
+
+.printers-stories{
+   margin-bottom: 80px;
+}
+
+.stor-sl-main-wrapp-link{
+   display: none;
+}
+
+[data-printerStories="rent"]{
+   display: block;
+}
+
+.coll-slider__link.coll-slider__link catalog-news-block{
+   width: 50%;
+}
+
+.catalog-news-block__photo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   margin-bottom: 25px;
+}
+
+.catalog-news-block__photo img{
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.catalog-news-block__info{
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+.catalog-news-block-big{
+   width: 75%;
+}
+
+.catalog-news-block__info-name{
+   font-size: 16px;
+   line-height: 13px;
+}
+
+.catalog-news-block__info-place{
+   font-size: 10px;
+   line-height: 12px;
+   color: #676767;
+}
+
+.catalog-news-block__info-article{
+   display: none;
+   font-size: 10px;
+   line-height: 12px;
+   color:#676767;
+}
+
+.upholstered-furniture__mini-nav__span-mob{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+   background-color: #F6f6f9;
+   border-radius: 4px;
+   padding: 8px 9px;
+}
+
+.upholstered-furniture__mini-nav__span-mob-second{
+   padding: 8px 12px;
+}
+
+.upholstered-furniture__mini-nav__span-mob-second img{
+   position: relative;
+   top: 4px;
 }
 
 
+@media(max-width:480px){
+   .upholstered-furniture__mini-nav__span-mob{
+      display: block;
+      margin-right: 10px;
+   }
 
 
+   .main-slider-4-catalog{
+      margin-bottom: 60px;
+      margin-top: 0;
+   }
 
 
+   .catalog-news-block__info-article{
+      display: block
+   }
+
+   .video-description-block__catalog{
+      margin-bottom: 40px;
+   }
+
+   .see-your-eyes-block-mini{
+      bottom:2px;
+   }
+
+   .main-video__block{
+      margin-bottom: 10px;
+   }
+
+   .catalog-news-block__info-name{
+      display: none;
+   }
+
+   .catalog-news-block-big{
+      margin-bottom: 40px;
+   }
+
+}
 
 
+@media(max-width: 380px){
+   .our-delivery.our-delivery-printers{
+      margin-bottom: 40px;
+      padding-bottom: 5px;
+   }
 
+   .printers-stories{
+      margin-bottom: 50px;
+   }
 
+   .upholstered-furnitur__switching_pages-prev,
+   .upholstered-furnitur__switching_pages-next{
+      font-size: 10px;
+      line-height: 24px;
+   }
 
+   .printers-stories__mini-nav{
+      overflow-x:scroll;
+   }
 
+   .printers-stories__mini-nav-item{
+      white-space: nowrap;
+   }
 
+   .upholstered-furniture__title{
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 20px;
+   }
 
+   .upholstered-furniture__intro{
+      margin-bottom: 20px;
+   }
 
+   .upholstered-furniture__our-furniture{
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+   }
 
+   .upholstered-furniture__our-furniture div:nth-child(1){
+      width: 100%;
+      margin-bottom: 20px;
+   }
 
+   .upholstered-furniture__our-furniture div:nth-child(2){
+      width: 100%;
+   }
 
+   .upholstered-furniture__info-block{
+      display: none;
+   }
 
+   .upholstered-furniture__catalog-products-block .coll-slider__link-photo__wrapper{
+      width: 290px;
+      height: 367px;
+   }
 
+   .upholstered-furniture__catalog-products-block .coll-slider__link{
+      margin-bottom: 30px;
+   }
 
+   .catalog-news-block{
+      margin-bottom: 30px;
+   }
 
+   .catalog-news-block__photo{
+      height: 200px;
+      margin-bottom: 10px;
+   }
 
+   .upholstered-furniture__our-furniture div:nth-child(1){
+      font-size: 14px;
+      line-height: 17px;
+   }
 
+   .upholstered-furniture__our-furniture div:nth-child(2){
+      font-size: 14px;
+      line-height: 21px;
+   }
 
+   .upholstered-furniture__load-more_products_button{
+      padding: 15px 0 13px 10px;
+      width: 242px;
+      left:-40px;
+      position: relative;
+   }
 
-
-
-
-
-
-
-
-
+   .catalog-news-block-big{
+      width: 100%;
+   }
+}
 
 
 
