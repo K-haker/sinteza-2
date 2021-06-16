@@ -9497,6 +9497,26 @@ main{
    margin-left: 6px;
 }
 
+.materials-products__item-info-item span:nth-child(1){
+   line-height: 14px;
+}
+
+.coll-slider__link-hidden{
+   display: none;
+}
+
+.materials-products__item{
+}
+
+.materials-products__item-pagination{
+   position: relative;
+   z-index: 300;
+}
+
+.catalog-button-switching-button-disabled{
+   color:#676767;
+}
+
 
 @media(max-width: 1085px){
    .materials-products__item{
@@ -9587,11 +9607,55 @@ main{
    .materials-products__item{
       width: 50%;
    }
+
+   .catalog-materials-order__title{
+      font-size: 72px;
+   }
+
+   .catalog-materials__parthners__designer{
+      font-size: 57px;
+      line-height: 64px;
+   }
+
+   .catalog-materials-order-block{
+      height: 576px;
+   }
 }
 
 @media(max-width:580px){
    .materials-products__item{
       width: 100%;
+   }
+
+   .catalog-materials__parthners__designer{
+      font-size: 43px;
+      line-height: 51px;
+   }
+
+   .catalog-materials-order__title{
+      font-size: 62px;
+   }
+
+   .catalog-materials-order-block{
+      height: 506px;
+   }
+
+   .catalog-materials__parthners-item div:nth-child(1){
+      font-size: 34px;
+      line-height: 38px;
+   }
+
+   .catalog-materials__parthners-item div:nth-child(2){
+      font-size: 14px;
+      line-height: 20px;
+   }
+
+   .catalog-materials-order__price{
+      font-size: 29px;
+   }
+
+   .catalog-materials-order__text{
+      font-size: 14px;
    }
 }
 
@@ -9680,6 +9744,11 @@ main{
 
 
 @media(max-width: 380px){
+   .upholstered-furnitur__switching_pages{
+      margin-top: 77px;
+   }
+
+
    .upholstered-furniture__info-block{
       display: none;
    }
@@ -9765,8 +9834,8 @@ main{
    .upholstered-furniture__load-more_products_button{
       padding: 15px 0 13px 10px;
       width: 242px;
-      left:-24px;
-      position: relative;
+      left:0;
+      position: absolute;
    }
 
    .catalog-news-block-big{
@@ -9905,6 +9974,13 @@ main{
       left: -69px;
    }
 
+   .materials-products__item-info {
+       position: static;
+       left: 0px;
+       bottom: 0px;
+       display: block;
+   }
+
 }
 
 .materials-products__item-info{
@@ -9921,9 +9997,30 @@ main{
    height: 100%;
 }
 
+.materials-products__item .swiper-pagination-bullet{
+   background-color: #D5D5D5;
+   opacity: 1;
+   border-radius: 0;
+   width: 4px;
+   height: 4px;
+}
 
+.materials-products__item .swiper-pagination-bullet.swiper-pagination-bullet-active{
+   background-color: #000000;
+   width: 6px;
+   height: 6px;
+   position: relative;
+   top: 2px;
+}
 
+.materials-products__item-main-block{
+   display: inline-block;
+   height: 250px;
+}
 
+.materials-products__item{
+   padding-bottom: 30px;
+}
 
 
 

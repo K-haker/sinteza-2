@@ -2,21 +2,28 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+
+   /*работа с кнопкой показать еще*/
+   $(".upholstered-furniture__load-more_products_button").on("click", function(){
+
+
+
+   })
+
+
    /*Показ информации о материале при ховере*/
-
-//   $(".materials-products__item-photo").hover(function(){
-//      $(this).closest(".materials-products__item").find(".materials-products__item-info").slideDown(100)
-//}, function(){
-//      $(".materials-products__item-info").slideUp(100);
-//   })
-
+   if($(window).width > 380){
       $(".materials-products__item-photo").mouseenter(function(){
+         $(".materials-products__item-info").slideUp(0)
          $(this).closest(".materials-products__item").find(".materials-products__item-info").slideDown(100)
       })
 
-      $(".materials-products__item-photo").mouseout(function(){
-         $(this).closest(".materials-products__item").find(".materials-products__item-info").slideUp(100);
+      $("body").on("click", function(){
+         $(".materials-products__item-info").slideUp(0)
       })
+   }
+
+
 
 
 
@@ -1246,10 +1253,6 @@ if(basketDeleteProductItem){
 var catalogPrintersSlider = new Swiper(".printers-stories-slider-container",{
    slidesPerView: 'auto',
    spaceBetween: 20,
-//   navigation:{
-//      nextEl:".coll-arr-right",
-//      prevEl:".coll-arr-left",
-//   },
 })
 
 
@@ -1258,23 +1261,6 @@ function materialsSliders(){
    var materialsProductsItemCounter = 0;
 
    var materialsProductsItem = document.querySelectorAll(".materials-products__item");
-
-
-//   if(window.screen.width <381){
-//      for(var i = 0; i<materialsProductsItem.length; i++){
-//         /*задаем классы (html структуру) для каждого материала*/
-//         materialsProductsItem[i].classList.add('swiper-container');
-//         materialsProductsItem[i].querySelector(".materials-products__item-block").classList.add('swiper-wrapper');
-//         materialsProductsItem[i].querySelector(".materials-products__item-main-block").classList.add('swiper-slide')
-//         materialsProductsItem[i].querySelector(".materials-products__item-info").classList.add("swiper-slide");
-//
-//         /*инициализируем слайдер*/
-//         var sliderMaterialName = new Swiper(`materialsProductsItem[i]`,{
-//            slidesPerView: '1',
-//            spaceBetween: 20,
-//         })
-//      }
-//   }
 
    if(window.screen.width <381){
       for(var i = 0; i<materialsProductsItem.length; i++){
@@ -1290,13 +1276,17 @@ function materialsSliders(){
          var sliderMaterialName = new Swiper(`.materials-products__item`,{
             slidesPerView: '1',
             spaceBetween: 20,
+            pagination:{
+               el:'.materials-products__item-pagination',
+            }
          })
 
    }
 
 }
 
-materialsSliders()
+materialsSliders();
+
 
 
 
