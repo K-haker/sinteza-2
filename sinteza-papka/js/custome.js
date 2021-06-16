@@ -2,7 +2,106 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+   /*Показ информации о материале при ховере*/
+
+//   $(".materials-products__item-photo").hover(function(){
+//      $(this).closest(".materials-products__item").find(".materials-products__item-info").slideDown(100)
+//}, function(){
+//      $(".materials-products__item-info").slideUp(100);
+//   })
+
+      $(".materials-products__item-photo").mouseenter(function(){
+         $(this).closest(".materials-products__item").find(".materials-products__item-info").slideDown(100)
+      })
+
+      $(".materials-products__item-photo").mouseout(function(){
+         $(this).closest(".materials-products__item").find(".materials-products__item-info").slideUp(100);
+      })
+
+
+
+   /**/
+   $(".printers-stories__mini-nav-item").on("click", function(){
+      $(".stor-sl-main-wrapp-link").removeClass("dis-bl");
+      $(".printers-stories__mini-nav-item").removeClass("printers-stories__mini-nav-item-active")
+      $(this).addClass("printers-stories__mini-nav-item-active")
+   })
+
+   $("#catalogStoriesNavRent").on("click", function(){
+      $('[data-printerStories="rent"]').addClass("dis-bl")
+   })
+
+   $("#catalogStoriesNavRepair").on("click", function(){
+      $('[data-printerStories="repair"]').addClass("dis-bl")
+   })
+
+   $("#catalogStoriesNavCopy").on("click", function(){
+      $('[data-printerStories="copy-equipment"]').addClass("dis-bl")
+   })
+
+
+
+   /*открыие мобильного меню сортировки в каталоге*/
+   $("[data-catalogMobMenuSort]").on("click", function(){
+      $(".upholstered-furniture__info-block").slideDown(300);
+      $("#background-furn").addClass("dis-bl");
+      $(".upholstered-furniture__info-block__choose-sort__dropdown-menu").slideDown(0)
+   })
+
+   /*закрытие мобильного меню сортировки в каталоге*/
+   $(".upholstered-furniture__info-block__mob-close").on("click", function(){
+      $(".upholstered-furniture__info-block").slideUp(300);
+      $("#background-furn").removeClass("dis-bl")
+   })
+
+   /*появление мобильное меню фильтров в каталоге*/
+   $("[data-catalogMobMenuFiltres]").on("click", function(){
+      $(".catalog_filters-dropdown-menu").slideDown(300)
+      $("#background-furn").addClass("dis-bl")
+   })
+
+   /*закрытие мобильное меню фильров в каталоге*/
+      $(".catalog_filters-dropdown-menu__close").on("click", function(){
+         $(".catalog_filters-dropdown-menu").slideUp(300);
+         $("#background-furn").removeClass("dis-bl");
+      })
+
+   /*работа с активным слайдом в скролящемся меню*/
+   $(".upholstered-furniture__mini-nav__span").on("click", function(){
+      if($(this).hasClass("upholstered-furniture__mini-nav__span-active")){
+         $(this).removeClass("upholstered-furniture__mini-nav__span-active")
+      } else{
+         $(this).addClass("upholstered-furniture__mini-nav__span-active")
+      }
+
+   })
+
    /*работа с сортировкой по типу в каталоге */
+      $(".upholstered-furniture__info-block__choose-sort_click-block").on("click", function(){
+         $(".upholstered-furniture__info-block__choose-sort__dropdown-menu").slideDown(300);
+
+         $(".upholstered-furniture__info-block__choose-sort_click-block img").addClass("upholstered-furniture__info-block__choose-sort_click-block-img-active")
+      })
+
+   /*нажатие на пункт выпадающего меню*/
+   if($(window).width() > 380){
+         $(".upholstered-furniture__info-block__choose-sort__dropdown-menu div").on("click", function(){
+         $(".upholstered-furniture__info-block__choose-sort__dropdown-menu div").removeClass("upholstered-furniture__info-block__choose-sort__dropdown-menu-div-active")
+         $(this).addClass("upholstered-furniture__info-block__choose-sort__dropdown-menu-div-active")
+
+         var textDropdownMEnuCatalog = $(this).text()
+         $(".upholstered-furniture__info-block__choose-sort span").text(textDropdownMEnuCatalog)
+
+         $(".upholstered-furniture__info-block__choose-sort__dropdown-menu").slideUp(300)
+
+         $(".upholstered-furniture__info-block__choose-sort_click-block img").removeClass("upholstered-furniture__info-block__choose-sort_click-block-img-active")
+      })
+   } else{
+      $(".upholstered-furniture__info-block__choose-sort__dropdown-menu div").on("click", function(){
+         $(".upholstered-furniture__info-block__choose-sort__dropdown-menu div").removeClass("upholstered-furniture__info-block__choose-sort__dropdown-menu-div-active")
+         $(this).addClass("upholstered-furniture__info-block__choose-sort__dropdown-menu-div-active")
+      })
+   }
 
    /*работа с поиском*/
    /*открытие поиска*/
@@ -1155,9 +1254,49 @@ var catalogPrintersSlider = new Swiper(".printers-stories-slider-container",{
 
 
 
+function materialsSliders(){
+   var materialsProductsItemCounter = 0;
+
+   var materialsProductsItem = document.querySelectorAll(".materials-products__item");
 
 
+//   if(window.screen.width <381){
+//      for(var i = 0; i<materialsProductsItem.length; i++){
+//         /*задаем классы (html структуру) для каждого материала*/
+//         materialsProductsItem[i].classList.add('swiper-container');
+//         materialsProductsItem[i].querySelector(".materials-products__item-block").classList.add('swiper-wrapper');
+//         materialsProductsItem[i].querySelector(".materials-products__item-main-block").classList.add('swiper-slide')
+//         materialsProductsItem[i].querySelector(".materials-products__item-info").classList.add("swiper-slide");
+//
+//         /*инициализируем слайдер*/
+//         var sliderMaterialName = new Swiper(`materialsProductsItem[i]`,{
+//            slidesPerView: '1',
+//            spaceBetween: 20,
+//         })
+//      }
+//   }
 
+   if(window.screen.width <381){
+      for(var i = 0; i<materialsProductsItem.length; i++){
+         /*задаем классы (html структуру) для каждого материала*/
+         materialsProductsItem[i].classList.add('swiper-container');
+         materialsProductsItem[i].querySelector(".materials-products__item-block").classList.add('swiper-wrapper');
+         materialsProductsItem[i].querySelector(".materials-products__item-main-block").classList.add('swiper-slide')
+         materialsProductsItem[i].querySelector(".materials-products__item-info").classList.add("swiper-slide");
+      }
+
+      /*инициализация слайдера*/
+
+         var sliderMaterialName = new Swiper(`materials-products__item`,{
+            slidesPerView: '1',
+            spaceBetween: 20,
+         })
+
+   }
+
+}
+
+materialsSliders()
 
 
 
