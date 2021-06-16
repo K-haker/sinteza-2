@@ -174,10 +174,38 @@
          </div>
    </header>
 
+   <div class="catalog_filters-dropdown-menu">
+      <div class="catalog_filters-dropdown-menu__close">
+        <img src="img/close-dropsown-filtres-nenu.svg" alt="">
+      </div>
+
+      <div class="catalog_filters-dropdown-menu__top">
+         <div class="catalog_filters-dropdown-menu__top-title">Фильтры</div>
+         <div class="catalog_filters-dropdown-menu__top-reset-button">Сбросить</div>
+      </div>
+      <div class="catalog_filters-dropdown-menu__main">
+
+      </div>
+      <div class="catalog_filters-dropdown-menu__button">
+         <span>Показать</span>
+         <img src="img/filters-mob-arrow.svg" alt="">
+      </div>
+   </div>
+
+   <div id="background-furn" class="background-furniture"></div>
+
 
 
 
    <main class="printers">
+
+   <div class="new-container">
+      <div class="general-info-product__nav">
+         <a href="">Главная</a>
+         <a href="">Мебель</a>
+         <a href="">Офисные кресла</a>
+      </div>
+   </div>
 
       <div class="new-container">
          <div class="upholstered-furniture__title">Принтеры</div>
@@ -200,7 +228,7 @@
       <div class="new-container">
          <div class="printers-stories">
             <div class="printers-stories__mini-nav">
-               <div class="printers-stories__mini-nav-item printers-stories__mini-nav-item-active">
+               <div id="catalogStoriesNavRent" class="printers-stories__mini-nav-item printers-stories__mini-nav-item-active">
                   <span>Аренда</span>
                   <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path opacity="0.3" d="M1.79631 6.3033L12.4029 6.3033L12.4029 16.9099" stroke="black"/>
@@ -208,7 +236,7 @@
                   </svg>
                </div>
 
-               <div class="printers-stories__mini-nav-item">
+               <div id="catalogStoriesNavRepair" class="printers-stories__mini-nav-item">
                   <span>Ремонт</span>
                   <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path opacity="0.3" d="M1.79631 6.3033L12.4029 6.3033L12.4029 16.9099" stroke="black"/>
@@ -216,7 +244,7 @@
                   </svg>
                </div>
 
-               <div class="printers-stories__mini-nav-item">
+               <div id="catalogStoriesNavCopy" class="printers-stories__mini-nav-item">
                   <span>Копийное оборудование</span>
                   <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path opacity="0.3" d="M1.79631 6.3033L12.4029 6.3033L12.4029 16.9099" stroke="black"/>
@@ -228,7 +256,7 @@
          <div class="printers-stories-slider-container swiper-container">
             <div class="swiper-wrapper">
 
-                  <div data-printerStories="rent" class="stor-sl-main-wrapp-link swiper-slide">
+                  <div data-printerStories="rent" class="stor-sl-main-wrapp-link swiper-slide dis-bl">
                      <div class="stories-slider__link-wrapper">
                         <div class="stories-slider__link">
                            <img src="img/main/stories-1.svg" alt="">
@@ -237,7 +265,7 @@
                      <span>Позаботимся обо <br> всем за вас</span>
                   </div>
 
-                  <div data-printerStories="rent" class="stor-sl-main-wrapp-link swiper-slide">
+                  <div data-printerStories="rent" class="stor-sl-main-wrapp-link swiper-slide dis-bl">
                      <div class="stories-slider__link-wrapper">
                         <div class="stories-slider__link">
                            <img src="img/main/stories-1.svg" alt="">
@@ -246,7 +274,7 @@
                      <span>Позаботимся обо <br> всем за вас</span>
                   </div>
 
-                  <div data-printerStories="rent" class="stor-sl-main-wrapp-link swiper-slide">
+                  <div data-printerStories="rent" class="stor-sl-main-wrapp-link swiper-slide dis-bl">
                      <div class="stories-slider__link-wrapper">
                         <div class="stories-slider__link">
                            <img src="img/main/stories-1.svg" alt="">
@@ -257,7 +285,7 @@
 
 
 
-                  <div data-printerStories="repair" class="stor-sl-main-wrapp-link swiper-slide">
+                  <div data-printerStories="repair" class="stor-sl-main-wrapp-link swiper-slide ">
                      <div class="stories-slider__link-wrapper">
                         <div class="stories-slider__link">
                            <img src="img/main/stories-1.svg" alt="">
@@ -353,11 +381,11 @@
       <div class="upholstered-furniture__products-block">
          <div class="upholstered-furniture__mini-nav">
 
-            <span class="upholstered-furniture__mini-nav__span-mob">
+            <span data-catalogMobMenuFiltres class="upholstered-furniture__mini-nav__span-mob">
                <img src="img/mob-sort-types.svg" alt="">
             </span>
 
-            <span class="upholstered-furniture__mini-nav__span-mob upholstered-furniture__mini-nav__span-mob-second">
+            <span data-catalogMobMenuSort class="upholstered-furniture__mini-nav__span-mob upholstered-furniture__mini-nav__span-mob-second">
                <img src="img/mob-sort-arrows.svg" alt="">
             </span>
 
@@ -372,6 +400,39 @@
 
          </div>
 
+         <div class="upholstered-furniture__info-block">
+            <div class="upholstered-furniture__info-block__mob-close">
+               <img src="img/mob-sort-catalog-close.svg" alt="">
+            </div>
+            <div class="upholstered-furniture__info-block-top">
+                <div class="upholstered-furniture__info-block__mob-title">Сортировка</div>
+               <div class="upholstered-furniture__info-block__products-counter-block">
+                  <span class="upholstered-furniture__info-block__products-counter">37</span>
+                  <span>товаров</span>
+               </div>
+            </div>
+
+
+            <div class="upholstered-furniture__info-block__choose-sort">
+               <div class="upholstered-furniture__info-block__choose-sort_click-block">
+                  <span>По популярности</span>
+                  <img src="img/sort-arr.svg" alt="">
+               </div>
+
+               <div class="upholstered-furniture__info-block__choose-sort__dropdown-menu">
+                  <div class="upholstered-furniture__info-block__choose-sort__dropdown-menu-div-active">По популярности</div>
+                  <div>По новинкам</div>
+                  <div>По названию</div>
+                  <div>По убыванию цены</div>
+                  <div>По возрастанию цены</div>
+               </div>
+            </div>
+
+            <div class="upholstered-furniture__info-block__mob-button">
+               <span>Выбрать</span>
+               <img src="img/catalog-choice-mob-sort-img.svg" alt="">
+            </div>
+         </div>
 
          <div class="upholstered-furniture__catalog-products-block">
 
@@ -461,14 +522,15 @@
                  <p class="coll-slider__price">273 108 ₽ </p>
             </div>
 
-            <div class="catalog-news-block">
-               <div class="catalog-news-block__photo">
-                  <img src="img/catalog-news-slider.jpg" alt="">
-               </div>
+            <div class="catalog-news-block-big">
+               <a href="#" class="catalog-news-block__photo">
+                  <img src="img/catalog-news-big.jpg" alt="">
+               </a>
 
                <div class="catalog-news-block__info">
-                  <span>Шоурум в центре дизайна Artplay</span>
-                  <span>21 Октября 2020 г.</span>
+                  <span class="catalog-news-block__info-name">Как мы сделали офис «Империя» в Москва-Сити  </span>
+                  <span class="catalog-news-block__info-article"> Статья</span>
+                  <span class="catalog-news-block__info-place">Офис</span>
                </div>
             </div>
 
@@ -529,13 +591,14 @@
             </div>
 
             <div class="catalog-news-block-big">
-               <div class="catalog-news-block__photo">
+               <a href="#" class="catalog-news-block__photo">
                   <img src="img/catalog-news-big.jpg" alt="">
-               </div>
+               </a>
 
                <div class="catalog-news-block__info">
-                  <span>Как мы сделали офис «Империя» в Москва-Сити  </span>
-                  <span>Офис</span>
+                  <span class="catalog-news-block__info-name">Как мы сделали офис «Империя» в Москва-Сити  </span>
+                  <span class="catalog-news-block__info-article"> Статья</span>
+                  <span class="catalog-news-block__info-place">Офис</span>
                </div>
             </div>
 
@@ -792,6 +855,13 @@
 
    <footer>
       <div class="footer-wrapper">
+        <div id="goToTopPageMakingOrder" class="footer-making-order__circle">
+           <div class="footer-making-order__circle-info">
+              <img src="img/making-order/arrow-footer.svg" alt="">
+              <div>Вверх</div>
+           </div>
+        </div>
+
          <div class="footer-top">
             <div class="delivery-container">
                <div class="footer-link__block">

@@ -177,8 +177,58 @@
 
 
 
+   <div class="catalog_filters-dropdown-menu">
+      <div class="catalog_filters-dropdown-menu__close">
+        <img src="img/close-dropsown-filtres-nenu.svg" alt="">
+      </div>
 
-  <main>
+      <div class="catalog_filters-dropdown-menu__top">
+         <div class="catalog_filters-dropdown-menu__top-title">Фильтры</div>
+         <div class="catalog_filters-dropdown-menu__top-reset-button">Сбросить</div>
+      </div>
+      <div class="catalog_filters-dropdown-menu__main">
+
+      </div>
+      <div class="catalog_filters-dropdown-menu__button">
+         <span>Показать</span>
+         <img src="img/filters-mob-arrow.svg" alt="">
+      </div>
+   </div>
+
+<!--
+   <div class="catalog_sort-dropdown-menu">
+      <div class="catalog_sort-dropdown-menu__close">
+        <img src="img/close-dropsown-sort-nenu.svg" alt="">
+      </div>
+
+      <div class="catalog_sort-dropdown-menu__top">
+         <div class="catalog_sort-dropdown-menu__top-title">Фильтры</div>
+         <div class="catalog_sort-dropdown-menu__top-reset-button">Сбросить</div>
+      </div>
+      <div class="catalog_sort-dropdown-menu__main">
+
+      </div>
+      <div class="catalog_sort-dropdown-menu__button">
+         <span>Показать</span>
+         <img src="img/filters-mob-arrow.svg" alt="">
+      </div>
+   </div>
+-->
+
+   <div id="background-furn" class="background-furniture"></div>
+
+
+
+ <main>
+
+
+     <div class="new-container">
+      <div class="general-info-product__nav">
+         <a href="">Главная</a>
+         <a href="">Мебель</a>
+         <a href="">Офисные кресла</a>
+      </div>
+   </div>
 
    <div class="new-container">
       <div class="upholstered-furniture__title">Мягкая мебель</div>
@@ -204,11 +254,11 @@
       <div class="upholstered-furniture__products-block">
          <div class="upholstered-furniture__mini-nav">
 
-            <span class="upholstered-furniture__mini-nav__span-mob">
+            <span data-catalogMobMenuFiltres class="upholstered-furniture__mini-nav__span-mob">
                <img src="img/mob-sort-types.svg" alt="">
             </span>
 
-            <span class="upholstered-furniture__mini-nav__span-mob upholstered-furniture__mini-nav__span-mob-second">
+            <span data-catalogMobMenuSort class="upholstered-furniture__mini-nav__span-mob upholstered-furniture__mini-nav__span-mob-second">
                <img src="img/mob-sort-arrows.svg" alt="">
             </span>
 
@@ -237,14 +287,23 @@
 
 
          <div class="upholstered-furniture__info-block">
-            <div class="upholstered-furniture__info-block__products-counter-block">
-               <span class="upholstered-furniture__info-block__products-counter">37</span>
-               <span>товаров</span>
+            <div class="upholstered-furniture__info-block__mob-close">
+               <img src="img/mob-sort-catalog-close.svg" alt="">
+            </div>
+            <div class="upholstered-furniture__info-block-top">
+                <div class="upholstered-furniture__info-block__mob-title">Сортировка</div>
+               <div class="upholstered-furniture__info-block__products-counter-block">
+                  <span class="upholstered-furniture__info-block__products-counter">37</span>
+                  <span>товаров</span>
+               </div>
             </div>
 
+
             <div class="upholstered-furniture__info-block__choose-sort">
-               <span>По популярности</span>
-               <img src="img/sort-arr.svg" alt="">
+               <div class="upholstered-furniture__info-block__choose-sort_click-block">
+                  <span>По популярности</span>
+                  <img src="img/sort-arr.svg" alt="">
+               </div>
 
                <div class="upholstered-furniture__info-block__choose-sort__dropdown-menu">
                   <div class="upholstered-furniture__info-block__choose-sort__dropdown-menu-div-active">По популярности</div>
@@ -254,11 +313,15 @@
                   <div>По возрастанию цены</div>
                </div>
             </div>
+
+            <div class="upholstered-furniture__info-block__mob-button">
+               <span>Выбрать</span>
+               <img src="img/catalog-choice-mob-sort-img.svg" alt="">
+            </div>
          </div>
 
 
          <div class="upholstered-furniture__catalog-products-block">
-
 
             <div class="coll-slider__link ">
               <div class="coll-slider__link-photo__wrapper">
@@ -351,8 +414,9 @@
                </div>
 
                <div class="catalog-news-block__info">
-                  <span>Шоурум в центре дизайна Artplay</span>
-                  <span>21 Октября 2020 г.</span>
+                  <span class="catalog-news-block__info-article">Статья</span>
+                  <span class="catalog-news-block__info-name">Шоурум в центре дизайна Artplay</span>
+                  <span class="catalog-news-block__info-place">21 Октября 2020 г.</span>
                </div>
             </div>
 
@@ -668,6 +732,13 @@
 
   <footer>
       <div class="footer-wrapper">
+        <div id="goToTopPageMakingOrder" class="footer-making-order__circle">
+           <div class="footer-making-order__circle-info">
+              <img src="img/making-order/arrow-footer.svg" alt="">
+              <div>Вверх</div>
+           </div>
+        </div>
+
          <div class="footer-top">
             <div class="delivery-container">
                <div class="footer-link__block">
@@ -749,14 +820,28 @@
 
 
 <!--
+<div class="catalog-news-block-big">
+   <a href="#" class="catalog-news-block__photo">
+      <img src="img/catalog-news-big.jpg" alt="">
+   </a>
+
+   <div class="catalog-news-block__info">
+      <span class="catalog-news-block__info-name">Как мы сделали офис «Империя» в Москва-Сити  </span>
+      <span class="catalog-news-block__info-article"> Статья</span>
+      <span class="catalog-news-block__info-place">Офис</span>
+   </div>
+</div>
+
+
 <div class="catalog-news-block">
    <div class="catalog-news-block__photo">
       <img src="img/catalog-news-slider.jpg" alt="">
    </div>
 
    <div class="catalog-news-block__info">
-      <span>Шоурум в центре дизайна Artplay</span>
-      <span>21 Октября 2020 г.</span>
+      <span class="catalog-news-block__info-article">Статья</span>
+      <span class="catalog-news-block__info-name">Шоурум в центре дизайна Artplay</span>
+      <span class="catalog-news-block__info-place">21 Октября 2020 г.</span>
    </div>
 </div>
 -->
