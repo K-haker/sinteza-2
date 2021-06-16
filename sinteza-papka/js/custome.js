@@ -1287,7 +1287,7 @@ function materialsSliders(){
 
       /*инициализация слайдера*/
 
-         var sliderMaterialName = new Swiper(`materials-products__item`,{
+         var sliderMaterialName = new Swiper(`.materials-products__item`,{
             slidesPerView: '1',
             spaceBetween: 20,
          })
