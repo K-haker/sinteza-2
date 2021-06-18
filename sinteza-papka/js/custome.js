@@ -624,21 +624,24 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
    /*Фиксированный блок при скролле над слайдером*/
    var OffsetTopFixedBlock = $("#prodCardotherInfoNavWrapper");
 
+   var fixedBlockBeforeFixed =    $("#prodCardotherInfoNavWrapper").offset().top;
+   console.log(fixedBlockBeforeFixed)
+
 
    if(OffsetTopFixedBlock.length > 0){
 
       $(window).on("scroll resize", function(){
          var scrollTopWindow = $(window).scrollTop();
-         var fixedBlockBeforeFixed =    $("#prodCardotherInfoNavWrapper").offset().top;
-         console.log(fixedBlockBeforeFixed)
 
          if($(window).width() > 480){
             if(scrollTopWindow > OffsetTopFixedBlock.offset().top -95){
                $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
                $('.product-card__other-information').addClass('block-was-fixed');
-            } else {                  $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
+            } else if(scrollTopWindow < fixedBlockBeforeFixed) {                  $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
                $('.product-card__other-information').removeClass('block-was-fixed');
             }
+
+            console.log(scrollTopWindow)
          }
 
 
@@ -658,8 +661,6 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 //            $("#prodCardotherInfoNavWrapper").removeClass("fixed-block-mobile");
 //            $('.product-card__other-information').removeClass('block-was-fixed-mobile');
 //         }
-
-         console.log(scrollTopWindow)
 
       })
    }
