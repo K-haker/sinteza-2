@@ -3,16 +3,29 @@ $(document).ready(function(){
    var theItemToDelete;
 
 
-   /*работа с кнопкой показать еще*/
-   $(".upholstered-furniture__load-more_products_button").on("click", function(){
+   /*работа с карточкой товара смена картинки при выборе цвета*/
+   $(".slide-left__color-variants-item__fake-radio").on("click", function(){
 
-
+     var srcNewColorProdCard =  $(this).closest('.colors-variants-item').attr('data-src');
+      $(".general-info-product__img").attr("src", `${srcNewColorProdCard}`);
 
    })
 
+   /*работа с карточкой товара смена картинки при выборе материала*/
+
+   $('[data-radio="material-prod-card"]').on("click", function(){
+
+     var srcNewMaterialProdCard =  $(this).closest('.slide-left__material-variants-item').attr('data-srcMaterial');
+      $(".general-info-product__img").attr("src", `${srcNewMaterialProdCard}`);
+
+   });
+
+   /*изменение конфигурация в таблице при нажатии на кнопку выбрать*/
+
+
 
    /*Показ информации о материале при ховере*/
-   if($(window).width > 380){
+   if($(window).width > 1024){
       $(".materials-products__item-photo").mouseenter(function(){
          $(".materials-products__item-info").slideUp(0)
          $(this).closest(".materials-products__item").find(".materials-products__item-info").slideDown(100)
@@ -27,7 +40,7 @@ $(document).ready(function(){
 
 
 
-   /**/
+   /*переключение блоков со строиз на странице принтеров*/
    $(".printers-stories__mini-nav-item").on("click", function(){
       $(".stor-sl-main-wrapp-link").removeClass("dis-bl");
       $(".printers-stories__mini-nav-item").removeClass("printers-stories__mini-nav-item-active")
@@ -598,14 +611,16 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
    /*Фиксированный блок при скролле над слайдером*/
    var OffsetTopFixedBlock = $("#prodCardotherInfoNavWrapper");
 
-   if(OffsetTopFixedBlock <0){
+   if(OffsetTopFixedBlock.length > 0){
+
       $(window).on("scroll resize", function(){
       var scrollTopWindow = $(window).scrollTop();
+
 
          if(scrollTopWindow > OffsetTopFixedBlock.offset().top -95 && $(window).width() >480){
             $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
             $('.product-card__other-information').addClass('block-was-fixed');
-         } else {
+         } else{
             $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
             $('.product-card__other-information').removeClass('block-was-fixed');
          }
@@ -617,6 +632,10 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
             $("#prodCardotherInfoNavWrapper").removeClass("fixed-block-mobile");
             $('.product-card__other-information').removeClass('block-was-fixed-mobile');
          }
+
+         console.log(`скролл от верха окна ${scrollTopWindow}`)
+         console.log(`скролл ${OffsetTopFixedBlock.offset().top}`)
+
       })
    }
 
@@ -633,8 +652,8 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
       $(window).on("scroll resize", function(){
       var scrollTopWindow = $(window).scrollTop();
 
-         if(OffsetTopFixedBlockProductCard > 0){
-            if(scrollTopWindow > OffsetTopFixedBlockProductCard.offset().top){
+         if(OffsetTopFixedBlockProductCard){
+            if(scrollTopWindow > OffsetTopFixedBlockProductCard.offset().top - 30){
                $(".product-card__mobile-bottom-block").addClass("dis-fl");
                $(".product-card__mobile-bottom").addClass("dis-flexed");
 
@@ -1262,7 +1281,7 @@ function materialsSliders(){
 
    var materialsProductsItem = document.querySelectorAll(".materials-products__item");
 
-   if(window.screen.width <381){
+   if(window.screen.width <1024){
       for(var i = 0; i<materialsProductsItem.length; i++){
          /*задаем классы (html структуру) для каждого материала*/
          materialsProductsItem[i].classList.add('swiper-container');
@@ -1285,8 +1304,11 @@ function materialsSliders(){
 
 }
 
-materialsSliders();
+window.addEventListener("load", function(){
 
+})
+
+materialsSliders();
 
 
 
