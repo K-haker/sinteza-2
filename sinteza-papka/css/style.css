@@ -8840,7 +8840,7 @@ main{
 }
 
 #searchProductsMatchedBlock{
-   display: block;
+   display: none;
 }
 
 #searchJournalMatchedBlock{
@@ -8856,6 +8856,10 @@ main{
 }
 
 #matches-found{
+   display: none;
+}
+
+#frequently-searched-block{
    display: none;
 }
 
@@ -9549,6 +9553,10 @@ main{
    margin-bottom: 20px;
 }
 
+.search-page__title{
+   font-family: "CodeCpro-Bold"
+}
+
 
 @media(max-width: 1085px){
    .materials-products__item{
@@ -9578,6 +9586,11 @@ main{
 }
 
 @media(max-width: 991px){
+   .search-page__title{
+      margin-top: 40px;
+      font-size: 56px;
+   }
+
    .upholstered-furniture__title{
       font-size: 67px;
       margin-bottom: 20px;
@@ -9636,6 +9649,11 @@ main{
 }
 
 @media(max-width:768px){
+   .search-page__title{
+      font-size: 46px;
+      line-height: 48px;
+   }
+
    .upholstered-furniture__title{
       font-size: 50px;
    }
@@ -9793,6 +9811,7 @@ main{
 
 
 @media(max-width: 380px){
+
    .upholstered-furnitur__switching_pages{
       margin-top: 77px;
    }
@@ -10165,8 +10184,6 @@ main{
    max-width: 100%;
    max-height: 100%;
 }
-
-
 
 
 
