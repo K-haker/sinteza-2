@@ -3,6 +3,20 @@ $(document).ready(function(){
    var theItemToDelete;
 
 
+   /*оформление заказа. Делать серые кнопки активными при заполнении всех полей*/
+
+
+   $(".making-order__form-registered__item-input").on("blur", function(){
+      if($(".errored-form-input").length < 1){
+
+         console.log("df")
+      }
+
+   })
+
+
+
+
    /*работа с карточкой товара смена картинки при выборе цвета*/
    $(".slide-left__color-variants-item__fake-radio").on("click", function(){
 
@@ -20,7 +34,6 @@ $(document).ready(function(){
 
    });
 
-   /*изменение конфигурация в таблице при нажатии на кнопку выбрать*/
 
 
 
@@ -611,30 +624,33 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
    /*Фиксированный блок при скролле над слайдером*/
    var OffsetTopFixedBlock = $("#prodCardotherInfoNavWrapper");
 
+
    if(OffsetTopFixedBlock.length > 0){
 
       $(window).on("scroll resize", function(){
-      var scrollTopWindow = $(window).scrollTop();
+         var scrollTopWindow = $(window).scrollTop();
+         var fixedBlockBeforeFixed =    $("#prodCardotherInfoNavWrapper").offset().top;
+         console.log(fixedBlockBeforeFixed)
+
 
 
          if(scrollTopWindow > OffsetTopFixedBlock.offset().top -95 && $(window).width() >480){
             $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
             $('.product-card__other-information').addClass('block-was-fixed');
-         } else{
+         } else if(scrollTopWindow < fixedBlockBeforeFixed && $(window).width() >480){
             $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
             $('.product-card__other-information').removeClass('block-was-fixed');
          }
 
-      if(scrollTopWindow > OffsetTopFixedBlock.offset().top -65 && $(window).width() <481){
+         if(scrollTopWindow > OffsetTopFixedBlock.offset().top -65 && $(window).width() <481){
             $("#prodCardotherInfoNavWrapper").addClass("fixed-block-mobile");
             $('.product-card__other-information').addClass('block-was-fixed-mobile');
-         } else {
+         } else if(scrollTopWindow < fixedBlockBeforeFixed && $(window).width() < 480) {
             $("#prodCardotherInfoNavWrapper").removeClass("fixed-block-mobile");
             $('.product-card__other-information').removeClass('block-was-fixed-mobile');
          }
 
-         console.log(`скролл от верха окна ${scrollTopWindow}`)
-         console.log(`скролл ${OffsetTopFixedBlock.offset().top}`)
+         console.log(scrollTopWindow)
 
       })
    }
