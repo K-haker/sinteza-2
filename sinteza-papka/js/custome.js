@@ -632,23 +632,32 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
          var fixedBlockBeforeFixed =    $("#prodCardotherInfoNavWrapper").offset().top;
          console.log(fixedBlockBeforeFixed)
 
-
-
-         if(scrollTopWindow > OffsetTopFixedBlock.offset().top -95 && $(window).width() >480){
-            $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
-            $('.product-card__other-information').addClass('block-was-fixed');
-         } else if(scrollTopWindow < fixedBlockBeforeFixed && $(window).width() >480){
-            $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
-            $('.product-card__other-information').removeClass('block-was-fixed');
+         if($(window).width() > 480){
+            if(scrollTopWindow > OffsetTopFixedBlock.offset().top -95){
+               $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
+               $('.product-card__other-information').addClass('block-was-fixed');
+            } else {                  $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
+               $('.product-card__other-information').removeClass('block-was-fixed');
+            }
          }
 
-         if(scrollTopWindow > OffsetTopFixedBlock.offset().top -65 && $(window).width() <481){
-            $("#prodCardotherInfoNavWrapper").addClass("fixed-block-mobile");
-            $('.product-card__other-information').addClass('block-was-fixed-mobile');
-         } else if(scrollTopWindow < fixedBlockBeforeFixed && $(window).width() < 480) {
-            $("#prodCardotherInfoNavWrapper").removeClass("fixed-block-mobile");
-            $('.product-card__other-information').removeClass('block-was-fixed-mobile');
-         }
+
+//
+//         if(scrollTopWindow > OffsetTopFixedBlock.offset().top -95 && $(window).width() >480){
+//            $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
+//            $('.product-card__other-information').addClass('block-was-fixed');
+//         } else if(scrollTopWindow < fixedBlockBeforeFixed && $(window).width() >480){
+//            $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
+//            $('.product-card__other-information').removeClass('block-was-fixed');
+//         }
+//
+//         if(scrollTopWindow > OffsetTopFixedBlock.offset().top -65 && $(window).width() <481){
+//            $("#prodCardotherInfoNavWrapper").addClass("fixed-block-mobile");
+//            $('.product-card__other-information').addClass('block-was-fixed-mobile');
+//         } else if(scrollTopWindow < fixedBlockBeforeFixed && $(window).width() < 480) {
+//            $("#prodCardotherInfoNavWrapper").removeClass("fixed-block-mobile");
+//            $('.product-card__other-information').removeClass('block-was-fixed-mobile');
+//         }
 
          console.log(scrollTopWindow)
 
@@ -747,7 +756,6 @@ var firstSwiper = new Swiper(".swiper-1",{
 var firstSwiper = new Swiper(".search-page-slider",{
    slidesPerView: 'auto',
    spaceBetween: 20,
-
 })
 
 
