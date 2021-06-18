@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+      <link rel="stylesheet" href="css/swiper-bundle.min.css">
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Спасибо!</title>
-</head>
-<body class="thank-you-body">
 
-   <header class="thank-you__header">
+   <link rel="stylesheet" href="css/style.css">
+   <meta charset="UTF-8">
+   <title>Оставить заявку</title>
+</head>
+<body>
+
+   <header>
       <div class="delivery-container">
          <div class="header-block header-block__main">
             <div class="header-left">
@@ -57,7 +59,7 @@
                </div>
 
                <a href="#" class="header-left__link-logo">
-                  <img src="img/new-logo-thank-you.svg" alt="">
+                  <img src="img/header/logo.svg" alt="">
                   <span>Интернет-магазин</span>
                </a>
                <a data-open="furniture" href="" class="header-left__link">Мебель</a>
@@ -77,7 +79,7 @@
                   <a href="tel:+74993223787">+7 (499) 322-37-87</a>
               </div>
                <div class="header-right__icons">
-                  <div class="header-icon  header-icon-1">
+                  <div id="open-search-panel" class="header-icon  header-icon-1">
                      <img src="img/header/lupa.svg" alt="">
                   </div>
                   <div class="header-icon">
@@ -173,74 +175,76 @@
          </div>
 </header>
 
-
-   <div id="background-furn" class="background-furniture"></div>
-
-   <div  onclick="pauseVideo()" class="thank-you-video-block">
-      <video id="videoOnMainPage" class="main-video__item " src="video/main-video.mp4" poster="img/poster-thank-you.png"  preload="auto"  type="video/mp4"></video>
-      <div onclick="playVideo()" class="play-stop__block play-stop__block-thank-you">
-         <img src="img/main/play-triangle.svg" alt="">
-         <div>Play</div>
-      </div>
-   </div>
-
-
-
    <main>
-    <a href="#" class="thank-you__see-your-eyes">
-         <span>Увидеть своими глазами</span>
-       <img src="img/thank-you/see-your.svg" alt="">
-    </a>
 
+      <div class="new-container">
+         <div class="request-title">Оставьте заявку</div>
+      </div>
 
-     <div class="new-container container-thank-you">
-         <div class="thank-you__check">
-            <div class="thank-you__check-top">
-               <div class="thank-you__check-title">Ваш заказ <br>
-               № 1234765 <br>
-               <span class="thank-you__check-status__paided">оплачен</span>
-<!--               <span class="thank-you__check-status__waiting-payment">оплата при получении</span>-->
-               </div>
+      <div class="new-container">
+         <div class="request-intro">Вы можете оставить заявку на заказ мебели и оборудования — <br class="br-desc"> наши менеджеры свяжутся и обговорят детали по заказу. </div>
+      </div>
 
-               <div class="thank-you__info">
-                 <p>Все детали по заказу доступны <br> в Личном кабинете </p>
-              </div>
+      <div class="new-container new-container-pad0 new-container__leave-request">
+         <div class="making-order__form-registered">
 
-              <a class="thank-you__personal-room" href="">
-                 <img src="img/thank-you/pers-room.svg" alt="">
-              </a>
-           </div>
+            <div class="making-order__form-registered__item">
+               <label  for="formInputName"> Имя и Фамилия / Название организации</label>
+                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
+            </div>
 
-           <div class="thank-you__check-bottom">
-               <span class="thank-you__check-bottom__text">Подготовили для вас скидки от партнеров</span>
+            <div class="making-order__form-registered__item">
+               <label for="formInputName"> Ваша почта</label>
+                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
+            </div>
 
-               <div class="thank-you__check-parthners">
+            <div class="making-order__form-registered__item">
+               <label for="formInputName"> Номер телефона</label>
+                 <input id="telephoneNumberMakingOrd" class="making-order__form-registered__item-input" placeholder="" type="text">
+            </div>
 
-                  <div class="thank-you__check-parthners-item">
-                     <div class="thank-you__check-parthners-item__img">
-                        <img src="img/thank-you/canon.svg" alt="">
-                     </div>
-                     <div>3% на камеру</div>
-                  </div>
-
-                  <div class="thank-you__check-parthners-item">
-                     <div class="thank-you__check-parthners-item__img">
-                        <img src="img/thank-you/nike.svg" alt="">
-                     </div>
-                     <div>4% на футболки</div>
-                  </div>
-
-                  <div class="thank-you__check-parthners-item">
-                     <div class="thank-you__check-parthners-item__img">
-                        <img src="img/thank-you/marshal.svg" alt="">
-                     </div>
-                     <div>5% на наушники</div>
-                  </div>
-
-               </div>
-           </div>
          </div>
-     </div>
+      </div>
+
+      <div class="new-container">
+         <div class="application-request">
+            <div class="application-request__title">Что Вас интересует?</div>
+            <div class="application-request_block">
+               <div class="application-request_block-item application-request_block-item-active">Мебель</div>
+               <div class="application-request_block-item">Оборудование</div>
+               <div class="application-request_block-item">Сервисный центр</div>
+               <div class="application-request_block-item">Комплекс услуг FIT-OUT</div>
+            </div>
+         </div>
+      </div>
+
+      <div class="new-container">
+         <div class="rewuest-comment">
+            <div class="making-order__form-registered__item">
+               <label  for="formInputName">Комментарий</label>
+                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
+            </div>
+         </div>
+      </div>
+
+      <div class="new-container">
+         <div class="attach-file">
+            <div class="attach-file-top">
+               <img src="img/add-file-leave-request.svg" alt="">
+               <span>Прикрепить файл</span>
+            </div>
+            <div class="attach-file-bottom">Вы можете прикрепить фото товара или проекта, который <br class="br-desc"> вам нравится — мы все учтем</div>
+         </div>
+      </div>
+
+
+      <div class="new-container">
+         <div class="leave-request__send-request">
+            <span>Отправить заявку</span>
+              <img src="img/leave-request__send-request.svg" alt="">
+         </div>
+      </div>
+
 
    </main>
 
