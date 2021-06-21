@@ -3,39 +3,155 @@ $(document).ready(function(){
    var theItemToDelete;
 
 
-   /*оформление заказа. Делать серые кнопки активными при заполнении всех полей*/
+   /*Работа с проверкой заполнения иформации в полях Оформление заказа и задание кнопке активного класса */
 
 
-   $(".making-order__form-registered__item-input").on("blur", function(){
-      if($(".errored-form-input").length < 1){
 
-         console.log("df")
+      if(){
+         $(".making-order__how-to-get-it").attr("disabled", false);
       }
 
+
+   /*Открытие блока с фильтрами*/
+   $("[data-catalogmobmenufiltres]").on("click", function(){
+      $("#filters-mobile-prod-card").addClass("upholstered-furniture__mini-nav-opened-mobile")
+      $("#filters-mobile-prod-card").removeClass("upholstered-furniture__mini-nav")
+
    })
 
 
 
+   /*Закрытие мобильного блока с фильтрами*/
+   $(".upholstered-furniture__mini-nav-close-mobile").on("click", function(){
+      $("#filters-mobile-prod-card").removeClass("upholstered-furniture__mini-nav-opened-mobile")
+      $("#filters-mobile-prod-card").addClass("upholstered-furniture__mini-nav")
+      $("#background-furn").removeClass("dis-bl")
 
-   /*работа с карточкой товара смена картинки при выборе цвета*/
+   })
+
+   /*Фиксированный блок при скролле над слайдером*/
+   var OffsetTopFixedBlockMaterials = $(".upholstered-furniture__mini-nav");
+   var OffsetTopFixedBlockParentMaterials = $(".upholstered-furniture__products-block");
+
+   if($(".upholstered-furniture__mini-nav").length > 0){
+
+      $(window).on("scroll resize", function(){
+
+         var scrollTopWindow = $(window).scrollTop();
+
+
+         if($(window).width() < 481){
+            if(scrollTopWindow > OffsetTopFixedBlockParentMaterials.offset().top -65){
+               $('.upholstered-furniture__mini-nav').addClass("fixed-block-mobile-mat");
+               $('.upholstered-furniture__products-block').addClass('block-was-fixed');
+            } else {
+               $('.upholstered-furniture__mini-nav').removeClass("fixed-block-mobile-mat");
+               $('.upholstered-furniture__products-block').removeClass('block-was-fixed');
+            }
+
+         }
+
+      })
+   }
+
+
+   /*работа с карточкой товара. смена картинки при выборе цвета, материала, комплектации */
    $(".slide-left__color-variants-item__fake-radio").on("click", function(){
-
      var srcNewColorProdCard =  $(this).closest('.colors-variants-item').attr('data-src');
       $(".general-info-product__img").attr("src", `${srcNewColorProdCard}`);
+   })
+
+
+
+   /*Изменение данных в конфигураторе*/
+   /*Цвет*/
+   $(".slide-left__color-variants-item__fake-radio").on("click", function(){
+      $(".colors-variants-item__info").removeClass("colors-variants-item__info-cheked")
+      $(this).closest(".colors-variants-item__info").addClass("colors-variants-item__info-cheked");
+   })
+
+   $(".product-card-choice-color").on("click", function(){
+      var newConfigColor = $(".colors-variants-item__info-cheked").find(".colors-variants-item__info-name").text();
+      $("#proCardOpenColorsBlock .info-product-meaning").text(newConfigColor)
+      $('[data-type="productCardsWindows"]').animate({'left':'-414px'},300);
+      $("#background-furn").removeClass("dis-bl");
 
    })
 
-   /*работа с карточкой товара смена картинки при выборе материала*/
+   /*Материал*/
+   $(".slide-left__color-variants-item__fake-radio").on("click", function(){
+      $(".slide-left__material-variants-item").removeClass("colors-variants-item__info-cheked")
+      $(this).closest(".slide-left__material-variants-item").addClass("colors-variants-item__info-cheked");
+   })
 
-   $('[data-radio="material-prod-card"]').on("click", function(){
+   $(".product-card-choice-material").on("click", function(){
+      var newConfigMaterial = $(".colors-variants-item__info-cheked").find(".colors-variants-item__info-name").text();
+      $("#proCardOpenMaterialsBlock .info-product-meaning").text(newConfigMaterial)
+      $('[data-type="productCardsWindows"]').animate({'left':'-414px'},300);
+      $("#background-furn").removeClass("dis-bl");
 
-     var srcNewMaterialProdCard =  $(this).closest('.slide-left__material-variants-item').attr('data-srcMaterial');
-      $(".general-info-product__img").attr("src", `${srcNewMaterialProdCard}`);
-
-   });
+   })
 
 
+   /*Размер*/
 
+   var productCardStartPrice = $(".general-info-product__price .prc").text();
+
+   $(".slide-left__size-variants-item__fake-radio").on("click", function(){
+      $(".slide-left__size-variants-item").removeClass("colors-variants-item__info-cheked")
+      $(this).closest(".slide-left__size-variants-item").addClass("colors-variants-item__info-cheked");
+   })
+
+   $(".product-card-choice-size").on("click", function(){
+      var newConfigComplectation = $(".colors-variants-item__info-cheked").find(".slide-left__size-variants-item-size").text();
+      $("#proCardOpenSizeBlock .info-product-meaning").text(newConfigComplectation);
+
+      $('[data-type="productCardsWindows"]').animate({'left':'-414px'},300);
+      $("#background-furn").removeClass("dis-bl");
+
+   })
+
+
+   /*Комплектация*/
+   $(".slide-left__color-variants-item__fake-radio").on("click", function(){
+      $(".comp-var-left-side").removeClass("colors-variants-item__info-cheked")
+      $(this).closest(".comp-var-left-side").addClass("colors-variants-item__info-cheked");
+   })
+
+   $(".product-card-choice-complectation").on("click", function(){
+      var newConfigSize = $(".colors-variants-item__info-cheked").find(".slide-left__size-variants-item-size").text();
+      $("#proCardOpenSizeBlock .info-product-meaning").text(newConfigSize)
+
+      var prodCardComplectationPrice = $(".colors-variants-item__info-cheked").find(".comp-var-right-side__price").text()
+
+      var productCardNewPrice = Number(productCardStartPrice) + Number(prodCardComplectationPrice)
+
+      $(".general-info-product__price .prc").text(productCardNewPrice)
+
+
+      $('[data-type="productCardsWindows"]').animate({'left':'-414px'},300);
+      $("#background-furn").removeClass("dis-bl");
+   })
+
+
+   /*Оставить заявку. открытие модального мобильного окна*/
+
+   $(".leave-request-aplication-request-choice").on("click", function(){
+      $(".application-request_block").slideDown(300);
+      $("#background-furn").slideDown(0)
+   })
+
+   /*оставить заявку. закрытие модального мобильного окна*/
+   $(".application-request_block-close").on("click", function(){
+      $(".application-request_block").slideUp(300);
+      $("#background-furn").slideUp(0)
+   })
+
+   /*оставить заявку. работа с радиобаттонами*/
+   $(".application-request_block-item").on("click", function(){
+      $(".application-request_block-item").removeClass("application-request_block-item-active");
+      $(this).addClass("application-request_block-item-active")
+   })
 
    /*Показ информации о материале при ховере*/
    if($(window).width > 1024){
@@ -48,9 +164,6 @@ $(document).ready(function(){
          $(".materials-products__item-info").slideUp(0)
       })
    }
-
-
-
 
 
    /*переключение блоков со строиз на странице принтеров*/
@@ -359,10 +472,14 @@ $(document).ready(function(){
     });
 
    /*маска телефона на странице Ваши данные*/
-
-
    if($("#telephoneNumberMakingOrd").length > 0){
       $("#telephoneNumberMakingOrd").mask("+7(999)999-99-99");
+   }
+
+
+   /*Маска теелфона на странице оставить заявку*/
+   if($('[data-type="telephoneNumberMakingOrd"]').length > 0){
+      $('[data-type="telephoneNumberMakingOrd"]').mask("+7(999)999-99-99");
    }
 
 
@@ -622,45 +739,41 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 
 
    /*Фиксированный блок при скролле над слайдером*/
+
+
+   if($("#prodCardotherInfoNavWrapper").length > 0){
+
    var OffsetTopFixedBlock = $("#prodCardotherInfoNavWrapper");
+   var OffsetTopFixedBlockParent = $(".product-card__other-information");
+
 
    var fixedBlockBeforeFixed =    $("#prodCardotherInfoNavWrapper").offset().top;
    console.log(fixedBlockBeforeFixed)
 
-
-   if(OffsetTopFixedBlock.length > 0){
-
       $(window).on("scroll resize", function(){
          var scrollTopWindow = $(window).scrollTop();
 
+
          if($(window).width() > 480){
-            if(scrollTopWindow > OffsetTopFixedBlock.offset().top -95){
+            if(scrollTopWindow > OffsetTopFixedBlockParent.offset().top -95){
                $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
                $('.product-card__other-information').addClass('block-was-fixed');
-            } else if(scrollTopWindow < fixedBlockBeforeFixed) {                  $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
+            } else {                  $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
                $('.product-card__other-information').removeClass('block-was-fixed');
             }
 
-            console.log(scrollTopWindow)
+
          }
 
+         if($(window).width() < 481){
+            if(scrollTopWindow > OffsetTopFixedBlockParent.offset().top -65){
+               $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
+               $('.product-card__other-information').addClass('block-was-fixed');
+            } else {                  $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
+               $('.product-card__other-information').removeClass('block-was-fixed');
+            }
 
-//
-//         if(scrollTopWindow > OffsetTopFixedBlock.offset().top -95 && $(window).width() >480){
-//            $("#prodCardotherInfoNavWrapper").addClass("fixed-block");
-//            $('.product-card__other-information').addClass('block-was-fixed');
-//         } else if(scrollTopWindow < fixedBlockBeforeFixed && $(window).width() >480){
-//            $("#prodCardotherInfoNavWrapper").removeClass("fixed-block");
-//            $('.product-card__other-information').removeClass('block-was-fixed');
-//         }
-//
-//         if(scrollTopWindow > OffsetTopFixedBlock.offset().top -65 && $(window).width() <481){
-//            $("#prodCardotherInfoNavWrapper").addClass("fixed-block-mobile");
-//            $('.product-card__other-information').addClass('block-was-fixed-mobile');
-//         } else if(scrollTopWindow < fixedBlockBeforeFixed && $(window).width() < 480) {
-//            $("#prodCardotherInfoNavWrapper").removeClass("fixed-block-mobile");
-//            $('.product-card__other-information').removeClass('block-was-fixed-mobile');
-//         }
+         }
 
       })
    }
@@ -678,7 +791,7 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
       $(window).on("scroll resize", function(){
       var scrollTopWindow = $(window).scrollTop();
 
-         if(OffsetTopFixedBlockProductCard){
+         if(OffsetTopFixedBlockProductCard.length >0){
             if(scrollTopWindow > OffsetTopFixedBlockProductCard.offset().top - 30){
                $(".product-card__mobile-bottom-block").addClass("dis-fl");
                $(".product-card__mobile-bottom").addClass("dis-flexed");
