@@ -173,7 +173,9 @@
             </div>
            </div>
          </div>
-</header>
+   </header>
+
+   <div id="background-furn" class="background-furniture"></div>
 
    <main>
 
@@ -200,27 +202,55 @@
 
             <div class="making-order__form-registered__item">
                <label for="formInputName"> Номер телефона</label>
-                 <input id="telephoneNumberMakingOrd" class="making-order__form-registered__item-input" placeholder="" type="text">
+                 <input data-type="telephoneNumberMakingOrd" class="making-order__form-registered__item-input" placeholder="" type="text">
             </div>
 
          </div>
       </div>
 
       <div class="new-container">
+        <div class="making-order__form-registered__item leave-request-aplication-request">
+            <label  for="formInputName"> Что Вас интересует?</label>
+              <input class="making-order__form-registered__item-input" placeholder="" type="text">
+
+              <div class="leave-request-aplication-request-choice">
+                 <img src="img/item-arrow-input.svg" alt="">
+              </div>
+         </div>
+
          <div class="application-request">
             <div class="application-request__title">Что Вас интересует?</div>
+
             <div class="application-request_block">
-               <div class="application-request_block-item application-request_block-item-active">Мебель</div>
-               <div class="application-request_block-item">Оборудование</div>
-               <div class="application-request_block-item">Сервисный центр</div>
-               <div class="application-request_block-item">Комплекс услуг FIT-OUT</div>
+                 <div class="application-request_block-close">
+                       <img src="img/close-moda-send-request.svg" alt="">
+                 </div>
+
+                  <div class="application-request_block-title">Тема обращения
+                 </div>
+                <div class="application-request_block-subtitle">Что Вас интересует?
+                 </div>
+
+                 <div class="application-request_block-wrapper">
+
+                     <div class="application-request_block-item application-request_block-item-active">Мебель</div>
+                     <div class="application-request_block-item">Оборудование</div>
+                     <div class="application-request_block-item">Сервисный центр</div>
+                     <div class="application-request_block-item">Комплекс услуг FIT-OUT</div>
+               </div>
+
+               <div class="application-request_block-choice">
+                  <span>Выбрать</span>
+                  <img src="img/choice-arrow.svg" alt="">
+               </div>
             </div>
+
          </div>
       </div>
 
       <div class="new-container">
          <div class="rewuest-comment">
-            <div class="making-order__form-registered__item">
+            <div class="making-order__form-registered__item leave-request-comments">
                <label  for="formInputName">Комментарий</label>
                  <input class="making-order__form-registered__item-input" placeholder="" type="text">
             </div>
@@ -251,6 +281,7 @@
 
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+   <script src="js/jquery.maskedinput.js"></script>
    <script src="js/swiper-bundle.min.js"></script>
    <script src="js/custome.js"></script>
 </body>
