@@ -5,11 +5,66 @@ $(document).ready(function(){
 
    /*Работа с проверкой заполнения иформации в полях Оформление заказа и задание кнопке активного класса */
 
+   $(".making-order__form-registered__item-input").keyup( function(){
+      var formInput1 = $("#formInput1").val();
+      var formInput2 = $("#formInput2").val();
+      var formInput3 = $("#formInput3").val();
 
-
-      if(){
-         $(".making-order__how-to-get-it").attr("disabled", false);
+      if(formInput1.length != 0 && formInput2.length != 0 && formInput3.length != 0 && !("errored-form-input").length < 1){
+         $("#making-order__first-button").attr("disabled", false);
+         $("#makingOrderRadioButonHowToGetIt").attr("disabled", false);
+      } else {
+         $("#making-order__first-button").attr("disabled", true);
+         $("#makingOrderRadioButonHowToGetIt").attr("disabled", true);
       }
+   })
+
+   $(".making-order__form-registered__item-input").keyup( function(){
+      var formInput4 = $("#formInput4").val();
+      var formInput5 = $("#formInput5").val();
+      var formInput6 = $("#formInput6").val();
+
+      if(formInput4.length != 0 && formInput5.length != 0 && formInput6.length != 0 && !("errored-form-input").length < 1){
+         $("#making-order__second-button").attr("disabled", false);
+         $("#makingOrderRadioButonPayment").attr("disabled", false);
+      } else {
+         $("#making-order__second-button").attr("disabled", true);
+         $("#makingOrderRadioButonPayment").attr("disabled", true);
+      }
+   })
+
+
+
+
+
+
+
+   /*Работа с кнопками */
+   $("#making-order__first-button").on("click", function(){
+      $("#how-get__wrapper-block").slideDown(0);
+      $("#making-order__your-data__wrraper-block").slideUp(0);
+       $("#makibg-order__wrapper-all").slideDown(0);
+       $("#making-order__payment-wrapper").slideUp(0)
+       $("#making-order__order-info__delivery").addClass("display-flex");
+       $("#making-order__order-info__pick-up-sevice").removeClass("display-flex");
+
+       $(".making-order__switching-menu_item").removeClass("making-order__switching-menu_item-active");
+       $('#makingOrderRadioButonHowToGetIt').addClass("making-order__switching-menu_item-active");
+
+      $(this).slideUp(0)
+      $('#making-order__second-button').slideDown(0)
+   })
+
+
+   $("#making-order__second-button").on("click", function(){
+      $("#makibg-order__wrapper-all").slideUp(0);
+      $(".making-order__switching-menu_item").removeClass("making-order__switching-menu_item-active");
+       $("#makingOrderRadioButonPayment").addClass("making-order__switching-menu_item-active")
+      $("#making-order__payment-wrapper").slideDown(0);
+
+      $(this).slideUp(0)
+   })
+
 
 
    /*Открытие блока с фильтрами*/
@@ -230,7 +285,7 @@ $(document).ready(function(){
       })
 
    /*нажатие на пункт выпадающего меню*/
-   if($(window).width() > 380){
+   if($(window).width() > 420){
          $(".upholstered-furniture__info-block__choose-sort__dropdown-menu div").on("click", function(){
          $(".upholstered-furniture__info-block__choose-sort__dropdown-menu div").removeClass("upholstered-furniture__info-block__choose-sort__dropdown-menu-div-active")
          $(this).addClass("upholstered-furniture__info-block__choose-sort__dropdown-menu-div-active")
@@ -362,6 +417,9 @@ $(document).ready(function(){
 
       $(".making-order__switching-menu_item").removeClass("making-order__switching-menu_item-active");
       $(this).addClass("making-order__switching-menu_item-active");
+
+      $("#making-order__first-button").slideDown(0)
+      $("#making-order__second-button").slideUp(0)
    })
 
     $("#makingOrderRadioButonHowToGetIt").on("click", function(){
@@ -374,6 +432,9 @@ $(document).ready(function(){
 
        $(".making-order__switching-menu_item").removeClass("making-order__switching-menu_item-active");
        $(this).addClass("making-order__switching-menu_item-active");
+
+       $("#making-order__second-button").slideDown(0)
+       $("#making-order__first-button").slideUp(0)
    })
 
    $("#makingOrderRadioButonPayment").on("click", function(){
@@ -472,8 +533,8 @@ $(document).ready(function(){
     });
 
    /*маска телефона на странице Ваши данные*/
-   if($("#telephoneNumberMakingOrd").length > 0){
-      $("#telephoneNumberMakingOrd").mask("+7(999)999-99-99");
+   if($('[data-telephoneMask="1"]').length > 0){
+      $('[data-telephoneMask="1"]').mask("+7(999)999-99-99");
    }
 
 
@@ -748,7 +809,6 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 
 
    var fixedBlockBeforeFixed =    $("#prodCardotherInfoNavWrapper").offset().top;
-   console.log(fixedBlockBeforeFixed)
 
       $(window).on("scroll resize", function(){
          var scrollTopWindow = $(window).scrollTop();
@@ -838,11 +898,28 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
       }
 
    })
+//
+//   $('[data-telephonemask="1"]').blur(function(){
+//
+//      if($('[data-telephonemask="1"]').value.replace(/[_-]/g, '').length < 14){
+//         $('[data-telephonemask="1"]').parent().find("label").addClass("label-active");
+//         $('[data-telephonemask="1"]').parent().removeClass("errored-form-input");
+//      }
+//
+//      if($('[data-telephonemask="1"]').value.replace(/[_-]/g, '').length > 13){
+//         $('[data-telephonemask="1"]').parent().find("label").removeClass("label-active");
+//         $('[data-telephonemask="1"]').parent().addClass("errored-form-input");
+//      }
+//
+//      $('[data-telephonemask="1"]').value
+//
+//   })
+//
+//   console.log($('[data-telephonemask="1"]'))
 
 
 
    $(".making-order__form-registered__item-input").focus(function(){
-      console.log("focus")
       $(this).parent().find("label").addClass("label-active");
    })
 

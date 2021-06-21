@@ -1024,7 +1024,7 @@ Media
 }
 
 
-@media(max-width: 320px){
+@media(max-width: 420px){
    .mailing-button{
       width: 103px;
    }
@@ -1489,7 +1489,7 @@ Media
 }
 
 
-@media(max-width:320px){
+@media(max-width:420px){
 
 }
 
@@ -2033,7 +2033,7 @@ Media
 }
 
 
-@media(max-width:320px){
+@media(max-width:420px){
 
 }
 
@@ -3769,7 +3769,7 @@ Media
 }
 
 
-@media(max-width:320px){
+@media(max-width:420px){
    .journal-news__item-photo-wrapper{
       height: 200px;
    }
@@ -5919,7 +5919,7 @@ Media
 }
 
 
-@media(max-width:320px){
+@media(max-width:420px){
    .slide-left__colors-slider-item__photo,
    .slide-left_material-slider-item__photo,
    .slide-left_complectations-slider-item__photo{
@@ -6981,7 +6981,7 @@ Media
 
 }
 
-@media(max-width:320px){
+@media(max-width:420px){
    .slide-left__colors-slider{
       right: 30px;
    }
@@ -7083,6 +7083,8 @@ Media
 .making-order__switching-menu_item{
    margin-right: 50px;
    cursor: pointer;
+   border: none;
+   background-color: transparent;
 }
 
 .making-order__switching-menu_item span{
@@ -8895,7 +8897,6 @@ main{
 }
 
 .upholstered-furniture__mini-nav{
-   overflow-x: scroll;
    margin-bottom:30px;
    display: flex;
 }
@@ -9496,9 +9497,6 @@ main{
    margin-right: 10px;
 }
 
-.upholstered-furniture__mini-nav::-webkit-scrollbar { width: 0; }
-.upholstered-furniture__mini-nav{ -ms-overflow-style: none; }
-.upholstered-furniture__mini-nav{ overflow: -moz-scrollbars-none; }
 
 .footer-wrapper{
    position: relative;
@@ -9604,6 +9602,7 @@ main{
 .upholstered-furniture__mini-nav-wrapper{
    overflow-x: scroll;
    display: flex;
+   padding-left: 10px;
 }
 
 
@@ -9890,7 +9889,7 @@ main{
    }
 
    .upholstered-furniture__mini-nav-opened-mobile .upholstered-furniture__mini-nav-top,
-   .upholstered-furniture__mini-nav-close-mobile
+   .upholstered-furniture__mini-nav-opened-mobile .upholstered-furniture__mini-nav-close-mobile
    {
       display: block;
       margin-bottom: 20px;
@@ -10343,7 +10342,7 @@ main{
 }
 
 
-@media(max-width: 380px){
+@media(max-width: 420px){
    .application-request__title,
    .application-request_block-title,
    .application-request_block-subtitle,
@@ -10503,7 +10502,13 @@ main{
    background-color: #FFFFFF;
 }
 
+.making-order__how-to-get-it{
+   cursor: pointer;
+}
 
+#making-order__second-button{
+   display: none;
+}
 
 
 
