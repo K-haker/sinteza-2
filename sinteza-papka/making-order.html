@@ -234,29 +234,29 @@
 
      <div class="new-container">
         <div class="making-order__switching-menu">
-           <div id="makingOrderRadioButonYouData" class="making-order__switching-menu_item making-order__switching-menu_item-active">
+           <button id="makingOrderRadioButonYouData" class="making-order__switching-menu_item making-order__switching-menu_item-active">
               <span>Ваши данные</span>
               <svg class='making-order__switching-menu_item-arr' width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.14376 7.73493L17.3811 7.73493L17.3811 23.2048" stroke="black" stroke-opacity="0.4" stroke-width="1.73"/>
                   <path d="M16.8025 7.95605L1 23.9997" stroke="black" stroke-opacity="0.4" stroke-width="1.73"/>
                </svg>
-           </div>
+           </button>
 
-            <div id="makingOrderRadioButonHowToGetIt" class="making-order__switching-menu_item ">
+            <button disabled="" id="makingOrderRadioButonHowToGetIt" class="making-order__switching-menu_item ">
               <span>Способ получения</span>
               <svg class='making-order__switching-menu_item-arr' width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.14376 7.73493L17.3811 7.73493L17.3811 23.2048" stroke="black" stroke-opacity="0.4" stroke-width="1.73"/>
                   <path d="M16.8025 7.95605L1 23.9997" stroke="black" stroke-opacity="0.4" stroke-width="1.73"/>
                </svg>
-           </div>
+           </button>
 
-           <div id="makingOrderRadioButonPayment" class="making-order__switching-menu_item ">
+           <button disabled="" id="makingOrderRadioButonPayment" class="making-order__switching-menu_item ">
               <span>Оплата</span>
               <svg class='making-order__switching-menu_item-arr' width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.14376 7.73493L17.3811 7.73493L17.3811 23.2048" stroke="black" stroke-opacity="0.4" stroke-width="1.73"/>
                   <path d="M16.8025 7.95605L1 23.9997" stroke="black" stroke-opacity="0.4" stroke-width="1.73"/>
                </svg>
-           </div>
+           </button>
 
         </div>
       </div>
@@ -299,7 +299,7 @@
 
                <div class="making-order__form-registered__item">
                   <label  for="formInputName"> Ваш адрес</label>
-                    <input id="qqqqqq" class="making-order__form-registered__item-input" placeholder="" type="text">
+                    <input id="formInput5" class="making-order__form-registered__item-input" placeholder="" type="text">
 
                     <div id="chooseYourCity" class="making-order__choice-your-city">
                          <span>г.</span>
@@ -312,12 +312,12 @@
 
                <div class="making-order__form-registered__item">
                   <label for="formInputName"> Квартира, подъезд, код домофона</label>
-                    <input class="making-order__form-registered__item-input" placeholder="" type="text">
+                    <input id="formInput4" class="making-order__form-registered__item-input" placeholder="" type="text">
                </div>
 
                <div class="making-order__form-registered__item">
                   <label for="formInputName"> Комментарий к заказу</label>
-                    <input class="making-order__form-registered__item-input" placeholder="" type="text">
+                    <input id="formInput6" class="making-order__form-registered__item-input" placeholder="" type="text">
                </div>
 
             </div>
@@ -399,19 +399,19 @@
       <div class="new-container new-container-pad0">
          <div class="making-order__form-registered">
 
-            <div class="making-order__form-registered__item">
+            <div  class="making-order__form-registered__item">
                <label  for="formInputName"> Имя и Фамилия / Название организации</label>
-                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
+               <input id="formInput1" class="making-order__form-registered__item-input" placeholder="" type="text">
             </div>
 
             <div class="making-order__form-registered__item">
                <label for="formInputName"> Ваша почта</label>
-                 <input class="making-order__form-registered__item-input" placeholder="" type="text">
+                 <input id="formInput2" class="making-order__form-registered__item-input" placeholder="" type="text">
             </div>
 
             <div class="making-order__form-registered__item">
                <label for="formInputName"> Номер телефона</label>
-                 <input id="telephoneNumberMakingOrd" class="making-order__form-registered__item-input" placeholder="" type="text">
+                 <input data-telephoneMask="1" id="formInput3" class="making-order__form-registered__item-input" placeholder="" type="text">
             </div>
 
          </div>
@@ -519,8 +519,13 @@
 
       <div class="new-container">
           <div class="making-order__bottom">
-           <button disabled="" class="making-order__how-to-get-it">
+           <button id="making-order__first-button" disabled="" class="making-order__how-to-get-it">
                <span>Перейти к способу получения</span>
+               <img src="img/making-order/wh-ar.svg" alt="">
+           </button>
+
+           <button id="making-order__second-button" disabled="" class="making-order__how-to-get-it">
+               <span>Перейти к оплате</span>
                <img src="img/making-order/wh-ar.svg" alt="">
            </button>
 
