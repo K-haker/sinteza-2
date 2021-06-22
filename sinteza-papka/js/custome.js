@@ -2,6 +2,21 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+   /*Задание тени фиксированному хедеру при сролле. Все станицы*/
+   $(window).on("scroll resize", function(){
+      if($(".header-block-wrapper").offset().top > 0){
+         $(".header-block-wrapper").addClass("fixed-header");
+      } else {
+         $(".header-block-wrapper").removeClass("fixed-header");
+      }
+   })
+
+
+   /*Сброс фильтров на страницах каталога*/
+   $(".upholstered-furniture__mini-nav-reset").on("click", function(){
+      $(".upholstered-furniture__mini-nav__span").removeClass("upholstered-furniture__mini-nav__span-active")
+   })
+
 
    /*Работа с проверкой заполнения иформации в полях Оформление заказа и задание кнопке активного класса */
 
@@ -271,9 +286,25 @@ $(document).ready(function(){
    $(".upholstered-furniture__mini-nav__span").on("click", function(){
       if($(this).hasClass("upholstered-furniture__mini-nav__span-active")){
          $(this).removeClass("upholstered-furniture__mini-nav__span-active")
-      } else{
+      } else if($(this).hasClass("miniNavItemAll")) {
+         $(".upholstered-furniture__mini-nav__span").removeClass(" upholstered-furniture__mini-nav__span-active")
+         $(this).addClass("upholstered-furniture__mini-nav__span-active")
+      } else if(!$(this).hasClass("miniNavItemAll")){
+         $(".miniNavItemAll").removeClass("upholstered-furniture__mini-nav__span-active")
+         $(this).addClass("upholstered-furniture__mini-nav__span-active")
+      }else{
          $(this).addClass("upholstered-furniture__mini-nav__span-active")
       }
+
+//      if($(".upholstered-furniture__mini-nav__span").hasClass("miniNavItemAll")){
+//         $(".upholstered-furniture__mini-nav__span").removeClass(" upholstered-furniture__mini-nav__span-active")
+//         $(this).addClass("upholstered-furniture__mini-nav__span-active")
+//      }
+
+//      if($(this).attr('id','miniNavItemAll')){
+//         (".upholstered-furniture__mini-nav__span").removeClass("upholstered-furniture__mini-nav__span-active")
+//         $(this).addClass('upholstered-furniture__mini-nav__span-active')
+//      }
 
    })
 
@@ -570,6 +601,10 @@ $(document).ready(function(){
       theItemToDelete.remove();
       $("#background-furn").removeClass("dis-bl");
       $(".busket__modal-clear-all-items").slideUp(300);
+      busketCostCalculation();
+      countingNumberOfItemsIndasket();
+      calculatingЕheВiscount();
+      calculatingTheFinalCost()
    });
 
    /*Закрытие уточняющих окон*/
@@ -1363,12 +1398,25 @@ var counterOfTotalPrice;
 function busketCostCalculation(){
    counterOfTotalPrice =0;
 
+   console.log("hop!")
+
+
    for(var i =0; i < basketProductItem.length; i++){
+
+      basketProductItem = document.querySelectorAll(".busket-products-list__item")
+
       var counterInItemBasket = basketProductItem[i].querySelector('.busket-product-counter-input');
       var priceInItemBasket = basketProductItem[i].querySelector('.busket-products-list__item-main-info__price-counter');
       var priceOfOneItem = +counterInItemBasket.value * +priceInItemBasket.textContent;
 
+
       counterOfTotalPrice = counterOfTotalPrice + priceOfOneItem
+
+      console.log(basketProductItem)
+
+//      console.log(counterInItemBasket)
+//      console.log(priceInItemBasket)
+//      console.log(priceOfOneItem)
    }
 
 
@@ -1384,7 +1432,9 @@ busketCostCalculation();
 var discontCounterInBasketpage;
 var discontmeaningInBasketpage = document.querySelector(".busket-general-price__discount-counter")
 
+
 function calculatingЕheВiscount(){
+
    discontCounterInBasketpage =0
 
    for(i=0; i < basketProductItem.length; i++){
@@ -1453,8 +1503,8 @@ for(i=0; i < minusOnePiece.length; i++){
       var counterPiecesOfProductItem = event.target.parentNode.parentNode.querySelector(".busket-product-counter-input");
 
       counterPiecesOfProductItem.value = +counterPiecesOfProductItem.value - 1;
-      if(counterPiecesOfProductItem.value < 0){
-         counterPiecesOfProductItem.value = 0;
+      if(counterPiecesOfProductItem.value < 1){
+         counterPiecesOfProductItem.value = 1;
       }
 
       busketCostCalculation();
@@ -1486,7 +1536,21 @@ if(basketDeleteProductItem){
 
 var catalogPrintersSlider = new Swiper(".printers-stories-slider-container",{
    slidesPerView: 'auto',
-   spaceBetween: 20,
+   spaceBetween: 120,
+   breakpoints:{
+      20:{
+         spaceBetween:20,
+      },
+      480:{
+         spaceBetween:40,
+      },
+      768:{
+         spaceBetween:80,
+      },
+      991:{
+         spaceBetween:120,
+      },
+   }
 })
 
 
