@@ -2,6 +2,34 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+   /*Удаление элемента*/
+   $(".busket-products-list__item-delete").on("click", function(){
+      $("#background-furn").addClass("dis-bl");
+      $("#deleteItemQuestionWindow").slideDown(300);
+      theItemToDelete = $(this).closest(".busket-products-list__item");
+   })
+
+   $("#yesDeleteElement").on("click", function(){
+      theItemToDelete.remove();
+      $("#background-furn").removeClass("dis-bl");
+      $(".busket__modal-clear-all-items").slideUp(300);
+
+      var busketProductsItem = $(".busket-products-list__item").length
+      console.log(busketProductsItem);
+
+      if(busketProductsItem < 1){
+         $("#visibleBlockIfTheCartHasAnItem").slideUp(0);
+         $("#noProductsInTheBusket").slideDown(0);
+
+         console.log('yes')
+      }
+
+      busketCostCalculation();
+      countingNumberOfItemsIndasket();
+      calculatingЕheВiscount();
+      calculatingTheFinalCost();
+   });
+
    /*Задание тени фиксированному хедеру при сролле. Все станицы*/
    $(window).on("scroll resize", function(){
       if($(".header-block-wrapper").offset().top > 0){
@@ -581,31 +609,17 @@ $(document).ready(function(){
    $("#clearBusketButton").on("click", function(){
       $("#background-furn").addClass("dis-bl");
       $("#clearBusketQuestionWindow").slideDown(300);
+
    })
 
    $("#yesClearBusket").on("click", function(){
       $("#busketProductsListBlock").empty();
       $("#background-furn").removeClass("dis-bl");
       $(".busket__modal-clear-all-items").slideUp(300);
-      $("#visibleBlockIfTheCartHasAnItem").addClass("dis-none");
-   })
 
-   /*Удаление элемента*/
-   $(".busket-products-list__item-delete").on("click", function(){
-      $("#background-furn").addClass("dis-bl");
-      $("#deleteItemQuestionWindow").slideDown(300);
-      theItemToDelete = $(this).closest(".busket-products-list__item");
+      $("#visibleBlockIfTheCartHasAnItem").slideUp(0);
+      $("#noProductsInTheBusket").slideDown(0);
    })
-
-   $("#yesDeleteElement").on("click", function(){
-      theItemToDelete.remove();
-      $("#background-furn").removeClass("dis-bl");
-      $(".busket__modal-clear-all-items").slideUp(300);
-      busketCostCalculation();
-      countingNumberOfItemsIndasket();
-      calculatingЕheВiscount();
-      calculatingTheFinalCost()
-   });
 
    /*Закрытие уточняющих окон*/
    $('[data-close="busketQuestionWindow"]').on("click", function(){
@@ -1398,9 +1412,6 @@ var counterOfTotalPrice;
 function busketCostCalculation(){
    counterOfTotalPrice =0;
 
-   console.log("hop!")
-
-
    for(var i =0; i < basketProductItem.length; i++){
 
       basketProductItem = document.querySelectorAll(".busket-products-list__item")
@@ -1409,10 +1420,9 @@ function busketCostCalculation(){
       var priceInItemBasket = basketProductItem[i].querySelector('.busket-products-list__item-main-info__price-counter');
       var priceOfOneItem = +counterInItemBasket.value * +priceInItemBasket.textContent;
 
-
       counterOfTotalPrice = counterOfTotalPrice + priceOfOneItem
 
-      console.log(basketProductItem)
+//      console.log(basketProductItem)
 
 //      console.log(counterInItemBasket)
 //      console.log(priceInItemBasket)
@@ -1516,22 +1526,22 @@ for(i=0; i < minusOnePiece.length; i++){
 }
 
 /*пересчет цены и количества при удалении позиции в списке*/
-var basketDeleteProductItem = document.querySelector("#yesDeleteElement");
-
-if(basketDeleteProductItem){
-   basketDeleteProductItem.addEventListener("click", function(){
-
-   /*пересчет цены и кол-ва товара*/
-   busketCostCalculation();
-   calculatingЕheВiscount();
-   calculatingTheFinalCost();
-   countingNumberOfItemsIndasket();
-
-   /*проверка на наличие товара в корзине*/
-   checkingAvailabilityOfProductsInBasket();
-})
-
-}
+//var basketDeleteProductItem = document.querySelector("#yesDeleteElement");
+//
+//if(basketDeleteProductItem){
+//   basketDeleteProductItem.addEventListener("click", function(){
+//
+//   /*пересчет цены и кол-ва товара*/
+//   busketCostCalculation();
+//   calculatingЕheВiscount();
+//   calculatingTheFinalCost();
+//   countingNumberOfItemsIndasket();
+//
+//   /*проверка на наличие товара в корзине*/
+//   checkingAvailabilityOfProductsInBasket();
+//})
+//
+//}
 
 
 var catalogPrintersSlider = new Swiper(".printers-stories-slider-container",{
