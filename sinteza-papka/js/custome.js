@@ -3,6 +3,20 @@ $(document).ready(function(){
    var theItemToDelete;
 
 
+   /*Оставить заявку. Валидация формы на странице */
+   $(".making-order__form-registered__item-input").keyup( function(){
+      var formInput4 = $("#formInputX1").val();
+      var formInput5 = $("#formInputX2").val();
+      var formInput6 = $("#formInputX3").val();
+
+      if(formInput4.length != 0 && formInput5.length != 0 && formInput6.length != 0 && !("errored-form-input").length < 1){
+         $("#making-order__second-button").attr("disabled", false);
+      } else {
+         $("#making-order__second-button").attr("disabled", true);
+      }
+   })
+
+
    /*Оставить заявку. Выбор темы обращенияя*/
    $("#whatIntrestedInput").val("Мебель")
 
