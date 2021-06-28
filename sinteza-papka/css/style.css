@@ -10424,6 +10424,23 @@ main{
    margin-left: 7px;
 }
 
+.thank-you-video-block{
+   width: 100vw;;
+   height: 100vh;
+}
+
+.thank-you-video-block video{
+   object-fit: cover;
+}
+
+.thank-you-body{
+   overflow: hidden;
+}
+
+.search-page-slider .coll-slider-product-img{
+   height: 100%;
+}
+
 
 
 @media(max-width: 420px){
@@ -10778,20 +10795,12 @@ main{
       margin: 0 auto;
    }
 
-
+   .search-page-slider .coll-slider__link-photo__wrapper{
+   width: 200px;
+   height: auto;
 }
 
-.thank-you-video-block{
-   width: 100vw;;
-   height: 100vh;
-}
 
-.thank-you-video-block video{
-   object-fit: cover;
-}
-
-.thank-you-body{
-   overflow: hidden;
 }
 
 
