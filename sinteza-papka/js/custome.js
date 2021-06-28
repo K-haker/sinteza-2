@@ -2,6 +2,25 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+
+   /*Оставить заявку. Выбор темы обращенияя*/
+   $("#whatIntrestedInput").val("Мебель")
+
+   $(".application-request_block-choice").on("click", function(){
+       var choicedThemeApplRequest = $(".application-request_block-item-active").text()
+      $(".application-request_block").slideUp(300);
+      $("#background-furn").slideUp(0)
+
+      $("#whatIntrestedInput").val(choicedThemeApplRequest)
+
+   })
+
+
+   /**/
+   $(".main-intro__left-bottom").on("scroll", function(){
+      var mainProgrammsOffsetTop = $(".main-programms").offset().top
+   })
+
    /*Удаление элемента*/
    $(".busket-products-list__item-delete").on("click", function(){
       $("#background-furn").addClass("dis-bl");
@@ -994,8 +1013,19 @@ var firstSwiper = new Swiper(".swiper-1",{
 })
 
 var firstSwiper = new Swiper(".search-page-slider",{
-   slidesPerView: 'auto',
    spaceBetween: 20,
+
+   breakpoints:{
+      1100:{
+         slidesPerView: 4,
+      },
+      420:{
+         slidesPerView: 'auto',
+      },
+      200:{
+         slidesPerView: 1,
+      },
+   }
 })
 
 
