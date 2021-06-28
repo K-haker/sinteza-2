@@ -10763,17 +10763,19 @@ main{
       top: -3px;
    }
 
-   .search-page-slider .coll-slider__link.swiper-slide{
-      max-width:200px;
-      margin: 0 auto;
-   }
-
    .thank-you__check-parthners{
       padding-right: 10px;
    }
 
    .request-intro{
       margin-bottom: 15px;
+   }
+
+
+
+   .col-sl-wrap-inside{
+      max-width: 200px;
+      margin: 0 auto;
    }
 
 
@@ -10791,14 +10793,6 @@ main{
 .thank-you-body{
    overflow: hidden;
 }
-
-
-
-
-
-
-
-
 
 
 
