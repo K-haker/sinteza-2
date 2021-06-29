@@ -2,20 +2,16 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
-//   var formInputX1 = $("#formInputX1").val();
-//   var formInputX2 = $("#formInputX2").val();
-//   var formInputX3 = $("#formInputX3").val();
+
+   /*Видимость/невидимость блока "сохранить данные" на странице создание заказа*/
 
 
    /*Оставить заявку. Валидация формы на странице */
+if($("#formInputX1").length > 0 && $("#formInputX2").length > 0 && $("#formInputX3").length > 0){
    $(".making-order__form-registered__item-input").keyup( function(){
       var formInputX1 = $("#formInputX1").val();
       var formInputX2 = $("#formInputX2").val();
       var formInputX3 = $("#formInputX3").val();
-
-      console.log(formInputX1)
-      console.log(formInputX2)
-      console.log(formInputX3)
 
       if(formInputX1.length != 0 && formInputX2.length != 0 && formInputX3.length != 0 && !("errored-form-input").length < 1){
          $("#leave-request__send-request").attr("disabled", false);
@@ -23,6 +19,9 @@ $(document).ready(function(){
          $("#leave-request__send-request").attr("disabled", true);
       }
    })
+}
+
+
 
 
    /*Оставить заявку. Выбор темы обращенияя*/
@@ -89,37 +88,47 @@ $(document).ready(function(){
 
    /*Работа с проверкой заполнения иформации в полях Оформление заказа и задание кнопке активного класса */
 
-//
-//
-//   $(".making-order__form-registered__item-input").keyup( function(){
-//      var formInput1 = $("#formInput1").val();
-//      var formInput2 = $("#formInput2").val();
-//      var formInput3 = $("#formInput3").val();
-//
-//      if(formInput1.length != 0 && formInput2.length != 0 && formInput3.length != 0 && !("errored-form-input").length < 1){
-//         $("#making-order__first-button").attr("disabled", false);
-//         $("#makingOrderRadioButonHowToGetIt").attr("disabled", false);
-//      } else {
-//         $("#making-order__first-button").attr("disabled", true);
-//         $("#makingOrderRadioButonHowToGetIt").attr("disabled", true);
-//      }
-//   })
-//
-//   $(".making-order__form-registered__item-input").keyup( function(){
-//      var formInput4 = $("#formInput4").val();
-//      var formInput5 = $("#formInput5").val();
-//      var formInput6 = $("#formInput6").val();
-//
-//      if(formInput4.length != 0 && formInput5.length != 0 && formInput6.length != 0 && !("errored-form-input").length < 1){
-//         $("#making-order__second-button").attr("disabled", false);
-//         $("#makingOrderRadioButonPayment").attr("disabled", false);
-//      } else {
-//         $("#making-order__second-button").attr("disabled", true);
-//         $("#makingOrderRadioButonPayment").attr("disabled", true);
-//      }
-//   })
-//
-//
+
+
+
+if($("#formInput1").length > 0 && $("#formInput2").length > 0 && $("#formInput3").length > 0){
+   $(".making-order__form-registered__item-input").keyup( function(){
+      var formInput1 = $("#formInput1").val();
+      var formInput2 = $("#formInput2").val();
+      var formInput3 = $("#formInput3").val();
+
+         if(formInput1.length != 0 && formInput2.length != 0 && formInput3.length != 0 && !("errored-form-input").length < 1){
+            $("#making-order__first-button").attr("disabled", false);           $("#makingOrderRadioButonHowToGetIt").attr("disabled", false);
+            $(".making-order__bottom-save-information").addClass("dis-bl")
+         } else {
+            $("#making-order__first-button").attr("disabled", true);          $("#makingOrderRadioButonHowToGetIt").attr("disabled", true);
+            $(".making-order__bottom-save-information").removeClass("dis-bl")
+         }
+   })
+}
+
+
+
+if($("#formInput4").length > 0 && $("#formInput5").length > 0 && $("#formInput6").length > 0){
+
+   $(".making-order__form-registered__item-input").keyup( function(){
+      var formInput4 = $("#formInput4").val();
+      var formInput5 = $("#formInput5").val();
+      var formInput6 = $("#formInput6").val();
+
+      if(formInput4.length != 0 && formInput5.length != 0 && formInput6.length != 0 && !("errored-form-input").length < 1){
+         $("#making-order__second-button").attr("disabled", false);
+         $("#makingOrderRadioButonPayment").attr("disabled", false);
+      } else {
+         $("#making-order__second-button").attr("disabled", true);
+         $("#makingOrderRadioButonPayment").attr("disabled", true);
+      }
+   })
+
+}
+
+
+
 
 
 
@@ -1022,6 +1031,40 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 /***/
 /*начало JS кода*/
 /***/
+
+
+/*Создание заявки. Скрипт прикрепления файла*/
+
+
+if(document.querySelector('#attach-file-top')){
+   // Создание экземпляра загружаемого объекта plupload
+   var uploader = new plupload.Uploader({
+   browse_button : 'attach-file-top', // Кнопка, запускающая диалог выбора файла, - это идентификатор элемента
+   url : 'images/upload.shtml', // Адрес страницы загрузки на стороне сервера ???
+
+   //flash_swf_url : 'js/Moxie.swf', // swf файл, вам нужно настроить этот параметр, когда вам нужно использовать swf для загрузки  !!!Вроде не надо
+
+   max_file_size: '2mb',// Ограничено 2 МБ filters: [{title: "Image files",extensions: "jpg,gif,png"}]// Предел изображения
+   silverlight_xap_url : 'js/Moxie.xap' // файл silverlight, вам нужно настроить этот параметр, когда вам нужно использовать silverlight для загрузки ???
+   });
+   // Вызов метода init () объекта экземпляра для инициализации
+   uploader.init();
+   // Картинка выбирается и запускается
+   uploader.bind('FilesAdded',function(uploader,files){
+   });
+   // Загрузка изображения запущена успешно, ps: data - это возвращаемое значение (третий параметр - это возвращаемое значение)
+   uploader.bind('FileUploaded',function(uploader,files,data){
+   });
+   // Он будет запускаться постоянно во время процесса загрузки файла, вы можете использовать это событие для отображения мониторинга процесса загрузки (например, хода загрузки)
+   uploader.bind('UploadProgress',function(uploader,file){
+   });
+   // Их больше N ..., пожалуйста, обратитесь к ссылке ==> http://www.sojson.com/jc_plupload.html для получения различных описаний событий.
+   // Наконец, регистрируем событие для кнопки "начать загрузку"
+
+   document.getElementById('attach-file-top').onclick = function(){
+   uploader.start(); // Вызов метода start () объекта экземпляра, чтобы начать загрузку файла, конечно, вы также можете вызвать этот метод в другом месте
+   }
+}
 
 
 /*слайдеры*/
