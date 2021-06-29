@@ -10925,8 +10925,20 @@ main{
    white-space: nowrap;
 }
 
+.attach-files-block-item{
+   width: 100px;
+   height: 100px;
+   overflow: hidden;
+}
 
+.attach-files-block-item img{
+   max-width: 100%;
+   max-height: 100%;
+}
 
+.attach-files-block{
+   background-color: red;
+}
 
 
 

@@ -1039,30 +1039,42 @@ $(".warranty-slider").on("click", ".carousel-center", function() {
 if(document.querySelector('#attach-file-top')){
    // Создание экземпляра загружаемого объекта plupload
    var uploader = new plupload.Uploader({
-   browse_button : 'attach-file-top', // Кнопка, запускающая диалог выбора файла, - это идентификатор элемента
-   url : 'images/upload.shtml', // Адрес страницы загрузки на стороне сервера ???
+      browse_button : 'attach-file-top', // Кнопка, запускающая диалог выбора файла, - это идентификатор элемента
+      url : 'images/upload.shtml', // Адрес страницы загрузки на стороне сервера ???
 
-   //flash_swf_url : 'js/Moxie.swf', // swf файл, вам нужно настроить этот параметр, когда вам нужно использовать swf для загрузки  !!!Вроде не надо
+      //flash_swf_url : 'js/Moxie.swf', // swf файл, вам нужно настроить этот параметр, когда вам нужно использовать swf для загрузки  !!!Вроде не надо
 
-   max_file_size: '2mb',// Ограничено 2 МБ filters: [{title: "Image files",extensions: "jpg,gif,png"}]// Предел изображения
-   silverlight_xap_url : 'js/Moxie.xap' // файл silverlight, вам нужно настроить этот параметр, когда вам нужно использовать silverlight для загрузки ???
+      max_file_size: '2mb',// Ограничено 2 МБ filters: [{title: "Image files",extensions: "jpg,gif,png"}]// Предел изображения
+      silverlight_xap_url : 'js/Moxie.xap' // файл silverlight, вам нужно настроить этот параметр, когда вам нужно использовать silverlight для загрузки ???
    });
+
    // Вызов метода init () объекта экземпляра для инициализации
    uploader.init();
    // Картинка выбирается и запускается
    uploader.bind('FilesAdded',function(uploader,files){
+      document.querySelector(".attach-files-block").innerHTML(`
+         <div class="attach-files-block-item">
+            <img src="" alt="">
+            <div>
+               <img src="" alt="">
+            </div>
+         </div>`)
    });
    // Загрузка изображения запущена успешно, ps: data - это возвращаемое значение (третий параметр - это возвращаемое значение)
    uploader.bind('FileUploaded',function(uploader,files,data){
+
    });
+
    // Он будет запускаться постоянно во время процесса загрузки файла, вы можете использовать это событие для отображения мониторинга процесса загрузки (например, хода загрузки)
    uploader.bind('UploadProgress',function(uploader,file){
+
    });
+
    // Их больше N ..., пожалуйста, обратитесь к ссылке ==> http://www.sojson.com/jc_plupload.html для получения различных описаний событий.
    // Наконец, регистрируем событие для кнопки "начать загрузку"
 
    document.getElementById('attach-file-top').onclick = function(){
-   uploader.start(); // Вызов метода start () объекта экземпляра, чтобы начать загрузку файла, конечно, вы также можете вызвать этот метод в другом месте
+      uploader.start(); // Вызов метода start () объекта экземпляра, чтобы начать загрузку файла, конечно, вы также можете вызвать этот метод в другом месте
    }
 }
 
