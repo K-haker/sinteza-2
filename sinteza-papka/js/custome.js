@@ -2,17 +2,25 @@ $(document).ready(function(){
    var show_popup_sert = false;
    var theItemToDelete;
 
+//   var formInputX1 = $("#formInputX1").val();
+//   var formInputX2 = $("#formInputX2").val();
+//   var formInputX3 = $("#formInputX3").val();
+
 
    /*Оставить заявку. Валидация формы на странице */
    $(".making-order__form-registered__item-input").keyup( function(){
-      var formInput4 = $("#formInputX1").val();
-      var formInput5 = $("#formInputX2").val();
-      var formInput6 = $("#formInputX3").val();
+      var formInputX1 = $("#formInputX1").val();
+      var formInputX2 = $("#formInputX2").val();
+      var formInputX3 = $("#formInputX3").val();
 
-      if(formInput4.length != 0 && formInput5.length != 0 && formInput6.length != 0 && !("errored-form-input").length < 1){
-         $("#making-order__second-button").attr("disabled", false);
+      console.log(formInputX1)
+      console.log(formInputX2)
+      console.log(formInputX3)
+
+      if(formInputX1.length != 0 && formInputX2.length != 0 && formInputX3.length != 0 && !("errored-form-input").length < 1){
+         $("#leave-request__send-request").attr("disabled", false);
       } else {
-         $("#making-order__second-button").attr("disabled", true);
+         $("#leave-request__send-request").attr("disabled", true);
       }
    })
 
@@ -81,35 +89,37 @@ $(document).ready(function(){
 
    /*Работа с проверкой заполнения иформации в полях Оформление заказа и задание кнопке активного класса */
 
-   $(".making-order__form-registered__item-input").keyup( function(){
-      var formInput1 = $("#formInput1").val();
-      var formInput2 = $("#formInput2").val();
-      var formInput3 = $("#formInput3").val();
-
-      if(formInput1.length != 0 && formInput2.length != 0 && formInput3.length != 0 && !("errored-form-input").length < 1){
-         $("#making-order__first-button").attr("disabled", false);
-         $("#makingOrderRadioButonHowToGetIt").attr("disabled", false);
-      } else {
-         $("#making-order__first-button").attr("disabled", true);
-         $("#makingOrderRadioButonHowToGetIt").attr("disabled", true);
-      }
-   })
-
-   $(".making-order__form-registered__item-input").keyup( function(){
-      var formInput4 = $("#formInput4").val();
-      var formInput5 = $("#formInput5").val();
-      var formInput6 = $("#formInput6").val();
-
-      if(formInput4.length != 0 && formInput5.length != 0 && formInput6.length != 0 && !("errored-form-input").length < 1){
-         $("#making-order__second-button").attr("disabled", false);
-         $("#makingOrderRadioButonPayment").attr("disabled", false);
-      } else {
-         $("#making-order__second-button").attr("disabled", true);
-         $("#makingOrderRadioButonPayment").attr("disabled", true);
-      }
-   })
-
-
+//
+//
+//   $(".making-order__form-registered__item-input").keyup( function(){
+//      var formInput1 = $("#formInput1").val();
+//      var formInput2 = $("#formInput2").val();
+//      var formInput3 = $("#formInput3").val();
+//
+//      if(formInput1.length != 0 && formInput2.length != 0 && formInput3.length != 0 && !("errored-form-input").length < 1){
+//         $("#making-order__first-button").attr("disabled", false);
+//         $("#makingOrderRadioButonHowToGetIt").attr("disabled", false);
+//      } else {
+//         $("#making-order__first-button").attr("disabled", true);
+//         $("#makingOrderRadioButonHowToGetIt").attr("disabled", true);
+//      }
+//   })
+//
+//   $(".making-order__form-registered__item-input").keyup( function(){
+//      var formInput4 = $("#formInput4").val();
+//      var formInput5 = $("#formInput5").val();
+//      var formInput6 = $("#formInput6").val();
+//
+//      if(formInput4.length != 0 && formInput5.length != 0 && formInput6.length != 0 && !("errored-form-input").length < 1){
+//         $("#making-order__second-button").attr("disabled", false);
+//         $("#makingOrderRadioButonPayment").attr("disabled", false);
+//      } else {
+//         $("#making-order__second-button").attr("disabled", true);
+//         $("#makingOrderRadioButonPayment").attr("disabled", true);
+//      }
+//   })
+//
+//
 
 
 

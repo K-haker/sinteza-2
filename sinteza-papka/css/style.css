@@ -10271,12 +10271,33 @@ main{
 }
 
 .leave-request__send-request{
-   background-color: #FFF658;
+   background-color: #000000;
    margin-left: -15px;
    font-size: 16px;
    line-height: 24px;
    padding: 14px 0 14px 14px;
-   cursor:pointer
+   cursor:pointer;
+   display: inline-block;
+   width: 100%;
+   border: none;
+   text-align: left;color: white;
+}
+
+.leave-request__send-request svg path{
+   stroke: white;
+}
+
+.leave-request__send-request:disabled{
+   background-color: #FFF658;
+   color:black;
+}
+
+.leave-request__send-request:disabled svg path{
+   stroke: black;
+}
+
+.leave-request__send-request svg{
+   position: relative;top: 1px;
 }
 
 
@@ -10806,6 +10827,88 @@ main{
 .butt-bg-col-black{
    background-color: black;
 }
+
+
+
+.refund-title{
+   font-size: 67px;
+   line-height: 68px;
+   font-family: "CodecPro-Bold";
+   margin-bottom: 12px;
+   margin-top: 34px;
+}
+
+.refund-undertitle{
+   margin-bottom: 70px;
+   font-family: "CodecPro-Regular";
+   font-size: 22px;
+   line-height: 32px;
+}
+
+.content-link_right-info ol{
+   font-size: 16px;
+   line-height: 24px;
+   color: rgba(0,0,0, 0.4);
+}
+
+.content-link_right-info ol li{
+   font-size: 16px;
+   line-height: 24px;
+   color: rgba(0,0,0, 0.4);
+   margin-left: 20px;
+}
+
+.our-delivery-h{
+   margin-left: 15px;
+}
+
+.our-delivery{
+   padding-left: 25px;
+   padding-right: 25px;
+}
+
+@media(max-width:768px){
+   .refund-title{
+      font-size: 57px;
+   }
+
+   .refund-undertitle{
+      font-size: 20px;
+      line-height: 29px;
+   }
+}
+
+@media(max-width:420px){
+   .refund-title{
+      font-size:28px ;
+      line-height: 34px;
+      margin-bottom: 15px;
+   }
+
+   .refund-undertitle{
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 21px;
+   }
+}
+
+.fw700{
+   font-family: "CodecPro-Bold"
+}
+
+.cur-poi{
+   cursor: pointer;
+}
+
+.opas04{
+   color: rgba(0,0,0,0.4)
+}
+
+
+
+
+
+
 
 
 
