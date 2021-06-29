@@ -6641,6 +6641,10 @@ Media
    padding-top: 25px;
 }
 
+.making-order__bottom-save-information{
+   display: none;
+}
+
 @media(max-width: 1200px){
    .busket-page__go-to-making-an-order_button{
       width: calc(100%);
@@ -10890,6 +10894,10 @@ main{
       font-size: 14px;
       line-height: 21px;
    }
+
+   .making-order__switching-menu_item {
+      margin-right: 10px;
+   }
 }
 
 .fw700{
@@ -10905,11 +10913,17 @@ main{
 }
 
 
+.dis-bl{
+   display: block;
+}
 
+.making-order__order-info__middle-item-price{
+   white-space: nowrap;
+}
 
-
-
-
+.busket-general-price__discount__couner-block{
+   white-space: nowrap;
+}
 
 
 
